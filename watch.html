@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch | Creators AI Hologram Boxing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <style>
+    .video-player {
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #0a1520, #001830);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .video-player::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(0,174,239,0.15), transparent 70%);
+    }
+    .play-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--neon-blue);
+      display: grid;
+      place-items: center;
+      font-size: 2rem;
+      box-shadow: var(--glow-blue);
+      z-index: 1;
+      transition: transform 0.2s;
+    }
+    .play-btn:hover { transform: scale(1.1); }
+    .episode-list .card { cursor: pointer; }
+    .episode-list .card.active { border-color: var(--neon-blue); box-shadow: var(--glow-blue); }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><img src="assets/logo.svg" alt="" class="nav-logo-img" data-asset="logo.svg" width="36" height="36"><span>Creators AI</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="index.html" data-page="index.html">Home</a>
+        <a href="events.html" data-page="events.html">Events</a>
+        <a href="fighters.html" data-page="fighters.html">Fighters</a>
+        <a href="watch.html" data-page="watch.html">Watch</a>
+        <a href="news.html" data-page="news.html">News</a>
+        <a href="book.html" data-page="book.html" class="nav-cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="section-label">Watch</p>
+      <h1 class="section-title">Latest Episodes</h1>
+      <p class="section-subtitle">Full episodes, highlights &amp; interviews from Creators AI Hologram Boxing</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="video-player" id="player">
+        <button class="play-btn" id="play-btn" aria-label="Play video">▶</button>
+      </div>
+      <h2 id="now-playing" style="font-family:var(--font-display);font-size:1.2rem;margin-bottom:0.5rem;">Hologram Boxing 001 | Episode 4</h2>
+      <p id="now-desc" style="color:var(--gray);font-size:0.9rem;margin-bottom:2rem;">Nova Strike vs Blaze Fury — Full Main Event | 12.6K views</p>
+
+      <div class="cards-grid episode-list">
+        <div class="card active" id="ep4" data-title="Hologram Boxing 001 | Episode 4" data-desc="Nova Strike vs Blaze Fury — Full Main Event | 12.6K views">
+          <div class="card-image"><span class="card-image-icon">▶</span></div>
+          <div class="card-body">
+            <h3 class="card-title">Hologram Boxing 001 | Episode 4</h3>
+            <div class="card-meta"><span class="latest">● Latest</span><span>12.6K views</span><span>5d ago</span></div>
+          </div>
+        </div>
+        <div class="card" id="ep3" data-title="Hologram Boxing 001 | Episode 3" data-desc="Cyber KO vs Phantom Punch — Full Fight | 9.2K views">
+          <div class="card-image"><span class="card-image-icon">▶</span></div>
+          <div class="card-body">
+            <h3 class="card-title">Hologram Boxing 001 | Episode 3</h3>
+            <div class="card-meta"><span>9.2K views</span><span>8d ago</span></div>
+          </div>
+        </div>
+        <div class="card" id="ep2" data-title="Hologram Boxing 001 | Episode 2" data-desc="Titan X vs Spark V — Full Fight | 7.8K views">
+          <div class="card-image"><span class="card-image-icon">▶</span></div>
+          <div class="card-body">
+            <h3 class="card-title">Hologram Boxing 001 | Episode 2</h3>
+            <div class="card-meta"><span>7.8K views</span><span>12d ago</span></div>
+          </div>
+        </div>
+        <div class="card" id="ep1" data-title="Hologram Boxing 001 | Episode 1" data-desc="Event Preview & Behind the Scenes | 24.1K views">
+          <div class="card-image"><span class="card-image-icon">▶</span></div>
+          <div class="card-body">
+            <h3 class="card-title">Hologram Boxing 001 | Episode 1</h3>
+            <div class="card-meta"><span>24.1K views</span><span>18d ago</span></div>
+          </div>
+        </div>
+        <div class="card" id="recap" data-title="Hologram Boxing 001 | VHS Recap" data-desc="Full event VHS-style recap | 18.4K views">
+          <div class="card-image"><span class="card-image-icon">📼</span></div>
+          <div class="card-body">
+            <h3 class="card-title">Hologram Boxing 001 | VHS Recap</h3>
+            <div class="card-meta"><span>18.4K views</span><span>3d ago</span></div>
+          </div>
+        </div>
+        <div class="card" id="highlights" data-title="All Knockouts from HB 001" data-desc="Every KO from the inaugural event | 15.2K views">
+          <div class="card-image"><span class="card-image-icon">💥</span></div>
+          <div class="card-body">
+            <h3 class="card-title">All Knockouts from HB 001</h3>
+            <div class="card-meta"><span>15.2K views</span><span>6d ago</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking-section">
+    <div class="container">
+      <div class="booking-box">
+        <h2>More on TikTok</h2>
+        <p class="sub">Clips, behind-the-scenes, and live updates</p>
+        <div class="booking-actions">
+          <a href="#" data-tiktok class="btn btn-primary">Follow <span data-tiktok-handle>@creatorsai</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">
+        <span>&copy; 2026 Creators AI Hologram Boxing</span>
+        <div class="footer-social"><a href="#" data-tiktok>📱</a><a href="index.html">Home</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

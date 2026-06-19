@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00AEEF"/>
+      <stop offset="100%" stop-color="#0077AA"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <circle cx="60" cy="60" r="56" stroke="url(#blueGlow)" stroke-width="3" fill="#050508"/>
+  <circle cx="60" cy="60" r="48" stroke="rgba(0,174,239,0.3)" stroke-width="1" fill="none"/>
+  <!-- Wireframe boxer head -->
+  <ellipse cx="60" cy="38" rx="14" ry="16" stroke="#00AEEF" stroke-width="1.5" filter="url(#glow)"/>
+  <!-- Body -->
+  <line x1="60" y1="54" x2="60" y2="78" stroke="#00AEEF" stroke-width="1.5"/>
+  <!-- Arms in guard -->
+  <line x1="60" y1="62" x2="38" y2="72" stroke="#00AEEF" stroke-width="1.5"/>
+  <line x1="60" y1="62" x2="82" y2="72" stroke="#00AEEF" stroke-width="1.5"/>
+  <ellipse cx="38" cy="76" rx="10" ry="12" stroke="#00AEEF" stroke-width="1.5" fill="rgba(0,174,239,0.15)"/>
+  <ellipse cx="82" cy="76" rx="10" ry="12" stroke="#00AEEF" stroke-width="1.5" fill="rgba(0,174,239,0.15)"/>
+  <!-- Legs -->
+  <line x1="60" y1="78" x2="48" y2="98" stroke="#00AEEF" stroke-width="1.5"/>
+  <line x1="60" y1="78" x2="72" y2="98" stroke="#00AEEF" stroke-width="1.5"/>
+  <!-- Gold accent ring -->
+  <path d="M 20 60 A 40 40 0 0 1 100 60" stroke="#FFC107" stroke-width="2" fill="none" opacity="0.6"/>
+</svg>

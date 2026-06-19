@@ -1,0 +1,11 @@
+{
+  "name": "creators-ai-hologram-boxing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Creators AI Hologram Boxing Event website",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod --dir=."
+  }
+}
