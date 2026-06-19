@@ -15,16 +15,16 @@ Then visit `http://localhost:8080`
 
 ## Customize (one file)
 
-Edit **`site-config.json`** — no code changes needed:
+Edit **`site-config.js`** — no code changes needed. Every page loads this automatically:
 
-```json
-{
-  "tiktokHandle": "your_tiktok_handle",
-  "tiktokUrl": "https://www.tiktok.com/@your_tiktok_handle",
-  "email": "bookings@creatorsai.com",
-  "siteName": "Creators AI Hologram Boxing",
-  "tagline": "Step in. Gear up. Get in the ring."
-}
+```js
+window.SITE_CONFIG = {
+  tiktokHandle: "your_tiktok_handle",
+  tiktokUrl: "https://www.tiktok.com/@your_tiktok_handle",
+  email: "bookings@creatorsai.com",
+  siteName: "Creators AI Hologram Boxing",
+  tagline: "Step in. Gear up. Get in the ring."
+};
 ```
 
 All TikTok links, handles, and email buttons update automatically across every page.
