@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="64" fill="#050508"/>
+  <circle cx="64" cy="64" r="62" stroke="#00AEEF" stroke-width="2" opacity="0.5"/>
+  <path d="M64 28 L68 48 L88 44 L72 58 L78 78 L64 66 L50 78 L56 58 L40 44 L60 48 Z" stroke="#FFC107" stroke-width="2" fill="rgba(255,193,7,0.15)"/>
+  <rect x="38" y="82" width="52" height="22" rx="4" stroke="#00AEEF" stroke-width="2" fill="rgba(0,174,239,0.1)"/>
+  <text x="64" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#00AEEF">PARTY</text>
+</svg>

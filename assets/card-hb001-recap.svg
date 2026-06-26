@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#050508"/>
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050508" stop-opacity="0.15"/>
+      <stop offset="55%" stop-color="#050508" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#050508" stop-opacity="0.92"/>
+    </linearGradient>
+    <clipPath id="leftHalf"><rect x="0" y="0" width="320" height="360"/></clipPath>
+    <clipPath id="rightHalf"><rect x="320" y="0" width="320" height="360"/></clipPath>
+  </defs>
+  <g clip-path="url(#leftHalf)">
+    <image href="wave-gold.png" x="-40" y="-20" width="400" height="400" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <g clip-path="url(#rightHalf)">
+    <image href="wave-orange.png" x="280" y="-20" width="400" height="400" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <rect x="318" y="0" width="4" height="360" fill="#FFC107" opacity="0.85"/>
+  <rect width="640" height="360" fill="url(#fade)"/>
+  <rect x="1" y="1" width="638" height="358" stroke="#FFC107" stroke-width="2" opacity="0.4"/>
+  <rect x="24" y="24" width="118" height="22" rx="4" fill="#FFC107"/>
+  <text x="83" y="39" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#000">EVENT RECAP</text>
+  <text x="32" y="300" font-family="Arial Black, sans-serif" font-size="26" font-weight="900" fill="#FFC107">WAVE GOLD</text>
+  <text x="32" y="328" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">vs WAVE FIRE</text>
+  <text x="608" y="328" text-anchor="end" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">HB 001</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#050508"/>
+  <rect x="1" y="1" width="638" height="358" stroke="#A855F7" stroke-width="2" opacity="0.4"/>
+  <path d="M520 80 L540 140 L600 140 L552 176 L568 236 L520 200 L472 236 L488 176 L440 140 L500 140 Z" stroke="#A855F7" stroke-width="2.5" fill="rgba(168,85,247,0.12)"/>
+  <path d="M120 200 L130 170 L160 185 L145 155 L175 155 L155 130 L170 100 L140 115 L120 90 L125 120 L95 130 L115 155 L100 185 Z" stroke="#00AEEF" stroke-width="2" fill="rgba(0,174,239,0.1)"/>
+  <rect x="40" y="28" width="120" height="22" rx="4" fill="#A855F7"/>
+  <text x="100" y="43" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#000">POP-UP EVENT</text>
+  <text x="48" y="118" font-family="Arial Black, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF">DOWNTOWN</text>
+  <text x="48" y="158" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#A855F7">HOLOGRAM SHOWDOWN</text>
+  <text x="48" y="196" font-family="Arial, sans-serif" font-size="14" fill="#9CA3AF">4 fights � food � drinks � live DJ</text>
+</svg>

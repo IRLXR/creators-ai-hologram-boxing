@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#050508"/>
+  <rect x="1" y="1" width="638" height="358" stroke="#00AEEF" stroke-width="2" opacity="0.35"/>
+  <rect x="40" y="28" width="100" height="22" rx="4" fill="#00AEEF" opacity="0.9"/>
+  <text x="90" y="43" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#000">EXPERIENCE</text>
+  <text x="48" y="130" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" fill="#FFC107">FOOD &amp;</text>
+  <text x="48" y="178" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" fill="#FFC107">DRINKS</text>
+  <text x="48" y="220" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Full event experience on site</text>
+  <rect x="380" y="80" width="200" height="140" rx="10" stroke="#00AEEF" stroke-width="2" fill="rgba(0,174,239,0.08)"/>
+  <circle cx="440" cy="130" r="16" stroke="#FFC107" stroke-width="2"/>
+  <rect x="490" y="115" width="60" height="30" rx="4" stroke="#FFC107" stroke-width="2"/>
+  <rect x="410" y="175" width="140" height="10" rx="2" fill="#00AEEF" opacity="0.4"/>
+</svg>

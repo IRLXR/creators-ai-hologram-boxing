@@ -1,7 +1,84 @@
 window.SITE_CONFIG = {
-  tiktokHandle: "creatorsai",
-  tiktokUrl: "https://www.tiktok.com/@creatorsai",
-  email: "bookings@creatorsai.com",
+  kickHandle: "creatorsai",
+  kickUrl: "https://kick.com/creatorsai",
+  twitchHandle: "creatorsai",
+  twitchUrl: "https://www.twitch.tv/creatorsai",
+  streamsReady: true,
+  email: "ic4d@irlxr.com",
   siteName: "Creators AI Hologram Boxing",
-  tagline: "Step in. Gear up. Get in the ring."
+  tagline: "Step in. Gear up. Watch hologram boxing.",
+  siteUrl: "https://creators-ai-hologram-boxing.vercel.app",
+  // Go High Level — token lives in Vercel env vars (GHL_PIT_TOKEN), not here
+  goHighLevel: {
+    enabled: true,
+    useApi: true,
+    apiEndpoint: "/api/ghl-submit",
+    trackingScriptUrl: "https://link.msgsndr.com/js/external-tracking.js",
+    trackingId: "",
+    chatWidgetId: "",
+    webhooks: {
+      ticket: "",
+      booking: "",
+      fighter: ""
+    }
+  },
+  admissionPrice: 20,
+  crypto: {
+    name: "Me vs Me",
+    symbol: "MVM",
+    ticketPriceHeadset: 200,
+    ticketPriceAttendee: 350,
+  },
+  influencerCodes: [
+    { code: "GOLDENWAVE", influencer: "Wave Gold Crew", fightId: "hb002-main", fighter: "Wave Gold" },
+    { code: "BLAZEHYPE", influencer: "Blaze Nation", fightId: "hb002-main", fighter: "Wave Fire" },
+    { code: "BLUECREW", influencer: "Cyber Blue Squad", fightId: "hb002-co", fighter: "Wave Blue" },
+    { code: "SILVERGHOST", influencer: "Phantom Feed", fightId: "hb002-co", fighter: "Wave Silver" },
+    { code: "GREENFORCE", influencer: "Titan Power", fightId: "hb002-undercard", fighter: "Wave Green" },
+    { code: "PINKSPEED", influencer: "Spark Velocity", fightId: "hb002-undercard", fighter: "Wave Pink" },
+  ],
+  nextEventName: "Hologram Boxing 002",
+  nextEventDate: "2026-08-15T18:00:00",
+  launchDate: "2026-08-15T18:00:00",
+  prizePool: 10000,
+  fights: [
+    {
+      id: "hb002-main",
+      code: "HB 002",
+      poster: "assets/fight-gold-vs-fire.png",
+      venue: "Undisclosed",
+      fighter1: "Wave Gold",
+      fighter2: "Wave Fire",
+      fightDate: "2026-08-15T18:00:00",
+      detailsUrl: "events.html#event-upcoming"
+    },
+    {
+      id: "hb002-co",
+      code: "HB 002",
+      poster: "assets/fight-blue-vs-silver.png",
+      venue: "Undisclosed",
+      fighter1: "Wave Blue",
+      fighter2: "Wave Silver",
+      fightDate: "2026-08-22T20:00:00",
+      detailsUrl: "fighters.html#wave-blue"
+    },
+    {
+      id: "hb002-undercard",
+      code: "HB 002",
+      poster: "assets/fight-green-vs-pink.png",
+      venue: "Undisclosed",
+      fighter1: "Wave Green",
+      fighter2: "Wave Pink",
+      fightDate: "2026-08-29T19:00:00",
+      detailsUrl: "fighters.html#wave-green"
+    }
+  ],
+  fighters: [
+    { id: "wave-gold", name: "Wave Gold", role: "Hologram Champion", image: "assets/fighter-nova.png", nextFightDate: "2026-08-15T18:00:00" },
+    { id: "wave-fire", name: "Wave Fire", role: "Knockout Variant", image: "assets/fighter-blaze.png", nextFightDate: "2026-08-15T18:00:00" },
+    { id: "wave-blue", name: "Wave Blue", role: "Rising Star", image: "assets/fighter-cyber.png", nextFightDate: "2026-08-22T20:00:00" },
+    { id: "wave-silver", name: "Wave Silver", role: "Ghost Variant", image: "assets/fighter-phantom.png", nextFightDate: "2026-08-22T20:00:00" },
+    { id: "wave-green", name: "Wave Green", role: "Power Core", image: "assets/fighter-titan.png", nextFightDate: "2026-08-29T19:00:00" },
+    { id: "wave-pink", name: "Wave Pink", role: "Speed Demon", image: "assets/fighter-spark.png", nextFightDate: "2026-08-29T19:00:00" }
+  ]
 };

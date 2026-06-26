@@ -21,7 +21,7 @@ Edit **`site-config.js`** — no code changes needed. Every page loads this auto
 window.SITE_CONFIG = {
   tiktokHandle: "your_tiktok_handle",
   tiktokUrl: "https://www.tiktok.com/@your_tiktok_handle",
-  email: "bookings@creatorsai.com",
+  email: "ic4d@irlxr.com",
   siteName: "Creators AI Hologram Boxing",
   tagline: "Step in. Gear up. Get in the ring."
 };

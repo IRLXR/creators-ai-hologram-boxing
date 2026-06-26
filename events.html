@@ -11,65 +11,52 @@
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 </head>
 <body>
-  <nav class="site-nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo"><img src="assets/logo.svg" alt="" class="nav-logo-img" data-asset="logo.svg" width="36" height="36"><span>Creators AI</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-      <div class="nav-links">
-        <a href="index.html" data-page="index.html">Home</a>
-        <a href="events.html" data-page="events.html">Events</a>
-        <a href="fighters.html" data-page="fighters.html">Fighters</a>
-        <a href="watch.html" data-page="watch.html">Watch</a>
-        <a href="news.html" data-page="news.html">News</a>
-        <a href="book.html" data-page="book.html" class="nav-cta">Book Now</a>
-      </div>
-    </div>
-  </nav>
+  <nav class="site-nav" data-auto-nav></nav>
 
   <header class="page-hero">
     <div class="container">
       <p class="section-label">Archive</p>
       <h1 class="section-title">Event Archive</h1>
-      <p class="section-subtitle">Every hologram boxing event — past, present, and upcoming. Winners take home prize money.</p>
+      <p class="section-subtitle">Every hologram boxing event — past, present, and upcoming. Attendees watch through AR; hologram fighters compete for prize money.</p>
     </div>
   </header>
 
   <section class="section">
     <div class="container cards-grid">
       <article class="card" id="event-001">
-        <div class="card-image"><span class="card-image-icon">🥊</span></div>
+        <div class="card-image"><img class="card-cover" src="assets/fight-gold-vs-fire.png" alt="Hologram Boxing 001" loading="lazy"></div>
         <div class="card-body">
           <span class="card-tag">Hologram Boxing 001</span>
           <h3 class="card-title">Creators AI Hologram Boxing 001</h3>
-          <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">The inaugural hologram boxing card. Six fights inside our 12ft tall arena with a $5,000 prize pool.</p>
+          <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">The inaugural hologram boxing card. Attendees watched through AR as six Wave variants battled in our inflatable tent. $5,000 prize pool.</p>
           <div class="card-meta"><span class="latest">● Latest</span><span>6 Fights</span><span>2.4K Attendees</span><span>Completed</span></div>
           <a href="watch.html#ep4" class="view-all-link" style="display:inline-block;margin-top:1rem;">Watch Recap →</a>
         </div>
       </article>
       <article class="card" id="event-002">
-        <div class="card-image"><span class="card-image-icon">⚡</span></div>
+        <div class="card-image"><img class="card-cover" src="assets/card-lightning.svg" alt="Downtown Hologram Showdown" loading="lazy"></div>
         <div class="card-body">
           <span class="card-tag">Pop-Up Event</span>
           <h3 class="card-title">Downtown Hologram Showdown</h3>
-          <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">A pop-up hologram boxing experience in the heart of the city. Four creator matchups with food, drinks, and live DJ.</p>
+          <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">A pop-up AR viewing experience in the heart of the city. Four hologram matchups, food, drinks, and live DJ.</p>
           <div class="card-meta"><span>4 Fights</span><span>1.8K Attendees</span><span>Completed</span></div>
         </div>
       </article>
       <article class="card" id="event-003">
-        <div class="card-image"><span class="card-image-icon">🏆</span></div>
+        <div class="card-image"><img class="card-cover" src="assets/card-trophy.svg" alt="Hologram Title Fight Night" loading="lazy"></div>
         <div class="card-body">
           <span class="card-tag">Championship</span>
           <h3 class="card-title">Hologram Title Fight Night</h3>
-          <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Nova Strike vs Blaze Fury for the hologram heavyweight title. Main event with full production and prize money.</p>
+          <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Wave Gold vs Wave Fire for the hologram heavyweight title. Main event with full tent production and prize money.</p>
           <div class="card-meta"><span>3 Fights</span><span>Prize Pool $5K</span><span>Completed</span></div>
         </div>
       </article>
       <article class="card" id="event-upcoming">
-        <div class="card-image"><span class="card-image-icon">📅</span></div>
+        <div class="card-image"><img class="card-cover" src="assets/card-calendar.svg" alt="Hologram Boxing 002" loading="lazy"></div>
         <div class="card-body">
           <span class="card-tag">Upcoming</span>
           <h3 class="card-title">Hologram Boxing 002</h3>
-          <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">The next chapter. Bigger arena, bigger prize pool, more fights. Limited dates — secure your $20 ticket now.</p>
+          <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">The next chapter. Bigger tent, bigger prize pool, more hologram fights. Limited dates — secure your <span data-crypto-name>Me vs Me</span> ticket now.</p>
           <div class="card-meta"><span class="latest">● Coming Soon</span><span>8 Fights</span><span>$10K Prize Pool</span></div>
           <a href="book.html" class="btn btn-primary" style="margin-top:1rem;">Book Your Spot</a>
         </div>
@@ -81,24 +68,18 @@
     <div class="container">
       <div class="booking-box">
         <h2>Want Us at Your Event?</h2>
-        <p class="sub">We bring the 12ft hologram arena to parties, festivals, and private events</p>
+        <p class="sub">We bring the inflatable tent and AR viewing experience to parties, festivals, and private events</p>
         <p class="highlight">Limited Dates Available</p>
         <div class="booking-actions">
           <a href="book.html" class="btn btn-gold">Book Your Event</a>
-          <a href="#" data-tiktok class="btn btn-outline">DM on TikTok</a>
+          <a href="#" data-kick class="btn btn-outline">Watch on Kick</a>
+          <a href="#" data-twitch class="btn btn-outline">Watch on Twitch</a>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer site-footer--mini">
-    <div class="container">
-      <div class="footer-bottom" style="border:none;padding:0;">
-        <span>&copy; 2026 Creators AI Hologram Boxing</span>
-        <div class="footer-social"><a href="#" data-tiktok>📱</a><a href="index.html">Home</a></div>
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer site-footer--mini"></footer>
   <script src="site-config.js"></script>
   <script src="js/main.js"></script>
 </body>

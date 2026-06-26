@@ -23,7 +23,20 @@
       padding: 1.5rem;
       text-align: center;
     }
-    .info-card .icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+    .info-card .icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 0.75rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .info-card .icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .info-card h3 {
       font-family: var(--font-display);
       font-size: 0.85rem;
@@ -77,29 +90,110 @@
     }
     .form-success.show { display: block; }
     .booking-form.hidden { display: none; }
+    .ticket-form-intro {
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      text-align: center;
+    }
+    .ticket-form-intro p {
+      color: var(--gray-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .form-hint {
+      color: var(--gray);
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+    .form-hint--gold { color: var(--gold); }
+    .influencer-panel {
+      background: rgba(0, 174, 239, 0.06);
+      border: 1px solid rgba(0, 174, 239, 0.35);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-top: 0.75rem;
+    }
+    .influencer-panel h4 {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      color: var(--neon-blue);
+      margin: 0 0 0.5rem;
+      text-transform: uppercase;
+    }
+    .influencer-panel p {
+      color: var(--gray-light);
+      font-size: 0.85rem;
+      margin: 0 0 1rem;
+      line-height: 1.5;
+    }
+    .code-input-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .code-input-row input {
+      flex: 1;
+      min-width: 0;
+    }
+    .code-input-row .btn {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .influencer-status {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .influencer-status--success { color: var(--gold); }
+    .influencer-status--error { color: #ff6b6b; }
+    .form-group.is-influencer-locked select {
+      border-color: var(--gold);
+      opacity: 0.95;
+    }
+    .form-section-label {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 1.5rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .generated-code {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      background: var(--bg-dark);
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      margin-top: 0.5rem;
+    }
+    .generated-code span {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+    }
+    .generated-code .btn {
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      padding: 0.4rem 0.75rem;
+    }
   </style>
 </head>
 <body>
-  <nav class="site-nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo"><img src="assets/logo.svg" alt="" class="nav-logo-img" data-asset="logo.svg" width="36" height="36"><span>Creators AI</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-      <div class="nav-links">
-        <a href="index.html" data-page="index.html">Home</a>
-        <a href="events.html" data-page="events.html">Events</a>
-        <a href="fighters.html" data-page="fighters.html">Fighters</a>
-        <a href="watch.html" data-page="watch.html">Watch</a>
-        <a href="news.html" data-page="news.html">News</a>
-        <a href="book.html" data-page="book.html" class="nav-cta">Book Now</a>
-      </div>
-    </div>
-  </nav>
+  <nav class="site-nav" data-auto-nav></nav>
 
   <header class="page-hero">
     <div class="container">
       <p class="section-label">Book</p>
       <h1 class="section-title">Reserve Your Spot</h1>
-      <p class="section-subtitle">$20 admission · All ages · Food &amp; drinks · Winners get prize money</p>
+      <p class="section-subtitle"><span data-crypto-name>Me vs Me</span> crypto only · Pick your view · Back a fighter to win</p>
     </div>
   </header>
 
@@ -107,55 +201,165 @@
 
   <section class="section">
     <div class="container">
-      <div class="info-grid">
+      <div class="info-grid" hidden>
         <div class="info-card">
-          <div class="icon">🥊</div>
-          <h3>Real Boxing Action</h3>
-          <p>Step into our 12ft tall hologram arena for authentic boxing inside a futuristic dome.</p>
+          <div class="icon"><img src="assets/icon-boxing.svg" alt="Watch Hologram Boxing" loading="lazy"></div>
+          <h3>Watch Hologram Boxing</h3>
+          <p>Put on AR gear inside our inflatable tent and watch hologram boxers fight inside the glowing square. You're ringside — not in the ring.</p>
         </div>
         <div class="info-card">
-          <div class="icon">👥</div>
+          <div class="icon"><img src="assets/icon-all-ages.svg" alt="Great for All Ages" loading="lazy"></div>
           <h3>Great for All Ages</h3>
-          <p>Family-friendly events with something for everyone — spectators and fighters alike.</p>
+          <p>Family-friendly events built for spectators — everyone watches hologram fights through augmented reality.</p>
         </div>
         <div class="info-card">
-          <div class="icon">🎉</div>
+          <div class="icon"><img src="assets/icon-parties.svg" alt="Fun for Parties" loading="lazy"></div>
           <h3>Fun for Parties</h3>
           <p>Perfect for birthdays, corporate events, festivals, and private parties.</p>
         </div>
         <div class="info-card">
-          <div class="icon">💲</div>
-          <h3>$20 Admission</h3>
-          <p>Affordable tickets with food vendors and drink stations on site.</p>
+          <div class="icon"><img src="assets/icon-admission.svg" alt="Me vs Me Crypto" loading="lazy"></div>
+          <h3><span data-crypto-name>Me vs Me</span> Crypto Only</h3>
+          <p>Event tickets are paid exclusively in <span data-crypto-name>Me vs Me</span> (<span data-crypto-symbol>MVM</span>). You must hold enough coins in your wallet to complete purchase.</p>
         </div>
         <div class="info-card">
-          <div class="icon">🍔</div>
+          <div class="icon"><img src="assets/icon-boxing.svg" alt="Choose Your View" loading="lazy"></div>
+          <h3>Choose Your View</h3>
+          <p><strong>Headset POV</strong> — watch through your own AR headset in the tent (<span data-ticket-price-headset>200 MVM</span>). <strong>Attendee POV</strong> — upgrade to a ringside guest's live feed (<span data-ticket-price-attendee>350 MVM</span>).</p>
+        </div>
+        <div class="info-card">
+          <div class="icon"><img src="assets/card-prize-money.svg" alt="Pick a Fighter Win" loading="lazy"></div>
+          <h3>Pick a Fighter, Win Big</h3>
+          <p>Every ticket includes a chance to win. Choose the hologram fighter you're backing — if they win the fight, you're entered to win from the spectator prize pool.</p>
+        </div>
+        <div class="info-card">
+          <div class="icon"><img src="assets/icon-food.svg" alt="Food and Drinks" loading="lazy"></div>
           <h3>Food &amp; Drinks</h3>
-          <p>Full concessions available at every event. Eat, drink, and enjoy the fights.</p>
+          <p>Enjoy food vendors and drink stations while hologram boxers battle inside the glowing square.</p>
         </div>
         <div class="info-card">
-          <div class="icon">💰</div>
+          <div class="icon"><img src="assets/card-prize-money.svg" alt="Prize Money" loading="lazy"></div>
           <h3>Prize Money</h3>
-          <p>Winners take home real prize money. Compete for cash in the hologram ring.</p>
+          <p>Hologram fighters compete for the main prize pool. Ticket holders who pick the winning fighter get a shot at the fan prize pool.</p>
         </div>
       </div>
 
       <div class="booking-box" style="margin-bottom:3rem;">
-        <h2>&gt;&gt; DM BOOK OR TICKET ON TIKTOK &lt;&lt;</h2>
-        <p class="sub">&gt;&gt; Link in Bio to Reserve &lt;&lt;</p>
-        <p class="highlight">Limited Dates — Secure Your Spot Now!</p>
-        <p class="tagline">Bring the Future to Your Event</p>
-        <div class="booking-actions">
-          <a href="#" data-tiktok class="btn btn-primary">Book on TikTok</a>
-        </div>
+        <h2>&gt;&gt; BUY YOUR TICKET &lt;&lt;</h2>
+        <p class="sub">Pay with <span data-crypto-name>Me vs Me</span> · Choose headset or attendee POV · Back a fighter to win</p>
+        <p class="highlight">Tickets unlock when each fight countdown hits zero</p>
       </div>
 
       <div class="section-header" style="text-align:center;margin-bottom:2rem;">
-        <p class="section-label">Or Submit Online</p>
-        <h2 class="section-title">Booking Request Form</h2>
+        <p class="section-label">Event Tickets</p>
+        <h2 class="section-title">Purchase with <span data-crypto-name>Me vs Me</span></h2>
+        <p class="section-subtitle">Pay with <span data-crypto-name>Me vs Me</span> · Pick your POV · Use an influencer code or choose your own fighter · Win if they win</p>
       </div>
 
-      <form class="booking-form" id="booking-form">
+      <div class="ticket-form-intro">
+        <p>Three steps to ringside: choose how you watch, lock in your fight &amp; fighter, then pay with <span data-crypto-name>Me vs Me</span>. Headset POV? Enter a creator code. Attendee POV? We generate your ringside pass automatically.</p>
+      </div>
+
+      <form class="booking-form" id="ticket-form" name="Ticket Purchase" data-ghl-form="ticket">
+        <p class="form-section-label">Step 1 — Your Details</p>
+        <div class="form-group">
+          <label for="ticket-name">Full Name</label>
+          <input type="text" id="ticket-name" name="name" required placeholder="Your name">
+          <p class="form-hint">We'll send your ticket confirmation and win-pool entry here.</p>
+        </div>
+        <div class="form-group">
+          <label for="ticket-email">Email</label>
+          <input type="email" id="ticket-email" name="email" required placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label for="ticket-wallet"><span data-crypto-name>Me vs Me</span> Wallet Address</label>
+          <input type="text" id="ticket-wallet" name="wallet" required placeholder="Your MVM wallet address">
+          <p class="form-hint">Tickets are crypto-only. Your wallet must hold enough <span data-crypto-symbol>MVM</span> before you purchase.</p>
+        </div>
+
+        <p class="form-section-label">Step 2 — How You Watch</p>
+        <div class="form-group">
+          <label for="ticket-view">Viewing Experience</label>
+          <select id="ticket-view" name="viewMode" required>
+            <option value="">Choose your POV…</option>
+            <option value="headset">Headset POV — your AR headset, your angle (<span data-ticket-price-headset>200 MVM</span>)</option>
+            <option value="attendee">Attendee POV — ride a ringside spectator's live feed (<span data-ticket-price-attendee>350 MVM</span>)</option>
+          </select>
+          <p data-view-note hidden class="form-hint form-hint--gold">Attendee POV drops you inside the crowd — feel the tent energy through someone already ringside.</p>
+          <div class="influencer-panel" data-influencer-panel hidden>
+            <div data-influencer-enter hidden>
+              <h4>Have an Influencer Code?</h4>
+              <p>Headset POV fans can enter a creator or partner code. Apply it and we'll lock in their fight &amp; fighter pick — then confirm your wallet and hit purchase.</p>
+              <div class="code-input-row">
+                <input type="text" id="ticket-influencer-code" name="influencerCode" placeholder="e.g. GOLDENWAVE" autocomplete="off" autocapitalize="characters">
+                <button type="button" class="btn btn-primary" data-influencer-apply>Apply</button>
+              </div>
+              <p class="influencer-status" data-influencer-status hidden></p>
+            </div>
+            <div data-attendee-code hidden>
+              <h4>Your Attendee POV Code</h4>
+              <p>Attendee POV tickets get a unique ringside pass code generated for you. Save it — this links you to your live spectator feed inside the tent.</p>
+              <div class="generated-code">
+                <span data-attendee-code-value>—</span>
+                <button type="button" class="btn btn-outline" data-attendee-copy>Copy</button>
+              </div>
+              <input type="hidden" id="ticket-attendee-code" name="attendeeCode" value="">
+              <p class="influencer-status influencer-status--success" data-attendee-code-status hidden></p>
+            </div>
+          </div>
+        </div>
+
+        <p class="form-section-label">Step 3 — Fight &amp; Fighter Pick</p>
+        <div class="form-group" data-fight-group>
+          <label for="ticket-fight">Fight</label>
+          <select id="ticket-fight" name="fight" required>
+            <option value="">Select fight…</option>
+          </select>
+        </div>
+        <div class="form-group" data-fighter-group>
+          <label for="ticket-fighter">Pick Your Fighter (to win)</label>
+          <select id="ticket-fighter" name="fighterPick" required>
+            <option value="">Pick your fighter…</option>
+          </select>
+          <p class="form-hint">Back the hologram fighter you believe in. If they win, you're entered to win from the spectator prize pool.</p>
+        </div>
+
+        <p class="form-section-label">Step 4 — Confirm &amp; Purchase</p>
+        <div class="form-group">
+          <label>Total (<span data-crypto-symbol>MVM</span>)</label>
+          <p style="font-family:var(--font-display);font-size:1.25rem;color:var(--gold);margin:0;" data-ticket-total>—</p>
+          <p class="form-hint">Price updates based on your viewing experience.</p>
+        </div>
+        <div class="form-group">
+          <label style="display:flex;align-items:flex-start;gap:0.5rem;text-transform:none;letter-spacing:0;font-weight:400;color:var(--gray-light);">
+            <input type="checkbox" name="balanceConfirm" required style="width:auto;margin-top:0.25rem;">
+            <span>I confirm my wallet holds enough <span data-crypto-name>Me vs Me</span> (<span data-crypto-symbol>MVM</span>) to cover this ticket.</span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Purchase Ticket with <span data-crypto-symbol>MVM</span></button>
+      </form>
+
+      <div class="form-success" id="ticket-success">
+        <p style="font-size:2rem;margin-bottom:1rem;">✓</p>
+        <p>Ticket request received!</p>
+        <p style="color:var(--gray-light);font-size:0.9rem;margin-top:0.5rem;">We'll verify your <span data-crypto-name>Me vs Me</span> balance and confirm your ticket, POV, and fighter pick via email.</p>
+        <a href="#" data-form-mailto class="btn btn-gold" style="margin-top:1rem;">Send via Email</a>
+      </div>
+
+      <div class="section-header" style="text-align:center;margin:3rem 0 2rem;">
+        <p class="section-label">Private Events</p>
+        <h2 class="section-title">Booking Request Form</h2>
+        <p class="section-subtitle">For private parties, corporate events, and festivals — not for individual fight tickets</p>
+      </div>
+
+      <div class="booking-box" style="margin-bottom:2rem;">
+        <p class="sub">Questions? Email us — every fight also streams live on Kick &amp; Twitch</p>
+        <div class="booking-actions">
+          <a href="#" data-email class="btn btn-gold" data-email-text>ic4d@irlxr.com</a>
+        </div>
+      </div>
+
+      <form class="booking-form" id="booking-form" name="Booking Request" data-ghl-form="booking">
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required placeholder="Your name">
@@ -168,7 +372,6 @@
           <label for="type">Booking Type</label>
           <select id="type" name="type" required>
             <option value="">Select type...</option>
-            <option value="ticket">Event Ticket ($20)</option>
             <option value="private">Private Event / Party</option>
             <option value="corporate">Corporate Event</option>
             <option value="festival">Festival / Pop-Up</option>
@@ -192,23 +395,58 @@
       <div class="form-success" id="form-success">
         <p style="font-size:2rem;margin-bottom:1rem;">✓</p>
         <p>Booking request received!</p>
-        <p style="color:var(--gray-light);font-size:0.9rem;margin-top:0.5rem;">We'll confirm your spot via email. For faster booking, DM us on TikTok.</p>
-        <a href="#" id="booking-mailto" data-email class="btn btn-gold" style="margin-top:1rem;">Send via Email</a>
-        <a href="#" data-tiktok class="btn btn-primary" style="margin-top:1rem;">DM on TikTok</a>
+        <p style="color:var(--gray-light);font-size:0.9rem;margin-top:0.5rem;">We'll confirm your spot via email shortly.</p>
+        <a href="#" id="booking-mailto" data-form-mailto class="btn btn-gold" style="margin-top:1rem;">Send via Email</a>
       </div>
     </div>
   </section>
 
   <section class="section" id="apply">
     <div class="container">
-      <div class="booking-box">
-        <h2>Apply to Fight</h2>
-        <p class="sub">Think you've got what it takes to compete in the hologram ring?</p>
-        <p class="highlight">Winners Get Prize Money</p>
-        <div class="booking-actions">
-          <a href="#" data-tiktok class="btn btn-primary">Apply via TikTok DM</a>
-          <a href="#" data-email class="btn btn-outline">Email Application</a>
+      <div class="section-header" style="text-align:center;margin-bottom:2rem;">
+        <p class="section-label">Fighters</p>
+        <h2 class="section-title">Apply as a Hologram Fighter</h2>
+        <p class="section-subtitle">This isn't for spectators — it's for creators ready to become the next featured hologram fighter. Get scanned, step into the ring, and go against Wave and other hologram variants for our <span data-prize-pool>$10,000</span> prize pool at <span data-next-event>Hologram Boxing 002</span>.</p>
+      </div>
+      <form class="booking-form" id="fighter-form" name="Fighter Application" data-ghl-form="fighter">
+        <div class="form-group">
+          <label for="fighter-name">Full Name / Ring Name</label>
+          <input type="text" id="fighter-name" name="name" required placeholder="Your name or alias">
         </div>
+        <div class="form-group">
+          <label for="fighter-email">Email</label>
+          <input type="email" id="fighter-email" name="email" required placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label for="fighter-weight">Weight Class</label>
+          <select id="fighter-weight" name="weightClass" required>
+            <option value="">Select class...</option>
+            <option value="lightweight">Lightweight</option>
+            <option value="welterweight">Welterweight</option>
+            <option value="middleweight">Middleweight</option>
+            <option value="heavyweight">Heavyweight</option>
+            <option value="super-heavyweight">Super Heavyweight</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fighter-record">Record / Experience</label>
+          <input type="text" id="fighter-record" name="record" placeholder="e.g. 5-1-0, amateur boxer, creator">
+        </div>
+        <div class="form-group">
+          <label for="fighter-social">Kick / Twitch Handle</label>
+          <input type="text" id="fighter-social" name="social" placeholder="Your Kick or Twitch username (optional)">
+        </div>
+        <div class="form-group">
+          <label for="fighter-why">Why do you want to be a hologram fighter?</label>
+          <textarea id="fighter-why" name="message" rows="4" required placeholder="Tell us why you belong in the hologram ring. Which Wave variant do you want to face — Gold, Fire, Blue, Silver, Green, or Pink? What makes you the next hologram fighter fans need to see?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Fighter Application</button>
+      </form>
+      <div class="form-success" id="fighter-success">
+        <p style="font-size:2rem;margin-bottom:1rem;">✓</p>
+        <p>Application received!</p>
+        <p style="color:var(--gray-light);font-size:0.9rem;margin-top:0.5rem;">We'll review your application and contact you about <span data-next-event>Hologram Boxing 002</span>.</p>
+        <a href="#" data-form-mailto class="btn btn-gold" style="margin-top:1rem;">Send via Email</a>
       </div>
     </div>
   </section>
@@ -223,20 +461,13 @@
       <div class="booking-box">
         <p class="sub">Interested in brand partnerships, sponsorships, or venue collaborations?</p>
         <div class="booking-actions">
-          <a href="#" data-email class="btn btn-gold">bookings@creatorsai.com</a>
+          <a href="#" data-email class="btn btn-gold">ic4d@irlxr.com</a>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer site-footer--mini">
-    <div class="container">
-      <div class="footer-bottom" style="border:none;padding:0;">
-        <span>&copy; 2026 Creators AI Hologram Boxing</span>
-        <div class="footer-social"><a href="#" data-tiktok>📱</a><a href="index.html">Home</a></div>
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer site-footer--mini"></footer>
   <script src="site-config.js"></script>
   <script src="js/main.js"></script>
 </body>

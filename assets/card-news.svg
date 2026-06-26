@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#050508"/>
+  <rect x="1" y="1" width="638" height="358" stroke="#00AEEF" stroke-width="2" opacity="0.35"/>
+  <path d="M 60 280 Q 320 60 580 280" stroke="#00AEEF" stroke-width="2" fill="none" opacity="0.45"/>
+  <ellipse cx="320" cy="290" rx="200" ry="24" stroke="#00AEEF" stroke-width="1" fill="rgba(0,174,239,0.12)"/>
+  <ellipse cx="480" cy="200" rx="36" ry="42" stroke="#00AEEF" stroke-width="2.5"/>
+  <line x1="480" y1="242" x2="480" y2="310" stroke="#00AEEF" stroke-width="2.5"/>
+  <line x1="480" y1="265" x2="430" y2="295" stroke="#00AEEF" stroke-width="2.5"/>
+  <line x1="480" y1="265" x2="530" y2="295" stroke="#00AEEF" stroke-width="2.5"/>
+  <rect x="40" y="28" width="72" height="22" rx="4" fill="#00AEEF" opacity="0.9"/>
+  <text x="76" y="43" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#000">NEWS</text>
+  <text x="48" y="130" font-family="Arial Black, sans-serif" font-size="42" font-weight="900" fill="#FFC107">WEBSITE</text>
+  <text x="48" y="182" font-family="Arial Black, sans-serif" font-size="42" font-weight="900" fill="#FFC107">LAUNCH</text>
+  <text x="48" y="220" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Creators AI Hologram Boxing</text>
+  <text x="48" y="248" font-family="Arial, sans-serif" font-size="13" fill="#9CA3AF">Official site now live</text>
+</svg>

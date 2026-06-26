@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#050508"/>
+  <rect x="1" y="1" width="798" height="598" stroke="#00AEEF" stroke-width="2" opacity="0.25"/>
+  <rect x="120" y="180" width="140" height="100" rx="10" stroke="#00AEEF" stroke-width="2" fill="rgba(0,174,239,0.08)"/>
+  <circle cx="190" cy="215" r="18" stroke="#FFC107" stroke-width="2"/>
+  <rect x="165" y="240" width="50" height="8" rx="2" fill="#FFC107" opacity="0.8"/>
+  <rect x="330" y="180" width="140" height="100" rx="10" stroke="#00AEEF" stroke-width="2" fill="rgba(0,174,239,0.08)"/>
+  <path d="M395 210 L410 250 L380 250 Z" stroke="#FFC107" stroke-width="2" fill="rgba(255,193,7,0.2)"/>
+  <rect x="375" y="252" width="50" height="8" rx="2" fill="#FFC107" opacity="0.8"/>
+  <rect x="540" y="180" width="140" height="100" rx="10" stroke="#00AEEF" stroke-width="2" fill="rgba(0,174,239,0.08)"/>
+  <rect x="595" y="205" width="30" height="45" rx="4" stroke="#FFC107" stroke-width="2"/>
+  <rect x="575" y="252" width="70" height="8" rx="2" fill="#FFC107" opacity="0.8"/>
+  <text x="400" y="380" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF">FOOD &amp; DRINKS</text>
+  <text x="400" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#9CA3AF">Vendors on site every fight night</text>
+</svg>

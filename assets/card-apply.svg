@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#050508"/>
+  <rect x="1" y="1" width="638" height="358" stroke="#FFC107" stroke-width="2" opacity="0.35"/>
+  <rect x="470" y="90" width="120" height="160" rx="6" stroke="#FFC107" stroke-width="2" fill="rgba(255,193,7,0.08)"/>
+  <line x1="500" y1="130" x2="560" y2="130" stroke="#FFC107" stroke-width="2"/>
+  <line x1="500" y1="160" x2="555" y2="160" stroke="#FFC107" stroke-width="1.5" opacity="0.7"/>
+  <line x1="500" y1="185" x2="550" y2="185" stroke="#FFC107" stroke-width="1.5" opacity="0.7"/>
+  <text x="530" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#FFC107">APPLY</text>
+  <rect x="40" y="28" width="100" height="22" rx="4" fill="#FFC107"/>
+  <text x="90" y="43" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#000">OPEN CALL</text>
+  <text x="48" y="118" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF">HOLOGRAM FIGHTER</text>
+  <text x="48" y="156" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#FFC107">APPLICATIONS</text>
+  <text x="48" y="194" font-family="Arial, sans-serif" font-size="14" fill="#9CA3AF">Apply to compete as a Wave variant</text>
+</svg>

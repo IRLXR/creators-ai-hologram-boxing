@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#050508"/>
+  <rect x="200" y="350" width="400" height="20" fill="rgba(0,174,239,0.3)"/>
+  <ellipse cx="300" cy="280" rx="30" ry="35" stroke="#00AEEF" stroke-width="2"/>
+  <ellipse cx="500" cy="280" rx="30" ry="35" stroke="#00AEEF" stroke-width="2"/>
+  <line x1="300" y1="315" x2="300" y2="380" stroke="#00AEEF" stroke-width="2"/>
+  <line x1="500" y1="315" x2="500" y2="380" stroke="#00AEEF" stroke-width="2"/>
+  <line x1="270" y1="330" x2="330" y2="300" stroke="#00AEEF" stroke-width="3"/>
+  <line x1="530" y1="330" x2="470" y2="300" stroke="#00AEEF" stroke-width="3"/>
+  <text x="400" y="80" text-anchor="middle" font-family="Arial Black" font-size="28" fill="#FFC107">REAL BOXING ACTION</text>
+</svg>

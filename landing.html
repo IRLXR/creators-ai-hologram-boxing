@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creators AI Hologram Boxing</title>
+  <meta name="description" content="The future of live entertainment is arriving. Join the waitlist for the world's first AI-powered hologram fighting league.">
+  <meta property="og:title" content="Creators AI Hologram Boxing">
+  <meta property="og:description" content="Experience the world's first AI-powered hologram fighting league. Join the waitlist.">
+  <meta property="og:image" content="https://creators-ai-hologram-boxing.vercel.app/assets/og-image.svg">
+  <meta property="og:url" content="https://creators-ai-hologram-boxing.vercel.app/landing.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preload" as="video" href="assets/ep3-ar-experience-hero.mp4" type="video/mp4">
+</head>
+<body class="prelaunch-body">
+
+  <section class="lp-hero" aria-label="Pre-launch hero">
+    <div class="lp-hero-bg" aria-hidden="true" data-parallax-bg>
+      <video
+        class="lp-hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="assets/ep3-ar-closeup-poster.png"
+      >
+        <source src="assets/ep3-ar-experience-hero.mp4" type="video/mp4">
+        <source src="assets/ep3-ar-experience.mp4" type="video/mp4">
+        <source src="assets/083e858b3a4647d299e25b5f543e7577.mov" type="video/quicktime">
+      </video>
+      <div class="lp-hero-shade"></div>
+      <div class="lp-hero-vignette"></div>
+      <div class="lp-hero-grid"></div>
+      <canvas class="lp-hero-canvas" id="lp-particles"></canvas>
+    </div>
+
+    <div class="lp-content">
+      <p class="lp-kicker">Creators AI Hologram Boxing</p>
+      <h1 class="lp-title">THE FUTURE OF LIVE ENTERTAINMENT IS ARRIVING</h1>
+      <p class="lp-lead">Experience the world's first AI-powered hologram fighting league.</p>
+
+      <div class="lp-email-wrap">
+        <form class="lp-email-form" id="prelaunch-form" novalidate>
+          <label class="visually-hidden" for="prelaunch-email">Email address</label>
+          <input
+            type="email"
+            id="prelaunch-email"
+            name="email"
+            class="lp-email-input"
+            placeholder="Enter your email address"
+            autocomplete="email"
+            inputmode="email"
+            required
+            aria-required="true"
+            aria-describedby="prelaunch-form-hint"
+          >
+          <button type="submit" class="lp-email-btn" id="prelaunch-submit">Notify Me</button>
+          <p class="lp-email-hint" id="prelaunch-form-hint" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="lp-success" id="prelaunch-success" hidden>
+          <p class="lp-success-line1">Welcome to the future.</p>
+          <p class="lp-success-line2">You're officially on the list.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="site-config.js"></script>
+  <script src="js/landing.js" defer></script>
+</body>
+</html>

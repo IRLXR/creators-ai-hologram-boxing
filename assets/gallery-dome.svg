@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#050508"/>
+  <path d="M100 500 Q400 50 700 500" stroke="#00AEEF" stroke-width="4" fill="rgba(0,174,239,0.05)"/>
+  <line x1="100" y1="500" x2="700" y2="500" stroke="#00AEEF" stroke-width="2"/>
+  <line x1="150" y1="500" x2="130" y2="350" stroke="#00AEEF" stroke-width="1" opacity="0.5"/>
+  <line x1="650" y1="500" x2="670" y2="350" stroke="#00AEEF" stroke-width="1" opacity="0.5"/>
+  <text x="400" y="560" text-anchor="middle" font-family="Arial" font-size="18" fill="#00AEEF">HOLOGRAM TENT</text>
+</svg>

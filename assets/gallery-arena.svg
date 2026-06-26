@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#050508"/>
+  <ellipse cx="400" cy="520" rx="280" ry="40" fill="rgba(0,174,239,0.25)"/>
+  <path d="M120 480 Q400 80 680 480" stroke="#00AEEF" stroke-width="3" fill="none" opacity="0.5"/>
+  <line x1="400" y1="200" x2="400" y2="420" stroke="#00AEEF" stroke-width="2"/>
+  <ellipse cx="400" cy="170" rx="35" ry="40" stroke="#00AEEF" stroke-width="2"/>
+  <line x1="400" y1="240" x2="320" y2="300" stroke="#00AEEF" stroke-width="2"/>
+  <line x1="400" y1="240" x2="480" y2="300" stroke="#00AEEF" stroke-width="2"/>
+  <rect x="350" y="100" width="100" height="30" rx="4" fill="#FFC107"/>
+  <text x="400" y="122" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#000">HOLOGRAM TENT</text>
+</svg>

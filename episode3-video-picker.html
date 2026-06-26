@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Episode 3 Video Options | Hologram Boxing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <style>
+    .picker-intro { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; color: var(--gray-light); line-height: 1.6; }
+    .picker-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .picker-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .picker-card.is-selected { border-color: var(--gold); box-shadow: 0 0 20px rgba(255, 215, 0, 0.25); }
+    .picker-video-wrap { aspect-ratio: 16/9; background: #000; }
+    .picker-video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .picker-body { padding: 1.25rem; }
+    .picker-tag { font-family: var(--font-display); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--neon-blue); margin-bottom: 0.5rem; }
+    .picker-body h3 { font-family: var(--font-display); font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .picker-body p { color: var(--gray); font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.75rem; }
+    .picker-file { font-size: 0.75rem; color: var(--gray); word-break: break-all; }
+    .picker-note { max-width: 760px; margin: 2rem auto 0; padding: 1rem 1.25rem; border: 1px solid var(--gold); border-radius: 8px; background: rgba(255,215,0,0.05); color: var(--gray-light); font-size: 0.9rem; line-height: 1.6; }
+    .picker-actions { text-align: center; margin-top: 2rem; }
+    .picker-hero { max-width: 900px; margin: 0 auto 2rem; }
+    .picker-hero .picker-video-wrap { border-radius: 8px; border: 2px solid var(--neon-blue); box-shadow: 0 0 30px rgba(0, 180, 255, 0.2); }
+    .picker-hero .picker-video-wrap video { object-fit: contain; }
+    .picker-hero-title { font-family: var(--font-display); font-size: 1.1rem; margin: 1rem 0 0.35rem; color: var(--neon-blue); }
+    .picker-hero-desc { color: var(--gray-light); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.5rem; }
+    .picker-section-label { font-family: var(--font-display); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 2.5rem 0 1rem; }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" data-auto-nav></nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="section-label">Watch</p>
+      <h1 class="section-title">Episode 3 — Experience Cuts</h1>
+      <p class="section-subtitle">Preview new cut below · Meta Quest 3 ski goggles on everyone</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <p class="picker-intro">Your pick — <strong>Full AR Experience</strong> is live on Watch. Nano Banana 2 + Seedance 2.0 · job <code>120bff2c</code>.</p>
+
+      <div class="picker-hero" id="preview">
+        <div class="picker-video-wrap">
+          <video id="hero-preview" controls playsinline preload="auto">
+            <source src="assets/ep3-ar-experience.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="picker-hero-title">★ LIVE ON WATCH — Full AR Experience (15s · Nano Banana 2 + Seedance 2.0)</p>
+        <p class="picker-hero-desc">Quest 3 ski goggles on every spectator → diverse crowd facing the glowing square → Wave Blue vs Silver realistic boxing inside the inflatable tent → mixed clapping and arms-up reactions, locked on the fight.</p>
+        <p class="picker-file">assets/ep3-ar-experience.mp4 · job 120bff2c · Nano Banana 2 + Seedance 2.0</p>
+      </div>
+
+      <p class="picker-section-label">★ Recommended — Full Experience (Live on Watch)</p>
+      <div class="picker-grid">
+        <article class="picker-card is-selected" style="grid-column:1/-1;max-width:720px;margin:0 auto;">
+          <div class="picker-video-wrap">
+            <video muted loop playsinline controls preload="metadata"><source src="assets/ep3-ar-experience.mp4" type="video/mp4"></video>
+          </div>
+          <div class="picker-body">
+            <p class="picker-tag">Master Cut · 15s · Nano Banana 2 + Seedance 2.0 · LIVE ON WATCH</p>
+            <h3>The Full AR Experience</h3>
+            <p>Everyone in Quest 3 ski-goggle headsets, all facing the glowing square watching Wave fight — no backs turned. Smiling fan close-up → diverse crowd clapping toward hologram boxers inside the tent → real boxing in the glowing square → ending mix of clapping and arms raised, still locked on the fight.</p>
+            <p class="picker-file">ep3-ar-experience.mp4 · job 120bff2c · Nano Banana 2 + Seedance 2.0 · LIVE</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="picker-section-label">✦ Latest — Ringside Over-Shoulder</p>
+      <div class="picker-grid">
+        <article class="picker-card" style="grid-column:1/-1;max-width:720px;margin:0 auto;border-color:var(--neon-blue);">
+          <div class="picker-video-wrap">
+            <video muted loop playsinline controls preload="metadata"><source src="assets/ep3-ringside-ots.mp4" type="video/mp4"></video>
+          </div>
+          <div class="picker-body">
+            <p class="picker-tag">New · 15s · Nano Banana 2 + Seedance 2.0</p>
+            <h3>Ringside Over-the-Shoulder — Girl</h3>
+            <p>Camera behind the young woman from <code>ep3-ar-closeup-poster.png</code> — long dark hair, Quest 3 ski-goggle strap, shirt on — looking across the crowd toward Wave Blue vs Silver. Every visible person has ski goggles on, all facing the fight.</p>
+            <p class="picker-file">ep3-ringside-ots.mp4 · job 5d81828f · Nano Banana 2 + Seedance 2.0</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="picker-section-label">✦ New Direction — Corner Wide Crowd</p>
+      <div class="picker-grid">
+        <article class="picker-card" style="grid-column:1/-1;max-width:720px;margin:0 auto;">
+          <div class="picker-video-wrap">
+            <video muted loop playsinline controls preload="metadata"><source src="assets/ep3-tent-corner-crowd.mp4" type="video/mp4"></video>
+          </div>
+          <div class="picker-body">
+            <p class="picker-tag">New · 15s · Nano Banana 2 + Seedance 2.0</p>
+            <h3>Tent Corner — Everyone in Ski Goggles</h3>
+            <p>Wide low-angle corner shot inside the inflatable tent — packed crowd on the glowing square perimeter, <strong>every visible person in Quest 3 ski-goggle headsets</strong>, all facing Wave Blue vs Silver in the center. Slow pan, realistic boxing, mixed clapping and arms-up reactions.</p>
+            <p class="picker-file">ep3-tent-corner-crowd.mp4 · job 9a3791f2 · Nano Banana 2 + Seedance 2.0</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="picker-section-label">✦ New Direction — Headset POV</p>
+      <div class="picker-grid">
+        <article class="picker-card" style="grid-column:1/-1;max-width:720px;margin:0 auto;">
+          <div class="picker-video-wrap">
+            <video muted loop playsinline controls preload="metadata"><source src="assets/ep3-pov-passthrough.mp4" type="video/mp4"></video>
+          </div>
+          <div class="picker-body">
+            <p class="picker-tag">New · 15s · Nano Banana 2 + Seedance 2.0</p>
+            <h3>Quest 3 AR Passthrough POV</h3>
+            <p>Totally different angle — <em>you</em> are in the headset. First-person view through Quest 3 ski-goggle strap watching Wave Blue vs Silver hologram boxers spar inside the tent's glowing floor square. Dark quilted tent interior, rolling fog, wireframe fight. Slow push-in, realistic punches, subtle HUD glow.</p>
+            <p class="picker-file">ep3-pov-passthrough.mp4 · job 79a0a718 · Nano Banana 2 + Seedance 2.0</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="picker-section-label">Alternate Cuts</p>
+      <div class="picker-grid">
+        <article class="picker-card">
+          <div class="picker-video-wrap">
+            <video muted loop playsinline controls preload="metadata"><source src="assets/ep3-ar-closeup-v2.mp4" type="video/mp4"></video>
+          </div>
+          <div class="picker-body">
+            <p class="picker-tag">Close-Up → Crowd · Nano Banana 2 + Seedance 2.0</p>
+            <h3>Authentic Fan Reaction</h3>
+            <p>Girl loses her mind with genuine excitement, camera dollies back to show entire ringside crowd in Quest 3 headsets equally hooked. Fight visible in background.</p>
+            <p class="picker-file">ep3-ar-closeup-v2.mp4 · job d4765895 · Nano Banana 2 + Seedance 2.0</p>
+          </div>
+        </article>
+
+        <article class="picker-card">
+          <div class="picker-video-wrap">
+            <video muted loop playsinline controls preload="metadata"><source src="assets/ep3-fight-impact.mp4" type="video/mp4"></video>
+          </div>
+          <div class="picker-body">
+            <p class="picker-tag">Wave Action · Nano Banana 2 + Seedance 2.0</p>
+            <h3>Realistic Hook Impact</h3>
+            <p>Wave Blue throws a proper boxing hook — hip rotation, shoulder drive, glove connects on Silver's jaw with authentic snap-back. Subtle glow on contact, no explosion. Real fight choreography.</p>
+            <p class="picker-file">ep3-fight-impact.mp4 · job e37f184d · Nano Banana 2 + Seedance 2.0</p>
+          </div>
+        </article>
+
+        <article class="picker-card">
+          <div class="picker-video-wrap">
+            <video muted loop playsinline controls preload="metadata"><source src="assets/ep3-ar-wide-tent.mp4" type="video/mp4"></video>
+          </div>
+          <div class="picker-body">
+            <p class="picker-tag">Wide Tent · Nano Banana 2 + Seedance 2.0</p>
+            <h3>Full Tent Interior</h3>
+            <p>Families celebrating around the glowing square perimeter, hologram fight center stage inside the inflatable tent.</p>
+            <p class="picker-file">ep3-ar-wide-tent.mp4 · job 2d9e5a79 · Nano Banana 2 + Seedance 2.0</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="picker-note">
+        <strong>Currently live:</strong> <code>ep3-ar-experience.mp4</code> on Watch + homepage. Reply if you want a different cut deployed to Vercel.
+      </div>
+
+      <div class="picker-actions">
+        <a href="watch.html#ep3" class="btn btn-primary">View on Watch Page</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer site-footer--mini"></footer>
+  <script src="site-config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

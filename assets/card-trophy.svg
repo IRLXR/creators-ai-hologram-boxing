@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#050508"/>
+  <rect x="1" y="1" width="638" height="358" stroke="#FFC107" stroke-width="2" opacity="0.35"/>
+  <circle cx="520" cy="180" r="70" stroke="#FFC107" stroke-width="2" fill="rgba(255,193,7,0.08)"/>
+  <path d="M500 155 h40 v20 c0 28-20 48-20 48s-20-20-20-48v-20z" stroke="#FFC107" stroke-width="3" fill="rgba(255,193,7,0.15)"/>
+  <rect x="488" y="228" width="64" height="10" rx="2" fill="#FFC107"/>
+  <rect x="40" y="28" width="110" height="22" rx="4" fill="#FFC107"/>
+  <text x="95" y="43" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#000">EVENT RECAP</text>
+  <text x="48" y="120" font-family="Arial Black, sans-serif" font-size="34" font-weight="900" fill="#FFFFFF">HOLOGRAM BOXING</text>
+  <text x="48" y="162" font-family="Arial Black, sans-serif" font-size="34" font-weight="900" fill="#FFC107">001</text>
+  <text x="48" y="200" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#9CA3AF">Wave Gold wins the title</text>
+  <text x="48" y="228" font-family="Arial, sans-serif" font-size="13" fill="#6B7280">Full highlights available now</text>
+</svg>

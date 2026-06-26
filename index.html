@@ -4,87 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creators AI Hologram Boxing | Premier Hologram Boxing Events</title>
-  <meta name="description" content="Step in. Gear up. Get in the ring. Experience the future of boxing with Creators AI Hologram Boxing — 12ft tall hologram fights, prize money, and unforgettable events.">
+  <meta name="description" content="Step into our inflatable tent, wear AR devices, and watch hologram boxers fight inside the glowing square. Prize money, food, drinks, and the future of live entertainment.">
   <meta property="og:title" content="Creators AI Hologram Boxing Event">
-  <meta property="og:description" content="12ft tall hologram arena. Real boxing action. Winners get prize money. $20 admission. Book on TikTok.">
-  <meta property="og:image" content="assets/og-image.svg">
+  <meta property="og:description" content="Inflatable hologram tent. Augmented reality viewing. Hologram boxers battle inside the glowing square while you watch. Tickets paid in Me vs Me crypto. Book online now.">
+  <meta property="og:image" content="https://creators-ai-hologram-boxing.vercel.app/assets/og-image.svg">
+  <meta property="og:url" content="https://creators-ai-hologram-boxing.vercel.app/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Creators AI Hologram Boxing Event">
+  <meta name="twitter:description" content="Hologram tent. AR viewing. Hologram boxers fight inside the glowing square while you watch. Me vs Me crypto tickets. Pick a fighter to win.">
+  <meta name="twitter:image" content="https://creators-ai-hologram-boxing.vercel.app/assets/og-image.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preload" as="video" href="assets/083e858b3a4647d299e25b5f543e7577.mov" type="video/quicktime">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="site-nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="assets/logo.svg" alt="" class="nav-logo-img" data-asset="logo.svg" width="36" height="36">
-        <span>Creators AI</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-links">
-        <a href="index.html" data-page="index.html">Home</a>
-        <a href="events.html" data-page="events.html">Events</a>
-        <a href="fighters.html" data-page="fighters.html">Fighters</a>
-        <a href="watch.html" data-page="watch.html">Watch</a>
-        <a href="news.html" data-page="news.html">News</a>
-        <a href="book.html" data-page="book.html" class="nav-cta">Book Now</a>
-      </div>
-    </div>
-  </nav>
+  <nav class="site-nav" data-auto-nav></nav>
 
   <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="container hero-content">
+  <section class="hero hero--video" id="home">
+    <div class="hero-media" aria-hidden="true">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/ep3-ar-closeup-poster.png">
+        <source src="assets/083e858b3a4647d299e25b5f543e7577.mov" type="video/quicktime">
+        <source src="assets/083e858b3a4647d299e25b5f543e7577.mov" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container hero-content hero-content--overlay">
       <div class="hero-text">
-        <p class="hero-tagline">Step in. Gear up. Get in the ring.</p>
+        <p class="hero-tagline">Step in. Gear up. Watch hologram boxing.</p>
         <span class="hero-label">Hologram Boxing</span>
         <h1 class="hero-title">
           <span class="line1">CREATORS AI</span>
           <span class="line2">HOLOGRAM BOXING</span>
           <span class="line3">Event</span>
         </h1>
-        <p class="hero-desc">Experience next-generation hologram boxing where creators step into a 12ft tall arena for epic fights. Real boxing action, prize money for winners, and the future of live entertainment.</p>
+        <p class="hero-desc">Enter our inflatable tent, put on AR headsets, and watch hologram boxers battle inside the glowing square. You won't step in the ring — you'll have a front-row seat to epic matchups, real prize money, and the future of live entertainment.</p>
         <div class="hero-actions">
           <a href="book.html" class="btn btn-primary">Book Your Spot</a>
-          <a href="watch.html" class="btn btn-outline">Watch Highlights</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hologram-stage">
-          <div class="hologram-dome"></div>
-          <div class="hologram-city">
-            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <div class="hero-dropdown" data-watch-dropdown>
+            <button type="button" class="btn btn-outline hero-dropdown-toggle" aria-expanded="false" aria-haspopup="menu" id="hero-watch-toggle">
+              Watch Live
+              <span class="hero-dropdown-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="hero-dropdown-menu" role="menu" aria-labelledby="hero-watch-toggle" hidden>
+              <a href="#" role="menuitem" class="hero-dropdown-item" data-kick>
+                <span class="hero-dropdown-label">Kick Live</span>
+                <span class="hero-dropdown-meta">kick.com/<span data-kick-handle>creatorsai</span></span>
+              </a>
+              <a href="#" role="menuitem" class="hero-dropdown-item" data-twitch>
+                <span class="hero-dropdown-label">Twitch Live</span>
+                <span class="hero-dropdown-meta">twitch.tv/<span data-twitch-handle>creatorsai</span></span>
+              </a>
+              <a href="watch.html" role="menuitem" class="hero-dropdown-item">
+                <span class="hero-dropdown-label">Highlights &amp; Replays</span>
+                <span class="hero-dropdown-meta">Full episodes on demand</span>
+              </a>
+            </div>
           </div>
-          <div class="hologram-floor"></div>
-          <div class="hologram-boxer">
-            <svg class="boxer-wireframe" viewBox="0 0 180 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="90" cy="45" rx="28" ry="32" stroke="#00AEEF" stroke-width="1.5"/>
-              <line x1="90" y1="77" x2="90" y2="160" stroke="#00AEEF" stroke-width="1.5"/>
-              <line x1="90" y1="100" x2="45" y2="130" stroke="#00AEEF" stroke-width="1.5"/>
-              <line x1="90" y1="100" x2="135" y2="130" stroke="#00AEEF" stroke-width="1.5"/>
-              <ellipse cx="45" cy="140" rx="18" ry="22" stroke="#00AEEF" stroke-width="1.5" fill="rgba(0,174,239,0.1)"/>
-              <ellipse cx="135" cy="140" rx="18" ry="22" stroke="#00AEEF" stroke-width="1.5" fill="rgba(0,174,239,0.1)"/>
-              <line x1="90" y1="160" x2="60" y2="230" stroke="#00AEEF" stroke-width="1.5"/>
-              <line x1="90" y1="160" x2="120" y2="230" stroke="#00AEEF" stroke-width="1.5"/>
-              <line x1="60" y1="230" x2="50" y2="270" stroke="#00AEEF" stroke-width="1.5"/>
-              <line x1="120" y1="230" x2="130" y2="270" stroke="#00AEEF" stroke-width="1.5"/>
-              <rect x="70" y="85" width="40" height="30" rx="4" stroke="#00AEEF" stroke-width="1" fill="rgba(0,174,239,0.05)"/>
-            </svg>
-          </div>
-          <div class="hologram-badge">
-            <span class="num">12FT</span>
-            <span class="label">Tall Big Space</span>
-          </div>
-          <div class="prize-banner">★ WINNERS GET PRIZE MONEY ★</div>
         </div>
       </div>
     </div>
@@ -93,28 +75,127 @@
   <!-- Prize Bar -->
   <div class="prize-bar">★ Winners Get Prize Money! ★</div>
 
-  <!-- Features -->
-  <section class="features-strip">
-    <div class="container features-grid">
-      <div class="feature-item" data-feature-link="book.html">
-        <div class="feature-icon">🥊</div>
-        <span class="feature-label">Real Boxing Action</span>
+  <!-- Social marquee -->
+  <section class="social-marquee-section" id="social-strip">
+    <div class="container">
+      <div class="section-header social-marquee-header">
+        <p class="section-label">Social</p>
+        <h2 class="section-title">Latest from Kick &amp; Twitch</h2>
+        <p class="section-subtitle">The latest posts &amp; highlights from <span data-kick-handle>creatorsai</span> on Kick and Twitch</p>
       </div>
-      <div class="feature-item" data-feature-link="book.html">
-        <div class="feature-icon">👥</div>
-        <span class="feature-label">Great for All Ages</span>
+    </div>
+    <div class="social-marquee">
+      <div class="social-marquee-viewport">
+        <div class="social-marquee-fade social-marquee-fade--top" aria-hidden="true"></div>
+        <div class="social-marquee-fade social-marquee-fade--bottom" aria-hidden="true"></div>
+        <div class="social-marquee-track" data-social-marquee>
+        <a href="#" data-kick class="social-post social-marquee-post">
+          <div class="social-header">
+            <div class="social-avatar"><img src="assets/social-avatar.svg" alt="" loading="lazy"></div>
+            <div>
+              <div class="social-name">Kick Live</div>
+              <div class="social-handle">kick.com/<span data-kick-handle>creatorsai</span></div>
+            </div>
+          </div>
+          <p class="social-text">🔴 LIVE NOW — hologram tent on Kick! Watch Wave Gold vs Wave Fire with AR-powered hologram boxers inside the glowing square.</p>
+          <div class="social-stats"><span>👁️ 4.2K watching</span><span>💬 Live chat</span></div>
+        </a>
+        <a href="#" data-twitch class="social-post social-marquee-post">
+          <div class="social-header">
+            <div class="social-avatar"><img src="assets/social-avatar.svg" alt="" loading="lazy"></div>
+            <div>
+              <div class="social-name">Twitch Live</div>
+              <div class="social-handle">twitch.tv/<span data-twitch-handle>creatorsai</span></div>
+            </div>
+          </div>
+          <p class="social-text">Hologram Boxing 002 main card streaming on Twitch 🥊 Full production, prize money on the line, every knockout live from the tent.</p>
+          <div class="social-stats"><span>👁️ 3.1K watching</span><span>💬 Live chat</span></div>
+        </a>
+        <a href="watch.html" class="social-post social-marquee-post">
+          <div class="social-header">
+            <div class="social-avatar"><img src="assets/social-avatar.svg" alt="" loading="lazy"></div>
+            <div>
+              <div class="social-name">Creators AI Hologram Boxing</div>
+              <div class="social-handle">Episode 4 · Wave Gold vs Wave Fire</div>
+            </div>
+          </div>
+          <p class="social-text">Hologram Boxing 001 | Episode 4 is live — Wave Gold vs Wave Fire main event inside the inflatable tent. Full AR crowd, glowing square, wireframe fighters.</p>
+          <div class="social-stats"><span>▶ 12.6K views</span><span>🔗 Watch now</span></div>
+        </a>
+        <a href="watch.html#ep3" class="social-post social-marquee-post">
+          <div class="social-header">
+            <div class="social-avatar"><img src="assets/social-avatar.svg" alt="" loading="lazy"></div>
+            <div>
+              <div class="social-name">Creators AI Hologram Boxing</div>
+              <div class="social-handle">Episode 3 · Wave Blue vs Wave Silver</div>
+            </div>
+          </div>
+          <p class="social-text">Wave Blue vs Wave Silver full fight replay — every punch inside the glowing square, crowd in Quest 3 headsets, thick tent fog. 🥊</p>
+          <div class="social-stats"><span>▶ 9.2K views</span><span>🔗 Replay</span></div>
+        </a>
+        <a href="book.html" class="social-post social-marquee-post">
+          <div class="social-header">
+            <div class="social-avatar"><img src="assets/social-avatar.svg" alt="" loading="lazy"></div>
+            <div>
+              <div class="social-name">Creators AI Hologram Boxing</div>
+              <div class="social-handle">Tickets · Me vs Me crypto</div>
+            </div>
+          </div>
+          <p class="social-text">HB 002 tickets unlock when the countdown hits zero. Pick your fighter — if they win, you're in the running for the fan prize pool. 🏆</p>
+          <div class="social-stats"><span>📅 Aug 15</span><span>🔗 Buy ticket</span></div>
+        </a>
+        <a href="news.html#hb001" class="social-post social-marquee-post">
+          <div class="social-header">
+            <div class="social-avatar"><img src="assets/social-avatar.svg" alt="" loading="lazy"></div>
+            <div>
+              <div class="social-name">Creators AI Hologram Boxing</div>
+              <div class="social-handle">Event Recap · HB 001</div>
+            </div>
+          </div>
+          <p class="social-text">Hologram Boxing 001 full recap — six fights, 2.4K attendees, prize money handed out inside the inflatable tent. What a night. 🔥</p>
+          <div class="social-stats"><span>📰 Recap</span><span>5d ago</span></div>
+        </a>
+        <a href="fighters.html" class="social-post social-marquee-post">
+          <div class="social-header">
+            <div class="social-avatar"><img src="assets/social-avatar.svg" alt="" loading="lazy"></div>
+            <div>
+              <div class="social-name">Creators AI Hologram Boxing</div>
+              <div class="social-handle">The Wave Roster</div>
+            </div>
+          </div>
+          <p class="social-text">Six Wave color variants — Gold, Fire, Blue, Silver, Green, Pink — all human-sized wireframe boxers sparring inside the glowing square. 👀</p>
+          <div class="social-stats"><span>🥊 6 fighters</span><span>🔗 Roster</span></div>
+        </a>
+        </div>
       </div>
-      <div class="feature-item" data-feature-link="book.html">
-        <div class="feature-icon">🎉</div>
-        <span class="feature-label">Fun for Parties</span>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header section-header-row">
+        <div>
+          <p class="section-label">Experience</p>
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">Four steps from arrival to hologram fight night</p>
+        </div>
+        <a href="about.html" class="view-all-link">Full Experience</a>
       </div>
-      <div class="feature-item" data-feature-link="book.html">
-        <div class="feature-icon">💲</div>
-        <span class="feature-label">$20 Admission</span>
+      <div class="section-video-wrap">
+        <video class="section-video" data-autoplay-video muted loop playsinline>
+          <source src="assets/higgsfield-892f90b0-5456-4ceb-9589-266f3b418c4d.mp4" type="video/mp4">
+        </video>
+        <div class="section-video-label">
+          <span class="section-video-tag">Inside the Tent</span>
+          <span class="section-video-title">Hologram Tent Interior</span>
+        </div>
       </div>
-      <div class="feature-item" data-feature-link="book.html">
-        <div class="feature-icon">🍔</div>
-        <span class="feature-label">Food &amp; Drinks</span>
+      <div class="steps-grid">
+        <div class="step-card"><div class="step-num">1</div><h3>Buy with Me vs Me</h3><p>Purchase your ticket with <span data-crypto-name>Me vs Me</span> crypto. Pick the fighter you're backing — if they win, you're in the running to win too.</p></div>
+        <div class="step-card"><div class="step-num">2</div><h3>Choose Your View</h3><p>Watch through your own AR headset, or upgrade to a ringside guest's live feed for a premium angle.</p></div>
+        <div class="step-card"><div class="step-num">3</div><h3>See the Fight Come Alive</h3><p>Put on your AR headset and watch hologram boxers throw down inside the glowing square — front-row intensity, live hologram combat, and energy for all ages.</p></div>
+        <div class="step-card"><div class="step-num">4</div><h3>Celebrate Winners</h3><p>Hologram fighters take home prize money. Ticket holders who picked the winning fighter get a shot at the fan prize pool.</p></div>
       </div>
     </div>
   </section>
@@ -131,7 +212,9 @@
       </div>
       <div class="cards-grid">
         <a href="events.html#event-001" class="card">
-          <div class="card-image"><span class="card-image-icon">🥊</span></div>
+          <div class="card-image">
+            <video class="card-video" data-autoplay-video muted loop playsinline><source src="assets/ep2-ar-experience.mp4" type="video/mp4"></video>
+          </div>
           <div class="card-body">
             <span class="card-tag">Hologram Boxing 001</span>
             <h3 class="card-title">Creators AI Hologram Boxing 001</h3>
@@ -139,7 +222,9 @@
           </div>
         </a>
         <a href="events.html#event-002" class="card">
-          <div class="card-image"><span class="card-image-icon">⚡</span></div>
+          <div class="card-image">
+            <video class="card-video" data-autoplay-video muted loop playsinline><source src="assets/ep1-tent-preview.mp4" type="video/mp4"></video>
+          </div>
           <div class="card-body">
             <span class="card-tag">Pop-Up Event</span>
             <h3 class="card-title">Downtown Hologram Showdown</h3>
@@ -147,7 +232,9 @@
           </div>
         </a>
         <a href="events.html#event-003" class="card">
-          <div class="card-image"><span class="card-image-icon">🏆</span></div>
+          <div class="card-image">
+            <video class="card-video" data-autoplay-video muted loop playsinline><source src="assets/higgsfield-386b5e5c-43c6-44ee-a8f3-ab148fe272ca.mp4" type="video/mp4"></video>
+          </div>
           <div class="card-body">
             <span class="card-tag">Championship</span>
             <h3 class="card-title">Hologram Title Fight Night</h3>
@@ -158,49 +245,33 @@
     </div>
   </section>
 
-  <!-- Fighters -->
-  <section class="section" id="fighters">
+  <!-- Upcoming Fights -->
+  <section class="section section--fights" id="fighters">
+    <div class="container">
+      <div class="section-header section-header-row">
+        <div>
+          <p class="section-label">Upcoming</p>
+          <h2 class="section-title">Fight Cards</h2>
+          <p class="section-subtitle">Each matchup has its own countdown — tickets unlock when the clock hits zero · <span data-crypto-name>Me vs Me</span> crypto only</p>
+        </div>
+        <a href="fighters.html" class="view-all-link">Full Roster</a>
+      </div>
+      <div class="fights-grid" data-fights-grid></div>
+    </div>
+  </section>
+
+  <!-- Wave Roster -->
+  <section class="section" id="roster">
     <div class="container">
       <div class="section-header section-header-row">
         <div>
           <p class="section-label">Fighters</p>
-          <h2 class="section-title">Trending Athletes</h2>
-          <p class="section-subtitle">The creators making waves in the hologram ring</p>
+          <h2 class="section-title">The Wave Roster</h2>
+          <p class="section-subtitle">Six hologram fighters from the Wave roster — one champion, six color variants, all inside the inflatable tent</p>
         </div>
-        <a href="fighters.html" class="view-all-link">View All Athletes</a>
+        <a href="fighters.html" class="view-all-link">View All Wave Variants</a>
       </div>
-      <div class="fighters-scroll">
-        <a href="fighters.html#nova" class="fighter-card">
-          <div class="fighter-avatar">🥊</div>
-          <div class="fighter-name">Nova Strike</div>
-          <div class="fighter-role">Hologram Champion</div>
-        </a>
-        <a href="fighters.html#blaze" class="fighter-card">
-          <div class="fighter-avatar">⚡</div>
-          <div class="fighter-name">Blaze Fury</div>
-          <div class="fighter-role">Knockout Artist</div>
-        </a>
-        <a href="fighters.html#cyber" class="fighter-card">
-          <div class="fighter-avatar">🤖</div>
-          <div class="fighter-name">Cyber KO</div>
-          <div class="fighter-role">Rising Star</div>
-        </a>
-        <a href="fighters.html#phantom" class="fighter-card">
-          <div class="fighter-avatar">👻</div>
-          <div class="fighter-name">Phantom Punch</div>
-          <div class="fighter-role">Fan Favorite</div>
-        </a>
-        <a href="fighters.html#titan" class="fighter-card">
-          <div class="fighter-avatar">💪</div>
-          <div class="fighter-name">Titan X</div>
-          <div class="fighter-role">Heavyweight</div>
-        </a>
-        <a href="fighters.html#spark" class="fighter-card">
-          <div class="fighter-avatar">✨</div>
-          <div class="fighter-name">Spark V</div>
-          <div class="fighter-role">Speed Demon</div>
-        </a>
-      </div>
+      <div class="fighters-scroll" data-fighters-roster></div>
     </div>
   </section>
 
@@ -211,34 +282,46 @@
         <div>
           <p class="section-label">Watch</p>
           <h2 class="section-title">Latest Episodes</h2>
-          <p class="section-subtitle">Full episodes, highlights &amp; interviews from Creators AI Hologram Boxing</p>
+          <p class="section-subtitle">Full episodes, highlights, and interviews — Wave Gold vs Wave Fire and every color on the roster</p>
         </div>
         <a href="watch.html" class="view-all-link">View All Episodes</a>
       </div>
       <div class="cards-grid">
         <a href="watch.html#ep4" class="card">
-          <div class="card-image"><span class="card-image-icon">▶</span></div>
+          <div class="card-image">
+            <video class="card-video" data-autoplay-video muted loop playsinline><source src="assets/higgsfield-892f90b0-5456-4ceb-9589-266f3b418c4d.mp4" type="video/mp4"></video>
+            <span class="card-image-icon">▶</span>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Hologram Boxing 001 | Episode 4</h3>
             <div class="card-meta"><span class="latest">● Latest</span><span>HB 001 EP 4</span><span>12.6K views</span><span>5d ago</span></div>
           </div>
         </a>
         <a href="watch.html#ep3" class="card">
-          <div class="card-image"><span class="card-image-icon">▶</span></div>
+          <div class="card-image">
+            <video class="card-video" data-autoplay-video muted loop playsinline><source src="assets/ep3-ar-experience.mp4" type="video/mp4"></video>
+            <span class="card-image-icon">▶</span>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Hologram Boxing 001 | Episode 3</h3>
             <div class="card-meta"><span>HB 001 EP 3</span><span>9.2K views</span><span>8d ago</span></div>
           </div>
         </a>
         <a href="watch.html#ep2" class="card">
-          <div class="card-image"><span class="card-image-icon">▶</span></div>
+          <div class="card-image">
+            <video class="card-video" data-autoplay-video muted loop playsinline><source src="assets/ep2-ar-experience.mp4" type="video/mp4"></video>
+            <span class="card-image-icon">▶</span>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Hologram Boxing 001 | Episode 2</h3>
             <div class="card-meta"><span>HB 001 EP 2</span><span>7.8K views</span><span>12d ago</span></div>
           </div>
         </a>
         <a href="watch.html#ep1" class="card">
-          <div class="card-image"><span class="card-image-icon">▶</span></div>
+          <div class="card-image">
+            <video class="card-video" data-autoplay-video muted loop playsinline><source src="assets/ep1-tent-preview.mp4" type="video/mp4"></video>
+            <span class="card-image-icon">▶</span>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Hologram Boxing 001 | Episode 1</h3>
             <div class="card-meta"><span>HB 001 EP 1</span><span>24.1K views</span><span>18d ago</span></div>
@@ -248,57 +331,57 @@
     </div>
   </section>
 
-  <!-- TikTok Social -->
-  <section class="section" id="social">
+  <!-- Live Streams -->
+  <section class="section" id="social" data-stream-section>
     <div class="container">
       <div class="section-header section-header-row">
         <div>
-          <p class="section-label">Social</p>
-          <h2 class="section-title">Latest from TikTok</h2>
-          <p class="section-subtitle">The latest posts &amp; highlights from <span data-tiktok-handle>@creatorsai</span></p>
+          <p class="section-label">Live Streams</p>
+          <h2 class="section-title">Watch on Kick &amp; Twitch</h2>
+          <p class="section-subtitle">Every hologram fight streams live — follow on Kick (<span data-kick-handle>creatorsai</span>) and Twitch (<span data-twitch-handle>creatorsai</span>)</p>
         </div>
-        <a href="#" data-tiktok class="view-all-link">Follow on TikTok</a>
+        <a href="watch.html" class="view-all-link">Watch Live</a>
       </div>
       <div class="social-feed">
-        <a href="#" data-tiktok class="social-post">
+        <a href="#" data-kick class="social-post">
           <div class="social-header">
-            <div class="social-avatar">🥊</div>
+            <div class="social-avatar"><img src="assets/social-avatar.svg" alt="Hologram Boxing on Kick" loading="lazy"></div>
             <div>
-              <div class="social-name">Creators AI Boxing</div>
-              <div class="social-handle" data-tiktok-handle>@creatorsai</div>
+              <div class="social-name">Kick Live</div>
+              <div class="social-handle">kick.com/<span data-kick-handle>creatorsai</span></div>
             </div>
           </div>
-          <p class="social-text">12FT TALL hologram arena is LIVE 🔥 Who's stepping in the ring next? DM to book your spot! #HologramBoxing #CreatorsAI</p>
-          <div class="social-stats"><span>❤️ 24.5K</span><span>💬 892</span><span>🔗 Share</span></div>
+          <p class="social-text">🔴 LIVE NOW — hologram tent on Kick! Watch Wave Gold vs Wave Fire with AR-powered hologram boxers inside the glowing square. Don't miss the main event.</p>
+          <div class="social-stats"><span>👁️ 4.2K watching</span><span>💬 Live chat</span><span>🔗 Watch on Kick</span></div>
         </a>
-        <a href="#" data-tiktok class="social-post">
+        <a href="#" data-twitch class="social-post">
           <div class="social-header">
-            <div class="social-avatar">🥊</div>
+            <div class="social-avatar"><img src="assets/social-avatar.svg" alt="Hologram Boxing on Twitch" loading="lazy"></div>
             <div>
-              <div class="social-name">Creators AI Boxing</div>
-              <div class="social-handle" data-tiktok-handle>@creatorsai</div>
+              <div class="social-name">Twitch Live</div>
+              <div class="social-handle">twitch.tv/<span data-twitch-handle>creatorsai</span></div>
             </div>
           </div>
-          <p class="social-text">WINNERS GET PRIZE MONEY 💰 Nova Strike takes the hologram title with a 1st round KO! Full replay on our page 🥊</p>
-          <div class="social-stats"><span>❤️ 18.2K</span><span>💬 456</span><span>🔗 Share</span></div>
+          <p class="social-text">Hologram Boxing 002 main card streaming on Twitch 🥊 Full production, prize money on the line, and every knockout live from the tent.</p>
+          <div class="social-stats"><span>👁️ 3.1K watching</span><span>💬 Live chat</span><span>🔗 Watch on Twitch</span></div>
         </a>
-        <a href="#" data-tiktok class="social-post">
+        <a href="watch.html" class="social-post">
           <div class="social-header">
-            <div class="social-avatar">🥊</div>
+            <div class="social-avatar"><img src="assets/social-avatar.svg" alt="Hologram Boxing streams" loading="lazy"></div>
             <div>
-              <div class="social-name">Creators AI Boxing</div>
-              <div class="social-handle" data-tiktok-handle>@creatorsai</div>
+              <div class="social-name">Stream Schedule</div>
+              <div class="social-handle">Kick &amp; Twitch</div>
             </div>
           </div>
-          <p class="social-text">Behind the scenes of the hologram dome setup 👀 $20 admission — food, drinks, and REAL boxing action. Link in bio to reserve!</p>
-          <div class="social-stats"><span>❤️ 31.7K</span><span>💬 1.2K</span><span>🔗 Share</span></div>
+          <p class="social-text">Can't make it in person? Every event streams live on Kick and Twitch. VODs and highlights posted after each fight night — on-site tent tickets paid in <span data-crypto-name>Me vs Me</span> crypto, free to watch online.</p>
+          <div class="social-stats"><span>📅 Next: HB 002</span><span>▶ Replays</span><span>🔗 View Schedule</span></div>
         </a>
       </div>
     </div>
   </section>
 
   <!-- News -->
-  <section class="section" id="news">
+  <section class="section" id="news" hidden>
     <div class="container">
       <div class="section-header section-header-row">
         <div>
@@ -310,7 +393,7 @@
       </div>
       <div class="cards-grid">
         <a href="blog/introducing-website.html" class="card">
-          <div class="card-image"><span class="card-image-icon">📰</span></div>
+          <div class="card-image"><img class="card-cover" src="assets/card-news.svg" alt="Website launch" loading="lazy"></div>
           <div class="card-body">
             <span class="card-tag">News</span>
             <h3 class="card-title">Introducing the Creators AI Hologram Boxing Website</h3>
@@ -318,7 +401,7 @@
           </div>
         </a>
         <a href="news.html#hb001" class="card">
-          <div class="card-image"><span class="card-image-icon">🏆</span></div>
+          <div class="card-image"><img class="card-cover" src="assets/card-hb001-recap.svg" alt="Wave Gold vs Wave Fire — Hologram Boxing 001 recap" loading="lazy"></div>
           <div class="card-body">
             <span class="card-tag">Event Recap</span>
             <h3 class="card-title">Hologram Boxing 001 — Full Event Recap</h3>
@@ -326,7 +409,7 @@
           </div>
         </a>
         <a href="news.html#prizes" class="card">
-          <div class="card-image"><span class="card-image-icon">💰</span></div>
+          <div class="card-image"><img class="card-cover" src="assets/card-prize-money.svg" alt="Prize money pool" loading="lazy"></div>
           <div class="card-body">
             <span class="card-tag">Announcement</span>
             <h3 class="card-title">Prize Money Pool Doubled for Next Event</h3>
@@ -337,17 +420,40 @@
     </div>
   </section>
 
+  <!-- FAQ Preview -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header section-header-row">
+        <div>
+          <p class="section-label">FAQ</p>
+          <h2 class="section-title">Common Questions</h2>
+        </div>
+        <a href="faq.html" class="view-all-link">All FAQ</a>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question" type="button">How do I buy a ticket?</button><div class="faq-answer"><p>Tickets are paid exclusively in <span data-crypto-name>Me vs Me</span> (<span data-crypto-symbol>MVM</span>) crypto — <span data-ticket-price-headset>200 MVM</span> for headset POV or <span data-ticket-price-attendee>350 MVM</span> for attendee POV. <a href="book.html">Purchase on our booking page</a> and pick the fighter you're backing.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button">Do I fight in the ring?</button><div class="faq-answer"><p>No. You watch through AR headsets while hologram boxers fight inside the glowing square. It's a ringside experience — not a sparring session.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button">Can ticket holders win prize money?</button><div class="faq-answer"><p>Yes! When you buy a ticket, pick the hologram fighter you're backing. If your fighter wins the fight, you're entered to win from the spectator prize pool at <span data-next-event>Hologram Boxing 002</span>.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button">How do I watch if I can't attend?</button><div class="faq-answer"><p>Every event streams live on <a href="#" data-kick>Kick</a> and <a href="#" data-twitch>Twitch</a> for free. On-site tent tickets require <span data-crypto-name>Me vs Me</span> crypto and include AR viewing plus a chance to win if your fighter takes the fight.</p></div></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Booking CTA -->
-  <section class="booking-section" id="book">
+  <section class="booking-section booking-section--video" id="book">
+    <video class="booking-video" data-autoplay-video muted loop playsinline>
+      <source src="assets/ep2-ar-experience.mp4" type="video/mp4">
+    </video>
+    <div class="booking-video-overlay"></div>
     <div class="container">
       <div class="booking-box">
-        <h2>&gt;&gt; DM BOOK OR TICKET ON TIKTOK &lt;&lt;</h2>
-        <p class="sub">Link in bio to reserve your spot</p>
+        <h2>&gt;&gt; BUY YOUR TICKET &lt;&lt;</h2>
+        <p class="sub">Pay with <span data-crypto-name>Me vs Me</span> crypto · Headset or attendee POV · Pick a fighter to win</p>
         <p class="highlight">Limited Dates — Secure Your Spot Now!</p>
-        <p class="tagline">Bring the Future to Your Event</p>
+        <p class="tagline">The only way in is enough <span data-crypto-symbol>MVM</span> in your wallet</p>
         <div class="booking-actions">
-          <a href="#" data-tiktok class="btn btn-primary">Book on TikTok</a>
-          <a href="book.html" class="btn btn-gold">View Booking Info</a>
+          <a href="book.html" class="btn btn-primary">Buy Ticket</a>
+          <a href="#" data-email class="btn btn-gold" data-email-text>ic4d@irlxr.com</a>
         </div>
       </div>
     </div>
@@ -371,53 +477,12 @@
       </div>
       <div class="partner-cta">
         <a href="book.html#partner" class="btn btn-outline">Become a Partner</a>
-        <p>Interested in brand partnerships? Contact us at <a href="#" data-email data-email-text>bookings@creatorsai.com</a></p>
+        <p>Interested in brand partnerships? Contact us at <a href="#" data-email data-email-text>ic4d@irlxr.com</a></p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <img src="assets/logo.svg" alt="" class="nav-logo-img" data-asset="logo.svg" width="36" height="36">
-            <span>Creators AI</span>
-          </a>
-          <p>Experience the future of boxing with hologram technology. Real fights, real prize money, unforgettable events.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <a href="events.html">Events</a>
-          <a href="fighters.html">Fighters</a>
-          <a href="watch.html">Watch</a>
-          <a href="news.html">News</a>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <a href="#" data-tiktok>TikTok</a>
-          <a href="#" data-email>Email Us</a>
-          <a href="book.html">Book an Event</a>
-          <a href="book.html#partner">Partnerships</a>
-        </div>
-        <div class="footer-col">
-          <h4>Info</h4>
-          <a href="book.html">$20 Admission</a>
-          <a href="book.html">All Ages Welcome</a>
-          <a href="book.html">Food &amp; Drinks</a>
-          <a href="blog/introducing-website.html">About Us</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Creators AI Hologram Boxing. All rights reserved.</span>
-        <div class="footer-social">
-          <a href="#" data-tiktok aria-label="TikTok">📱</a>
-          <a href="#" data-email aria-label="Email">✉️</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer" data-auto-footer></footer>
 
   <!-- Cookie Banner -->
   <div class="cookie-banner" id="cookie-banner">

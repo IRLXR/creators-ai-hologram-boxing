@@ -11,84 +11,94 @@
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 </head>
 <body>
-  <nav class="site-nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo"><img src="assets/logo.svg" alt="" class="nav-logo-img" data-asset="logo.svg" width="36" height="36"><span>Creators AI</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-      <div class="nav-links">
-        <a href="index.html" data-page="index.html">Home</a>
-        <a href="events.html" data-page="events.html">Events</a>
-        <a href="fighters.html" data-page="fighters.html">Fighters</a>
-        <a href="watch.html" data-page="watch.html">Watch</a>
-        <a href="news.html" data-page="news.html">News</a>
-        <a href="book.html" data-page="book.html" class="nav-cta">Book Now</a>
-      </div>
-    </div>
-  </nav>
+  <nav class="site-nav" data-auto-nav></nav>
 
   <header class="page-hero">
     <div class="container">
       <p class="section-label">Fighters</p>
-      <h1 class="section-title">Trending Athletes</h1>
-      <p class="section-subtitle">The creators and competitors making waves in the hologram ring</p>
+      <h1 class="section-title">The Wave Roster</h1>
+      <p class="section-subtitle">Six hologram fighters on the Wave roster — one champion, six color variants, all inside the inflatable tent</p>
     </div>
   </header>
+
+  <section class="section section--fights">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Upcoming</p>
+        <h2 class="section-title">Fight Cards</h2>
+        <p class="section-subtitle">Tickets unlock when each fight countdown ends · Paid in <span data-crypto-name>Me vs Me</span> crypto</p>
+      </div>
+      <div class="fights-grid" data-fights-grid></div>
+    </div>
+  </section>
 
   <section class="section">
     <div class="container">
       <div class="cards-grid">
-        <article class="card" id="nova">
-          <div class="card-image" style="display:grid;place-items:center;font-size:4rem;">🥊</div>
+        <article class="card fighter-detail-card" id="wave-gold">
+          <div class="card-image"><img class="card-cover" src="assets/fighter-nova.png" alt="Wave Gold" loading="lazy"></div>
           <div class="card-body">
             <span class="card-tag">Champion</span>
-            <h3 class="card-title">Nova Strike</h3>
-            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 8-1-0 | 6 KOs. Current hologram heavyweight champion. Known for devastating first-round finishes inside the 12ft arena.</p>
-            <div class="card-meta"><span>Weight: Heavyweight</span><span>Title Holder</span></div>
+            <h3 class="card-title">Wave Gold</h3>
+            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 8-1-0 | 6 KOs. The reigning hologram champion — devastating first-round finishes and the gold standard under the WAVE waistband inside the inflatable tent.</p>
+            <div class="card-meta"><span>Variant: Gold</span><span>Title Holder</span></div>
+            <div class="fighter-countdown" data-fight-countdown data-fight-date="2026-08-15T18:00:00" data-fight-label="Next Fight"></div>
+            <a href="book.html?fighter=wave-gold" class="fighter-ticket-btn btn btn-gold" data-fight-ticket hidden>Buy Tickets</a>
           </div>
         </article>
-        <article class="card" id="blaze">
-          <div class="card-image" style="display:grid;place-items:center;font-size:4rem;">⚡</div>
+        <article class="card fighter-detail-card" id="wave-fire">
+          <div class="card-image"><img class="card-cover" src="assets/fighter-blaze.png" alt="Wave Fire" loading="lazy"></div>
           <div class="card-body">
             <span class="card-tag">Contender</span>
-            <h3 class="card-title">Blaze Fury</h3>
-            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 7-2-0 | 5 KOs. Knockout artist with explosive power. Lost title fight to Nova Strike — rematch coming soon.</p>
-            <div class="card-meta"><span>Weight: Heavyweight</span><span>#1 Contender</span></div>
+            <h3 class="card-title">Wave Fire</h3>
+            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 7-2-0 | 5 KOs. Blazing orange-red energy and knockout power — lost the title to Wave Gold. Rematch booked for Hologram Boxing 002.</p>
+            <div class="card-meta"><span>Variant: Fire</span><span>#1 Contender</span></div>
+            <div class="fighter-countdown" data-fight-countdown data-fight-date="2026-08-15T18:00:00" data-fight-label="Next Fight"></div>
+            <a href="book.html?fighter=wave-fire" class="fighter-ticket-btn btn btn-gold" data-fight-ticket hidden>Buy Tickets</a>
           </div>
         </article>
-        <article class="card" id="cyber">
-          <div class="card-image" style="display:grid;place-items:center;font-size:4rem;">🤖</div>
+        <article class="card fighter-detail-card" id="wave-blue">
+          <div class="card-image"><img class="card-cover" src="assets/fighter-cyber.png" alt="Wave Blue" loading="lazy"></div>
           <div class="card-body">
             <span class="card-tag">Rising Star</span>
-            <h3 class="card-title">Cyber KO</h3>
-            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 5-0-0 | 4 KOs. Undefeated prospect with a unique holographic fighting style. TikTok following: 2.1M.</p>
-            <div class="card-meta"><span>Weight: Middleweight</span><span>Undefeated</span></div>
+            <h3 class="card-title">Wave Blue</h3>
+            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 5-0-0 | 4 KOs. Electric cyan style and undefeated form — 2.1M fans tune in every fight night.</p>
+            <div class="card-meta"><span>Variant: Cyan</span><span>Undefeated</span></div>
+            <div class="fighter-countdown" data-fight-countdown data-fight-date="2026-08-22T20:00:00" data-fight-label="Next Fight"></div>
+            <a href="book.html?fighter=wave-blue" class="fighter-ticket-btn btn btn-gold" data-fight-ticket hidden>Buy Tickets</a>
           </div>
         </article>
-        <article class="card" id="phantom">
-          <div class="card-image" style="display:grid;place-items:center;font-size:4rem;">👻</div>
+        <article class="card fighter-detail-card" id="wave-silver">
+          <div class="card-image"><img class="card-cover" src="assets/fighter-phantom.png" alt="Wave Silver" loading="lazy"></div>
           <div class="card-body">
             <span class="card-tag">Fan Favorite</span>
-            <h3 class="card-title">Phantom Punch</h3>
-            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 6-3-0 | 3 KOs. Crowd favorite known for flashy entrances and unpredictable fighting style in the hologram dome.</p>
-            <div class="card-meta"><span>Weight: Lightweight</span><span>Fan Vote Winner</span></div>
+            <h3 class="card-title">Wave Silver</h3>
+            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 6-3-0 | 3 KOs. Ghost-white hologram style, flashy tent entrances, and unpredictable movement — voted fan favorite at Hologram Boxing 001.</p>
+            <div class="card-meta"><span>Variant: Silver</span><span>Fan Vote Winner</span></div>
+            <div class="fighter-countdown" data-fight-countdown data-fight-date="2026-08-22T20:00:00" data-fight-label="Next Fight"></div>
+            <a href="book.html?fighter=wave-silver" class="fighter-ticket-btn btn btn-gold" data-fight-ticket hidden>Buy Tickets</a>
           </div>
         </article>
-        <article class="card" id="titan">
-          <div class="card-image" style="display:grid;place-items:center;font-size:4rem;">💪</div>
+        <article class="card fighter-detail-card" id="wave-green">
+          <div class="card-image"><img class="card-cover" src="assets/fighter-titan.png" alt="Wave Green" loading="lazy"></div>
           <div class="card-body">
             <span class="card-tag">Heavyweight</span>
-            <h3 class="card-title">Titan X</h3>
-            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 4-1-0 | 3 KOs. The biggest fighter in the hologram roster. Dominates with size and power in the 12ft arena.</p>
-            <div class="card-meta"><span>Weight: Super Heavyweight</span></div>
+            <h3 class="card-title">Wave Green</h3>
+            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 4-1-0 | 3 KOs. Emerald power-core build — the largest fighter on the roster. Raw size and force dominate the hologram floor.</p>
+            <div class="card-meta"><span>Variant: Emerald</span><span>Super Heavyweight</span></div>
+            <div class="fighter-countdown" data-fight-countdown data-fight-date="2026-08-29T19:00:00" data-fight-label="Next Fight"></div>
+            <a href="book.html?fighter=wave-green" class="fighter-ticket-btn btn btn-gold" data-fight-ticket hidden>Buy Tickets</a>
           </div>
         </article>
-        <article class="card" id="spark">
-          <div class="card-image" style="display:grid;place-items:center;font-size:4rem;">✨</div>
+        <article class="card fighter-detail-card" id="wave-pink">
+          <div class="card-image"><img class="card-cover" src="assets/fighter-spark.png" alt="Wave Pink" loading="lazy"></div>
           <div class="card-body">
             <span class="card-tag">Speed Demon</span>
-            <h3 class="card-title">Spark V</h3>
-            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 7-1-0 | 2 KOs. Fastest hands in hologram boxing. Decision specialist who outpoints opponents with volume punching.</p>
-            <div class="card-meta"><span>Weight: Welterweight</span></div>
+            <h3 class="card-title">Wave Pink</h3>
+            <p style="color:var(--gray-light);font-size:0.9rem;margin-bottom:0.75rem;">Record: 7-1-0 | 2 KOs. Hot magenta speed — the fastest hands in hologram boxing. Outpoints every opponent with nonstop volume.</p>
+            <div class="card-meta"><span>Variant: Magenta</span><span>Speed Tier</span></div>
+            <div class="fighter-countdown" data-fight-countdown data-fight-date="2026-08-29T19:00:00" data-fight-label="Next Fight"></div>
+            <a href="book.html?fighter=wave-pink" class="fighter-ticket-btn btn btn-gold" data-fight-ticket hidden>Buy Tickets</a>
           </div>
         </article>
       </div>
@@ -98,25 +108,18 @@
   <section class="booking-section">
     <div class="container">
       <div class="booking-box">
-        <h2>Think You've Got What It Takes?</h2>
-        <p class="sub">Step into the hologram ring and showcase your skills</p>
-        <p class="highlight">Apply to fight at our next event</p>
+        <h2>Become the Next Hologram Fighter</h2>
+        <p class="sub">Think you've got what it takes? Apply to debut as a featured hologram fighter and go head-to-head with Wave — our reigning champion — and the rest of the roster inside the glowing square.</p>
+        <p class="highlight">Hologram fighter applications open for <span data-next-event>Hologram Boxing 002</span> — step in, get scanned, and fight Wave on the biggest hologram stage in the game.</p>
         <div class="booking-actions">
-          <a href="book.html#apply" class="btn btn-primary">Apply to Fight</a>
-          <a href="watch.html" class="btn btn-outline">Watch Fights First</a>
+          <a href="book.html#apply" class="btn btn-primary">Apply as Hologram Fighter</a>
+          <a href="watch.html" class="btn btn-outline">Watch Wave Fights</a>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer site-footer--mini">
-    <div class="container">
-      <div class="footer-bottom" style="border:none;padding:0;">
-        <span>&copy; 2026 Creators AI Hologram Boxing</span>
-        <div class="footer-social"><a href="#" data-tiktok>📱</a><a href="index.html">Home</a></div>
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer site-footer--mini"></footer>
   <script src="site-config.js"></script>
   <script src="js/main.js"></script>
 </body>

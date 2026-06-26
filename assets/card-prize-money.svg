@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#050508"/>
+  <rect x="1" y="1" width="638" height="358" stroke="#22C55E" stroke-width="2" opacity="0.35"/>
+  <circle cx="500" cy="190" r="80" stroke="#22C55E" stroke-width="2" fill="rgba(34,197,94,0.1)"/>
+  <text x="500" y="175" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#22C55E">$</text>
+  <text x="500" y="210" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">10K</text>
+  <rect x="40" y="28" width="130" height="22" rx="4" fill="#22C55E"/>
+  <text x="105" y="43" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#000">ANNOUNCEMENT</text>
+  <text x="48" y="118" font-family="Arial Black, sans-serif" font-size="32" font-weight="900" fill="#FFFFFF">PRIZE POOL</text>
+  <text x="48" y="158" font-family="Arial Black, sans-serif" font-size="32" font-weight="900" fill="#22C55E">DOUBLED</text>
+  <text x="48" y="196" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#9CA3AF">$10,000 total for HB 002</text>
+  <text x="48" y="224" font-family="Arial, sans-serif" font-size="13" fill="#6B7280">Hologram fight winners get paid</text>
+</svg>
