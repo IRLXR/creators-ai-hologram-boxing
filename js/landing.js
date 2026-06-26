@@ -13,6 +13,47 @@
   const video = document.querySelector('.lp-hero-video');
   const canvas = document.getElementById('lp-particles');
   const parallaxBg = document.querySelector('[data-parallax-bg]');
+  const countdownEl = document.getElementById('lp-countdown');
+
+  function initLandingCountdown() {
+    if (!countdownEl) return;
+
+    const label = 'Next Event';
+    const targetMs = new Date(config.nextEventDate || config.launchDate).getTime();
+    if (!targetMs || Number.isNaN(targetMs)) return;
+
+    const pad = (n) => String(n);
+
+    const tick = () => {
+      const diff = targetMs - Date.now();
+      if (diff <= 0) {
+        countdownEl.classList.add('is-live');
+        countdownEl.innerHTML = `<span class="lp-countdown-live">● ${label} — Tickets On Sale!</span>`;
+        return;
+      }
+
+      countdownEl.classList.remove('is-live');
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+
+      countdownEl.innerHTML = `
+        <span class="lp-countdown-label">${label}</span>
+        <div class="lp-countdown-grid">
+          <div class="lp-countdown-unit"><strong>${pad(d)}</strong><span>Days</span></div>
+          <div class="lp-countdown-unit"><strong>${pad(h)}</strong><span>Hrs</span></div>
+          <div class="lp-countdown-unit"><strong>${pad(m)}</strong><span>Min</span></div>
+          <div class="lp-countdown-unit"><strong>${pad(s)}</strong><span>Sec</span></div>
+        </div>
+      `;
+    };
+
+    tick();
+    window.setInterval(tick, 1000);
+  }
+
+  initLandingCountdown();
 
   if (video) {
     video.muted = true;

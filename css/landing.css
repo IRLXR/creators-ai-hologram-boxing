@@ -16,8 +16,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body.prelaunch-body {
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: var(--lp-black);
 }
 
@@ -249,6 +250,87 @@ body.prelaunch-body {
 .lp-success-line2 {
   color: var(--lp-silver);
   font-size: 0.95rem;
+}
+
+/* Countdown — large rectangle below email */
+.lp-countdown {
+  width: 100%;
+  max-width: 560px;
+  margin-top: clamp(1.25rem, 3vh, 2rem);
+  padding: clamp(1.1rem, 2.5vw, 1.5rem) clamp(1rem, 3vw, 1.75rem);
+  border: 1px solid var(--lp-glass-edge);
+  border-radius: 4px;
+  background: var(--lp-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), var(--lp-glow);
+  animation: lpFadeUp 0.9s ease 0.44s both;
+}
+
+.lp-countdown-label {
+  display: block;
+  font-family: var(--lp-font);
+  font-size: clamp(0.62rem, 1.4vw, 0.72rem);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lp-blue);
+  margin-bottom: 0.85rem;
+}
+
+.lp-countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.lp-countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(4.5rem, 12vw, 5.75rem);
+  padding: 0.5rem 0.25rem;
+  border: 1px solid rgba(0, 174, 239, 0.2);
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.lp-countdown-unit strong {
+  font-family: var(--lp-font);
+  font-size: clamp(1.6rem, 4.5vw, 2.35rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--lp-white);
+  font-variant-numeric: tabular-nums;
+}
+
+.lp-countdown-unit span {
+  margin-top: 0.35rem;
+  font-size: clamp(0.55rem, 1.2vw, 0.65rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lp-silver);
+}
+
+.lp-countdown.is-live {
+  border-color: rgba(255, 193, 7, 0.45);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 0 28px rgba(255, 193, 7, 0.25);
+}
+
+.lp-countdown-live {
+  font-family: var(--lp-font);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--lp-gold);
+}
+
+@media (max-width: 380px) {
+  .lp-countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
