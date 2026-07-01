@@ -1,5 +1,5 @@
 {
-  "brief": "Production Brief 001 — Scene 2 Master Frames (Revision 2)",
+  "brief": "Production Brief 001 — Scene 2 Master Frames (Revision 3)",
   "model": "nano_banana_2",
   "aspect_ratio": "16:9",
   "host_reference": "assets/Ads/card-apply.png",
@@ -9,25 +9,27 @@
   "status": "approved",
   "approved_at": "2026-07-01",
   "generated_at": "2026-07-01",
-  "note": "Revision 2 approved — official Wave reference, locked for Scene 2 and Seedance animation.",
+  "headset_strap_approved_at": "2026-07-01",
+  "headset_strap_reference": "ugc/output/host-keyframe-ads-avatar-quest3-strap.png",
+  "note": "Revision 3 approved — official monogram headset straps on frames 01–02. Frames 03–04 unchanged from Revision 2.",
   "frames": [
     {
       "id": "01-enter-the-arena",
       "title": "ENTER THE ARENA",
       "path": "assets/landing/scene2/master-frames/01-enter-the-arena.png",
-      "job_id": "e128b153-42e9-4563-af75-4080563ddd93",
-      "previous_job_id": "2ab97f2c-0c60-4bc0-aa6f-1a4970fed6bf",
-      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260701_051325_e128b153-42e9-4563-af75-4080563ddd93.png",
-      "revision": "Larger iconic tent, stronger arrival, more recognizable host"
+      "job_id": "9f11a9f7-aff6-4b74-a8e7-4edcbfa038f2",
+      "previous_job_id": "e128b153-42e9-4563-af75-4080563ddd93",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260701_125513_9f11a9f7-aff6-4b74-a8e7-4edcbfa038f2.png",
+      "revision": "Headset strap only — official luxury monogram side strap on every spectator"
     },
     {
       "id": "02-gear-up",
       "title": "GEAR UP",
       "path": "assets/landing/scene2/master-frames/02-gear-up.png",
-      "job_id": "b161be9a-5911-4ee6-a8d3-dae324747ed9",
-      "previous_job_id": "d8b80190-fe85-44ae-9185-5ffed3f5b68f",
-      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260701_051326_b161be9a-5911-4ee6-a8d3-dae324747ed9.png",
-      "revision": "Friends helping with headsets, staff guidance, anticipation"
+      "job_id": "bc8b155f-862e-42fe-8f7c-b33b953f2781",
+      "previous_job_id": "b161be9a-5911-4ee6-a8d3-dae324747ed9",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260701_125516_bc8b155f-862e-42fe-8f7c-b33b953f2781.png",
+      "revision": "Headset strap only — official luxury monogram side strap on every spectator"
     },
     {
       "id": "03-fight-begins",
