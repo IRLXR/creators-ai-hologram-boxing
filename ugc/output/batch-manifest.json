@@ -1,0 +1,181 @@
+{
+  "keyframe_job_id": "916340ac-0891-4ea8-b20f-59ecb4267d25",
+  "cost_per_plate_credits": 67,
+  "scripts": {
+    "02-the-inflatable-tent": "Our arena is an inflatable tent \u2014 not a stadium. Literally. Inside: dark quilted walls, rolling fog, and this insane blue-purple glowing square on the floor. Lowkey secret club energy. Tap to book \u2014 Creators AI Hologram Boxing.",
+    "03-meet-the-wave-fighters": "One fighter. Six neon colors. All Wave. Wave Gold, Fire, Blue, Silver, Green, Pink \u2014 pick your fighter when you grab tickets. Tap to book now.",
+    "04-ar-headset-experience": "The moment the headset clicks on \u2014 you put on AR gear inside the tent. Wave hologram boxers come alive in the glowing square. Headset POV from 200 MVM. Tap to book \u2014 Creators AI Hologram Boxing.",
+    "05-tickets-and-mvm-crypto": "Quick ticket breakdown \u2014 200 MVM headset POV, 350 MVM attendee POV. Me vs Me crypto only. Pick your fight and fighter on the Book page. Tap to book now.",
+    "06-pick-your-fighter-win-prizes": "Ten thousand dollar prize pool \u2014 and you can win too. Buy a ticket, pick your Wave fighter. If they win, you're in the fan prize pool. Tap to book now.",
+    "07-headset-pov-vs-attendee-pov": "Two views. One tent. Which one? Headset POV \u2014 200 MVM, your AR angle. Attendee POV \u2014 350 MVM, ringside live feed. Both spectator only. Tap to book.",
+    "08-watch-free-on-kick-twitch": "Watch free \u2014 no ticket needed. Every hologram fight streams live on Kick and Twitch at creatorsai. Full AR tent experience \u2014 book on site. Tap to book now.",
+    "09-book-the-tent-for-your-party": "Bring the hologram tent to your party. Birthdays, brand launches, festivals \u2014 we set up the inflatable tent, AR headsets, and Wave fights. Tap to request a date \u2014 Creators AI Hologram Boxing.",
+    "10-all-ages-family-night": "Kid-friendly? Yes \u2014 all ages welcome. Spectator AR night, no contact for guests. Family night, birthdays, date night. Tap to book the tent.",
+    "11-home-hero-brand": "Creators AI Hologram Boxing. This is the future of fight night \u2014 no cap. Inflatable tent, AR headsets, real prize money, HB 002 loading. Tap to book now.",
+    "12-social-kick-twitch-feed": "If you're not following creatorsai yet \u2014 you're missing the feed. Kick and Twitch live fights, episode drops, ticket countdowns. Follow then tap to book.",
+    "13-how-it-works-four-steps": "Hologram boxing in four steps. One \u2014 buy with Me vs Me crypto. Two \u2014 pick headset or attendee POV. Three \u2014 AR headset on in the tent. Four \u2014 celebrate winners. Tap to book.",
+    "14-event-archive-hb001": "Where it started \u2014 Hologram Boxing 001. Six fights, six Wave variants, Wave Gold champion. Watch the recap free \u2014 HB 002 tickets open now. Tap to book.",
+    "15-hologram-boxing-002": "Hologram Boxing 002 is loading \u2014 it's about to hit different. Bigger tent, ten thousand dollar prize pool, Gold vs Fire main event. Tap to book before countdown ends.",
+    "16-downtown-hologram-showdown": "We turned downtown into a hologram fight night. Pop-up inflatable tent, DJ, food, four fights. Want us at your festival? Tap to book the tent.",
+    "17-title-fight-night": "When the hologram belt was on the line \u2014 Wave Gold vs Wave Fire title fight. Full tent production, real prize money. Rematch is HB 002. Tap to watch and book.",
+    "18-fight-card-gold-vs-fire": "Main event alert \u2014 Wave Gold vs Wave Fire. Hologram Boxing 002. Champion vs knockout artist rematch. Pick a side for the fan prize pool. Tap to book now.",
+    "18b-fight-card-blue-vs-silver": "Co-main \u2014 Wave Blue vs Wave Silver. Speed vs phantom energy in the glowing square. 200 MVM headset or 350 MVM attendee POV. Tap to book.",
+    "18c-fight-card-green-vs-pink": "Undercard heat \u2014 Wave Green vs Wave Pink. Power vs pure speed. Don't sleep on the early fights. Pick your fighter. Tap to book now.",
+    "19-watch-episodes-on-demand": "Missed the tent? Watch page got you. Full episodes free \u2014 Gold vs Fire main event, AR experiences, tent preview. Tap to watch on site.",
+    "20-hb001-recap-highlights": "Hologram Boxing 001 \u2014 full recap just dropped. VHS-style recap, six Wave variants, Wave Gold takes the title. Watch free then grab HB 002 tickets. Tap to book.",
+    "21-gallery-inside-the-tent": "Gallery page equals vibe check for the tent. Tent interior, live crowd, food, drinks, prize night. See the vibe then book your spot. Tap to book.",
+    "22-news-prize-pool-doubled": "Breaking \u2014 we doubled the prize pool for Hologram Boxing 002. Ten thousand dollars on the line. Book now and pick your fighter. Tap to book.",
+    "23-about-five-step-journey": "Arrival to knockout \u2014 your hologram boxing night in five steps. Buy MVM, choose POV, enter tent, AR fight, prize night. Tap to book your spot.",
+    "24-hologram-tent-technology": "How does the hologram tent actually work? High-tech inflatable structure, glowing floor square, AI wireframe fighters, live AR for every guest. Tap for the full breakdown.",
+    "25-food-drinks-experience": "Hologram boxing isn't just the fight \u2014 it's a full night out. Food vendors and drink stations inside the tent. Tap to book your spot.",
+    "26-book-ticket-three-steps": "Buying a ticket equals three steps on Book. Your details, pick headset or attendee POV, choose fight and fighter \u2014 pay in MVM. Tap to start.",
+    "26b-influencer-codes": "Got a creator code? Use it at checkout. Codes like GOLDENWAVE auto-fill fight and fighter. Support your creator \u2014 tap to book.",
+    "26c-attendee-ringside-pass": "Attendee POV gets an auto ringside pass. 350 MVM premium live feed inside the tent. Upgrade your angle. Tap to book now.",
+    "27-apply-hologram-fighter": "Creators \u2014 this isn't a spectator ticket. Apply as a Wave hologram fighter. Ten thousand dollar prize pool at HB 002. Tap to apply on the Book page.",
+    "28-become-a-partner": "Brands \u2014 partner with hologram boxing. Sponsorships, venue collabs, influencer codes. Reach the next gen of live entertainment. Tap to contact us.",
+    "29-join-waitlist-early-access": "Get in before tickets drop. The world's first AI hologram fighting league is launching. Join the waitlist for early access and ticket alerts. Tap to join.",
+    "30-faq-common-questions": "Quick answers before you book. You don't fight \u2014 you watch in AR. MVM crypto tickets. Free stream on Kick and Twitch. All ages. Tap for full FAQ.",
+    "31-website-launch": "Official website is live \u2014 your front row to everything hologram boxing. Fight cards, roster, watch episodes, book tickets, gallery, FAQ. Tap to explore."
+  },
+  "jobs": {
+    "01-what-is-hologram-boxing": {
+      "job_id": "721f7c0e-f660-49f1-bb79-add7416fdf11",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_185335_721f7c0e-f660-49f1-bb79-add7416fdf11.mp4",
+      "file": "ads-avatar-what-is-hologram-boxing-plate.mp4",
+      "status": "voice_fixed",
+      "voice_job_id": "937b8031-a3cf-4762-b471-fdf370894599",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_211718_937b8031-a3cf-4762-b471-fdf370894599.mp4",
+      "voice_preset": "Skye"
+    },
+    "02-the-inflatable-tent": {
+      "job_id": "df6cd1f8-13f8-4187-82bb-c19ef54a8367",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_190452_df6cd1f8-13f8-4187-82bb-c19ef54a8367.mp4",
+      "file": "02-the-inflatable-tent-plate.mp4",
+      "status": "voice_fixed",
+      "voice_job_id": "4802f016-3508-475f-b057-9f3088131796",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_210903_4802f016-3508-475f-b057-9f3088131796.mp4"
+    },
+    "03-meet-the-wave-fighters": {
+      "job_id": "98759b86-ed03-4898-a0ec-cc94959eac2b",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_190453_98759b86-ed03-4898-a0ec-cc94959eac2b.mp4",
+      "file": "03-meet-the-wave-fighters-plate.mp4",
+      "status": "voice_fixed",
+      "voice_job_id": "c909f1e2-5477-4f57-a6b9-30fb035ee22a",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_210901_c909f1e2-5477-4f57-a6b9-30fb035ee22a.mp4"
+    },
+    "04-ar-headset-experience": {
+      "job_id": "31827018-8e45-4f63-9a70-57b0fb534588",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_190513_31827018-8e45-4f63-9a70-57b0fb534588.mp4",
+      "file": "04-ar-headset-experience-plate.mp4",
+      "status": "voice_fixed",
+      "voice_job_id": "e106b1b9-8c56-4596-b68e-36e3f47458ec",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_210901_e106b1b9-8c56-4596-b68e-36e3f47458ec.mp4"
+    },
+    "05-tickets-and-mvm-crypto": {
+      "job_id": "e946260c-526a-42f1-87c1-6fe65dade912",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_190453_e946260c-526a-42f1-87c1-6fe65dade912.mp4",
+      "file": "05-tickets-and-mvm-crypto-plate.mp4",
+      "status": "voice_fixed",
+      "voice_job_id": "ac2359ca-5eb8-4d32-b9f8-25671490c2be",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_210902_ac2359ca-5eb8-4d32-b9f8-25671490c2be.mp4"
+    },
+    "07-headset-pov-vs-attendee-pov": {
+      "job_id": "f85a7380-5fcc-419a-9a4b-f515fa1d8a05",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_190514_f85a7380-5fcc-419a-9a4b-f515fa1d8a05.mp4",
+      "file": "07-headset-pov-vs-attendee-pov-plate.mp4",
+      "status": "voice_fixed",
+      "voice_job_id": "a04f0b5a-02ea-4c2d-a8a2-01c07df2e937",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_210903_a04f0b5a-02ea-4c2d-a8a2-01c07df2e937.mp4"
+    },
+    "08-watch-free-on-kick-twitch": {
+      "job_id": "aaacd4de-16e2-4587-845a-9c9d2c584a6b",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_190515_aaacd4de-16e2-4587-845a-9c9d2c584a6b.mp4",
+      "file": "08-watch-free-on-kick-twitch-plate.mp4",
+      "status": "voice_fixed",
+      "voice_job_id": "f51713b5-0b08-4087-adaa-c1d9fc71ce4c",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_210902_f51713b5-0b08-4087-adaa-c1d9fc71ce4c.mp4"
+    },
+    "09-book-the-tent-for-your-party": {
+      "job_id": "9476e6a1-2c3c-4a16-be12-25232e2b1b8e",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_190515_9476e6a1-2c3c-4a16-be12-25232e2b1b8e.mp4",
+      "file": "09-book-the-tent-for-your-party-plate.mp4",
+      "status": "voice_fixed",
+      "voice_job_id": "902fe99c-67a9-4269-81ed-fb87bfdcf349",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_210904_902fe99c-67a9-4269-81ed-fb87bfdcf349.mp4"
+    },
+    "06-pick-your-fighter-win-prizes": {
+      "job_id": "6d83e019-9647-482a-8025-1960b1591adc",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_191016_6d83e019-9647-482a-8025-1960b1591adc.mp4",
+      "file": "06-pick-your-fighter-win-prizes-plate.mp4",
+      "status": "voice_fixed",
+      "voice_job_id": "b88a83a4-f4b7-4e75-b159-6d426a077907",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_210904_b88a83a4-f4b7-4e75-b159-6d426a077907.mp4"
+    },
+    "10-all-ages-family-night": {
+      "job_id": "5f2d4984-51d6-4c70-a35d-0577d037bdc5",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_191016_5f2d4984-51d6-4c70-a35d-0577d037bdc5.mp4",
+      "file": "10-all-ages-family-night-plate.mp4",
+      "status": "completed"
+    },
+    "11-home-hero-brand": {
+      "job_id": "75aa205a-c179-4957-a876-43883fc694c5",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_191017_75aa205a-c179-4957-a876-43883fc694c5.mp4",
+      "file": "11-home-hero-brand-plate.mp4",
+      "status": "completed"
+    },
+    "12-social-kick-twitch-feed": {
+      "job_id": "30eb618d-b53a-449b-9819-6107df89689d",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_191018_30eb618d-b53a-449b-9819-6107df89689d.mp4",
+      "file": "12-social-kick-twitch-feed-plate.mp4",
+      "status": "completed"
+    },
+    "13-how-it-works-four-steps": {
+      "job_id": "8bfc90f9-eaea-46bf-b448-63443eec18d7",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_191019_8bfc90f9-eaea-46bf-b448-63443eec18d7.mp4",
+      "file": "13-how-it-works-four-steps-plate.mp4",
+      "status": "completed"
+    },
+    "14-event-archive-hb001": {
+      "job_id": "92bf33f6-7030-4995-96ac-a47c94e20b8c",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_191020_92bf33f6-7030-4995-96ac-a47c94e20b8c.mp4",
+      "file": "14-event-archive-hb001-plate.mp4",
+      "status": "completed"
+    },
+    "15-hologram-boxing-002": {
+      "job_id": "0aee631b-cd74-4af6-b0ce-df4d01003599",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260626_191021_0aee631b-cd74-4af6-b0ce-df4d01003599.mp4",
+      "file": "15-hologram-boxing-002-plate.mp4",
+      "status": "completed"
+    }
+  },
+  "pending": [
+    "16-downtown-hologram-showdown",
+    "17-title-fight-night",
+    "18-fight-card-gold-vs-fire",
+    "18b-fight-card-blue-vs-silver",
+    "18c-fight-card-green-vs-pink",
+    "19-watch-episodes-on-demand",
+    "20-hb001-recap-highlights",
+    "21-gallery-inside-the-tent",
+    "22-news-prize-pool-doubled",
+    "23-about-five-step-journey",
+    "24-hologram-tent-technology",
+    "25-food-drinks-experience",
+    "26-book-ticket-three-steps",
+    "26b-influencer-codes",
+    "26c-attendee-ringside-pass",
+    "27-apply-hologram-fighter",
+    "28-become-a-partner",
+    "29-join-waitlist-early-access",
+    "30-faq-common-questions",
+    "31-website-launch"
+  ],
+  "completed_count": 15,
+  "voice": {
+    "preset": "Skye",
+    "voice_id": "1fb253b8-928b-4d29-a349-f242a71eaddf",
+    "voice_type": "preset",
+    "pipeline": "voice_change on original Seedance job_id (not prior voice pass)",
+    "note": "Script 01 re-voiced with Skye. Plates 02-15 still Gia until credits topped up (~28 credits)."
+  }
+}

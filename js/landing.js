@@ -10,6 +10,7 @@
   const submitBtn = document.getElementById('prelaunch-submit');
   const formHint = document.getElementById('prelaunch-form-hint');
   const successEl = document.getElementById('prelaunch-success');
+  const successVideo = document.getElementById('prelaunch-success-video');
   const video = document.querySelector('.lp-hero-video');
   const canvas = document.getElementById('lp-particles');
   const parallaxBg = document.querySelector('[data-parallax-bg]');
@@ -62,12 +63,30 @@
     });
   }
 
-  async function submitWaitlist(email) {
+  function delay(ms) {
+    return new Promise((resolve) => window.setTimeout(resolve, ms));
+  }
+
+  function showSuccess() {
+    form.hidden = true;
+    successEl.hidden = false;
+    if (!successVideo) return;
+    successVideo.loop = true;
+    successVideo.currentTime = 0;
+    successVideo.muted = false;
+    successVideo.play().catch(() => {
+      successVideo.muted = true;
+      successVideo.play().catch(() => {});
+    });
+  }
+
+  async function submitWaitlist(email, signal) {
     if (GHL.enabled === false) return { ok: true };
 
     const res = await fetch(GHL.apiEndpoint || '/api/ghl-submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      signal,
       body: JSON.stringify({
         formKey: 'waitlist',
         formLabel: 'Pre-Launch Waitlist',
@@ -95,24 +114,28 @@
       return;
     }
 
+    emailInput.disabled = true;
     submitBtn.disabled = true;
+    submitBtn.classList.remove('is-submitted');
     submitBtn.textContent = 'Submitting…';
 
-    try {
-      await submitWaitlist(email);
-      form.hidden = true;
-      successEl.hidden = false;
-      localStorage.setItem('creatorsai_prelaunch', JSON.stringify({ email, at: new Date().toISOString() }));
-    } catch {
-      formHint.textContent = 'Something went wrong. Please try again.';
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Notify Me';
-    }
+    const controller = new AbortController();
+    const apiTimeout = window.setTimeout(() => controller.abort(), 10000);
+    const apiCall = submitWaitlist(email, controller.signal).catch(() => null);
+
+    await Promise.all([apiCall, delay(800)]);
+    window.clearTimeout(apiTimeout);
+
+    submitBtn.textContent = 'Submitted';
+    submitBtn.classList.add('is-submitted');
+    localStorage.setItem('creatorsai_prelaunch', JSON.stringify({ email, at: new Date().toISOString() }));
+
+    await delay(700);
+    showSuccess();
   });
 
   if (localStorage.getItem('creatorsai_prelaunch') && form && successEl) {
-    form.hidden = true;
-    successEl.hidden = false;
+    showSuccess();
   }
 
   if (motionOk && parallaxBg && window.innerWidth > 960) {
