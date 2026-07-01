@@ -359,4 +359,365 @@ body.prelaunch-body {
     animation: none !important;
     transition: none !important;
   }
+
+  .lp-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  [data-parallax-img] {
+    transform: none !important;
+  }
+}
+
+/* ── Hero → Scene 2 transition ── */
+.lp-scene2-divider {
+  position: relative;
+  z-index: 2;
+  height: clamp(3rem, 8vh, 5rem);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 45%, #000 100%);
+  pointer-events: none;
+  margin-top: -1px;
+}
+
+/* ── Scene 2 — The Experience (Production Brief 001) ── */
+.lp-scene2 {
+  position: relative;
+  z-index: 2;
+  background: var(--lp-black);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.lp-scene2-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.lp-scene2-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #000 0%, rgba(0,0,0,0.97) 28%, rgba(0,0,0,0.99) 100%);
+}
+
+.lp-scene2-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 45% at 50% 0%, rgba(0,174,239,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 90% 60% at 50% 100%, rgba(123,44,191,0.08) 0%, transparent 50%);
+}
+
+.lp-scene2-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,174,239,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,174,239,0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(180deg, #000 0%, #000 60%, transparent 100%);
+  opacity: 0.9;
+}
+
+.lp-scene2-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+}
+
+.lp-scene2-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.lp-scene2.is-active .lp-scene2-progress {
+  opacity: 1;
+}
+
+.lp-scene2-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--lp-blue), var(--lp-purple));
+  box-shadow: 0 0 12px rgba(0, 174, 239, 0.6);
+  transition: width 0.08s linear;
+}
+
+.lp-scene2-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2.5rem, 1040px);
+  margin-inline: auto;
+  padding: clamp(2.5rem, 7vh, 4rem) 0 clamp(4rem, 12vh, 6.5rem);
+}
+
+.lp-scene2-intro {
+  text-align: center;
+  margin-bottom: clamp(3.25rem, 8vh, 5rem);
+}
+
+.lp-scene2-kicker {
+  display: inline-block;
+  font-family: var(--lp-font);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--lp-blue);
+  margin-bottom: 1.1rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(0, 174, 239, 0.25);
+  border-radius: 999px;
+  background: rgba(8, 12, 24, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.lp-scene2-title {
+  font-family: var(--lp-font);
+  font-size: clamp(1.35rem, 3.5vw, 2.35rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  text-wrap: balance;
+  margin-bottom: 1.25rem;
+}
+
+.lp-scene2-subtitle {
+  font-size: clamp(0.88rem, 1.5vw, 1.02rem);
+  line-height: 1.75;
+  color: var(--lp-silver);
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+.lp-story-flow {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.5rem, 9vh, 5.5rem);
+}
+
+.lp-story-beat {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.35rem;
+  align-items: center;
+  position: relative;
+}
+
+/* Glass panel — shared */
+.lp-glass-panel {
+  position: relative;
+  border-radius: 6px;
+  background: linear-gradient(145deg, rgba(12, 18, 36, 0.78) 0%, rgba(8, 12, 24, 0.62) 100%);
+  border: 1px solid rgba(0, 174, 239, 0.22);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.lp-glass-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0, 174, 239, 0.35), transparent 40%, rgba(123, 44, 191, 0.25));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+.lp-story-visual {
+  position: relative;
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 174, 239, 0.28);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 12px 40px rgba(0, 0, 0, 0.55),
+    0 0 48px rgba(0, 174, 239, 0.12);
+  transform: translateZ(0);
+}
+
+.lp-story-visual-frame {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.lp-story-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  will-change: transform;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lp-story-beat.is-visible .lp-story-visual img {
+  transform: scale(1.02);
+}
+
+.lp-story-visual-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 174, 239, 0.08) 0%, transparent 35%),
+    linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+  pointer-events: none;
+}
+
+.lp-story-copy {
+  padding: clamp(1.15rem, 3.5vw, 1.65rem);
+}
+
+.lp-story-step {
+  font-family: var(--lp-font);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: var(--lp-purple);
+  margin-bottom: 0.5rem;
+}
+
+.lp-story-title {
+  font-family: var(--lp-font);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.65rem;
+  color: var(--lp-blue);
+}
+
+.lp-story-desc {
+  font-size: clamp(0.88rem, 1.4vw, 0.98rem);
+  line-height: 1.65;
+  color: var(--lp-silver);
+}
+
+.lp-scene2-finale {
+  text-align: center;
+  margin-top: clamp(3.5rem, 9vh, 5.5rem);
+  padding: clamp(2rem, 5vw, 3rem) clamp(1.25rem, 4vw, 2.25rem);
+}
+
+.lp-scene2-finale-title {
+  font-family: var(--lp-font);
+  font-size: clamp(1.2rem, 3vw, 1.85rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-wrap: balance;
+  margin-bottom: 0.85rem;
+}
+
+.lp-scene2-finale-lead {
+  font-size: clamp(0.88rem, 1.5vw, 1rem);
+  line-height: 1.65;
+  color: var(--lp-silver);
+  max-width: 32rem;
+  margin: 0 auto 1.5rem;
+}
+
+.lp-scene2-cta {
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .lp-story-beat {
+    grid-template-columns: 1.12fr 0.88fr;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  .lp-story-beat--reverse {
+    direction: rtl;
+  }
+
+  .lp-story-beat--reverse > * {
+    direction: ltr;
+  }
+
+  .lp-story-beat::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: calc(-1 * clamp(1.75rem, 4.5vh, 2.75rem));
+    width: 1px;
+    height: clamp(1.75rem, 4.5vh, 2.75rem);
+    background: linear-gradient(180deg, rgba(0, 174, 239, 0.4), rgba(123, 44, 191, 0.2));
+    transform: translateX(-50%);
+    opacity: 0.6;
+  }
+
+  .lp-story-beat:last-of-type::after {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .lp-scene2-inner {
+    width: min(100% - 1.5rem, 1040px);
+  }
+
+  .lp-story-visual {
+    margin-inline: -0.25rem;
+    border-radius: 4px;
+  }
+
+  .lp-story-copy {
+    margin-top: 0.25rem;
+  }
+}
+
+/* Scroll reveal directions */
+.lp-reveal {
+  opacity: 0;
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.lp-reveal[data-reveal="up"] {
+  transform: translateY(28px);
+}
+
+.lp-reveal[data-reveal="left"] {
+  transform: translateX(-36px);
+}
+
+.lp-reveal[data-reveal="right"] {
+  transform: translateX(36px);
+}
+
+.lp-reveal.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.lp-story-beat.is-visible .lp-story-visual {
+  animation: lpFrameGlow 1.2s ease 0.3s both;
+}
+
+@keyframes lpFrameGlow {
+  from { box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 12px 40px rgba(0,0,0,0.55), 0 0 0 rgba(0,174,239,0); }
+  to   { box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 12px 40px rgba(0,0,0,0.55), 0 0 48px rgba(0,174,239,0.12); }
 }
