@@ -6,6 +6,10 @@
   "scripts": {
     "start": "python -m http.server 8080",
     "deploy:vercel": "vercel --prod",
-    "deploy:netlify": "netlify deploy --prod --dir=."
+    "deploy:netlify": "netlify deploy --prod --dir=.",
+    "meta:verify": "node scripts/meta/meta-ads-cli.js verify",
+    "meta:list": "node scripts/meta/meta-ads-cli.js list",
+    "meta:plan": "node scripts/meta/meta-ads-cli.js plan",
+    "meta:create-waitlist": "node scripts/meta/meta-ads-cli.js create-waitlist"
   }
 }

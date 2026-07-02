@@ -42,6 +42,8 @@ window.SITE_CONFIG = {
   launchDate: "2026-08-15T18:00:00",
   prizePool: 10000,
   socialAds: {
+    metaAdAccountId: "534185933351087",
+    metaAdsManagerUrl: "https://adsmanager.facebook.com/adsmanager/manage/ad_account_settings/ad_account_setup?act=534185933351087&nav_source=fb4b",
     metaPixelId: "",
     tiktokPixelId: ""
   },

@@ -42,6 +42,12 @@ let SITE = {
     chatWidgetId: '',
     webhooks: { ticket: '', booking: '', fighter: '' },
   },
+  socialAds: {
+    metaAdAccountId: '',
+    metaAdsManagerUrl: '',
+    metaPixelId: '',
+    tiktokPixelId: '',
+  },
 };
 
 function pageRoot() {
@@ -83,6 +89,10 @@ function applyConfig(config) {
         ...SITE.goHighLevel.webhooks,
         ...(config.goHighLevel?.webhooks || {}),
       },
+    },
+    socialAds: {
+      ...(SITE.socialAds || {}),
+      ...(config.socialAds || {}),
     },
   };
 }
@@ -275,6 +285,7 @@ function initCookieBanner() {
   document.getElementById('cookie-accept')?.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'all');
     banner.classList.remove('show');
+    initMetaPixel();
   });
   document.getElementById('cookie-essential')?.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'essential');
@@ -992,6 +1003,25 @@ function initGoHighLevel() {
   }
 }
 
+function initMetaPixel() {
+  const pixelId = SITE.socialAds?.metaPixelId;
+  if (!pixelId || document.querySelector('[data-meta-pixel]')) return;
+  if (localStorage.getItem('cookiesAccepted') === 'essential') return;
+
+  const script = document.createElement('script');
+  script.dataset.metaPixel = '1';
+  script.textContent = `
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '${pixelId}');
+    fbq('track', 'PageView');
+  `;
+  document.head.appendChild(script);
+}
+
 function initFormSubmit(formId, storageKey, successId, mailtoPrefix, ghlFormKey) {
   const form = document.getElementById(formId);
   if (!form) return;
@@ -1126,6 +1156,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   upgradeFullFooter();
   initCookieBanner();
   initGoHighLevel();
+  initMetaPixel();
   initSocialMarquee();
   initSocialLinks();
   initHeroWatchDropdown();
