@@ -3,7 +3,8 @@
 **Title:** The Evolution of the Fight  
 **Duration target:** ~52s spoken over 60s film (pauses built into edit)  
 **Voice direction:** Deep · calm · wise · authoritative · warm · timeless — **not** hype · **not** celebrity imitation  
-**Model:** Higgsfield `seed_audio` (preset TBD — audition slow documentary voice)  
+**Model:** ElevenLabs `eleven_multilingual_v2` (preferred) or Higgsfield `seed_audio` fallback  
+**Setup:** `docs/ELEVENLABS-CONNECT.md`  
 **Pacing:** `speech_rate` negative or 0 · generous pauses between lines · `-14 LUFS` VO bed
 
 ---

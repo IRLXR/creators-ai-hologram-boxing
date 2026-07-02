@@ -11,5 +11,18 @@
       "note": "Use for social ad VO when user wants high energy"
     },
     "note": "Use for all ad VO unless user requests otherwise. speech_rate 0 = natural conversational pace."
+  },
+  "elevenlabs_brief003": {
+    "provider": "elevenlabs",
+    "status": "pending_voice_selection",
+    "model": "eleven_multilingual_v2",
+    "voice_id": "",
+    "voice_name": "TBD — deep documentary narrator",
+    "stability": 0.7,
+    "similarity_boost": 0.75,
+    "speed": 0.9,
+    "script_file": "ads/brief-003/VO-SCRIPT.md",
+    "setup": "docs/ELEVENLABS-CONNECT.md",
+    "note": "Brief 003 only — not Roman hype. Set voice_id after picking voice in ElevenLabs library."
   }
 }
