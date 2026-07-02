@@ -23,8 +23,8 @@ This library is the single source of truth for all AI Hologram Boxing creative w
 | 12 | `12_HIGGSFIELD_GUIDE.md` | Animation pipeline |
 | 13 | `13_PROMPT_LIBRARY.md` | Reusable prompt templates |
 | 14 | `14_DIRECTOR_BRIEF_001.md` | Campaign: The Future Is Here |
-| 15 | `15_DIRECTOR_BRIEF_002.md` | Future campaign placeholder |
-| 16 | `16_DIRECTOR_BRIEF_003.md` | Future campaign placeholder |
+| 15 | `15_DIRECTOR_BRIEF_002.md` | Campaign: Would You Walk Inside |
+| 16 | `16_DIRECTOR_BRIEF_003.md` | Campaign: The Evolution of the Fight (60s documentary) |
 | 17 | `17_SOCIAL_MEDIA_ADS.md` | Platform exports |
 | 18 | `18_POSTER_GUIDE.md` | Poster standards |
 | 19 | `19_QUALITY_CONTROL.md` | QC checklist |

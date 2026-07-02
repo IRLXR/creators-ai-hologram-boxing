@@ -1,0 +1,138 @@
+{
+  "purpose": "Director's Brief 003 — THE EVOLUTION OF THE FIGHT (60s documentary film)",
+  "campaign": "The Future Is Here — evolution documentary",
+  "brief": "ads/brief-003/DIRECTORS-BRIEF-003.md",
+  "storyboard": "ads/brief-003/STORYBOARD.md",
+  "prompts": "ads/brief-003/NANO-BANANA-PROMPTS.md",
+  "vo_script": "ads/brief-003/VO-SCRIPT.md",
+  "model_stills": "nano_banana_2",
+  "model_video": "seedance_2_0",
+  "aspect_ratio": "9:16",
+  "total_duration_sec": 60,
+  "status": "pre-production",
+  "frames_status": "pending",
+  "video_status": "not_started",
+  "approval_gate": "User must approve all master frames before any Seedance generation",
+  "generated_at": "2026-06-21",
+  "references": {
+    "note": "Chapter 7 only — reuse Brief 002 approved brand refs",
+    "arena_exterior_media_id": "1cda5722-71f1-4b34-ba3d-46a0e537e38c",
+    "arena_interior_media_id": "4d3b873e-fd8f-4e6b-bea9-2a133fa8645d",
+    "headset_media_id": "a80bd13f-836a-4094-9f88-907c07ac29a0",
+    "wave_media_id": "7c8931af-5600-4baf-aaac-4e8aaeaf43c8",
+    "headset_strap_media_id": "8e9c76e3-5a4f-49b9-af68-7cf9c7539597",
+    "wave_still": "assets/fighter-cyber.png"
+  },
+  "voiceover": {
+    "style": "Documentary — deep, calm, wise, authoritative, warm",
+    "not": "Roman hype profile · no celebrity clone",
+    "model": "seed_audio",
+    "speech_rate": "TBD — slow (negative or 0)",
+    "status": "not_recorded"
+  },
+  "final_film": {
+    "title": "The Evolution of the Fight — 60s Documentary",
+    "path": "ads/brief-003/output/EVOLUTION-60s-9x16-VO.mp4",
+    "path_ambient": "ads/brief-003/output/EVOLUTION-60s-9x16-ambient.mp4",
+    "exports_pending": [
+      "instagram_reel",
+      "tiktok",
+      "facebook_reel",
+      "youtube_shorts"
+    ]
+  },
+  "frames": [
+    {
+      "id": "01-prehistoric-gathering",
+      "title": "PREHISTORIC GATHERING",
+      "time": "0:08-0:15",
+      "path": "ads/brief-003/master-frames/01-prehistoric-gathering.png",
+      "status": "pending",
+      "job_id": null,
+      "seedance_job_id": null
+    },
+    {
+      "id": "02-egypt-ceremony",
+      "title": "ANCIENT EGYPT",
+      "time": "0:15-0:21",
+      "path": "ads/brief-003/master-frames/02-egypt-ceremony.png",
+      "status": "pending",
+      "job_id": null,
+      "seedance_job_id": null
+    },
+    {
+      "id": "03-greece-olympics",
+      "title": "ANCIENT GREECE",
+      "time": "0:21-0:27",
+      "path": "ads/brief-003/master-frames/03-greece-olympics.png",
+      "status": "pending",
+      "job_id": null,
+      "seedance_job_id": null
+    },
+    {
+      "id": "04-rome-colosseum",
+      "title": "ROME",
+      "time": "0:27-0:33",
+      "path": "ads/brief-003/master-frames/04-rome-colosseum.png",
+      "status": "pending",
+      "job_id": null,
+      "seedance_job_id": null
+    },
+    {
+      "id": "05-asia-martial-arts",
+      "title": "ASIA",
+      "time": "0:33-0:39",
+      "path": "ads/brief-003/master-frames/05-asia-martial-arts.png",
+      "status": "pending",
+      "job_id": null,
+      "seedance_job_id": null
+    },
+    {
+      "id": "06-modern-boxing",
+      "title": "MODERN BOXING",
+      "time": "0:39-0:44",
+      "path": "ads/brief-003/master-frames/06-modern-boxing.png",
+      "status": "pending",
+      "job_id": null,
+      "seedance_job_id": null
+    },
+    {
+      "id": "07-modern-ufc",
+      "title": "MODERN UFC",
+      "time": "0:44-0:49",
+      "path": "ads/brief-003/master-frames/07-modern-ufc.png",
+      "status": "pending",
+      "job_id": null,
+      "seedance_job_id": null
+    },
+    {
+      "id": "08-timeline-future-line",
+      "title": "TIMELINE — NEXT CHAPTER",
+      "time": "0:49-0:51",
+      "path": "ads/brief-003/master-frames/08-timeline-future-line.png",
+      "status": "pending",
+      "job_id": null,
+      "seedance_job_id": null
+    },
+    {
+      "id": "09-future-arena-wave",
+      "title": "AI HOLOGRAM BOXING — THE FUTURE",
+      "time": "0:51-0:55",
+      "path": "ads/brief-003/master-frames/09-future-arena-wave.png",
+      "status": "pending",
+      "job_id": null,
+      "seedance_job_id": null,
+      "brand_lock": true,
+      "requires_references": true
+    },
+    {
+      "id": "10-cta-end-card",
+      "title": "CTA END CARD",
+      "time": "0:58-1:00",
+      "path": "ads/brief-003/master-frames/10-cta-end-card.png",
+      "status": "pending",
+      "job_id": null,
+      "seedance_job_id": null
+    }
+  ]
+}
