@@ -9,11 +9,12 @@
   "model_video": "seedance_2_0",
   "aspect_ratio": "9:16",
   "total_duration_sec": 60,
-  "status": "pre-production",
-  "frames_status": "pending",
+  "status": "frames_generated",
+  "frames_status": "pending_user_approval",
   "video_status": "not_started",
   "approval_gate": "User must approve all master frames before any Seedance generation",
-  "generated_at": "2026-06-21",
+  "generated_at": "2026-07-02",
+  "frames_generated_at": "2026-07-02",
   "references": {
     "note": "Chapter 7 only — reuse Brief 002 approved brand refs",
     "arena_exterior_media_id": "1cda5722-71f1-4b34-ba3d-46a0e537e38c",
@@ -47,8 +48,9 @@
       "title": "PREHISTORIC GATHERING",
       "time": "0:08-0:15",
       "path": "ads/brief-003/master-frames/01-prehistoric-gathering.png",
-      "status": "pending",
-      "job_id": null,
+      "status": "generated_pending_review",
+      "job_id": "227a737c-4153-4a25-97df-478da3fe78d3",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143800_227a737c-4153-4a25-97df-478da3fe78d3.png",
       "seedance_job_id": null
     },
     {
@@ -56,8 +58,9 @@
       "title": "ANCIENT EGYPT",
       "time": "0:15-0:21",
       "path": "ads/brief-003/master-frames/02-egypt-ceremony.png",
-      "status": "pending",
-      "job_id": null,
+      "status": "generated_pending_review",
+      "job_id": "ba262c06-00d0-45d8-88bd-62facd358c07",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143800_ba262c06-00d0-45d8-88bd-62facd358c07.png",
       "seedance_job_id": null
     },
     {
@@ -65,8 +68,11 @@
       "title": "ANCIENT GREECE",
       "time": "0:21-0:27",
       "path": "ads/brief-003/master-frames/03-greece-olympics.png",
-      "status": "pending",
-      "job_id": null,
+      "status": "generated_pending_review",
+      "job_id": "b21fa97b-ab97-4341-ab53-6af2118de34f",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143925_b21fa97b-ab97-4341-ab53-6af2118de34f.png",
+      "previous_job_id": "7a32bbb0-2295-4f8c-abbc-450f66bdbefe",
+      "note": "v1 flagged nsfw — regenerated family-friendly PG prompt",
       "seedance_job_id": null
     },
     {
@@ -74,8 +80,9 @@
       "title": "ROME",
       "time": "0:27-0:33",
       "path": "ads/brief-003/master-frames/04-rome-colosseum.png",
-      "status": "pending",
-      "job_id": null,
+      "status": "generated_pending_review",
+      "job_id": "f322860a-dbef-4c88-9b34-6c7e0a24e1ba",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143800_f322860a-dbef-4c88-9b34-6c7e0a24e1ba.png",
       "seedance_job_id": null
     },
     {
@@ -83,8 +90,9 @@
       "title": "ASIA",
       "time": "0:33-0:39",
       "path": "ads/brief-003/master-frames/05-asia-martial-arts.png",
-      "status": "pending",
-      "job_id": null,
+      "status": "generated_pending_review",
+      "job_id": "3f0fcbd9-ae57-4d6e-bc66-40e47d2257ce",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143817_3f0fcbd9-ae57-4d6e-bc66-40e47d2257ce.png",
       "seedance_job_id": null
     },
     {
@@ -92,8 +100,9 @@
       "title": "MODERN BOXING",
       "time": "0:39-0:44",
       "path": "ads/brief-003/master-frames/06-modern-boxing.png",
-      "status": "pending",
-      "job_id": null,
+      "status": "generated_pending_review",
+      "job_id": "e4bd092d-c135-4032-81f5-af865c140aaa",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143812_e4bd092d-c135-4032-81f5-af865c140aaa.png",
       "seedance_job_id": null
     },
     {
@@ -101,8 +110,9 @@
       "title": "MODERN UFC",
       "time": "0:44-0:49",
       "path": "ads/brief-003/master-frames/07-modern-ufc.png",
-      "status": "pending",
-      "job_id": null,
+      "status": "generated_pending_review",
+      "job_id": "22441d1c-1cdd-4b00-9c56-094b33fc2499",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143812_22441d1c-1cdd-4b00-9c56-094b33fc2499.png",
       "seedance_job_id": null
     },
     {
@@ -110,8 +120,9 @@
       "title": "TIMELINE — NEXT CHAPTER",
       "time": "0:49-0:51",
       "path": "ads/brief-003/master-frames/08-timeline-future-line.png",
-      "status": "pending",
-      "job_id": null,
+      "status": "generated_pending_review",
+      "job_id": "e8d856b0-87cb-4649-bc6b-97adc681267a",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143812_e8d856b0-87cb-4649-bc6b-97adc681267a.png",
       "seedance_job_id": null
     },
     {
@@ -119,8 +130,9 @@
       "title": "AI HOLOGRAM BOXING — THE FUTURE",
       "time": "0:51-0:55",
       "path": "ads/brief-003/master-frames/09-future-arena-wave.png",
-      "status": "pending",
-      "job_id": null,
+      "status": "generated_pending_review",
+      "job_id": "c77ccfa3-85c7-4dda-8d33-849128d09049",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143837_c77ccfa3-85c7-4dda-8d33-849128d09049.png",
       "seedance_job_id": null,
       "brand_lock": true,
       "requires_references": true
@@ -130,8 +142,9 @@
       "title": "CTA END CARD",
       "time": "0:58-1:00",
       "path": "ads/brief-003/master-frames/10-cta-end-card.png",
-      "status": "pending",
-      "job_id": null,
+      "status": "generated_pending_review",
+      "job_id": "c8b3e222-d6ca-4513-83e7-1fbefc8a4799",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143833_c8b3e222-d6ca-4513-83e7-1fbefc8a4799.png",
       "seedance_job_id": null
     }
   ]

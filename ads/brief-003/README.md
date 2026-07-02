@@ -10,7 +10,7 @@
 | Storyboard | ✅ `STORYBOARD.md` |
 | VO script | ✅ `VO-SCRIPT.md` |
 | Nano Banana prompts | ✅ `NANO-BANANA-PROMPTS.md` |
-| Master frames (10) | ⏳ **Next — generate + your approval** |
+| Master frames (10) | ✅ Generated — **your approval required** |
 | Seedance animation | 🔒 Blocked until frames approved |
 | Documentary VO | 🔒 After picture lock |
 | Social exports | 🔒 After final mix |
