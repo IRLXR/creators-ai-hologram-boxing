@@ -135,18 +135,26 @@ Use Higgsfield **Infinite Talk** (not exposed in MCP yet — run in app):
 
 **Do not use:** `dubbing` (translates existing words, not custom script), `voice_change` (same words/timing only).
 
-### Local preview (no credits)
+### APPROVED FINAL (2026-07-02) — DEJ-1 voice
 
-Audio-replaced only — **lips do not match** until Infinite Talk runs:
+**Voice:** DEJ-1 (custom element) · **8% slower** · lips preserved via `voice_change` on plate `8a0cefe7…`
 
-- VO: `ugc/output/32-live-interactive-effects-vo-15s.mp3`
-- Preview: `ugc/output/32-live-interactive-effects-audio-preview.mp4`
-- Review copy: `assets/AD for Review/32-live-interactive-effects-audio-preview.mp4`
+| Use | File |
+|-----|------|
+| **Review / upload** | `assets/AD for Review/32-live-interactive-effects-plate.mp4` |
+| **Ads posting (launch hub)** | `ads/output/32-live-interactive-effects-plate.mp4` |
+| **UGC output** | `ugc/output/32-live-interactive-effects-plate.mp4` |
+
+Legacy alias (same file): `32-live-interactive-effects-audio-preview.mp4`
+
+**Job:** DEJ-1 voice_change `c1ca264a-484a-4829-8d9d-fba5cd2e43fc` · Alt Tasha `ad4486bd-2989-40a7-b669-054fe1aaef6e`
+
+**Script unchanged** — see `ugc/output/32-live-interactive-effects-vo.txt`
 
 ---
 
 ## Seedance generation notes (full regen — only if topping up credits)
 
-Same pipeline as other Ads avatar plates (`916340ac` keyframe → `seedance_2_0` 15s → **Skye** `voice_change`).
+Same pipeline as other Ads avatar plates (`916340ac` keyframe → `seedance_2_0` 15s → **DEJ-1** `voice_change`).
 
 **15s prompt VO block:** use **15s Full VO** above.

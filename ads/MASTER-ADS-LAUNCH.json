@@ -5,7 +5,7 @@
   "goal": "Founding Fan waitlist email signups",
   "user_level": "beginner — needs click-by-click guides, zero jargon",
   "launch_strategy": "Day 1: 2 hero cinematic ads. Week 1+: Phase 1 UGC. Week 2+: Phases 2-3. Phase 4 when tickets live.",
-  "total_ads": 17,
+  "total_ads": 18,
   "full_catalog": "ads/ALL-ADS-CATALOG.json",
   "launch_hub": "ads/launch-hub.html",
   "total_day1_budget_usd": 35,
@@ -81,7 +81,7 @@
     "catalog": "ads/ALL-ADS-CATALOG.json",
     "phase_1_count": 2,
     "phase_2_count": 4,
-    "phase_3_count": 5,
+    "phase_3_count": 6,
     "phase_4_count": 4
   },
   "prerequisites": [

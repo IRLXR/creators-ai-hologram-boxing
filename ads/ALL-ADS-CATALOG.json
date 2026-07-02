@@ -181,6 +181,21 @@
                     "hook":  null
                 },
                 {
+                    "id":  "32_interactive",
+                    "tier":  "ugc",
+                    "phase":  "Phase 3 - Consideration",
+                    "name":  "Live Interactive Stream Effects",
+                    "file":  "c:\\Users\\suzet\\Desktop\\creators-ai-hologram-boxing\\ads\\output\\32-live-interactive-effects-plate.mp4",
+                    "file_desktop":  "c:\\Users\\suzet\\Desktop\\creators-ai-hologram-boxing\\assets\\AD for Review\\32-live-interactive-effects-plate.mp4",
+                    "headline":  "Interact Live From Stream",
+                    "meta_primary":  "Tap effect buttons on @creatorsai Kick/Twitch live — Rain, Lightning, Fog — and trigger synced AR for every Meta Quest at the hologram boxing tent. Watch free. Book headset POV on site.",
+                    "tiktok_text":  "Tap Rain on the live → AR rain for every creator in the tent. Hologram boxing goes interactive. Follow @creatorsai.",
+                    "meta_campaign":  "CAMP_HB_Consideration_001",
+                    "path":  "/watch.html?utm_campaign=live_effects\u0026utm_content=32_interactive",
+                    "cta":  "Learn More",
+                    "hook":  "You're not just watching the live — you control the tent."
+                },
+                {
                     "id":  "14_hb001",
                     "tier":  "ugc",
                     "phase":  "Phase 3 - Consideration",
@@ -256,5 +271,5 @@
                     "hook":  null
                 }
             ],
-    "total_ads":  17
+    "total_ads":  18
 }
