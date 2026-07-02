@@ -137,7 +137,8 @@ Use Higgsfield **Infinite Talk** (not exposed in MCP yet — run in app):
 
 ### APPROVED FINAL (2026-07-02) — DEJ-1 voice
 
-**Voice:** DEJ-1 (custom element) · **8% slower** · lips preserved via `voice_change` on plate `8a0cefe7…`
+**Voice:** DEJ-1 (custom element) · lips preserved via `voice_change` on plate `8a0cefe7…`  
+**Note:** Do not apply `-t` trim after slow pass — it cuts off the ending (“Tap to book”). Use full `dej1-voicechange` export.
 
 | Use | File |
 |-----|------|
