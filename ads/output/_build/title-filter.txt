@@ -1,0 +1,2 @@
+drawtext=fontfile=C\:/Windows/Fonts/arialbd.ttf:text=THE FUTURE IS HERE:fontsize=52:fontcolor=0x00AEEF:x=(w-text_w)/2:y=(h-text_h)/2-40
+drawtext=fontfile=C\:/Windows/Fonts/arialbd.ttf:text=AI HOLOGRAM BOXING:fontsize=28:fontcolor=white@0.85:x=(w-text_w)/2:y=(h-text_h)/2+30

@@ -41,6 +41,10 @@ window.SITE_CONFIG = {
   nextEventDate: "2026-08-15T18:00:00",
   launchDate: "2026-08-15T18:00:00",
   prizePool: 10000,
+  socialAds: {
+    metaPixelId: "",
+    tiktokPixelId: ""
+  },
   fights: [
     {
       id: "hb002-main",

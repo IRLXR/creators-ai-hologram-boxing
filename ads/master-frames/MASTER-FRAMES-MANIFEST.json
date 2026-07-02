@@ -1,0 +1,109 @@
+{
+  "purpose": "Ad production keyframes — NOT for landing page or website",
+  "campaign": "The Future Is Here — 4-beat ad sequence",
+  "brief": "Ad Master Frames (Revision 3) + Seedance 2.0 animation",
+  "model_stills": "nano_banana_2",
+  "model_video": "seedance_2_0",
+  "aspect_ratio": "16:9",
+  "video_duration_sec": 5,
+  "host_reference": "assets/Ads/card-apply.png",
+  "host_media_id": "819d7e88-b1ee-4838-882f-ea53d5933493",
+  "wave_reference": "assets/fighter-cyber.png",
+  "wave_media_id": "0e48aecc-a9ac-49ea-9784-b09399185324",
+  "status": "approved",
+  "video_status": "completed",
+  "final_ad": {
+    "title": "The Future Is Here — 15s Launch Ad",
+    "path": "ads/output/FUTURE-IS-HERE-15s-9x16.mp4",
+    "aspect_ratio": "9:16",
+    "duration_sec": 15,
+    "structure": "2s title + 4 beats @ 2.75s + 2s CTA",
+    "audio": "Seedance ambient ducked under Roman VO (seed_audio)",
+    "voiceover": {
+      "voice": "Roman",
+      "voice_id": "7e63ac18-5fcd-4aba-8078-a86d4e11c127",
+      "voice_type": "preset",
+      "job_id": "07dbca51-8e55-4152-9c6c-a000142dd041",
+      "script_file": "ads/output/FUTURE-IS-HERE-VO-SCRIPT.md",
+      "audio_path": "ads/output/FUTURE-IS-HERE-vo-roman-v4-hype.wav",
+      "speech_rate": 4,
+      "loudness_rate": 3,
+      "mix": "hype — brighter EQ, lighter compression, faster delivery",
+      "final_with_vo": "ads/output/FUTURE-IS-HERE-15s-9x16-VO.mp4",
+      "previous_voice": {
+        "voice": "Roman v3 natural",
+        "job_id": "1c867be8-e423-4d22-93fa-bed92cb63a90",
+        "audio_path": "ads/output/FUTURE-IS-HERE-vo-roman-v3.wav"
+      },
+      "archived_roman_v2": {
+        "voice": "Roman v2",
+        "job_id": "5a59ec1c-cc09-42b2-b231-15a95ad9b480",
+        "audio_path": "ads/output/FUTURE-IS-HERE-vo-roman-v2.wav"
+      },
+      "archived_roman_v1": {
+        "voice": "Roman v1",
+        "job_id": "1bb9e89e-2546-41a8-a00e-2b7a9f7e9dcc",
+        "audio_path": "ads/output/FUTURE-IS-HERE-vo-roman.wav"
+      },
+      "archived_skye": {
+        "job_id": "2a93c834-ebb3-4769-a181-4b954e59f001",
+        "audio_path": "ads/output/FUTURE-IS-HERE-vo.wav"
+      }
+    }
+  },
+  "default_voice_config": "ads/VOICE-CONFIG.json",
+  "approved_at": "2026-07-01",
+  "video_completed_at": "2026-07-02",
+  "generated_at": "2026-07-01",
+  "headset_strap_approved_at": "2026-07-01",
+  "headset_strap_reference": "ugc/output/host-keyframe-ads-avatar-quest3-strap.png",
+  "note": "Revision 3 approved. Seedance 5s clips generated 2026-07-02. Frame 01 first attempt flagged NSFW — regenerated successfully.",
+  "frames": [
+    {
+      "id": "01-enter-the-arena",
+      "title": "ENTER THE ARENA",
+      "path": "ads/master-frames/01-enter-the-arena.png",
+      "job_id": "9f11a9f7-aff6-4b74-a8e7-4edcbfa038f2",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260701_125513_9f11a9f7-aff6-4b74-a8e7-4edcbfa038f2.png",
+      "revision": "Headset strap only — official luxury monogram side strap on every spectator",
+      "seedance_job_id": "e208ecdc-245d-47ea-a2e6-01276b14a88f",
+      "seedance_previous_job_id": "1a154d22-8169-4eaf-8538-64a32ccc7f15",
+      "seedance_note": "First attempt nsfw — regenerated with family-friendly prompt",
+      "video_path": "ads/output/01-enter-the-arena-seedance.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_014152_e208ecdc-245d-47ea-a2e6-01276b14a88f.mp4"
+    },
+    {
+      "id": "02-gear-up",
+      "title": "GEAR UP",
+      "path": "ads/master-frames/02-gear-up.png",
+      "job_id": "bc8b155f-862e-42fe-8f7c-b33b953f2781",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260701_125516_bc8b155f-862e-42fe-8f7c-b33b953f2781.png",
+      "revision": "Headset strap only — official luxury monogram side strap on every spectator",
+      "seedance_job_id": "dd10679c-0f49-4cff-87f8-fb06fc7e1f14",
+      "video_path": "ads/output/02-gear-up-seedance.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_013648_dd10679c-0f49-4cff-87f8-fb06fc7e1f14.mp4"
+    },
+    {
+      "id": "03-fight-begins",
+      "title": "THE FIGHT BEGINS",
+      "path": "ads/master-frames/03-fight-begins.png",
+      "job_id": "c5744bc4-e9fa-49ed-9add-0b283c72521e",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260701_051327_c5744bc4-e9fa-49ed-9add-0b283c72521e.png",
+      "revision": "Official Wave wireframe fighters — featureless head, gold vs cyan, larger glow",
+      "seedance_job_id": "dc7cbb2c-173c-4cf8-8f5f-2e7f4e42e3f5",
+      "video_path": "ads/output/03-fight-begins-seedance.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_013648_dc7cbb2c-173c-4cf8-8f5f-2e7f4e42e3f5.mp4"
+    },
+    {
+      "id": "04-world-watching",
+      "title": "THE WORLD IS WATCHING",
+      "path": "ads/master-frames/04-world-watching.png",
+      "job_id": "94ca1696-ee58-4dc3-927b-cd40a849f132",
+      "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260701_051328_94ca1696-ee58-4dc3-927b-cd40a849f132.png",
+      "revision": "Premium global broadcast — wall monitors, multi-camera, creator reactions",
+      "seedance_job_id": "19254744-5c3c-41e4-a2dc-49b2c9af947d",
+      "video_path": "ads/output/04-world-watching-seedance.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_013648_19254744-5c3c-41e4-a2dc-49b2c9af947d.mp4"
+    }
+  ]
+}

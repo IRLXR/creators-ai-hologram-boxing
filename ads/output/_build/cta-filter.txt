@@ -1,0 +1,2 @@
+drawtext=fontfile=C\:/Windows/Fonts/arialbd.ttf:text=THIS IS ONLY THE BEGINNING:fontsize=38:fontcolor=white:x=(w-text_w)/2:y=(h-text_h)/2-60
+drawtext=fontfile=C\:/Windows/Fonts/arialbd.ttf:text=BECOME A FOUNDING FAN:fontsize=44:fontcolor=0x00AEEF:x=(w-text_w)/2:y=(h-text_h)/2+20

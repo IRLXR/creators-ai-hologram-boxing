@@ -1,0 +1,15 @@
+{
+  "default_voice": {
+    "name": "Roman",
+    "voice_id": "7e63ac18-5fcd-4aba-8078-a86d4e11c127",
+    "voice_type": "preset",
+    "model": "seed_audio",
+    "speech_rate": 0,
+    "hype_profile": {
+      "speech_rate": 4,
+      "loudness_rate": 3,
+      "note": "Use for social ad VO when user wants high energy"
+    },
+    "note": "Use for all ad VO unless user requests otherwise. speech_rate 0 = natural conversational pace."
+  }
+}

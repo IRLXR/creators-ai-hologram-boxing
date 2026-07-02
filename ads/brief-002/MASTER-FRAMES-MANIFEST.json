@@ -1,0 +1,108 @@
+{
+  "purpose": "Ad production — Director's Brief 002: WOULD YOU WALK INSIDE?",
+  "campaign": "Would You Walk Inside — 5-beat anticipation trailer",
+  "brief": "ads/brief-002/DIRECTORS-BRIEF-002.md",
+  "model_stills": "nano_banana_2",
+  "model_video": "seedance_2_0",
+  "aspect_ratio": "9:16",
+  "scene_duration_sec": 3,
+  "total_duration_sec": 15,
+  "status": "completed",
+  "frames_approved_at": "2026-07-02",
+  "seedance_completed_at": "2026-07-02",
+  "audio": "Seedance ambient + Roman hype VO; end-card music preserved (scene 5)",
+  "generated_at": "2026-07-02",
+  "final_ad": {
+    "title": "Would You Walk Inside — 15s Launch Ad",
+    "path": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4",
+    "path_no_vo": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-SEEDANCE.mp4",
+    "master_copy": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16.mp4",
+    "aspect_ratio": "9:16",
+    "duration_sec": 15,
+    "resolution": "1080x1920",
+    "fps": 24,
+    "structure": "5 scenes @ 3s each (trimmed from 5s Seedance clips)",
+    "desktop_copy": "C:\\Users\\suzet\\Desktop\\WOULD-YOU-WALK-INSIDE-15s-9x16.mp4",
+    "exports": {
+      "instagram_reel": "ads/brief-002/output/INSTAGRAM-REEL-WOULD-YOU-WALK-INSIDE.mp4",
+      "tiktok": "ads/brief-002/output/TIKTOK-WOULD-YOU-WALK-INSIDE.mp4",
+      "facebook_reel": "ads/brief-002/output/FACEBOOK-REEL-WOULD-YOU-WALK-INSIDE.mp4",
+      "youtube_shorts": "ads/brief-002/output/YOUTUBE-SHORTS-WOULD-YOU-WALK-INSIDE.mp4"
+    },
+    "thumbnail": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-thumbnail.png",
+    "poster_frame": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-poster-frame.png",
+    "voiceover": {
+      "voice": "Roman",
+      "version": "v3",
+      "voice_id": "7e63ac18-5fcd-4aba-8078-a86d4e11c127",
+      "voice_type": "preset",
+      "job_id": "9c2844f4-ef5b-4323-bbdc-32aaa3cfb137",
+      "speech_rate": 2,
+      "loudness_rate": 3,
+      "script_file": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-VO-SCRIPT.md",
+      "audio_path": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-vo-roman-v3-hype-fit.wav",
+      "mix_note": "Full ending through 'The future is waiting' — 1.8s crossfade into end-card music",
+      "archived_v2_job_id": "5ccf70b7-cbee-48ba-bab6-70b2daac65f3",
+      "archived_v1_job_id": "8ebc8817-7143-4a44-8293-7f51b7c1a8e8"
+    }
+  },
+  "references": {
+    "arena_exterior_media_id": "1cda5722-71f1-4b34-ba3d-46a0e537e38c",
+    "arena_interior_media_id": "4d3b873e-fd8f-4e6b-bea9-2a133fa8645d",
+    "headset_media_id": "a80bd13f-836a-4094-9f88-907c07ac29a0",
+    "wave_media_id": "7c8931af-5600-4baf-aaac-4e8aaeaf43c8",
+    "headset_strap_media_id": "8e9c76e3-5a4f-49b9-af68-7cf9c7539597"
+  },
+  "frames": [
+    {
+      "id": "01-would-you-walk-inside",
+      "title": "WOULD YOU WALK INSIDE?",
+      "time": "0-3s",
+      "path": "ads/brief-002/master-frames/01-would-you-walk-inside.png",
+      "job_id": "efd9e6fc-d9e2-4659-85e0-70ced56e5823",
+      "seedance_job_id": "4cbd7370-bae2-4517-91b1-c5833d8cb4a1",
+      "seedance_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_064455_4cbd7370-bae2-4517-91b1-c5833d8cb4a1.mp4",
+      "video_path": "ads/brief-002/output/01-would-you-walk-inside-seedance-3s.mp4"
+    },
+    {
+      "id": "02-welcome-guests",
+      "title": "WELCOME",
+      "time": "3-6s",
+      "path": "ads/brief-002/master-frames/02-welcome-guests.png",
+      "job_id": "6761b8ae-3a10-46ef-ba45-a9262837ef28",
+      "seedance_job_id": "374fc012-7ff0-4f81-a651-52fcd46e2847",
+      "seedance_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_064454_374fc012-7ff0-4f81-a651-52fcd46e2847.mp4",
+      "video_path": "ads/brief-002/output/02-welcome-guests-seedance-3s.mp4"
+    },
+    {
+      "id": "03-tunnel-mystery",
+      "title": "TUNNEL",
+      "time": "6-9s",
+      "path": "ads/brief-002/master-frames/03-tunnel-mystery.png",
+      "job_id": "89beb364-ba1b-4b5f-8015-268e852f9aaa",
+      "seedance_job_id": "50bec302-1732-411a-ad98-2aa3becbc86e",
+      "seedance_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_064456_50bec302-1732-411a-ad98-2aa3becbc86e.mp4",
+      "video_path": "ads/brief-002/output/03-tunnel-mystery-seedance-3s.mp4"
+    },
+    {
+      "id": "04-arena-glimpse",
+      "title": "ARENA GLIMPSE",
+      "time": "9-12s",
+      "path": "ads/brief-002/master-frames/04-arena-glimpse.png",
+      "job_id": "cd2265a9-f2cd-4ce0-8177-5c2ed88d1112",
+      "seedance_job_id": "b9dd15dd-8494-42ec-8ba4-6ae0cb037fb3",
+      "seedance_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_064455_b9dd15dd-8494-42ec-8ba4-6ae0cb037fb3.mp4",
+      "video_path": "ads/brief-002/output/04-arena-glimpse-seedance-3s.mp4"
+    },
+    {
+      "id": "05-cta-end-card",
+      "title": "CTA END CARD",
+      "time": "12-15s",
+      "path": "ads/brief-002/master-frames/05-cta-end-card.png",
+      "job_id": "4284b7e1-3892-4106-9a13-1d00607bcd51",
+      "seedance_job_id": "a33d1de9-84d9-4fbb-a359-b8a2b6c6c025",
+      "seedance_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_064454_a33d1de9-84d9-4fbb-a359-b8a2b6c6c025.mp4",
+      "video_path": "ads/brief-002/output/05-cta-end-card-seedance-3s.mp4"
+    }
+  ]
+}

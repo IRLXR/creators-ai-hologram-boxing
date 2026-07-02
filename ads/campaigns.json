@@ -1,0 +1,304 @@
+{
+  "site_base": "https://creators-ai-hologram-boxing.vercel.app",
+  "creative_base": "ugc/output",
+  "event": {
+    "name": "Hologram Boxing 002",
+    "date": "2026-08-15T18:00:00",
+    "prize_pool_usd": 10000
+  },
+  "default_targeting": {
+    "geo": ["US"],
+    "age_min": 18,
+    "age_max": 44,
+    "interests": [
+      "Boxing",
+      "Mixed martial arts",
+      "Esports",
+      "Virtual reality",
+      "Augmented reality",
+      "Live streaming",
+      "Twitch",
+      "Video games",
+      "Music festivals",
+      "Entertainment"
+    ]
+  },
+  "meta_placements": [
+    "Instagram Reels",
+    "Instagram Stories",
+    "Facebook Reels",
+    "Facebook Feed"
+  ],
+  "phases": [
+    {
+      "id": "phase_1",
+      "name": "Launch — Waitlist",
+      "priority": 1,
+      "start_when": "Day 1 — run first",
+      "budget_split": { "meta_pct": 60, "tiktok_pct": 40 },
+      "daily_budget_usd": { "meta": 20, "tiktok": 15 }
+    },
+    {
+      "id": "phase_2",
+      "name": "Awareness",
+      "priority": 2,
+      "start_when": "After 3–5 days waitlist baseline",
+      "budget_split": { "meta_pct": 50, "tiktok_pct": 50 },
+      "daily_budget_usd": { "meta": 15, "tiktok": 15 }
+    },
+    {
+      "id": "phase_3",
+      "name": "Consideration",
+      "priority": 3,
+      "start_when": "Week 2 or when watch page traffic grows",
+      "budget_split": { "meta_pct": 50, "tiktok_pct": 50 },
+      "daily_budget_usd": { "meta": 15, "tiktok": 10 }
+    },
+    {
+      "id": "phase_4",
+      "name": "Conversion — Tickets",
+      "priority": 4,
+      "start_when": "Countdown under 30 days or tickets live",
+      "budget_split": { "meta_pct": 55, "tiktok_pct": 45 },
+      "daily_budget_usd": { "meta": 25, "tiktok": 20 }
+    }
+  ],
+  "campaigns": [
+    {
+      "phase": "phase_1",
+      "objective": "waitlist",
+      "meta": {
+        "campaign_name": "CAMP_HB_Waitlist_001",
+        "objective": "Leads",
+        "objective_fallback": "Traffic",
+        "optimization": "Landing page views or Lead form",
+        "ad_set_name": "ADSET_HB_Waitlist_US_18-44",
+        "cta": "Sign Up"
+      },
+      "tiktok": {
+        "campaign_name": "CAMP_HB_Waitlist_001",
+        "objective": "Website conversions",
+        "objective_fallback": "Traffic",
+        "ad_group_name": "ADGRP_HB_Waitlist_US_18-44",
+        "cta": "Sign Up"
+      },
+      "ads": [
+        {
+          "id": "29_waitlist",
+          "script": "29",
+          "name": "AD_HB_Waitlist_FoundingFan",
+          "creative": "ads-avatar-what-is-hologram-boxing-plate.mp4",
+          "creative_alt": ["01-what-is-hologram-boxing-plate.mp4", "TIKTOK-what-is-hologram-boxing-plate.mp4"],
+          "headline": "Join the Waitlist",
+          "meta_primary": "The world's first live AI hologram boxing experience is launching. Drop your email for early access, ticket alerts, and exclusive drops.",
+          "tiktok_text": "Hologram boxing launching soon. Waitlist = first in the tent. Tap to join.",
+          "path": "/landing.html?utm_campaign=waitlist&utm_content=29_waitlist",
+          "hook": "Get in before tickets drop."
+        },
+        {
+          "id": "01_what_is_waitlist",
+          "script": "01",
+          "name": "AD_HB_Waitlist_WhatIs",
+          "creative": "ads-avatar-what-is-hologram-boxing-plate.mp4",
+          "headline": "What Is Hologram Boxing?",
+          "meta_primary": "What is hologram boxing? Walk into an inflatable tent, AR on, watch Wave hologram boxers in a glowing square. Spectator only — fight night energy that hits different. Join the waitlist.",
+          "tiktok_text": "What is hologram boxing? Tent + AR + AI fighters. You watch — Wave fights. Tap to join.",
+          "path": "/landing.html?utm_campaign=waitlist&utm_content=01_what_is",
+          "hook": "What is hologram boxing? Real talk — you don't fight."
+        }
+      ]
+    },
+    {
+      "phase": "phase_2",
+      "objective": "awareness",
+      "meta": {
+        "campaign_name": "CAMP_HB_Awareness_001",
+        "objective": "Awareness",
+        "ad_set_name": "ADSET_HB_Awareness_US_18-44",
+        "cta": "Learn More"
+      },
+      "tiktok": {
+        "campaign_name": "CAMP_HB_Awareness_001",
+        "objective": "Reach",
+        "ad_group_name": "ADGRP_HB_Awareness_US_18-44",
+        "cta": "Learn More"
+      },
+      "ads": [
+        {
+          "id": "01_what_is",
+          "script": "01",
+          "creative": "ads-avatar-what-is-hologram-boxing-plate.mp4",
+          "headline": "What Is Hologram Boxing?",
+          "meta_primary": "Walk into an inflatable tent, AR on, watch Wave hologram boxers in a glowing square. Spectator only — fight night energy that hits different.",
+          "tiktok_text": "What is hologram boxing? Tent + AR + AI fighters. You watch — Wave fights.",
+          "path": "/about.html?utm_campaign=awareness&utm_content=01_what_is"
+        },
+        {
+          "id": "02_tent",
+          "script": "02",
+          "creative": "02-the-inflatable-tent-plate.mp4",
+          "headline": "Inside the Hologram Tent",
+          "meta_primary": "Dark quilted walls, rolling fog, glowing fight square. Wave wireframe boxers spar while the crowd watches in VR goggles. Lowkey secret club energy.",
+          "tiktok_text": "Whole fight lives in an inflatable tent. Glowing square. Wireframe boxers. Fog.",
+          "path": "/about.html?utm_campaign=awareness&utm_content=02_tent"
+        },
+        {
+          "id": "11_hero",
+          "script": "11",
+          "creative": "11-home-hero-brand-plate.mp4",
+          "headline": "Hologram Boxing Is Here",
+          "meta_primary": "Inflatable tent, AR headsets, real prize money, HB 002 loading. Future fight night vibes.",
+          "tiktok_text": "Creators AI Hologram Boxing — tent, AR, AI fighters, real prizes.",
+          "path": "/book.html?utm_campaign=awareness&utm_content=11_hero"
+        },
+        {
+          "id": "10_all_ages",
+          "script": "10",
+          "creative": "10-all-ages-family-night-plate.mp4",
+          "headline": "All Ages Welcome",
+          "meta_primary": "Family-friendly hologram boxing — AR goggles, AI fighters, no contact for guests. Groups, birthdays, date night.",
+          "tiktok_text": "All ages hologram boxing night. AR spectators only.",
+          "path": "/book.html?utm_campaign=awareness&utm_content=10_all_ages"
+        }
+      ]
+    },
+    {
+      "phase": "phase_3",
+      "objective": "consideration",
+      "meta": {
+        "campaign_name": "CAMP_HB_Consideration_001",
+        "objective": "Traffic",
+        "ad_set_name": "ADSET_HB_Consideration_US_18-44",
+        "cta": "Learn More"
+      },
+      "tiktok": {
+        "campaign_name": "CAMP_HB_Consideration_001",
+        "objective": "Traffic",
+        "ad_group_name": "ADGRP_HB_Consideration_US_18-44",
+        "cta": "Learn More"
+      },
+      "ads": [
+        {
+          "id": "03_roster",
+          "script": "03",
+          "creative": "03-meet-the-wave-fighters-plate.mp4",
+          "headline": "Meet the Wave Roster",
+          "meta_primary": "Wave — one AI hologram champion, six color variants. Gold vs Fire main event on Hologram Boxing 002. Pick your side.",
+          "tiktok_text": "Wave Gold. Wave Fire. Wave Blue. Six variants one roster.",
+          "path": "/fighters.html?utm_campaign=consideration&utm_content=03_roster"
+        },
+        {
+          "id": "13_how_it_works",
+          "script": "13",
+          "creative": "13-how-it-works-four-steps-plate.mp4",
+          "headline": "How It Works",
+          "meta_primary": "1) Buy with Me vs Me crypto 2) Choose headset or attendee POV 3) Watch in the tent 4) Win if your fighter wins.",
+          "tiktok_text": "Buy ticket → pick view → AR headset → win prizes. Four steps.",
+          "path": "/about.html?utm_campaign=consideration&utm_content=13_how_it_works"
+        },
+        {
+          "id": "04_headset",
+          "script": "04",
+          "creative": "04-ar-headset-experience-plate.mp4",
+          "headline": "AR Headset Experience",
+          "meta_primary": "Put on AR gear inside the tent — Wave hologram boxers come alive in the glowing square. Headset POV from 200 MVM.",
+          "tiktok_text": "AR headset on → hologram fight in your face. 200 MVM.",
+          "path": "/book.html?utm_campaign=consideration&utm_content=04_headset"
+        },
+        {
+          "id": "08_stream",
+          "script": "08",
+          "creative": "08-watch-free-on-kick-twitch-plate.mp4",
+          "headline": "Watch Free on Kick & Twitch",
+          "meta_primary": "Every hologram fight streams live free on @creatorsai. Tent tickets = full AR experience in Me vs Me crypto. Stream now, pull up later.",
+          "tiktok_text": "Free live stream on Kick & Twitch @creatorsai.",
+          "path": "/watch.html?utm_campaign=consideration&utm_content=08_stream"
+        },
+        {
+          "id": "14_hb001",
+          "script": "14",
+          "creative": "14-event-archive-hb001-plate.mp4",
+          "headline": "Hologram Boxing 001",
+          "meta_primary": "The inaugural card — 6 Wave variants, $5K pool, Wave Gold champion. Watch recap free — HB 002 tickets open now.",
+          "tiktok_text": "HB 001 recap on site. 002 tickets loading.",
+          "path": "/events.html?utm_campaign=consideration&utm_content=14_hb001"
+        }
+      ]
+    },
+    {
+      "phase": "phase_4",
+      "objective": "conversion_tickets",
+      "meta": {
+        "campaign_name": "CAMP_HB_Tickets_001",
+        "objective": "Sales",
+        "objective_fallback": "Traffic",
+        "ad_set_name": "ADSET_HB_Tickets_US_18-44",
+        "cta": "Book Now"
+      },
+      "tiktok": {
+        "campaign_name": "CAMP_HB_Tickets_001",
+        "objective": "Website conversions",
+        "ad_group_name": "ADGRP_HB_Tickets_US_18-44",
+        "cta": "Shop Now"
+      },
+      "ads": [
+        {
+          "id": "15_hb002",
+          "script": "15",
+          "creative": "15-hologram-boxing-002-plate.mp4",
+          "headline": "HB 002 — Book Now",
+          "meta_primary": "Bigger tent. $10,000 prize pool. 8 fights. Gold vs Fire main event. Tickets unlock at countdown — secure your spot in Me vs Me crypto.",
+          "tiktok_text": "HB 002. $10K pool. Gold vs Fire. Limited dates. Tap to book.",
+          "path": "/book.html?utm_campaign=hb002_tickets&utm_content=15_hb002"
+        },
+        {
+          "id": "05_mvm",
+          "script": "05",
+          "creative": "05-tickets-and-mvm-crypto-plate.mp4",
+          "headline": "Book with Me vs Me Crypto",
+          "meta_primary": "On-site tent tickets: Headset POV 200 MVM · Attendee POV 350 MVM. Me vs Me crypto only. Pick fight + fighter on Book page.",
+          "tiktok_text": "200 MVM headset POV. 350 MVM attendee POV. Me vs Me crypto.",
+          "path": "/book.html?utm_campaign=hb002_tickets&utm_content=05_mvm"
+        },
+        {
+          "id": "06_prizes",
+          "script": "06",
+          "creative": "06-pick-your-fighter-win-prizes-plate.mp4",
+          "headline": "$10K Prize Pool",
+          "meta_primary": "Hologram Boxing 002 — $10,000 fighter pool. Buy a ticket, pick your Wave fighter. If they win, you're entered in the fan prize pool.",
+          "tiktok_text": "$10K on the line. Pick your fighter when you buy.",
+          "path": "/book.html?utm_campaign=hb002_tickets&utm_content=06_prizes"
+        },
+        {
+          "id": "07_pov",
+          "script": "07",
+          "creative": "07-headset-pov-vs-attendee-pov-plate.mp4",
+          "headline": "Choose Your POV",
+          "meta_primary": "Headset POV (200 MVM) — your AR goggles, your angle. Attendee POV (350 MVM) — ringside guest live feed. Both spectator-only.",
+          "tiktok_text": "Headset POV vs Attendee POV — same tent, different angle.",
+          "path": "/book.html?utm_campaign=hb002_tickets&utm_content=07_pov"
+        }
+      ]
+    }
+  ],
+  "pending_creatives": [
+    { "script": "18", "topic": "Gold vs Fire", "substitute": "15-hologram-boxing-002-plate.mp4" },
+    { "script": "18b", "topic": "Blue vs Silver", "substitute": "03-meet-the-wave-fighters-plate.mp4" },
+    { "script": "18c", "topic": "Green vs Pink", "substitute": "03-meet-the-wave-fighters-plate.mp4" },
+    { "script": "19", "topic": "Watch Episodes", "substitute": "08-watch-free-on-kick-twitch-plate.mp4" },
+    { "script": "20", "topic": "HB 001 Recap", "substitute": "14-event-archive-hb001-plate.mp4" },
+    { "script": "21", "topic": "Gallery", "substitute": "02-the-inflatable-tent-plate.mp4" },
+    { "script": "24", "topic": "Tent Tech", "substitute": "02-the-inflatable-tent-plate.mp4" },
+    { "script": "26", "topic": "3-Step Book", "substitute": "05-tickets-and-mvm-crypto-plate.mp4" },
+    { "script": "27", "topic": "Apply Fighter", "substitute": "03-meet-the-wave-fighters-plate.mp4" },
+    { "script": "29", "topic": "Waitlist", "substitute": "ads-avatar-what-is-hologram-boxing-plate.mp4" }
+  ],
+  "ab_hooks": [
+    "Wait — hologram boxing is real? No cap.",
+    "HB 002 tickets unlock at countdown zero — don't sleep.",
+    "$10K pool — pick the winner, win with them.",
+    "You're front row through AR goggles. Literally.",
+    "2,400 at HB 001 — 002 hits different.",
+    "You don't fight. You watch. All ages."
+  ]
+}

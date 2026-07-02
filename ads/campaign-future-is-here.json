@@ -1,0 +1,54 @@
+{
+  "campaign_id": "future_is_here_001",
+  "status": "approved",
+  "approved_at": "2026-07-02",
+  "name": "The Future Is Here — Launch Ad",
+  "creative": {
+    "file": "ads/output/FUTURE-IS-HERE-15s-9x16-VO.mp4",
+    "alt_file": "ads/output/FUTURE-IS-HERE-15s-9x16.mp4",
+    "format": "9:16",
+    "duration_sec": 15,
+    "voice": "Roman (seed_audio)",
+    "vo_script": "Picture this — you walk into the arena, gear up, throw on the headset… and BOOM — you're front row! AI hologram boxers going live. Real crowd. Real energy. The whole world's tuning in. Become a Founding Fan — link in bio!",
+    "script_file": "ads/output/FUTURE-IS-HERE-VO-SCRIPT.md"
+  },
+  "destination": {
+    "primary_url": "https://creators-ai-hologram-boxing.vercel.app/landing.html",
+    "cta": "Become a Founding Fan",
+    "goal": "Waitlist / Founding Fan email signups"
+  },
+  "utm": {
+    "meta": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo",
+    "instagram": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=instagram&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo",
+    "facebook": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=facebook&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo",
+    "tiktok": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo"
+  },
+  "copy": {
+    "meta_primary": "The future of live entertainment just arrived. Walk into the arena, gear up, and watch AI hologram boxers go live — front row energy you've never felt before. Become a Founding Fan.",
+    "meta_headline": "The Future Is Here",
+    "meta_description": "AI Hologram Boxing — spectator experience. Join the waitlist.",
+    "tiktok_text": "Picture this — inflatable tent, AR headset, AI hologram boxers LIVE. Front row energy. Become a Founding Fan 🔗 link in bio",
+    "instagram_caption": "The future isn't coming. It's here. 🥊 AI hologram boxers. Live crowd. Real energy. Become a Founding Fan — link in bio.",
+    "facebook_primary": "Something the world has never seen — AI Hologram Boxing. Gear up, throw on the headset, watch hologram fighters go live. Become a Founding Fan today."
+  },
+  "targeting": {
+    "geo": ["US"],
+    "age_min": 18,
+    "age_max": 44,
+    "interests": ["Boxing", "MMA", "Esports", "Virtual reality", "Augmented reality", "Live streaming", "Twitch", "Gaming", "Music festivals"]
+  },
+  "budget_test": {
+    "meta_daily_usd": 20,
+    "tiktok_daily_usd": 15,
+    "note": "Start in DRAFT. Do not publish until payment method confirmed."
+  },
+  "placements": {
+    "meta": ["Instagram Reels", "Instagram Stories", "Facebook Reels", "Facebook Feed"],
+    "tiktok": ["TikTok feed", "TikTok search"]
+  },
+  "manus_task": {
+    "id": "hEJUKNb7D7WfUWAnABmMtk",
+    "url": "https://manus.im/app/hEJUKNb7D7WfUWAnABmMtk",
+    "title": "Creators AI Hologram Boxing Campaign Launch Guide"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "brand": "Creators AI Hologram Boxing",
+  "site": "https://creators-ai-hologram-boxing.vercel.app",
+  "landing_url": "https://creators-ai-hologram-boxing.vercel.app/landing.html",
+  "goal": "Founding Fan waitlist email signups",
+  "user_level": "beginner — needs click-by-click guides, zero jargon",
+  "launch_strategy": "Day 1: 2 hero cinematic ads. Week 1+: Phase 1 UGC. Week 2+: Phases 2-3. Phase 4 when tickets live.",
+  "total_ads": 17,
+  "full_catalog": "ads/ALL-ADS-CATALOG.json",
+  "launch_hub": "ads/launch-hub.html",
+  "total_day1_budget_usd": 35,
+  "budget": { "meta_daily_usd": 20, "tiktok_daily_usd": 15 },
+  "targeting": {
+    "geo": ["United States"],
+    "age": "18-44",
+    "interests": ["Boxing", "MMA", "Esports", "VR", "AR", "Live streaming", "Twitch", "Gaming"]
+  },
+  "approved_ads_priority": [
+    {
+      "id": "walk_inside_001",
+      "priority": 1,
+      "name": "Would You Walk Inside",
+      "status": "APPROVED — use first",
+      "file_project": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4",
+      "file_desktop": "C:\\Users\\suzet\\Desktop\\WOULD-YOU-WALK-INSIDE-15s-9x16.mp4",
+      "format": "9:16 15s",
+      "hook": "Would you walk inside?",
+      "vo": "Would you walk inside? Behind that glow — something the world has never seen. You gear up. You walk in. And BOOM — AI hologram boxers, live, front row. Real crowd. Real energy. Become a Founding Fan. The future is waiting.",
+      "meta": {
+        "campaign": "CAMP_HB_WalkInside_001",
+        "adset": "ADSET_HB_WalkInside_US_18-44",
+        "ad": "AD_HB_WalkInside_Launch15s",
+        "headline": "Would You Walk Inside?",
+        "primary": "Something the world has never seen is waiting behind that door. AI hologram boxers. Live. Front row energy. Become a Founding Fan.",
+        "cta": "Sign Up",
+        "url": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=walk_inside&utm_content=launch_15s_vo"
+      },
+      "tiktok": {
+        "campaign": "CAMP_HB_WalkInside_001",
+        "adgroup": "ADGRP_HB_WalkInside_US_18-44",
+        "ad": "AD_HB_WalkInside_Launch15s",
+        "text": "Would you walk inside? 👀 AI hologram boxers LIVE. Front row energy. Become a Founding Fan 🔗",
+        "cta": "Sign Up",
+        "url": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=walk_inside&utm_content=launch_15s_vo"
+      },
+      "organic_caption": "Would you walk inside? Something the world has never seen is waiting. Become a Founding Fan — link in bio."
+    },
+    {
+      "id": "future_is_here_001",
+      "priority": 2,
+      "name": "The Future Is Here",
+      "status": "APPROVED — A/B test vs Walk Inside",
+      "file_project": "ads/output/FUTURE-IS-HERE-15s-9x16-VO.mp4",
+      "file_desktop": "C:\\Users\\suzet\\Desktop\\FUTURE-IS-HERE-15s-9x16.mp4",
+      "format": "9:16 15s",
+      "hook": "Picture this — you walk into the arena",
+      "vo": "Picture this — you walk into the arena, gear up, throw on the headset… and BOOM — you're front row! AI hologram boxers going live. Real crowd. Real energy. The whole world's tuning in. Become a Founding Fan — link in bio!",
+      "meta": {
+        "campaign": "CAMP_HB_FutureIsHere_001",
+        "adset": "ADSET_HB_FutureIsHere_US_18-44",
+        "ad": "AD_HB_FutureIsHere_Launch15s",
+        "headline": "The Future Is Here",
+        "primary": "The future of live entertainment just arrived. Walk into the arena, gear up, and watch AI hologram boxers go live — front row energy you've never felt before. Become a Founding Fan.",
+        "cta": "Sign Up",
+        "url": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo"
+      },
+      "tiktok": {
+        "campaign": "CAMP_HB_FutureIsHere_001",
+        "adgroup": "ADGRP_HB_FutureIsHere_US_18-44",
+        "ad": "AD_HB_FutureIsHere_Launch15s",
+        "text": "Picture this — tent + AR + AI boxers LIVE. Front row. Become a Founding Fan 🔗",
+        "cta": "Sign Up",
+        "url": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo"
+      },
+      "organic_caption": "The future isn't coming. It's here. 🥊 AI hologram boxers. Live crowd. Real energy. Become a Founding Fan — link in bio."
+    }
+  ],
+  "legacy_ugc_ads": {
+    "note": "15 UGC ads in ALL-ADS-CATALOG.json — Phase 1-4. Launch Hub has copy for all.",
+    "folder": "ugc/output/",
+    "catalog": "ads/ALL-ADS-CATALOG.json",
+    "phase_1_count": 2,
+    "phase_2_count": 4,
+    "phase_3_count": 5,
+    "phase_4_count": 4
+  },
+  "prerequisites": [
+    "Meta Business Suite — business.facebook.com — Page + Instagram connected",
+    "Meta Ads Manager — adsmanager.facebook.com — payment method added",
+    "TikTok Ads Manager — ads.tiktok.com — Business Center + payment",
+    "Bio link on IG + TikTok → landing.html",
+    "Upload videos from Desktop paths above"
+  ],
+  "compliance": [
+    "Spectators watch — attendees do NOT fight in the ring",
+    "On-site POV tickets: Me vs Me (MVM) crypto only",
+    "Prize pool subject to event rules"
+  ],
+  "repo_docs": [
+    "ads/ALL-ADS-CATALOG.json",
+    "ads/MASTER-ADS-LAUNCH.json",
+    "ads/MANUS-FULL-LAUNCH-BRIEF.md",
+    "ads/MANUS-PROMPT-ALL-17-ADS.md",
+    "ads/launch-hub.html",
+    "ads/all-ads-data.js",
+    "ads/LAUNCH-CHECKLIST.md",
+    "ads/campaigns.json"
+  ],
+  "manus_task": {
+    "id": "nQieSq4h7ZuXkw86qHS35L",
+    "url": "https://manus.im/app/nQieSq4h7ZuXkw86qHS35L",
+    "title": "Beginner Runbook for Facebook, Instagram, TikTok Ads Launch — All 17 Ads",
+    "previous_tasks": [
+      {
+        "id": "YU2N5ywp78jTsM8WCjbqfL",
+        "url": "https://manus.im/app/YU2N5ywp78jTsM8WCjbqfL",
+        "title": "Setting Up Draft Ads for Creators AI Hologram Boxing"
+      },
+      {
+        "id": "hEJUKNb7D7WfUWAnABmMtk",
+        "url": "https://manus.im/app/hEJUKNb7D7WfUWAnABmMtk"
+      }
+    ]
+  }
+}

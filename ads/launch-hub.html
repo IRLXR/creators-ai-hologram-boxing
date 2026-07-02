@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launch Hub — The Future Is Here</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0b10;
+      --panel: #12141c;
+      --border: rgba(255,255,255,.08);
+      --text: #e8eaf0;
+      --muted: #9aa3b2;
+      --cyan: #22d3ee;
+      --gold: #fbbf24;
+      --green: #34d399;
+      --pink: #f472b6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 24px 16px 80px; }
+    h1 {
+      font-family: Orbitron, sans-serif;
+      font-size: clamp(1.25rem, 4vw, 1.75rem);
+      letter-spacing: .04em;
+      margin: 0 0 8px;
+    }
+    .sub { color: var(--muted); margin: 0 0 24px; }
+    .badge {
+      display: inline-block;
+      background: rgba(52,211,153,.15);
+      color: var(--green);
+      border: 1px solid rgba(52,211,153,.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: .75rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .tab {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: .9rem;
+    }
+    .tab.is-active { border-color: var(--cyan); color: var(--cyan); }
+    .ad-select {
+      width: 100%;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 12px 14px;
+      border-radius: 8px;
+      font: inherit;
+      font-size: .95rem;
+      margin-bottom: 16px;
+    }
+    .ad-phase-label { color: var(--gold); font-size: .8rem; margin-bottom: 8px; }
+    .panel { display: none; }
+    .panel.is-active { display: block; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .card h2 { margin: 0 0 12px; font-size: 1.05rem; }
+    .card h3 { margin: 20px 0 8px; font-size: .95rem; color: var(--cyan); }
+    .card p, .card li { color: var(--muted); }
+    .card ol, .card ul { padding-left: 1.25rem; }
+    .card li { margin-bottom: 8px; }
+    .field { margin-bottom: 14px; }
+    .field label {
+      display: block;
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .field-row {
+      display: flex;
+      gap: 8px;
+      align-items: stretch;
+    }
+    .field-row input,
+    .field-row textarea {
+      flex: 1;
+      background: #0d0f15;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      padding: 10px 12px;
+      font: inherit;
+      font-size: .875rem;
+    }
+    .field-row textarea { min-height: 72px; resize: vertical; }
+    .copy-btn {
+      flex-shrink: 0;
+      background: rgba(34,211,238,.12);
+      border: 1px solid rgba(34,211,238,.35);
+      color: var(--cyan);
+      border-radius: 8px;
+      padding: 0 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: .8rem;
+    }
+    .copy-btn.copied { background: rgba(52,211,153,.15); border-color: var(--green); color: var(--green); }
+    .path {
+      background: #0d0f15;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      font-family: ui-monospace, monospace;
+      font-size: .8rem;
+      word-break: break-all;
+      color: var(--gold);
+    }
+    .checklist label {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      color: var(--text);
+    }
+    .checklist input { margin-top: 4px; accent-color: var(--cyan); }
+    .checklist label.done { opacity: .55; text-decoration: line-through; }
+    .links a { color: var(--cyan); }
+    .warn {
+      border-left: 3px solid var(--gold);
+      padding: 12px 14px;
+      background: rgba(251,191,36,.08);
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: .9rem;
+    }
+    .progress {
+      height: 6px;
+      background: #0d0f15;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--cyan), var(--pink));
+      width: 0%;
+      transition: width .3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="badge">ALL ADS — 17 TOTAL</span>
+    <h1>Launch Hub — Full Ad Library</h1>
+    <p class="sub">Hero ads + all UGC plates. Pick any ad below → copy fields for Meta, TikTok, organic. <a href="MANUS-FULL-LAUNCH-BRIEF.md" style="color:var(--cyan)">Beginner guide</a> · <a href="https://manus.im/app/nQieSq4h7ZuXkw86qHS35L" target="_blank" rel="noopener" style="color:var(--cyan)">Manus runbook (17 ads)</a></p>
+
+    <p class="ad-phase-label" id="ad-phase-label">Day 1 — Hero Ad A</p>
+    <select class="ad-select" id="ad-picker" aria-label="Choose ad"></select>
+
+    <div class="progress" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab is-active" data-tab="start" type="button">1. Start</button>
+      <button class="tab" data-tab="meta" type="button">2. Meta (IG + FB)</button>
+      <button class="tab" data-tab="tiktok" type="button">3. TikTok</button>
+      <button class="tab" data-tab="organic" type="button">4. Organic</button>
+      <button class="tab" data-tab="track" type="button">5. Tracking</button>
+    </div>
+
+    <section class="panel is-active" id="panel-start">
+      <div class="card">
+        <h2>Video file (upload this everywhere)</h2>
+        <p class="path" id="video-path">ads\output\FUTURE-IS-HERE-15s-9x16-VO.mp4</p>
+        <p>Full path on your PC:</p>
+        <div class="field">
+          <div class="field-row">
+            <input readonly id="video-full-path" value="">
+            <button class="copy-btn" type="button" data-copy="video-full-path">Copy</button>
+          </div>
+        </div>
+        <p id="video-note">15s · 9:16 · Roman VO</p>
+      </div>
+
+      <div class="card links">
+        <h2>One-time accounts (do first)</h2>
+        <ol>
+          <li><a href="https://business.facebook.com" target="_blank" rel="noopener">Meta Business Suite</a> — create Business Portfolio, add Facebook Page, connect Instagram</li>
+          <li><a href="https://adsmanager.facebook.com" target="_blank" rel="noopener">Meta Ads Manager</a> — add payment method (Billing)</li>
+          <li><a href="https://ads.tiktok.com" target="_blank" rel="noopener">TikTok Ads Manager</a> — Business Center + payment</li>
+          <li>Set bio link on IG + TikTok to landing URL (copy in Organic tab)</li>
+        </ol>
+      </div>
+
+      <div class="card checklist" id="check-start">
+        <h2>Setup checklist</h2>
+        <label><input type="checkbox" data-check="start-1"> Meta Business + Page + IG connected</label>
+        <label><input type="checkbox" data-check="start-2"> Meta payment method added</label>
+        <label><input type="checkbox" data-check="start-3"> TikTok Ads + payment added</label>
+        <label><input type="checkbox" data-check="start-4"> Video file located on desktop</label>
+        <label><input type="checkbox" data-check="start-5"> Landing page form tested</label>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-meta">
+      <div class="warn">Create everything in <strong>DRAFT</strong>. Preview on phone before publishing spend.</div>
+      <div class="card">
+        <h2>Meta Ads Manager — click path</h2>
+        <ol>
+          <li>Go to <a href="https://adsmanager.facebook.com" target="_blank" rel="noopener">adsmanager.facebook.com</a> → <strong>Create</strong></li>
+          <li>Campaign: objective <strong>Leads</strong> (or Traffic if no pixel yet)</li>
+          <li>Name: <code>CAMP_HB_FutureIsHere_001</code> · Budget: <strong>$20/day</strong> campaign budget</li>
+          <li>Ad set name: <code>ADSET_HB_FutureIsHere_US_18-44</code></li>
+          <li>Location: United States · Age 18–44 · English</li>
+          <li>Placements: <strong>Manual</strong> → Instagram Reels, IG Stories, Facebook Reels, FB Feed only</li>
+          <li>Ad level: Upload video → paste fields below → CTA <strong>Sign Up</strong></li>
+          <li>Preview mobile → Save draft → Publish when ready</li>
+        </ol>
+      </div>
+
+      <div class="card" id="meta-fields"></div>
+
+      <div class="card checklist" id="check-meta">
+        <h2>Meta checklist</h2>
+        <label><input type="checkbox" data-check="meta-1"> Campaign created (draft)</label>
+        <label><input type="checkbox" data-check="meta-2"> Video uploaded</label>
+        <label><input type="checkbox" data-check="meta-3"> Copy + URL pasted</label>
+        <label><input type="checkbox" data-check="meta-4"> Mobile preview OK</label>
+        <label><input type="checkbox" data-check="meta-5"> Published or scheduled</label>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-tiktok">
+      <div class="card">
+        <h2>TikTok Ads Manager — click path</h2>
+        <ol>
+          <li>Go to <a href="https://ads.tiktok.com" target="_blank" rel="noopener">ads.tiktok.com</a> → <strong>Create campaign</strong></li>
+          <li>Objective: <strong>Website conversions</strong> or <strong>Traffic</strong></li>
+          <li>Name: <code>CAMP_HB_FutureIsHere_001</code> · Budget: <strong>$15/day</strong></li>
+          <li>Ad group: <code>ADGRP_HB_FutureIsHere_US_18-44</code> · US · 18–44</li>
+          <li>Upload same MP4 → paste fields below</li>
+          <li>Destination: landing URL with TikTok UTM</li>
+          <li>Submit for review → turn on when approved</li>
+        </ol>
+      </div>
+      <div class="card" id="tiktok-fields"></div>
+      <div class="card checklist" id="check-tiktok">
+        <h2>TikTok checklist</h2>
+        <label><input type="checkbox" data-check="tt-1"> Campaign created</label>
+        <label><input type="checkbox" data-check="tt-2"> Video uploaded</label>
+        <label><input type="checkbox" data-check="tt-3"> Copy + URL pasted</label>
+        <label><input type="checkbox" data-check="tt-4"> Ad approved</label>
+        <label><input type="checkbox" data-check="tt-5"> Campaign live</label>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-organic">
+      <div class="card">
+        <h2>Free organic posts (same video)</h2>
+        <p>Post as Reels on Instagram, Facebook Page, and TikTok. Put landing link in bio (IG/TikTok) or first comment.</p>
+      </div>
+      <div class="card" id="organic-fields"></div>
+    </section>
+
+    <section class="panel" id="panel-track">
+      <div class="card">
+        <h2>Pixel setup (optional but recommended)</h2>
+        <ol>
+          <li>Meta Events Manager → create Pixel → copy Pixel ID</li>
+          <li>TikTok Events Manager → create Pixel → copy Pixel ID</li>
+          <li>Paste IDs into <code>site-config.js</code> → <code>socialAds.metaPixelId</code> and <code>socialAds.tiktokPixelId</code></li>
+          <li>Deploy landing page → test with Meta Pixel Helper browser extension</li>
+          <li>On waitlist submit, a <strong>Lead</strong> event fires automatically</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h2>UTM test</h2>
+        <p>Open each URL on your phone, submit a test email, confirm it lands in Go High Level.</p>
+        <div id="utm-links"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="all-ads-data.js"></script>
+  <script>
+    const SITE = window.ALL_ADS_CATALOG?.site || 'https://creators-ai-hologram-boxing.vercel.app';
+    const CATALOG = window.ALL_ADS_CATALOG?.ads || [];
+
+    function buildUrl(path, source) {
+      const p = path.startsWith('/') ? path : '/' + path;
+      const sep = p.includes('?') ? '&' : '?';
+      return `${SITE}${p}${sep}utm_source=${source}&utm_medium=paid_social`;
+    }
+
+    function adToFields(ad) {
+      const campaignSlug = (ad.path.match(/utm_campaign=([^&]+)/) || [])[1] || ad.id;
+      const contentSlug = (ad.path.match(/utm_content=([^&]+)/) || [])[1] || ad.id;
+      const adset = ad.meta_campaign ? ad.meta_campaign.replace('CAMP_', 'ADSET_') + '_US_18-44' : 'ADSET_HB_US_18-44';
+      const adgroup = ad.meta_campaign ? ad.meta_campaign.replace('CAMP_', 'ADGRP_') + '_US_18-44' : 'ADGRP_HB_US_18-44';
+      return {
+        meta: {
+          campaign: ad.meta_campaign || 'CAMP_HB_Launch_001',
+          adset,
+          ad: ad.name || ad.headline,
+          primary: ad.meta_primary,
+          headline: ad.headline,
+          description: 'Creators AI Hologram Boxing',
+          cta: ad.cta || 'Sign Up',
+          url: buildUrl(ad.path, 'meta')
+        },
+        tiktok: {
+          campaign: ad.meta_campaign || 'CAMP_HB_Launch_001',
+          adgroup,
+          ad: ad.name || ad.headline,
+          text: ad.tiktok_text,
+          cta: ad.cta || 'Sign Up',
+          url: buildUrl(ad.path, 'tiktok')
+        },
+        organic: {
+          instagram: ad.meta_primary?.slice(0, 220) + ' — link in bio.',
+          tiktok: (ad.tiktok_text || ad.headline) + ' Link in bio 👆',
+          facebook: ad.headline + ' — ' + SITE + ad.path.split('?')[0],
+          bio: SITE + '/landing.html'
+        }
+      };
+    }
+
+    function loadAdIndex(idx) {
+      const ad = CATALOG[idx];
+      if (!ad) return;
+      document.getElementById('ad-phase-label').textContent = ad.phase + (ad.tier === 'hero' ? ' ★ START HERE' : '');
+      document.getElementById('video-path').textContent = ad.file.replace(/^.*[\\\/]ads[\\\/]/, 'ads\\').replace(/^.*[\\\/]ugc[\\\/]/, 'ugc\\');
+      document.getElementById('video-full-path').value = ad.file_desktop || ad.file;
+      document.getElementById('video-note').textContent = ad.tier === 'hero' ? '15s · 9:16 · Roman VO · Hero ad' : 'UGC plate · 9:16 · from ugc/output/';
+      const fields = adToFields(ad);
+      renderFields('meta-fields', fields.meta);
+      renderFields('tiktok-fields', fields.tiktok);
+      renderFields('organic-fields', fields.organic);
+      const utmSources = ['meta', 'instagram', 'facebook', 'tiktok'];
+      document.getElementById('utm-links').innerHTML = utmSources.map((src) => {
+        const url = buildUrl(ad.path, src);
+        const id = `utm-${src}`;
+        return `<div class="field"><label>${src}</label><div class="field-row">
+          <input readonly id="${id}" value="${url}"><button class="copy-btn" type="button" data-copy="${id}">Copy</button></div></div>`;
+      }).join('');
+    }
+
+    function renderFields(containerId, obj) {
+      const el = document.getElementById(containerId);
+      el.innerHTML = Object.entries(obj).map(([key, val]) => {
+        const id = `${containerId}-${key}`;
+        const isLong = val.length > 80;
+        return `<div class="field"><label>${key.replace(/_/g, ' ')}</label>
+          <div class="field-row">${isLong
+            ? `<textarea readonly id="${id}">${val}</textarea>`
+            : `<input readonly id="${id}" value="${val.replace(/"/g, '&quot;')}">`}
+          <button class="copy-btn" type="button" data-copy="${id}">Copy</button></div></div>`;
+      }).join('');
+    }
+
+    const picker = document.getElementById('ad-picker');
+    let lastPhase = '';
+    CATALOG.forEach((ad, i) => {
+      if (ad.phase !== lastPhase) {
+        const og = document.createElement('optgroup');
+        og.label = ad.phase;
+        picker.appendChild(og);
+        lastPhase = ad.phase;
+      }
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = ad.name + (ad.tier === 'hero' ? ' ★' : '');
+      picker.lastElementChild.appendChild(opt);
+    });
+    picker.addEventListener('change', () => loadAdIndex(Number(picker.value)));
+    loadAdIndex(0);
+
+    document.querySelectorAll('.tab[data-tab]').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach((t) => t.classList.remove('is-active'));
+        document.querySelectorAll('.panel').forEach((p) => p.classList.remove('is-active'));
+        tab.classList.add('is-active');
+        document.getElementById('panel-' + tab.dataset.tab).classList.add('is-active');
+      });
+    });
+
+    document.body.addEventListener('click', async (e) => {
+      const btn = e.target.closest('[data-copy]');
+      if (!btn) return;
+      const id = btn.getAttribute('data-copy');
+      const node = document.getElementById(id);
+      const text = node.tagName === 'TEXTAREA' ? node.value : node.value;
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1500);
+      } catch {
+        node.select?.();
+        document.execCommand('copy');
+      }
+    });
+
+    const STORAGE_KEY = 'hb_launch_checklist';
+    function loadChecks() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch { return {}; }
+    }
+    function saveChecks(state) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      updateProgress();
+    }
+    function updateProgress() {
+      const boxes = document.querySelectorAll('[data-check]');
+      const state = loadChecks();
+      let done = 0;
+      boxes.forEach((box) => {
+        const key = box.getAttribute('data-check');
+        box.checked = !!state[key];
+        box.closest('label')?.classList.toggle('done', box.checked);
+        if (box.checked) done++;
+      });
+      document.getElementById('progress-fill').style.width =
+        boxes.length ? `${Math.round((done / boxes.length) * 100)}%` : '0%';
+    }
+    document.querySelectorAll('[data-check]').forEach((box) => {
+      box.addEventListener('change', () => {
+        const state = loadChecks();
+        state[box.getAttribute('data-check')] = box.checked;
+        saveChecks(state);
+        box.closest('label')?.classList.toggle('done', box.checked);
+      });
+    });
+    updateProgress();
+  </script>
+</body>
+</html>

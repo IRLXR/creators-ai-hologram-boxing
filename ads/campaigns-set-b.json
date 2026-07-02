@@ -1,0 +1,231 @@
+{
+  "set_id": "B",
+  "set_name": "Campaign Set B — TikTok Native · Stream · Fight Cards · Events",
+  "site_base": "https://creators-ai-hologram-boxing.vercel.app",
+  "creative_base": "ugc/output",
+  "note": "Run parallel to Set A (ads/campaigns.json). Different hooks and creatives — A/B test or separate audiences.",
+  "default_targeting": {
+    "geo": ["US"],
+    "age_min": 18,
+    "age_max": 44,
+    "interests": [
+      "TikTok",
+      "Kick (streaming platform)",
+      "Twitch",
+      "Boxing",
+      "Esports",
+      "Virtual reality",
+      "Live streaming",
+      "Content creators",
+      "Entertainment"
+    ]
+  },
+  "phases": [
+    {
+      "id": "set_b_1",
+      "name": "TikTok-Native UGC",
+      "start_when": "Same week as Set A Phase 1 — separate ad sets",
+      "daily_budget_usd": { "meta": 10, "tiktok": 25 }
+    },
+    {
+      "id": "set_b_2",
+      "name": "Stream & Follow",
+      "start_when": "Day 3+ alongside Set A",
+      "daily_budget_usd": { "meta": 10, "tiktok": 15 }
+    },
+    {
+      "id": "set_b_3",
+      "name": "Fight Card Hype",
+      "start_when": "Week 2 or when promoting HB 002 card",
+      "daily_budget_usd": { "meta": 20, "tiktok": 15 }
+    },
+    {
+      "id": "set_b_4",
+      "name": "Private Events & Leads",
+      "start_when": "Week 2+ or B2B outreach",
+      "daily_budget_usd": { "meta": 10, "tiktok": 5 }
+    }
+  ],
+  "campaigns": [
+    {
+      "phase": "set_b_1",
+      "objective": "tiktok_native_ugc",
+      "meta": {
+        "campaign_name": "CAMP_HB_SetB_TikTokNative_001",
+        "objective": "Traffic",
+        "ad_set_name": "ADSET_HB_SetB_TTNative_US_18-34",
+        "cta": "Learn More",
+        "note": "Optional on Meta — primary channel is TikTok"
+      },
+      "tiktok": {
+        "campaign_name": "CAMP_HB_SetB_TikTokNative_001",
+        "objective": "Website conversions",
+        "ad_group_name": "ADGRP_HB_SetB_TTNative_US_18-34",
+        "cta": "Learn More",
+        "age_focus": "18-34"
+      },
+      "ads": [
+        {
+          "id": "tt_what_is_crop",
+          "name": "AD_SetB_TT_WhatIs_CropTank",
+          "creative": "TIKTOK-what-is-hologram-boxing-plate.mp4",
+          "headline": "What Is Hologram Boxing?",
+          "meta_primary": "What is hologram boxing? Real talk — you don't fight. Inflatable tent, AR on, AI boxers in a glowing square. Family-friendly. Tap to book.",
+          "tiktok_text": "What is hologram boxing? 🥊 You DON'T fight — AI boxers in a tent with AR on. Lowkey the future of fight night.",
+          "path": "/about.html?utm_campaign=setb_ttnative&utm_content=tt_what_is",
+          "hook": "What is hologram boxing?",
+          "burn_captions": true
+        },
+        {
+          "id": "tt_what_is_hoodie",
+          "name": "AD_SetB_TT_WhatIs_Hoodie",
+          "creative": "TIKTOK-hoodie-what-is-hologram-boxing-plate.mp4",
+          "headline": "Hologram Boxing Explained",
+          "meta_primary": "Same VO — hoodie UGC variant for A/B. Inflatable tent + AR + glowing square. Tap to book Creators AI Hologram Boxing.",
+          "tiktok_text": "POV: you find out hologram boxing is real 😭 Tent + AR + AI fighters. Tap to book ↓",
+          "path": "/about.html?utm_campaign=setb_ttnative&utm_content=tt_hoodie",
+          "hook": "POV: hologram boxing is real"
+        },
+        {
+          "id": "tt_what_is_full",
+          "name": "AD_SetB_TT_WhatIs_FullPlate",
+          "creative": "01-what-is-hologram-boxing-plate-full.mp4",
+          "headline": "You Don't Fight — You Watch",
+          "meta_primary": "Inflatable tent. AR headset. AI hologram boxers in a glowing floor square. Spectator-only fight night. Tap to book.",
+          "tiktok_text": "Real talk — you don't fight. You watch Wave hologram boxers in AR. Tap ↓",
+          "path": "/book.html?utm_campaign=setb_ttnative&utm_content=01_full",
+          "hook": "You don't fight — you watch"
+        }
+      ]
+    },
+    {
+      "phase": "set_b_2",
+      "objective": "stream_follow",
+      "meta": {
+        "campaign_name": "CAMP_HB_SetB_Stream_001",
+        "objective": "Traffic",
+        "ad_set_name": "ADSET_HB_SetB_Stream_US_18-44",
+        "cta": "Watch More"
+      },
+      "tiktok": {
+        "campaign_name": "CAMP_HB_SetB_Stream_001",
+        "objective": "Traffic",
+        "ad_group_name": "ADGRP_HB_SetB_Stream_US_18-44",
+        "cta": "Learn More"
+      },
+      "ads": [
+        {
+          "id": "08_stream",
+          "name": "AD_SetB_Stream_Free",
+          "creative": "08-watch-free-on-kick-twitch-plate.mp4",
+          "headline": "Watch Free on Kick & Twitch",
+          "meta_primary": "Every hologram fight streams live FREE on @creatorsai. Tent tickets = full AR in Me vs Me crypto. Stream now, book the tent later.",
+          "tiktok_text": "Free live hologram fights on Kick & Twitch @creatorsai 🔴 Full AR tent = book on site.",
+          "path": "/watch.html?utm_campaign=setb_stream&utm_content=08_stream",
+          "alt_destination": "https://kick.com/creatorsai"
+        },
+        {
+          "id": "12_social",
+          "name": "AD_SetB_Follow_CreatorsAI",
+          "creative": "12-social-kick-twitch-feed-plate.mp4",
+          "headline": "Follow @creatorsai",
+          "meta_primary": "Live fight alerts, episode drops, ticket countdowns on Kick & Twitch. Follow @creatorsai then book when you're ready.",
+          "tiktok_text": "Follow @creatorsai — live fights + HB 002 drops. Don't miss the next card.",
+          "path": "/watch.html?utm_campaign=setb_stream&utm_content=12_social"
+        }
+      ]
+    },
+    {
+      "phase": "set_b_3",
+      "objective": "fight_card_hype",
+      "meta": {
+        "campaign_name": "CAMP_HB_SetB_FightCard_001",
+        "objective": "Traffic",
+        "ad_set_name": "ADSET_HB_SetB_FightCard_US_18-44",
+        "cta": "Book Now"
+      },
+      "tiktok": {
+        "campaign_name": "CAMP_HB_SetB_FightCard_001",
+        "objective": "Website conversions",
+        "ad_group_name": "ADGRP_HB_SetB_FightCard_US_18-44",
+        "cta": "Shop Now"
+      },
+      "ads": [
+        {
+          "id": "18_gold_fire",
+          "name": "AD_SetB_GoldVsFire",
+          "creative": "15-hologram-boxing-002-plate.mp4",
+          "creative_note": "Fight-card copy · HB002 plate",
+          "headline": "Gold vs Fire — HB 002",
+          "meta_primary": "Main event: Wave Gold vs Wave Fire rematch inside the inflatable tent. $10K prize pool. Pick your fighter when you buy — win if they win. MVM crypto tickets.",
+          "tiktok_text": "Gold vs Fire rematch 🥇🔥 HB 002. Pick your side. $10K on the line.",
+          "path": "/book.html?fighter=wave-gold&utm_campaign=setb_fightcard&utm_content=18_gold_fire"
+        },
+        {
+          "id": "18b_blue_silver",
+          "name": "AD_SetB_BlueVsSilver",
+          "creative": "03-meet-the-wave-fighters-plate.mp4",
+          "headline": "Blue vs Silver",
+          "meta_primary": "Co-main: Wave Blue vs Wave Silver on HB 002. 200 MVM headset POV or 350 MVM attendee POV. Pick your fighter for the fan prize pool.",
+          "tiktok_text": "Blue vs Silver co-main ⚡️ Speed vs phantom energy. Tickets on site.",
+          "path": "/book.html?utm_campaign=setb_fightcard&utm_content=18b_blue_silver"
+        },
+        {
+          "id": "18c_green_pink",
+          "name": "AD_SetB_GreenVsPink",
+          "creative": "03-meet-the-wave-fighters-plate.mp4",
+          "headline": "Green vs Pink",
+          "meta_primary": "Undercard banger: Wave Green vs Wave Pink. Don't sleep on early fights — pick your fighter for the fan prize pool.",
+          "tiktok_text": "Green vs Pink undercard 💚💗 Power vs speed in the glowing square.",
+          "path": "/book.html?utm_campaign=setb_fightcard&utm_content=18c_green_pink"
+        },
+        {
+          "id": "06_prize_pool",
+          "name": "AD_SetB_10K_Prize",
+          "creative": "06-pick-your-fighter-win-prizes-plate.mp4",
+          "headline": "$10K Prize Pool",
+          "meta_primary": "Hologram Boxing 002 — $10,000 fighter pool. Buy a ticket, pick your Wave fighter. If they win, you're in the fan prize pool.",
+          "tiktok_text": "$10K prize pool. Pick your fighter. Win if they win. Tap to book.",
+          "path": "/book.html?utm_campaign=setb_fightcard&utm_content=06_prizes"
+        }
+      ]
+    },
+    {
+      "phase": "set_b_4",
+      "objective": "private_events_leads",
+      "meta": {
+        "campaign_name": "CAMP_HB_SetB_Events_001",
+        "objective": "Leads",
+        "ad_set_name": "ADSET_HB_SetB_Events_US",
+        "cta": "Sign Up"
+      },
+      "tiktok": {
+        "campaign_name": "CAMP_HB_SetB_Events_001",
+        "objective": "Lead generation",
+        "ad_group_name": "ADGRP_HB_SetB_Events_US",
+        "cta": "Sign Up"
+      },
+      "ads": [
+        {
+          "id": "09_private_party",
+          "name": "AD_SetB_BookTheTent",
+          "creative": "09-book-the-tent-for-your-party-plate.mp4",
+          "headline": "Book the Tent",
+          "meta_primary": "Birthdays, corporate events, festivals — we bring the inflatable tent, AR headsets, and Wave hologram fights. Submit a booking request on our site.",
+          "tiktok_text": "Hologram boxing at YOUR party 🎉 Tent + AR + fights. Request a date ↓",
+          "path": "/book.html?utm_campaign=setb_private_event&utm_content=09_party"
+        },
+        {
+          "id": "27_apply_fighter",
+          "name": "AD_SetB_ApplyFighter",
+          "creative": "03-meet-the-wave-fighters-plate.mp4",
+          "headline": "Apply as Hologram Fighter",
+          "meta_primary": "Creators — featured as a Wave variant in the hologram ring. $10K prize pool at HB 002. Apply on Book page — separate from spectator tickets.",
+          "tiktok_text": "Want in the hologram ring? Fighter applications open for HB 002. Tap to apply.",
+          "path": "/book.html?utm_campaign=setb_fighter_apply&utm_content=27_apply#apply",
+          "meta_cta": "Apply Now"
+        }
+      ]
+    }
+  ]
+}

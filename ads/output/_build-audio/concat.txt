@@ -1,0 +1,6 @@
+file 'c:/Users/suzet/Desktop/creators-ai-hologram-boxing/ads/output/_build-audio/00-title.mp4'
+file 'c:/Users/suzet/Desktop/creators-ai-hologram-boxing/ads/output/_build-audio/01.mp4'
+file 'c:/Users/suzet/Desktop/creators-ai-hologram-boxing/ads/output/_build-audio/02.mp4'
+file 'c:/Users/suzet/Desktop/creators-ai-hologram-boxing/ads/output/_build-audio/03.mp4'
+file 'c:/Users/suzet/Desktop/creators-ai-hologram-boxing/ads/output/_build-audio/04.mp4'
+file 'c:/Users/suzet/Desktop/creators-ai-hologram-boxing/ads/output/_build-audio/05-cta.mp4'

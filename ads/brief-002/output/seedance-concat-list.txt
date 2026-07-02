@@ -1,0 +1,5 @@
+file '01-would-you-walk-inside-seedance-3s.mp4'
+file '02-welcome-guests-seedance-3s.mp4'
+file '03-tunnel-mystery-seedance-3s.mp4'
+file '04-arena-glimpse-seedance-3s.mp4'
+file '05-cta-end-card-seedance-3s.mp4'
