@@ -8,3 +8,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 .vercel
+ads/brief-001/output/_*.png
+ads/brief-001/version-b-overlays.ffilter
+scripts/__pycache__/
+scripts/_*.tmp

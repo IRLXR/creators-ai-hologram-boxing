@@ -5,7 +5,7 @@
   "goal": "Founding Fan waitlist email signups",
   "user_level": "beginner — needs click-by-click guides, zero jargon",
   "launch_strategy": "Day 1: 2 hero cinematic ads. Week 1+: Phase 1 UGC. Week 2+: Phases 2-3. Phase 4 when tickets live.",
-  "total_ads": 18,
+  "total_ads": 19,
   "full_catalog": "ads/ALL-ADS-CATALOG.json",
   "launch_hub": "ads/launch-hub.html",
   "total_day1_budget_usd": 35,
@@ -46,19 +46,21 @@
       "organic_caption": "Would you walk inside? Something the world has never seen is waiting. Become a Founding Fan — link in bio."
     },
     {
-      "id": "future_is_here_001",
+      "id": "future_is_here_001_vo",
       "priority": 2,
-      "name": "The Future Is Here",
-      "status": "APPROVED — A/B test vs Walk Inside",
-      "file_project": "ads/output/FUTURE-IS-HERE-15s-9x16-VO.mp4",
-      "file_desktop": "C:\\Users\\suzet\\Desktop\\FUTURE-IS-HERE-15s-9x16.mp4",
+      "name": "The Future Is Here — With Voice Over",
+      "variant": "A",
+      "status": "APPROVED — TikTok + Meta broad + Facebook Reels",
+      "file_project": "ads/brief-001/output/Director_Brief_001_Version_A_With_VoiceOver.mp4",
+      "file_desktop": "C:\\Users\\suzet\\Desktop\\Director_Brief_001_Version_A_With_VoiceOver.mp4",
       "format": "9:16 15s",
       "hook": "Picture this — you walk into the arena",
       "vo": "Picture this — you walk into the arena, gear up, throw on the headset… and BOOM — you're front row! AI hologram boxers going live. Real crowd. Real energy. The whole world's tuning in. Become a Founding Fan — link in bio!",
+      "comparison_report": "ads/brief-001/COMPARISON-REPORT.md",
       "meta": {
         "campaign": "CAMP_HB_FutureIsHere_001",
         "adset": "ADSET_HB_FutureIsHere_US_18-44",
-        "ad": "AD_HB_FutureIsHere_Launch15s",
+        "ad": "AD_HB_FutureIsHere_Launch15s_VO",
         "headline": "The Future Is Here",
         "primary": "The future of live entertainment just arrived. Walk into the arena, gear up, and watch AI hologram boxers go live — front row energy you've never felt before. Become a Founding Fan.",
         "cta": "Sign Up",
@@ -67,12 +69,43 @@
       "tiktok": {
         "campaign": "CAMP_HB_FutureIsHere_001",
         "adgroup": "ADGRP_HB_FutureIsHere_US_18-44",
-        "ad": "AD_HB_FutureIsHere_Launch15s",
+        "ad": "AD_HB_FutureIsHere_Launch15s_VO",
         "text": "Picture this — tent + AR + AI boxers LIVE. Front row. Become a Founding Fan 🔗",
         "cta": "Sign Up",
         "url": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo"
       },
       "organic_caption": "The future isn't coming. It's here. 🥊 AI hologram boxers. Live crowd. Real energy. Become a Founding Fan — link in bio."
+    },
+    {
+      "id": "future_is_here_001_mystery",
+      "priority": 3,
+      "name": "The Future Is Here — Cinematic Mystery",
+      "variant": "B",
+      "status": "APPROVED — Instagram Reels + YouTube Shorts + retarget",
+      "file_project": "ads/brief-001/output/Director_Brief_001_Version_B_Cinematic_Mystery.mp4",
+      "file_desktop": "C:\\Users\\suzet\\Desktop\\Director_Brief_001_Version_B_Cinematic_Mystery.mp4",
+      "format": "9:16 15s",
+      "hook": "THE FUTURE OF LIVE ENTERTAINMENT...",
+      "vo": "None — on-screen text only",
+      "comparison_report": "ads/brief-001/COMPARISON-REPORT.md",
+      "meta": {
+        "campaign": "CAMP_HB_FutureIsHere_001",
+        "adset": "ADSET_HB_FutureIsHere_Mystery_US_18-44",
+        "ad": "AD_HB_FutureIsHere_Launch15s_Mystery",
+        "headline": "The Future Is Here",
+        "primary": "The future of live entertainment. Premium trailer energy — tent, headsets, hologram boxers going live. Become a Founding Fan.",
+        "cta": "Sign Up",
+        "url": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_mystery"
+      },
+      "tiktok": {
+        "campaign": "CAMP_HB_FutureIsHere_001",
+        "adgroup": "ADGRP_HB_FutureIsHere_Mystery_US_18-44",
+        "ad": "AD_HB_FutureIsHere_Launch15s_Mystery",
+        "text": "THE FUTURE OF LIVE ENTERTAINMENT... IT'S HERE. Become a Founding Fan 🔗",
+        "cta": "Sign Up",
+        "url": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_mystery"
+      },
+      "organic_caption": "THE FUTURE OF LIVE ENTERTAINMENT... IT'S HERE. 🥊 Become a Founding Fan — link in bio."
     }
   ],
   "legacy_ugc_ads": {

@@ -17,18 +17,42 @@
                     "cta":  "Sign Up"
                 },
                 {
-                    "id":  "future_is_here_001",
+                    "id":  "future_is_here_001_vo",
                     "tier":  "hero",
-                    "phase":  "Day 1 - Hero Ad B",
-                    "name":  "The Future Is Here",
-                    "file":  "c:\\Users\\suzet\\Desktop\\creators-ai-hologram-boxing\\ads\\output\\FUTURE-IS-HERE-15s-9x16-VO.mp4",
-                    "file_desktop":  "C:\\Users\\suzet\\Desktop\\FUTURE-IS-HERE-15s-9x16.mp4",
+                    "phase":  "Day 1 - Hero Ad B (VO)",
+                    "name":  "The Future Is Here — With Voice Over",
+                    "variant":  "A",
+                    "file":  "c:\\Users\\suzet\\Desktop\\creators-ai-hologram-boxing\\ads\\brief-001\\output\\Director_Brief_001_Version_A_With_VoiceOver.mp4",
+                    "file_desktop":  "C:\\Users\\suzet\\Desktop\\Director_Brief_001_Version_A_With_VoiceOver.mp4",
                     "headline":  "The Future Is Here",
                     "meta_primary":  "The future of live entertainment just arrived. Walk into the arena, gear up, and watch AI hologram boxers go live - front row energy you have never felt before. Become a Founding Fan.",
                     "tiktok_text":  "Picture this - tent + AR + AI boxers LIVE. Front row. Become a Founding Fan",
                     "meta_campaign":  "CAMP_HB_FutureIsHere_001",
                     "path":  "/landing.html?utm_campaign=future_is_here\u0026utm_content=launch_15s_vo",
-                    "cta":  "Sign Up"
+                    "cta":  "Sign Up",
+                    "video_note":  "15s · 9:16 · Roman VO · Brief 001 Version A",
+                    "platforms_primary":  ["TikTok", "Facebook Reels", "Meta broad prospecting"],
+                    "platforms_secondary":  ["Instagram Reels"],
+                    "comparison_report":  "ads/brief-001/COMPARISON-REPORT.md"
+                },
+                {
+                    "id":  "future_is_here_001_mystery",
+                    "tier":  "hero",
+                    "phase":  "Day 1 - Hero Ad B (Mystery)",
+                    "name":  "The Future Is Here — Cinematic Mystery",
+                    "variant":  "B",
+                    "file":  "c:\\Users\\suzet\\Desktop\\creators-ai-hologram-boxing\\ads\\brief-001\\output\\Director_Brief_001_Version_B_Cinematic_Mystery.mp4",
+                    "file_desktop":  "C:\\Users\\suzet\\Desktop\\Director_Brief_001_Version_B_Cinematic_Mystery.mp4",
+                    "headline":  "The Future Is Here",
+                    "meta_primary":  "The future of live entertainment. Premium trailer energy - tent, headsets, hologram boxers going live. No narration needed. Become a Founding Fan.",
+                    "tiktok_text":  "THE FUTURE OF LIVE ENTERTAINMENT... IT'S HERE. Become a Founding Fan",
+                    "meta_campaign":  "CAMP_HB_FutureIsHere_001",
+                    "path":  "/landing.html?utm_campaign=future_is_here\u0026utm_content=launch_15s_mystery",
+                    "cta":  "Sign Up",
+                    "video_note":  "15s · 9:16 · No VO · On-screen text · Brief 001 Version B",
+                    "platforms_primary":  ["Instagram Reels", "YouTube Shorts"],
+                    "platforms_secondary":  ["TikTok retarget", "Meta warm audiences"],
+                    "comparison_report":  "ads/brief-001/COMPARISON-REPORT.md"
                 },
                 {
                     "id":  "29_waitlist",
@@ -271,5 +295,5 @@
                     "hook":  null
                 }
             ],
-    "total_ads":  18
+    "total_ads":  19
 }

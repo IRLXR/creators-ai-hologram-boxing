@@ -4,8 +4,27 @@
   "approved_at": "2026-07-02",
   "name": "The Future Is Here — Launch Ad",
   "creative": {
-    "file": "ads/output/FUTURE-IS-HERE-15s-9x16-VO.mp4",
-    "alt_file": "ads/output/FUTURE-IS-HERE-15s-9x16.mp4",
+    "comparison_report": "ads/brief-001/COMPARISON-REPORT.md",
+    "variants": {
+      "A_vo": {
+        "id": "future_is_here_001_vo",
+        "file": "ads/brief-001/output/Director_Brief_001_Version_A_With_VoiceOver.mp4",
+        "file_desktop": "C:\\Users\\suzet\\Desktop\\Director_Brief_001_Version_A_With_VoiceOver.mp4",
+        "voice": "Roman (seed_audio)",
+        "platforms_primary": ["TikTok", "Facebook Reels", "Meta broad prospecting"],
+        "utm_content": "launch_15s_vo"
+      },
+      "B_mystery": {
+        "id": "future_is_here_001_mystery",
+        "file": "ads/brief-001/output/Director_Brief_001_Version_B_Cinematic_Mystery.mp4",
+        "file_desktop": "C:\\Users\\suzet\\Desktop\\Director_Brief_001_Version_B_Cinematic_Mystery.mp4",
+        "voice": "None — on-screen text only",
+        "platforms_primary": ["Instagram Reels", "YouTube Shorts"],
+        "utm_content": "launch_15s_mystery"
+      }
+    },
+    "file": "ads/brief-001/output/Director_Brief_001_Version_A_With_VoiceOver.mp4",
+    "alt_file": "ads/brief-001/output/Director_Brief_001_Version_B_Cinematic_Mystery.mp4",
     "format": "9:16",
     "duration_sec": 15,
     "voice": "Roman (seed_audio)",
@@ -21,7 +40,10 @@
     "meta": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo",
     "instagram": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=instagram&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo",
     "facebook": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=facebook&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo",
-    "tiktok": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo"
+    "tiktok": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo",
+    "mystery_meta": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_mystery",
+    "mystery_instagram": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=instagram&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_mystery",
+    "mystery_tiktok": "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_mystery"
   },
   "copy": {
     "meta_primary": "The future of live entertainment just arrived. Walk into the arena, gear up, and watch AI hologram boxers go live — front row energy you've never felt before. Become a Founding Fan.",

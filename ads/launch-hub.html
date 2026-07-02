@@ -169,7 +169,7 @@
 </head>
 <body>
   <div class="wrap">
-    <span class="badge">ALL ADS — 18 TOTAL</span>
+    <span class="badge">ALL ADS — 19 TOTAL</span>
     <h1>Launch Hub — Full Ad Library</h1>
     <p class="sub">Hero ads + all UGC plates. Pick any ad below → copy fields for Meta, TikTok, organic. <a href="MANUS-FULL-LAUNCH-BRIEF.md" style="color:var(--cyan)">Beginner guide</a> · <a href="https://manus.im/app/nQieSq4h7ZuXkw86qHS35L" target="_blank" rel="noopener" style="color:var(--cyan)">Manus runbook (17 ads)</a></p>
 
@@ -198,6 +198,7 @@
           </div>
         </div>
         <p id="video-note">15s · 9:16 · Roman VO</p>
+        <p id="platform-note" class="sub" style="margin-top:8px;display:none"></p>
       </div>
 
       <div class="card links">
@@ -349,7 +350,15 @@
       document.getElementById('ad-phase-label').textContent = ad.phase + (ad.tier === 'hero' ? ' ★ START HERE' : '');
       document.getElementById('video-path').textContent = ad.file.replace(/^.*[\\\/]ads[\\\/]/, 'ads\\').replace(/^.*[\\\/]ugc[\\\/]/, 'ugc\\');
       document.getElementById('video-full-path').value = ad.file_desktop || ad.file;
-      document.getElementById('video-note').textContent = ad.tier === 'hero' ? '15s · 9:16 · Roman VO · Hero ad' : 'UGC plate · 9:16 · from ugc/output/';
+      document.getElementById('video-note').textContent = ad.video_note || (ad.tier === 'hero' ? '15s · 9:16 · Hero ad' : 'UGC plate · 9:16 · from ugc/output/');
+      const platformNote = document.getElementById('platform-note');
+      if (ad.platforms_primary?.length) {
+        platformNote.style.display = 'block';
+        platformNote.textContent = 'Best on: ' + ad.platforms_primary.join(' · ') + (ad.comparison_report ? ' · See ' + ad.comparison_report : '');
+      } else {
+        platformNote.style.display = 'none';
+        platformNote.textContent = '';
+      }
       const fields = adToFields(ad);
       renderFields('meta-fields', fields.meta);
       renderFields('tiktok-fields', fields.tiktok);

@@ -1,7 +1,7 @@
 # Launch — "The Future Is Here" 15s Ad
 
 **Interactive guide (open in browser):** `ads/launch-hub.html`  
-**Status:** APPROVED  **Creative:** `ads/output/FUTURE-IS-HERE-15s-9x16-VO.mp4` (9:16 · 15s · Roman VO)  
+**Status:** APPROVED  **Creatives:** Brief 001 revision — two final versions (see `ads/brief-001/COMPARISON-REPORT.md`)  
 **Goal:** Founding Fan waitlist signups on landing page
 
 ---
@@ -11,7 +11,8 @@
 1. **Meta Business Suite** — [business.facebook.com](https://business.facebook.com) — connect Instagram + Facebook Page
 2. **TikTok Ads Manager** — [ads.tiktok.com](https://ads.tiktok.com) — add payment method
 3. **Upload video** from:  
-   `c:\Users\suzet\Desktop\creators-ai-hologram-boxing\ads\output\FUTURE-IS-HERE-15s-9x16-VO.mp4`
+   `c:\Users\suzet\Desktop\Director_Brief_001_Version_A_With_VoiceOver.mp4` (Version A — VO)  
+   `c:\Users\suzet\Desktop\Director_Brief_001_Version_B_Cinematic_Mystery.mp4` (Version B — Mystery)
 
 ---
 
