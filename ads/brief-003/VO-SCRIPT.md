@@ -38,8 +38,13 @@
 | 0:48 | To experience something unforgettable. | Hold into silence before future. |
 | *(0:49–0:55 visual only)* | — | Silence / score · future chapter |
 | 0:55 | Every generation has witnessed the next chapter… | Return of narrator. Intimate. |
-| 0:58 | This… | Pause. |
-| 0:59 | Is ours. | Fade to logo. |
+| 0:57 | This… is ours. | Pause — let it land. |
+| 0:59 | A new era of live spectacle is beginning… | Future tent / Wave visuals. |
+| 1:02 | Where hologram warriors clash… and the crowd wears the future on their eyes. | Arena interior energy. |
+| 1:06 | You don't just watch history anymore… | Push into tent. |
+| 1:08 | You step inside it. | Wave materializing. |
+| 1:10 | Be part of something… truly unforgettable. | Warm close — invitation. |
+| 1:13 | *(hold)* | Fade to logo · CTA on screen. |
 
 ---
 

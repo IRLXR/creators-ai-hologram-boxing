@@ -1,6 +1,6 @@
 {
-  "purpose": "Director's Brief 003 — THE EVOLUTION OF THE FIGHT (60s documentary film)",
-  "campaign": "The Future Is Here — evolution documentary",
+  "purpose": "Director's Brief 003 \u2014 THE EVOLUTION OF THE FIGHT (60s documentary film)",
+  "campaign": "The Future Is Here \u2014 evolution documentary",
   "brief": "ads/brief-003/DIRECTORS-BRIEF-003.md",
   "storyboard": "ads/brief-003/STORYBOARD.md",
   "prompts": "ads/brief-003/NANO-BANANA-PROMPTS.md",
@@ -8,15 +8,16 @@
   "model_stills": "nano_banana_2",
   "model_video": "seedance_2_0",
   "aspect_ratio": "9:16",
-  "total_duration_sec": 60,
-  "status": "frames_generated",
-  "frames_status": "pending_user_approval",
-  "video_status": "not_started",
-  "approval_gate": "User must approve all master frames before any Seedance generation",
+  "total_duration_sec": 86.2,
+  "status": "complete",
+  "frames_status": "approved",
+  "video_status": "complete",
+  "approval_gate": "User approved all master frames 2026-07-02",
   "generated_at": "2026-07-02",
   "frames_generated_at": "2026-07-02",
+  "assembled_at": "2026-07-02",
   "references": {
-    "note": "Chapter 7 only — reuse Brief 002 approved brand refs",
+    "note": "Chapter 7 only \u2014 reuse Brief 002 approved brand refs",
     "arena_exterior_media_id": "1cda5722-71f1-4b34-ba3d-46a0e537e38c",
     "arena_interior_media_id": "4d3b873e-fd8f-4e6b-bea9-2a133fa8645d",
     "headset_media_id": "a80bd13f-836a-4094-9f88-907c07ac29a0",
@@ -25,22 +26,28 @@
     "wave_still": "assets/fighter-cyber.png"
   },
   "voiceover": {
-    "style": "Documentary — deep, calm, wise, authoritative, warm",
-    "not": "Roman hype profile · no celebrity clone",
-    "model": "seed_audio",
-    "speech_rate": "TBD — slow (negative or 0)",
-    "status": "not_recorded"
+    "style": "Documentary \u2014 deep, calm, wise, authoritative, warm",
+    "provider": "elevenlabs",
+    "voice": "Bill (pqHfZKP75CvOlQylNhV4)",
+    "model": "eleven_multilingual_v2",
+    "path": "ads/brief-003/output/EVOLUTION-vo-documentary-v1.mp3",
+    "duration_sec": 74.91,
+    "status": "recorded",
+    "note": "Full narration preserved \u2014 no atrim cutoff"
   },
   "final_film": {
-    "title": "The Evolution of the Fight — 60s Documentary",
+    "title": "The Evolution of the Fight \u2014 60s Documentary",
     "path": "ads/brief-003/output/EVOLUTION-60s-9x16-VO.mp4",
     "path_ambient": "ads/brief-003/output/EVOLUTION-60s-9x16-ambient.mp4",
+    "build_script": "ads/brief-003/build_evolution_film.py",
     "exports_pending": [
       "instagram_reel",
       "tiktok",
       "facebook_reel",
       "youtube_shorts"
-    ]
+    ],
+    "assembled_at": "2026-07-02",
+    "edit": "action montage \u2014 dual beats per chapter (motion + still)"
   },
   "frames": [
     {
@@ -48,92 +55,105 @@
       "title": "PREHISTORIC GATHERING",
       "time": "0:08-0:15",
       "path": "ads/brief-003/master-frames/01-prehistoric-gathering.png",
-      "status": "generated_pending_review",
+      "status": "approved",
       "job_id": "227a737c-4153-4a25-97df-478da3fe78d3",
       "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143800_227a737c-4153-4a25-97df-478da3fe78d3.png",
-      "seedance_job_id": null
+      "seedance_job_id": null,
+      "video_method": "ken_burns_still",
+      "video_path": "ads/brief-003/output/01-prehistoric-gathering-trim.mp4",
+      "note": "Seedance flagged nsfw \u2014 used slow zoom on approved still"
     },
     {
       "id": "02-egypt-ceremony",
       "title": "ANCIENT EGYPT",
       "time": "0:15-0:21",
       "path": "ads/brief-003/master-frames/02-egypt-ceremony.png",
-      "status": "generated_pending_review",
+      "status": "approved",
       "job_id": "ba262c06-00d0-45d8-88bd-62facd358c07",
       "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143800_ba262c06-00d0-45d8-88bd-62facd358c07.png",
-      "seedance_job_id": null
+      "seedance_job_id": "c6289c7f-9b57-478c-b6ca-0bb9b7ba8211",
+      "video_path": "ads/brief-003/output/02-egypt-ceremony-trim.mp4"
     },
     {
       "id": "03-greece-olympics",
       "title": "ANCIENT GREECE",
       "time": "0:21-0:27",
       "path": "ads/brief-003/master-frames/03-greece-olympics.png",
-      "status": "generated_pending_review",
+      "status": "approved",
       "job_id": "b21fa97b-ab97-4341-ab53-6af2118de34f",
       "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143925_b21fa97b-ab97-4341-ab53-6af2118de34f.png",
       "previous_job_id": "7a32bbb0-2295-4f8c-abbc-450f66bdbefe",
-      "note": "v1 flagged nsfw — regenerated family-friendly PG prompt",
-      "seedance_job_id": null
+      "note": "v1 flagged nsfw \u2014 regenerated family-friendly PG prompt",
+      "seedance_job_id": "5f76af24-4ceb-4f48-a34c-19eaba735fe1",
+      "video_path": "ads/brief-003/output/03-greece-olympics-trim.mp4"
     },
     {
       "id": "04-rome-colosseum",
       "title": "ROME",
       "time": "0:27-0:33",
       "path": "ads/brief-003/master-frames/04-rome-colosseum.png",
-      "status": "generated_pending_review",
+      "status": "approved",
       "job_id": "f322860a-dbef-4c88-9b34-6c7e0a24e1ba",
       "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143800_f322860a-dbef-4c88-9b34-6c7e0a24e1ba.png",
-      "seedance_job_id": null
+      "seedance_job_id": "d4c55942-daa0-4bae-941a-61b47a261068",
+      "video_path": "ads/brief-003/output/04-rome-colosseum-trim.mp4"
     },
     {
       "id": "05-asia-martial-arts",
       "title": "ASIA",
       "time": "0:33-0:39",
       "path": "ads/brief-003/master-frames/05-asia-martial-arts.png",
-      "status": "generated_pending_review",
+      "status": "approved",
       "job_id": "3f0fcbd9-ae57-4d6e-bc66-40e47d2257ce",
       "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143817_3f0fcbd9-ae57-4d6e-bc66-40e47d2257ce.png",
-      "seedance_job_id": null
+      "seedance_job_id": "c7b39b65-c390-404e-92e1-219e290c392c",
+      "video_path": "ads/brief-003/output/05-asia-martial-arts-trim.mp4"
     },
     {
       "id": "06-modern-boxing",
       "title": "MODERN BOXING",
       "time": "0:39-0:44",
       "path": "ads/brief-003/master-frames/06-modern-boxing.png",
-      "status": "generated_pending_review",
+      "status": "approved",
       "job_id": "e4bd092d-c135-4032-81f5-af865c140aaa",
       "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143812_e4bd092d-c135-4032-81f5-af865c140aaa.png",
-      "seedance_job_id": null
+      "seedance_job_id": "e973eb4e-f9d8-407d-abe3-53e4622949cf",
+      "video_path": "ads/brief-003/output/06-modern-boxing-trim.mp4"
     },
     {
       "id": "07-modern-ufc",
       "title": "MODERN UFC",
       "time": "0:44-0:49",
       "path": "ads/brief-003/master-frames/07-modern-ufc.png",
-      "status": "generated_pending_review",
+      "status": "approved",
       "job_id": "22441d1c-1cdd-4b00-9c56-094b33fc2499",
       "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143812_22441d1c-1cdd-4b00-9c56-094b33fc2499.png",
-      "seedance_job_id": null
+      "seedance_job_id": "4c1dd170-a8bc-4dcf-96ed-1e95ee2d03af",
+      "video_path": "ads/brief-003/output/07-modern-ufc-trim.mp4"
     },
     {
       "id": "08-timeline-future-line",
-      "title": "TIMELINE — NEXT CHAPTER",
+      "title": "TIMELINE \u2014 NEXT CHAPTER",
       "time": "0:49-0:51",
       "path": "ads/brief-003/master-frames/08-timeline-future-line.png",
-      "status": "generated_pending_review",
+      "status": "approved",
       "job_id": "e8d856b0-87cb-4649-bc6b-97adc681267a",
       "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143812_e8d856b0-87cb-4649-bc6b-97adc681267a.png",
-      "seedance_job_id": null
+      "seedance_job_id": null,
+      "video_method": "ken_burns_still",
+      "video_path": "ads/brief-003/output/08-timeline-future-line-trim.mp4",
+      "note": "Seedance flagged nsfw \u2014 used slow zoom on approved still"
     },
     {
       "id": "09-future-arena-wave",
-      "title": "AI HOLOGRAM BOXING — THE FUTURE",
-      "time": "0:51-0:55",
+      "title": "AI HOLOGRAM BOXING \u2014 THE FUTURE",
+      "time": "0:51-0:58",
       "path": "ads/brief-003/master-frames/09-future-arena-wave.png",
-      "status": "generated_pending_review",
+      "status": "approved",
       "job_id": "c77ccfa3-85c7-4dda-8d33-849128d09049",
       "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143837_c77ccfa3-85c7-4dda-8d33-849128d09049.png",
-      "seedance_job_id": null,
+      "seedance_job_id": "72408c7a-c8f5-4f74-a0d7-dba095404d03",
+      "video_path": "ads/brief-003/output/09-future-arena-wave-trim.mp4",
       "brand_lock": true,
       "requires_references": true
     },
@@ -142,10 +162,11 @@
       "title": "CTA END CARD",
       "time": "0:58-1:00",
       "path": "ads/brief-003/master-frames/10-cta-end-card.png",
-      "status": "generated_pending_review",
+      "status": "approved",
       "job_id": "c8b3e222-d6ca-4513-83e7-1fbefc8a4799",
       "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260702_143833_c8b3e222-d6ca-4513-83e7-1fbefc8a4799.png",
-      "seedance_job_id": null
+      "seedance_job_id": "b3e02a9a-e7d1-4a82-9879-0689700c5fb1",
+      "video_path": "ads/brief-003/output/10-cta-end-card-trim.mp4"
     }
   ]
 }

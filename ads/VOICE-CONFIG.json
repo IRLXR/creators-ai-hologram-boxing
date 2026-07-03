@@ -14,15 +14,15 @@
   },
   "elevenlabs_brief003": {
     "provider": "elevenlabs",
-    "status": "pending_voice_selection",
+    "status": "generated",
     "model": "eleven_multilingual_v2",
-    "voice_id": "",
-    "voice_name": "TBD — deep documentary narrator",
-    "stability": 0.7,
-    "similarity_boost": 0.75,
-    "speed": 0.9,
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill — deep documentary narrator (Morgan Freeman-style; not a celebrity clone)",
+    "stability": 0.72,
+    "similarity_boost": 0.78,
+    "speed": 0.92,
     "script_file": "ads/brief-003/VO-SCRIPT.md",
     "setup": "docs/ELEVENLABS-CONNECT.md",
-    "note": "Brief 003 only — not Roman hype. Set voice_id after picking voice in ElevenLabs library."
+    "note": "User asked for Morgan Freeman tone. ElevenLabs prohibits unauthorized celebrity impersonation — Bill is the official deep documentary preset. Add ELEVENLABS_API_KEY to .env.local then npm run generate:brief003-vo"
   }
 }

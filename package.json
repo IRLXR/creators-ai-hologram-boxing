@@ -10,6 +10,11 @@
     "meta:verify": "node scripts/meta/meta-ads-cli.js verify",
     "meta:list": "node scripts/meta/meta-ads-cli.js list",
     "meta:plan": "node scripts/meta/meta-ads-cli.js plan",
-    "meta:create-waitlist": "node scripts/meta/meta-ads-cli.js create-waitlist"
+    "meta:create-waitlist": "node scripts/meta/meta-ads-cli.js create-waitlist",
+    "meta:create-test-ad": "node scripts/meta/meta-ads-cli.js create-test-ad",
+    "generate:brief003-vo": "node --env-file=.env.local scripts/generate-brief003-vo.mjs"
+  },
+  "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.56.0"
   }
 }

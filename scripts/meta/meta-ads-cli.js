@@ -13,11 +13,20 @@
 
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
+const os = require("os");
 const {
   verifyConnection,
   listCampaigns,
   createCampaign,
   createAdSet,
+  createAdCreative,
+  createAd,
+  uploadVideo,
+  uploadAdImage,
+  waitForVideo,
+  pickImageUrl,
+  defaultTargeting,
 } = require("./meta-client");
 const { listAllBundles, mapCampaignBundle, loadCampaignConfig } = require("./map-campaigns");
 
@@ -98,10 +107,119 @@ async function cmdCreateWaitlist(execute) {
   printJson("Ads to attach", bundle.ads);
 }
 
+const TEST_AD = {
+  campaignName: "CAMP_HB_Test_001",
+  adSetName: "ADSET_HB_Test_US_18-44",
+  adName: "AD_HB_Test_WalkInside_001",
+  video: "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4",
+  headline: "Would You Walk Inside?",
+  message:
+    "Something the world has never seen is waiting behind that door. AI hologram boxers. Live. Front row energy. Become a Founding Fan.",
+  linkUrl:
+    "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=test&utm_content=walk_inside",
+  callToAction: "SIGN_UP",
+  dailyBudgetUsd: 5,
+};
+
+function extractThumbnail(videoPath) {
+  const thumbPath = path.join(os.tmpdir(), `meta-test-thumb-${Date.now()}.jpg`);
+  execFileSync(
+    "ffmpeg",
+    ["-y", "-i", videoPath, "-ss", "00:00:01", "-vframes", "1", "-q:v", "2", thumbPath],
+    { stdio: "ignore" }
+  );
+  return thumbPath;
+}
+
+async function cmdCreateTestAd(execute) {
+  const root = path.join(__dirname, "../..");
+  const videoPath = path.join(root, TEST_AD.video);
+  if (!fs.existsSync(videoPath)) {
+    throw new Error(`Video not found: ${TEST_AD.video}`);
+  }
+
+  const plan = {
+    ...TEST_AD,
+    videoPath,
+    status: "PAUSED",
+    note: "Creates traffic test campaign + ad set + video ad for landing page preview.",
+  };
+
+  if (!execute) {
+    printJson("Dry run — would create test ad", plan);
+    console.log("\nAdd --execute to upload video and create PAUSED test ad in Meta.");
+    return;
+  }
+
+  console.log("Creating test traffic campaign…");
+  const campaignRes = await createCampaign({
+    name: TEST_AD.campaignName,
+    objective: "OUTCOME_TRAFFIC",
+    status: "PAUSED",
+  });
+  console.log("Campaign:", campaignRes.id);
+
+  const adSetRes = await createAdSet({
+    campaignId: campaignRes.id,
+    name: TEST_AD.adSetName,
+    dailyBudgetUsd: TEST_AD.dailyBudgetUsd,
+    optimizationGoal: "LINK_CLICKS",
+    targeting: defaultTargeting(),
+    status: "PAUSED",
+  });
+  console.log("Ad set:", adSetRes.id);
+
+  console.log("Uploading video (this may take a minute)…");
+  const videoUpload = await uploadVideo(videoPath);
+  const videoId = videoUpload.id;
+  console.log("Video ID:", videoId);
+
+  console.log("Waiting for Meta video processing…");
+  const videoReady = await waitForVideo(videoId);
+
+  console.log("Uploading thumbnail…");
+  const thumbPath = extractThumbnail(videoPath);
+  const imageUpload = await uploadAdImage(thumbPath);
+  fs.unlinkSync(thumbPath);
+  const imageUrl = pickImageUrl(imageUpload, videoReady);
+
+  const pageId = process.env.META_PAGE_ID;
+  const creativeRes = await createAdCreative({
+    name: `${TEST_AD.adName}_Creative`,
+    pageId,
+    videoId,
+    imageUrl,
+    message: TEST_AD.message,
+    headline: TEST_AD.headline,
+    linkUrl: TEST_AD.linkUrl,
+    callToAction: TEST_AD.callToAction,
+  });
+  console.log("Creative:", creativeRes.id);
+
+  const adRes = await createAd({
+    name: TEST_AD.adName,
+    adSetId: adSetRes.id,
+    creativeId: creativeRes.id,
+    status: "PAUSED",
+  });
+  console.log("Ad:", adRes.id);
+
+  printJson("Test ad created (PAUSED)", {
+    campaignId: campaignRes.id,
+    adSetId: adSetRes.id,
+    videoId,
+    creativeId: creativeRes.id,
+    adId: adRes.id,
+    previewUrl: `https://adsmanager.facebook.com/adsmanager/manage/ads?act=${process.env.META_AD_ACCOUNT_ID}&selected_ad_ids=${adRes.id}`,
+  });
+  console.log("\nOpen Ads Manager → preview ad → turn ON only when ready to spend.");
+}
+
 async function main() {
   loadEnv();
-  const [command, arg, ...rest] = process.argv.slice(2);
-  const execute = rest.includes("--execute");
+  const args = process.argv.slice(2);
+  const [command, arg] = args;
+  const execute = args.includes("--execute");
 
   switch (command) {
     case "verify":
@@ -116,6 +234,9 @@ async function main() {
     case "create-waitlist":
       await cmdCreateWaitlist(execute);
       break;
+    case "create-test-ad":
+      await cmdCreateTestAd(execute);
+      break;
     default:
       console.log(`Meta Marketing API — Hologram Boxing
 
@@ -124,6 +245,7 @@ Commands:
   list                List existing campaigns
   plan [name]         Show Campaign → Ad Set → Ads mapping from campaigns.json
   create-waitlist     Create PAUSED waitlist campaign + ad set (--execute)
+  create-test-ad      Upload hero video + create PAUSED test ad (--execute)
 
 Setup:
   1. Copy .env.example → .env.local

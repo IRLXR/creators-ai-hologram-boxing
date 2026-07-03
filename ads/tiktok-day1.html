@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Day 1 — Creators AI Hologram Boxing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0a0b10; --panel:#12141c; --border:rgba(255,255,255,.08); --text:#e8eaf0; --muted:#9aa3b2; --cyan:#22d3ee; --green:#34d399; --gold:#fbbf24; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+    .wrap { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
+    h1 { font-family:Orbitron,sans-serif; font-size:1.35rem; margin:0 0 6px; }
+    .sub { color:var(--muted); margin:0 0 20px; }
+    .badge { display:inline-block; background:rgba(52,211,153,.12); color:var(--green); border:1px solid rgba(52,211,153,.35); padding:4px 10px; border-radius:999px; font-size:.72rem; font-weight:600; margin-bottom:12px; }
+    .card { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px; margin-bottom:14px; }
+    .card h2 { margin:0 0 10px; font-size:1rem; }
+    .card p, .card li { color:var(--muted); }
+    .card ol { padding-left:1.2rem; }
+    .card li { margin-bottom:8px; }
+    .card a { color:var(--cyan); }
+    .path { background:#0d0f15; border:1px dashed var(--border); border-radius:8px; padding:10px 12px; font-family:ui-monospace,monospace; font-size:.78rem; color:var(--gold); word-break:break-all; margin:8px 0; }
+    .field { margin-bottom:12px; }
+    .field label { display:block; font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:5px; }
+    .row { display:flex; gap:8px; }
+    .row input, .row textarea { flex:1; background:#0d0f15; border:1px solid var(--border); border-radius:8px; color:var(--text); padding:10px 12px; font:inherit; font-size:.84rem; }
+    .row textarea { min-height:64px; resize:vertical; }
+    .btn { flex-shrink:0; background:rgba(34,211,238,.12); border:1px solid rgba(34,211,238,.35); color:var(--cyan); border-radius:8px; padding:0 14px; font-weight:600; cursor:pointer; font-size:.78rem; }
+    .btn.copied { color:var(--green); border-color:var(--green); }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    .actions a { display:inline-block; background:linear-gradient(135deg,rgba(34,211,238,.2),rgba(244,114,182,.15)); border:1px solid rgba(34,211,238,.4); color:var(--text); text-decoration:none; padding:10px 16px; border-radius:8px; font-weight:600; font-size:.88rem; }
+    .warn { border-left:3px solid var(--gold); padding:10px 12px; background:rgba(251,191,36,.08); border-radius:0 8px 8px 0; font-size:.88rem; color:var(--muted); margin-bottom:14px; }
+    .pixel-box input { width:100%; background:#0d0f15; border:1px solid var(--border); border-radius:8px; color:var(--text); padding:10px 12px; font:inherit; margin-top:8px; }
+    code { color:var(--cyan); font-size:.85em; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="badge">TIKTOK DAY 1 — $15/DAY</span>
+    <h1>TikTok Ads — Ready to Paste</h1>
+    <p class="sub">Videos are on your Desktop. Open TikTok Ads Manager, paste each field, upload the video, submit for review.</p>
+
+    <div class="warn">I can't log into your TikTok account from here. Use the links below — everything is pre-filled for copy-paste.</div>
+
+    <div class="card">
+      <h2>1. Upload this video</h2>
+      <p class="path">C:\Users\suzet\Desktop\TIKTOK-AD-01-Walk-Inside.mp4</p>
+      <p>Backup (TikTok-native cut): <code>TIKTOK-AD-01-Walk-Inside-Native.mp4</code> on Desktop</p>
+    </div>
+
+    <div class="card">
+      <h2>2. Open TikTok</h2>
+      <div class="actions">
+        <a href="https://business.tiktok.com" target="_blank" rel="noopener">Business Center</a>
+        <a href="https://ads.tiktok.com" target="_blank" rel="noopener">Ads Manager</a>
+        <a href="https://ads.tiktok.com/i18n/events_manager/pixel" target="_blank" rel="noopener">Events / Pixel</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>3. Campaign fields (copy each)</h2>
+      <div id="fields"></div>
+    </div>
+
+    <div class="card pixel-box">
+      <h2>4. After you create the pixel</h2>
+      <p>Paste your Pixel ID here — I'll show the exact line to put in <code>site-config.js</code>. Send it to Cursor and we'll deploy.</p>
+      <input type="text" id="pixel-id" placeholder="CXXXXXXXXXXXXXXXXX" autocomplete="off">
+      <div class="path" id="pixel-snippet" style="margin-top:12px;display:none"></div>
+    </div>
+
+    <div class="card">
+      <h2>5. Publish checklist</h2>
+      <ol>
+        <li>Billing added in Ads Manager</li>
+        <li>Pixel ID sent to Cursor → deploy landing page</li>
+        <li>Test email on landing page from your phone</li>
+        <li>Ad approved → turn campaign ON</li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    const FIELDS = {
+      campaign: 'CAMP_HB_WalkInside_001',
+      objective: 'Website conversions (SubmitForm) — or Traffic if no pixel yet',
+      budget: '$15/day',
+      adgroup: 'ADGRP_HB_WalkInside_US_18-44',
+      location: 'United States',
+      age: '18–44',
+      language: 'English',
+      smart_campaign: 'OFF',
+      ad_text: 'Would you walk inside? 👀 AI hologram boxers LIVE. Front row energy. Become a Founding Fan 🔗',
+      cta: 'Sign Up',
+      url: 'https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=walk_inside&utm_content=launch_15s_vo',
+      bio_link: 'https://creators-ai-hologram-boxing.vercel.app/landing.html'
+    };
+
+    const el = document.getElementById('fields');
+    el.innerHTML = Object.entries(FIELDS).map(([k, v]) => {
+      const id = 'f-' + k;
+      const long = v.length > 70;
+      return `<div class="field"><label>${k.replace(/_/g,' ')}</label><div class="row">${
+        long ? `<textarea readonly id="${id}">${v}</textarea>` : `<input readonly id="${id}" value="${v.replace(/"/g,'&quot;')}">`
+      }<button class="btn" type="button" data-copy="${id}">Copy</button></div></div>`;
+    }).join('');
+
+    document.body.addEventListener('click', async (e) => {
+      const btn = e.target.closest('[data-copy]');
+      if (!btn) return;
+      const node = document.getElementById(btn.dataset.copy);
+      const text = node.tagName === 'TEXTAREA' ? node.value : node.value;
+      await navigator.clipboard.writeText(text);
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1500);
+    });
+
+    document.getElementById('pixel-id').addEventListener('input', (e) => {
+      const id = e.target.value.trim();
+      const box = document.getElementById('pixel-snippet');
+      if (!/^C[A-Z0-9]+$/i.test(id)) { box.style.display = 'none'; return; }
+      box.style.display = 'block';
+      box.textContent = `// site-config.js → socialAds\ntiktokPixelId: "${id}"`;
+    });
+  </script>
+</body>
+</html>

@@ -65,7 +65,23 @@ Suggested settings for Brief 003:
 
 ---
 
-## 5. GoHighLevel (optional)
+## 5. Generate Brief 003 narration (Node)
+
+After your API key is in `.env.local`:
+
+```bash
+npm install
+npm run generate:brief003-vo
+```
+
+Output: `ads/brief-003/output/EVOLUTION-vo-documentary-v1.mp3`
+
+Voice and model settings: `ads/VOICE-CONFIG.json` → `elevenlabs_brief003`.  
+Default voice is **George** (`JBFqnCBsd6RMkjVDRZzb`) until you pick a custom documentary voice in the ElevenLabs library.
+
+---
+
+## 6. GoHighLevel (optional)
 
 To attach generated audio to waitlist contacts, use **Make** or **Zapier**:
 

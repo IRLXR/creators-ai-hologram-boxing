@@ -1,0 +1,101 @@
+{
+  "collection": "Social Media Collection 002 — The Experience",
+  "brand": "Creators AI Hologram Boxing",
+  "model": "nano_banana_2",
+  "format": "1080x1350 (4:5)",
+  "platforms": ["Instagram", "TikTok", "Facebook", "LinkedIn"],
+  "created": "2026-07-02",
+  "folder": "assets/social-collection-002",
+  "desktop_folder": "C:\\Users\\suzet\\Desktop\\SOCIAL-COLLECTION-002",
+  "follows_collection": "social-collection-001",
+  "posts": [
+    {
+      "id": "POST-008",
+      "title": "First Step",
+      "headline": "ONE STEP... / CHANGES EVERYTHING.",
+      "footer": "AI Hologram Boxing",
+      "emotion": "Anticipation",
+      "file": "POST-008-first-step-1080x1350.png",
+      "job_id": "ff967705-3767-47a7-816b-8d6f16780055",
+      "caption_instagram": "One step changes everything. The future is waiting inside. Become a Founding Fan — link in bio.",
+      "caption_tiktok": "ONE STEP... changes everything 👀 AI Hologram Boxing. Link in bio."
+    },
+    {
+      "id": "POST-009",
+      "title": "The Moment",
+      "headline": "IT STARTS HERE.",
+      "footer": "Coming Soon",
+      "emotion": "Curiosity",
+      "file": "POST-009-the-moment-1080x1350.png",
+      "job_id": "999334b4-feac-4053-8373-100f94d80e14",
+      "caption_instagram": "It starts here. One headset. One moment. The experience begins.",
+      "caption_tiktok": "IT STARTS HERE. Gear up. Experience the future 🔗 link in bio"
+    },
+    {
+      "id": "POST-010",
+      "title": "Inside",
+      "headline": "WELCOME TO TOMORROW.",
+      "footer": "Experience The Future",
+      "emotion": "Wonder",
+      "file": "POST-010-inside-1080x1350.png",
+      "job_id": "4566ed87-e604-4f77-b8e9-347669efc3be",
+      "caption_instagram": "Welcome to tomorrow. Inside the hologram arena — everyone looking toward the future.",
+      "caption_tiktok": "WELCOME TO TOMORROW. Inside AI Hologram Boxing. Link in bio."
+    },
+    {
+      "id": "POST-011",
+      "title": "The Reaction",
+      "headline": "THE LOOK SAYS EVERYTHING.",
+      "footer": "Become A Founding Fan",
+      "emotion": "Joy",
+      "file": "POST-011-the-reaction-1080x1350.png",
+      "job_id": "73c6fb05-3739-4195-85f0-4b09699642a9",
+      "caption_instagram": "The look says everything. Real reactions. Real amazement. Become a Founding Fan — link in bio.",
+      "caption_tiktok": "THE LOOK SAYS EVERYTHING 😭 Become a Founding Fan — link in bio"
+    },
+    {
+      "id": "POST-012",
+      "title": "The Energy",
+      "headline": "YOU CAN FEEL IT.",
+      "footer": "AI Hologram Boxing",
+      "emotion": "Energy",
+      "file": "POST-012-the-energy-1080x1350.png",
+      "job_id": "4dac99bd-16cd-4a90-84a2-37b89a019db2",
+      "caption_instagram": "You can feel it. The energy inside the arena hits different.",
+      "caption_tiktok": "YOU CAN FEEL IT. AI Hologram Boxing energy. Link in bio."
+    },
+    {
+      "id": "POST-013",
+      "title": "The Future Is Watching",
+      "headline": "EVERY SEAT. ONE EXPERIENCE.",
+      "footer": "Coming Soon",
+      "emotion": "Belonging",
+      "file": "POST-013-every-seat-one-experience-1080x1350.png",
+      "job_id": "f2e20083-fa30-4bee-8eea-67f1a97a8fa1",
+      "caption_instagram": "Every seat. One experience. You're part of something bigger.",
+      "caption_tiktok": "EVERY SEAT. ONE EXPERIENCE. Coming soon 🔗 link in bio"
+    },
+    {
+      "id": "POST-014",
+      "title": "Are You Ready?",
+      "headline": "ARE YOU READY?",
+      "footer": "Become A Founding Fan",
+      "emotion": "Invitation",
+      "file": "POST-014-are-you-ready-1080x1350.png",
+      "job_id": "f4093ee1-003c-47da-9bc0-33ee146ece4c",
+      "caption_instagram": "Are you ready? The doors are open. Become a Founding Fan — link in bio.",
+      "caption_tiktok": "ARE YOU READY? 👀 Become a Founding Fan — link in bio"
+    }
+  ],
+  "bio_link": "https://creators-ai-hologram-boxing.vercel.app/landing.html",
+  "posting_order": ["POST-008", "POST-009", "POST-010", "POST-011", "POST-012", "POST-013", "POST-014"],
+  "quality_control": {
+    "brand_bible": true,
+    "official_wave": true,
+    "official_arena": true,
+    "official_headset": true,
+    "headsets_on_every_person": true,
+    "premium_typography": true,
+    "photorealistic": true
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "collection": "Social Media Collection 001 — The Future Is Here",
+  "brand": "Creators AI Hologram Boxing",
+  "model": "nano_banana_2",
+  "format": "1080x1350 (4:5)",
+  "platforms": ["Instagram", "TikTok", "Facebook", "LinkedIn"],
+  "created": "2026-07-02",
+  "folder": "assets/social-collection-001",
+  "desktop_folder": "C:\\Users\\suzet\\Desktop\\SOCIAL-COLLECTION-001",
+  "references": {
+    "arena_exterior": "79bfa98e-eb40-412b-9e11-b12dc994340c",
+    "wave_fighter": "2f370cad-ef3c-43c2-8b0c-c7f7b42d439e",
+    "headset": "02c82b50-e453-4d3f-9e3a-05335a3c766b",
+    "arena_interior": "7733ccb6-3838-4e52-95ae-8cd1ad9106f1",
+    "doors_mystery": "6f536c34-9400-4558-b28a-3b3047f12403"
+  },
+  "posts": [
+    {
+      "id": "POST-001",
+      "title": "The Future Is Here",
+      "headline": "THE FUTURE IS HERE",
+      "footer": "Become A Founding Fan",
+      "emotion": "Wonder",
+      "file": "POST-001-the-future-is-here-1080x1350.png",
+      "job_id": "4d892f8d-e5b9-46f7-abe1-e6e8a43db102",
+      "caption_instagram": "The future isn't coming. It's here. 🥊 Become a Founding Fan — link in bio.",
+      "caption_tiktok": "THE FUTURE IS HERE. AI hologram boxing. Become a Founding Fan — link in bio 👆"
+    },
+    {
+      "id": "POST-002",
+      "title": "Would You Walk Inside?",
+      "headline": "WOULD YOU WALK INSIDE?",
+      "footer": "The Next Evolution Of Live Entertainment",
+      "emotion": "Curiosity",
+      "file": "POST-002-would-you-walk-inside-1080x1350.png",
+      "job_id": "29f8fbaa-7761-4015-9d81-5e05073765b1",
+      "caption_instagram": "Would you walk inside? Something the world has never seen is waiting. Link in bio.",
+      "caption_tiktok": "Would you walk inside? 👀 The next evolution of live entertainment. Link in bio."
+    },
+    {
+      "id": "POST-003",
+      "title": "One Headset",
+      "headline": "ONE HEADSET / Infinite Possibilities",
+      "footer": "Coming Soon",
+      "emotion": "Excitement",
+      "file": "POST-003-one-headset-1080x1350.png",
+      "job_id": "54271f53-7b18-4adf-887f-e5f53ab4ade8",
+      "caption_instagram": "One headset. Infinite possibilities. The future of live entertainment is coming.",
+      "caption_tiktok": "One headset → infinite possibilities. Coming soon 🔗 link in bio"
+    },
+    {
+      "id": "POST-004",
+      "title": "Meet Wave",
+      "headline": "MEET WAVE",
+      "footer": "Only The Beginning",
+      "emotion": "Mystery",
+      "file": "POST-004-meet-wave-1080x1350.png",
+      "job_id": "983b19f9-945b-4003-8d60-020394055731",
+      "caption_instagram": "Meet Wave. The hologram fighter you've never seen before. Only the beginning.",
+      "caption_tiktok": "MEET WAVE 👀 Only the beginning. Link in bio."
+    },
+    {
+      "id": "POST-005",
+      "title": "The Experience",
+      "headline": "YOU HAD TO BE THERE",
+      "footer": "Experience The Future",
+      "emotion": "Amazement",
+      "file": "POST-005-the-experience-1080x1350.png",
+      "job_id": "37ea3a05-e998-4478-8564-a9a6fb9cd2c4",
+      "caption_instagram": "You had to be there. Inside the hologram tent — families, friends, creators. Experience the future.",
+      "caption_tiktok": "YOU HAD TO BE THERE. Experience the future of fight night. Link in bio."
+    },
+    {
+      "id": "POST-006",
+      "title": "The Evolution",
+      "headline": "EVERY GENERATION CHANGES THE GAME",
+      "footer": "Now It's Our Turn",
+      "emotion": "Inspiration",
+      "file": "POST-006-the-evolution-1080x1350.png",
+      "job_id": "94908299-d0af-4c1f-a2c5-cb2968a477ab",
+      "caption_instagram": "Every generation changes the game. Now it's our turn. Become a Founding Fan — link in bio.",
+      "caption_tiktok": "From Stone Age to hologram boxing. Every generation changes the game. Now it's our turn."
+    },
+    {
+      "id": "POST-007",
+      "title": "Founding Fan",
+      "headline": "BECOME A FOUNDING FAN",
+      "footer": "Join Before Launch",
+      "emotion": "Belonging",
+      "file": "POST-007-founding-fan-1080x1350.png",
+      "job_id": "c61c3ef4-9816-4271-9fee-22f0ed84b3c9",
+      "caption_instagram": "Become a Founding Fan. Join before launch — link in bio.",
+      "caption_tiktok": "BECOME A FOUNDING FAN. Join before launch 👆 link in bio"
+    }
+  ],
+  "bio_link": "https://creators-ai-hologram-boxing.vercel.app/landing.html",
+  "posting_order": [
+    "POST-001",
+    "POST-002",
+    "POST-003",
+    "POST-004",
+    "POST-005",
+    "POST-006",
+    "POST-007"
+  ]
+}

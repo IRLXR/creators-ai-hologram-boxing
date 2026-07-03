@@ -250,26 +250,52 @@
     </section>
 
     <section class="panel" id="panel-tiktok">
+      <div class="warn">TikTok Day 1 budget: <strong>$15/day</strong>. Start with one hero ad. Add a second ad after 48h if CTR is healthy.</div>
       <div class="card">
-        <h2>TikTok Ads Manager — click path</h2>
+        <h2>Step A — TikTok Business Center (one-time)</h2>
         <ol>
-          <li>Go to <a href="https://ads.tiktok.com" target="_blank" rel="noopener">ads.tiktok.com</a> → <strong>Create campaign</strong></li>
-          <li>Objective: <strong>Website conversions</strong> or <strong>Traffic</strong></li>
-          <li>Name: <code>CAMP_HB_FutureIsHere_001</code> · Budget: <strong>$15/day</strong></li>
-          <li>Ad group: <code>ADGRP_HB_FutureIsHere_US_18-44</code> · US · 18–44</li>
-          <li>Upload same MP4 → paste fields below</li>
-          <li>Destination: landing URL with TikTok UTM</li>
-          <li>Submit for review → turn on when approved</li>
+          <li>Open <a href="https://business.tiktok.com" target="_blank" rel="noopener">business.tiktok.com</a> → sign in with your TikTok account</li>
+          <li><strong>Create Business Center</strong> → name it <code>Creators AI Hologram Boxing</code></li>
+          <li>Link your TikTok profile <strong>@creatorsai</strong> (Assets → TikTok accounts → Add)</li>
+          <li>Open <a href="https://ads.tiktok.com" target="_blank" rel="noopener">ads.tiktok.com</a> → <strong>Tools → Billing</strong> → add payment method</li>
+          <li>Set bio link on TikTok to <code>https://creators-ai-hologram-boxing.vercel.app/landing.html</code> (Organic tab → bio field)</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h2>Step B — TikTok Pixel (recommended before spend)</h2>
+        <ol>
+          <li><a href="https://ads.tiktok.com/i18n/events_manager/pixel" target="_blank" rel="noopener">Events Manager → Web events → TikTok Pixel</a> → <strong>Create pixel</strong></li>
+          <li>Setup method: <strong>Manually install pixel code</strong> (already on our landing page)</li>
+          <li>Copy the Pixel ID (looks like <code>CXXXXXXXXXXXXXXXXX</code>)</li>
+          <li>Paste into <code>site-config.js</code> → <code>socialAds.tiktokPixelId</code> → deploy to Vercel</li>
+          <li>On the pixel, add event <strong>SubmitForm</strong> (fires when someone joins the waitlist)</li>
+          <li>Test: open landing URL on phone → submit test email → Events Manager should show activity within ~20 min</li>
+        </ol>
+        <p class="sub">No pixel yet? Use objective <strong>Traffic</strong> for Day 1, then switch to <strong>Website conversions</strong> once pixel is live.</p>
+      </div>
+      <div class="card">
+        <h2>Step C — Create your first campaign</h2>
+        <ol>
+          <li><a href="https://ads.tiktok.com" target="_blank" rel="noopener">ads.tiktok.com</a> → <strong>Create campaign</strong></li>
+          <li>Objective: <strong>Website conversions</strong> (pixel + SubmitForm) or <strong>Traffic</strong> (no pixel yet)</li>
+          <li>Smart campaign: <strong>OFF</strong> (manual control for launch)</li>
+          <li>Campaign name + budget from fields below · Ad group: US · 18–44 · English</li>
+          <li>Placements: TikTok feed + TikTok search (automatic is fine)</li>
+          <li>Upload the MP4 from the Start tab → paste ad text + URL below</li>
+          <li>CTA button: <strong>Sign Up</strong> · Identity: your TikTok account</li>
+          <li>Submit for review → turn campaign <strong>ON</strong> when approved (usually same day)</li>
         </ol>
       </div>
       <div class="card" id="tiktok-fields"></div>
       <div class="card checklist" id="check-tiktok">
         <h2>TikTok checklist</h2>
-        <label><input type="checkbox" data-check="tt-1"> Campaign created</label>
+        <label><input type="checkbox" data-check="tt-0"> Business Center + billing added</label>
+        <label><input type="checkbox" data-check="tt-0b"> Pixel created + ID in site-config.js + deployed</label>
+        <label><input type="checkbox" data-check="tt-1"> Campaign created (draft)</label>
         <label><input type="checkbox" data-check="tt-2"> Video uploaded</label>
         <label><input type="checkbox" data-check="tt-3"> Copy + URL pasted</label>
-        <label><input type="checkbox" data-check="tt-4"> Ad approved</label>
-        <label><input type="checkbox" data-check="tt-5"> Campaign live</label>
+        <label><input type="checkbox" data-check="tt-4"> Mobile preview OK</label>
+        <label><input type="checkbox" data-check="tt-5"> Ad approved + campaign live</label>
       </div>
     </section>
 
@@ -402,14 +428,22 @@
     picker.addEventListener('change', () => loadAdIndex(Number(picker.value)));
     loadAdIndex(0);
 
+    function activateTab(name) {
+      const tab = document.querySelector(`.tab[data-tab="${name}"]`);
+      if (!tab) return;
+      document.querySelectorAll('.tab').forEach((t) => t.classList.remove('is-active'));
+      document.querySelectorAll('.panel').forEach((p) => p.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      document.getElementById('panel-' + name).classList.add('is-active');
+    }
+
     document.querySelectorAll('.tab[data-tab]').forEach((tab) => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach((t) => t.classList.remove('is-active'));
-        document.querySelectorAll('.panel').forEach((p) => p.classList.remove('is-active'));
-        tab.classList.add('is-active');
-        document.getElementById('panel-' + tab.dataset.tab).classList.add('is-active');
-      });
+      tab.addEventListener('click', () => activateTab(tab.dataset.tab));
     });
+
+    const urlTab = new URLSearchParams(window.location.search).get('tab')
+      || (window.location.hash === '#tiktok' ? 'tiktok' : null);
+    if (urlTab) activateTab(urlTab);
 
     document.body.addEventListener('click', async (e) => {
       const btn = e.target.closest('[data-copy]');

@@ -30,6 +30,14 @@ This library is the single source of truth for all AI Hologram Boxing creative w
 | 19 | `19_QUALITY_CONTROL.md` | QC checklist |
 | 20 | `20_EXPORT_GUIDE.md` | Deliverables |
 
+## Primal Branding (Patrick Hanlon)
+
+| Folder | Purpose |
+|--------|---------|
+| `brand/primal-code/` | Seven belief-system pillars — Creation Story, Creed, Icons, Rituals, Sacred Words, Nonbelievers, Leader |
+
+Start at `brand/primal-code/README.md`.
+
 ## Core principles
 
 - Never use landing-page images as production references.
