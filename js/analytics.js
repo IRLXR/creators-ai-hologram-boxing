@@ -327,12 +327,20 @@
     });
   }
 
+  function isWaitlistEvent(opts) {
+    return opts?.content_category === 'waitlist'
+      || opts?.content_id === 'waitlist'
+      || opts?.form_key === 'waitlist';
+  }
+
   function trackAddToCart(value, extra) {
     const opts = extra || {};
-    const usdValue = typeof value === 'number' && value > 50 ? ticketUsdValue(opts.content_id || 'headset') : Number(value);
+    const usdValue = isWaitlistEvent(opts)
+      ? 0
+      : (typeof value === 'number' && value > 50 ? ticketUsdValue(opts.content_id || 'headset') : Number(value));
     track('AddToCart', {
       ...opts,
-      event_source: 'ticket_form',
+      event_source: isWaitlistEvent(opts) ? 'waitlist' : 'ticket_form',
       currency: tiktokCurrency(),
       value: usdValue,
       price: usdValue,
@@ -343,9 +351,9 @@
     const opts = extra || {};
     track('AddPaymentInfo', {
       ...opts,
-      event_source: 'ticket_form',
+      event_source: isWaitlistEvent(opts) ? 'waitlist' : 'ticket_form',
       currency: tiktokCurrency(),
-      value: ticketUsdValue(opts.content_id || 'headset'),
+      value: isWaitlistEvent(opts) ? 0 : ticketUsdValue(opts.content_id || 'headset'),
     });
   }
 
@@ -385,12 +393,17 @@
 
   function trackPurchase(value, extra) {
     const opts = extra || {};
-    const usdValue = typeof value === 'number' && value > 50
-      ? ticketUsdValue(opts.content_id || (opts.content_name?.includes('Attendee') ? 'attendee' : 'headset'))
-      : Number(value) || ticketUsdValue('headset');
+    let usdValue;
+    if (isWaitlistEvent(opts)) {
+      usdValue = 0;
+    } else if (typeof value === 'number' && value > 50) {
+      usdValue = ticketUsdValue(opts.content_id || (opts.content_name?.includes('Attendee') ? 'attendee' : 'headset'));
+    } else {
+      usdValue = Number(value) || ticketUsdValue('headset');
+    }
     track('Purchase', {
       ...opts,
-      event_source: 'ticket_form',
+      event_source: isWaitlistEvent(opts) ? 'waitlist' : 'ticket_form',
       currency: tiktokCurrency(),
       value: usdValue,
       price: usdValue,
@@ -415,7 +428,12 @@
   function pageViewContentMap() {
     const path = global.location.pathname;
     if (path.includes('landing')) {
-      trackViewContent({ content_category: 'waitlist', content_id: 'landing' });
+      trackViewContent({
+        content_category: 'waitlist',
+        content_id: 'waitlist',
+        content_name: 'Founding Fan Waitlist',
+        value: 0,
+      });
     } else if (path.includes('book')) {
       trackViewContent({ content_category: 'tickets', content_id: 'book' });
     } else if (path.includes('watch')) {
@@ -517,14 +535,27 @@
     if (!form || form.dataset.analyticsBound) return;
     form.dataset.analyticsBound = '1';
 
+    const waitlistMeta = {
+      content_category: 'waitlist',
+      content_id: 'waitlist',
+      content_name: 'Founding Fan Waitlist',
+      value: 0,
+    };
+
     emailInput?.addEventListener('focus', () => {
-      trackInitiateCheckout({
-        step: 'waitlist_email_focus',
-        content_category: 'waitlist',
-        content_id: 'waitlist',
-        value: 0,
-      });
+      if (!sessionStorage.getItem('hb_waitlist_cart')) {
+        sessionStorage.setItem('hb_waitlist_cart', '1');
+        trackAddToCart(0, { ...waitlistMeta, step: 'waitlist_email_focus' });
+      }
+      trackInitiateCheckout({ ...waitlistMeta, step: 'waitlist_email_focus' });
     }, { once: true });
+
+    emailInput?.addEventListener('blur', () => {
+      const email = emailInput.value.trim();
+      if (!email.includes('@') || sessionStorage.getItem('hb_waitlist_payment')) return;
+      sessionStorage.setItem('hb_waitlist_payment', '1');
+      trackAddPaymentInfo({ ...waitlistMeta, step: 'waitlist_email_entered' });
+    });
   }
 
   function bindTicketFormTracking() {

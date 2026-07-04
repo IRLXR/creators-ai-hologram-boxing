@@ -239,6 +239,13 @@ body.prelaunch-body {
 }
 
 /* Success */
+.lp-email-wrap.is-complete .lp-email-form {
+  display: none;
+}
+
+.lp-email-wrap.is-complete .lp-success {
+  display: block;
+}
 .lp-success {
   padding: 0;
   background: var(--lp-glass);
@@ -500,7 +507,6 @@ body.prelaunch-body {
   max-width: 36rem;
   margin-inline: auto;
 }
-
 
 /* Brief 004 — Create a Memory film preview */
 .lp-memory-film {

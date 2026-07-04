@@ -13,6 +13,7 @@ window.SITE_CONFIG = {
     enabled: true,
     useApi: true,
     apiEndpoint: "/api/ghl-submit",
+    /** Local dev server (npm start) proxies /api/ghl-submit to production. */
     trackingScriptUrl: "https://link.msgsndr.com/js/external-tracking.js",
     trackingId: "",
     chatWidgetId: "",

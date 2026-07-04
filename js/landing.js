@@ -14,24 +14,104 @@
     return window.HBAnalytics;
   }
 
+  function ghlApiEndpoint() {
+    // scripts/dev-server.py proxies /api/* to production on localhost.
+    return ghl.apiEndpoint || '/api/ghl-submit';
+  }
+
+  function isDevHost() {
+    const host = window.location.hostname;
+    return host === 'localhost' || host === '127.0.0.1';
+  }
+
   async function submitWaitlist(email) {
     if (!ghl.enabled) return { ok: true };
 
-    const res = await fetch(ghl.apiEndpoint || '/api/ghl-submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        formKey: 'waitlist',
-        formLabel: 'Founding Fan Waitlist',
-        data: { email },
-        pageUrl: window.location.href,
-      }),
-    });
-    if (!res.ok) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+
+    try {
+      const endpoint = ghlApiEndpoint();
+      if (isDevHost()) console.log('[waitlist] POST', endpoint, email);
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
+        body: JSON.stringify({
+          formKey: 'waitlist',
+          formLabel: 'Founding Fan Waitlist',
+          data: { email },
+          pageUrl: window.location.href,
+        }),
+      });
       const body = await res.json().catch(() => ({}));
-      throw new Error(body.error || 'Could not save your email');
+      if (!res.ok) {
+        throw new Error(body.error || 'Could not save your email');
+      }
+      if (isDevHost()) console.log('[waitlist] saved', body);
+      return body;
+    } finally {
+      clearTimeout(timeout);
     }
-    return res.json();
+  }
+
+  function showWaitlistSuccess(form, success, successVideo, wrap) {
+    const signup = wrap || document.getElementById('founding-fan-signup');
+    signup?.classList.add('is-complete');
+    if (form) {
+      form.hidden = true;
+      form.setAttribute('aria-hidden', 'true');
+    }
+    if (success) {
+      success.hidden = false;
+      success.removeAttribute('hidden');
+      success.setAttribute('aria-hidden', 'false');
+      success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      successVideo?.play().catch(() => {});
+    }
+  }
+
+  function resetWaitlistUi(form, success, submitBtn, wrap) {
+    const signup = wrap || document.getElementById('founding-fan-signup');
+    signup?.classList.remove('is-complete');
+    if (form) {
+      form.hidden = false;
+      form.removeAttribute('hidden');
+      form.setAttribute('aria-hidden', 'false');
+    }
+    if (success) {
+      success.hidden = true;
+      success.setAttribute('hidden', '');
+      success.setAttribute('aria-hidden', 'true');
+    }
+    resetWaitlistSubmit(submitBtn);
+  }
+
+  function resetWaitlistSubmit(submitBtn) {
+    if (!submitBtn) return;
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Become a Founding Fan';
+  }
+
+  function trackWaitlistConversion(email) {
+    const a = analytics();
+    if (!a) return;
+
+    const meta = {
+      form_key: 'waitlist',
+      value: 0,
+      content_category: 'waitlist',
+      content_id: 'waitlist',
+      content_name: 'Founding Fan Waitlist',
+    };
+
+    Promise.resolve()
+      .then(() => a.trackCompleteRegistration('Founding Fan Waitlist', email, meta))
+      .then(() => a.trackLead('Founding Fan Waitlist', email, meta))
+      .then(() => {
+        a.trackPurchase(0, meta);
+      })
+      .catch(() => {});
   }
 
   function initCountdown() {
@@ -76,33 +156,25 @@
     const success = $('prelaunch-success');
     const successVideo = $('prelaunch-success-video');
     const submitBtn = $('prelaunch-submit');
+    const wrap = $('founding-fan-signup');
+    let submitting = false;
     if (!form || !emailInput) return;
-
-    let checkoutStarted = false;
-    emailInput.addEventListener('focus', () => {
-      if (checkoutStarted) return;
-      checkoutStarted = true;
-      analytics()?.trackInitiateCheckout({
-        step: 'waitlist_email_focus',
-        content_category: 'waitlist',
-        content_id: 'waitlist',
-        value: 0,
-      });
-    }, { once: true });
 
     emailInput.addEventListener('blur', () => {
       const email = emailInput.value.trim();
-      if (email && email.includes('@')) analytics()?.identify(email);
+      if (email && email.includes('@')) analytics()?.identify(email).catch(() => {});
     });
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (submitting) return;
       const email = emailInput.value.trim();
       if (!email) {
         if (hint) hint.textContent = 'Please enter a valid email address.';
         return;
       }
 
+      submitting = true;
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Joining…';
@@ -113,26 +185,16 @@
 
       try {
         await submitWaitlist(email);
-        await analytics()?.trackCompleteRegistration('Founding Fan Waitlist', email, {
-          form_key: 'waitlist',
-          value: 0,
-        });
-        await analytics()?.trackLead('Founding Fan Waitlist', email, {
-          form_key: 'waitlist',
-          value: 0,
-        });
-
-        form.hidden = true;
-        if (success) {
-          success.hidden = false;
-          successVideo?.play().catch(() => {});
-        }
+        showWaitlistSuccess(form, success, successVideo, wrap);
+        trackWaitlistConversion(email);
       } catch (err) {
-        if (hint) hint.textContent = err.message || 'Something went wrong. Please try again.';
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Become a Founding Fan';
-        }
+        const message = err.name === 'AbortError'
+          ? 'Request timed out. Please try again.'
+          : (err.message || 'Something went wrong. Please try again.');
+        if (hint) hint.textContent = message;
+        resetWaitlistUi(form, success, submitBtn, wrap);
+      } finally {
+        submitting = false;
       }
     });
   }

@@ -4,7 +4,8 @@
   "private": true,
   "description": "Creators AI Hologram Boxing Event website",
   "scripts": {
-    "start": "python -m http.server 8080",
+    "start": "python3 scripts/dev-server.py",
+    "start:static": "python3 -m http.server 8080",
     "deploy:vercel": "vercel --prod",
     "deploy:netlify": "netlify deploy --prod --dir=.",
     "meta:verify": "node scripts/meta/meta-ads-cli.js verify",
