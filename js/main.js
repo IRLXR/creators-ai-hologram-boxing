@@ -948,7 +948,7 @@ function buildGoHighLevelPayload(formKey, data, formLabel) {
   return payload;
 }
 
-async function submitToGoHighLevel(formKey, data, formLabel) {
+async function submitToGoHighLevel(formKey, data, formLabel, tracking) {
   const ghl = SITE.goHighLevel;
   if (!ghl?.enabled) return;
 
@@ -977,6 +977,7 @@ async function submitToGoHighLevel(formKey, data, formLabel) {
         formLabel,
         data,
         pageUrl: window.location.href,
+        tracking: tracking || undefined,
       }),
       keepalive: true,
     });
@@ -1040,8 +1041,12 @@ function initFormSubmit(formId, storageKey, successId, mailtoPrefix, ghlFormKey)
     const data = Object.fromEntries(new FormData(form));
     localStorage.setItem(storageKey, JSON.stringify({ ...data, submittedAt: new Date().toISOString() }));
 
+    const analyticsApi = window.HBAnalytics;
+    const eventIds = analyticsApi?.makeWaitlistEventIds?.() || {};
+    const tracking = analyticsApi?.getServerTrackingPayload?.(eventIds) || { event_ids: eventIds };
+
     if (ghlFormKey) {
-      await submitToGoHighLevel(ghlFormKey, data, mailtoPrefix);
+      await submitToGoHighLevel(ghlFormKey, data, mailtoPrefix, tracking);
     }
 
     if (ghlFormKey) {

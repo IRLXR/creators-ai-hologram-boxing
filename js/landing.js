@@ -24,7 +24,7 @@
     return host === 'localhost' || host === '127.0.0.1';
   }
 
-  async function submitWaitlist(email) {
+  async function submitWaitlist(email, tracking) {
     if (!ghl.enabled) return { ok: true };
 
     const controller = new AbortController();
@@ -42,6 +42,7 @@
           formLabel: 'Founding Fan Waitlist',
           data: { email },
           pageUrl: window.location.href,
+          tracking: tracking || undefined,
         }),
       });
       const body = await res.json().catch(() => ({}));
@@ -93,7 +94,7 @@
     submitBtn.textContent = 'Become a Founding Fan';
   }
 
-  function trackWaitlistConversion(email) {
+  function trackWaitlistConversion(email, eventIds) {
     const a = analytics();
     if (!a) return;
 
@@ -106,10 +107,19 @@
     };
 
     Promise.resolve()
-      .then(() => a.trackCompleteRegistration('Founding Fan Waitlist', email, meta))
-      .then(() => a.trackLead('Founding Fan Waitlist', email, meta))
+      .then(() => a.trackCompleteRegistration('Founding Fan Waitlist', email, {
+        ...meta,
+        event_id: eventIds?.CompleteRegistration,
+      }))
+      .then(() => a.trackLead('Founding Fan Waitlist', email, {
+        ...meta,
+        event_id: eventIds?.Lead,
+      }))
       .then(() => {
-        a.trackPurchase(0, meta);
+        a.trackPurchase(0, {
+          ...meta,
+          event_id: eventIds?.Purchase,
+        });
       })
       .catch(() => {});
   }
@@ -183,10 +193,13 @@
 
       analytics()?.trackSubmitForm('Founding Fan Waitlist', { form_key: 'waitlist' });
 
+      const eventIds = analytics()?.makeWaitlistEventIds?.() || {};
+      const tracking = analytics()?.getServerTrackingPayload?.(eventIds) || { event_ids: eventIds };
+
       try {
-        await submitWaitlist(email);
+        await submitWaitlist(email, tracking);
         showWaitlistSuccess(form, success, successVideo, wrap);
-        trackWaitlistConversion(email);
+        trackWaitlistConversion(email, eventIds);
       } catch (err) {
         const message = err.name === 'AbortError'
           ? 'Request timed out. Please try again.'

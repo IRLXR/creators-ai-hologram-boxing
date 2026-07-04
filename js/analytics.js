@@ -122,6 +122,33 @@
     return 0;
   }
 
+  function getTtpCookie() {
+    const match = document.cookie.match(/(?:^|;\s*)_ttp=([^;]+)/);
+    return match ? decodeURIComponent(match[1]) : '';
+  }
+
+  function makeWaitlistEventIds() {
+    const ts = Date.now();
+    const rand = Math.random().toString(36).slice(2, 10);
+    return {
+      Lead: `${ts}_Lead_${rand}`,
+      CompleteRegistration: `${ts}_CompleteRegistration_${rand}`,
+      Purchase: `${ts}_Purchase_${rand}`,
+    };
+  }
+
+  function getServerTrackingPayload(eventIds) {
+    const attr = getAttribution();
+    return {
+      ttclid: attr.ttclid || new URLSearchParams(global.location.search).get('ttclid') || '',
+      ttp: getTtpCookie(),
+      user_agent: global.navigator.userAgent,
+      external_id: getVisitorId(),
+      referrer: document.referrer || undefined,
+      event_ids: eventIds || {},
+    };
+  }
+
   function buildContentItem(extra) {
     const meta = pageMeta();
     const opts = extra || {};
@@ -265,8 +292,8 @@
     }
   }
 
-  function track(eventName, payload, metaEventName) {
-    trackTikTok(eventName, payload);
+  function track(eventName, payload, metaEventName, tiktokOptions) {
+    trackTikTok(eventName, payload, tiktokOptions);
     trackMeta(metaEventName || eventName, payload);
   }
 
@@ -367,32 +394,37 @@
 
   async function trackCompleteRegistration(formName, email, extra) {
     await identify(email);
+    const opts = extra || {};
+    const tiktokOptions = opts.event_id ? { event_id: opts.event_id } : undefined;
     track('CompleteRegistration', {
       event_source: 'form',
       form_name: formName,
       content_name: formName,
-      content_category: extra?.form_key || 'registration',
-      value: extra?.value ?? 0,
+      content_category: opts.form_key || 'registration',
+      value: opts.value ?? 0,
       status: 'submitted',
-      ...extra,
-    }, 'CompleteRegistration');
+      ...opts,
+    }, 'CompleteRegistration', tiktokOptions);
   }
 
   async function trackLead(formName, email, extra) {
     await identify(email);
+    const opts = extra || {};
+    const tiktokOptions = opts.event_id ? { event_id: opts.event_id } : undefined;
     track('Lead', {
       event_source: 'form',
       form_name: formName,
       content_name: formName,
-      content_category: extra?.form_key || 'lead',
-      value: extra?.value ?? 0,
+      content_category: opts.form_key || 'lead',
+      value: opts.value ?? 0,
       status: 'submitted',
-      ...extra,
-    }, 'Lead');
+      ...opts,
+    }, 'Lead', tiktokOptions);
   }
 
   function trackPurchase(value, extra) {
     const opts = extra || {};
+    const tiktokOptions = opts.event_id ? { event_id: opts.event_id } : undefined;
     let usdValue;
     if (isWaitlistEvent(opts)) {
       usdValue = 0;
@@ -407,7 +439,7 @@
       currency: tiktokCurrency(),
       value: usdValue,
       price: usdValue,
-    }, 'Purchase');
+    }, 'Purchase', tiktokOptions);
   }
 
   function trackContact(method) {
@@ -634,6 +666,8 @@
     trackContact,
     trackWatchVideo,
     getAttribution,
+    getServerTrackingPayload,
+    makeWaitlistEventIds,
     isDebug,
     ticketUsdValue,
     tiktokCurrency,

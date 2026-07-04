@@ -1,5 +1,6 @@
 const GHL_API = 'https://services.leadconnectorhq.com';
 const { sendAutoReply, sendTeamAlert } = require('./ghl-auto-reply');
+const { trackFormConversion } = require('./tiktok-events');
 
 function splitName(fullName) {
   const parts = String(fullName || '').trim().split(/\s+/).filter(Boolean);
@@ -63,7 +64,7 @@ module.exports = async (req, res) => {
     });
   }
 
-  const { formKey, formLabel, data = {}, pageUrl } = req.body || {};
+  const { formKey, formLabel, data = {}, pageUrl, tracking = {} } = req.body || {};
   const email = String(data.email || '').trim();
 
   if (!email) {
@@ -145,11 +146,25 @@ module.exports = async (req, res) => {
       8000,
     ).catch(() => ({ ok: false }));
 
+    const tiktokEvents = await withTimeout(
+      trackFormConversion({
+        req,
+        formKey,
+        formLabel,
+        email,
+        phone: data.phone,
+        pageUrl,
+        tracking,
+      }),
+      5000,
+    ).catch((err) => ({ ok: false, error: err.message || 'tiktok_failed' }));
+
     return res.status(200).json({
       ok: true,
       contactId: contactId || null,
       autoReply: autoReply?.ok === true,
       teamAlert: teamAlert?.ok === true,
+      tiktokEvents: tiktokEvents?.ok === true,
     });
   } catch (error) {
     return res.status(500).json({ error: 'Failed to reach Go High Level' });
