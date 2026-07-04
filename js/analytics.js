@@ -457,34 +457,128 @@
     });
   }
 
-  function pageViewContentMap() {
-    const path = global.location.pathname;
-    if (path.includes('landing')) {
-      trackViewContent({
-        content_category: 'waitlist',
-        content_id: 'waitlist',
-        content_name: 'Founding Fan Waitlist',
+  function normalizePathname(pathname) {
+    const path = String(pathname || '/').toLowerCase();
+    if (path === '/' || path.endsWith('/index.html')) return 'home';
+    return path.replace(/^\//, '').replace(/\.html$/, '');
+  }
+
+  /** ViewContent mapping for every public site page (TikTok + Meta). */
+  const PAGE_VIEW_MAP = {
+    home: {
+      content_category: 'home',
+      content_id: 'home',
+      content_name: 'Home',
+      value: 0,
+    },
+    landing: {
+      content_category: 'waitlist',
+      content_id: 'waitlist',
+      content_name: 'Founding Fan Waitlist',
+      value: 0,
+    },
+    book: {
+      content_category: 'tickets',
+      content_id: 'book',
+      content_name: 'Book Tickets',
+      value: 0,
+    },
+    watch: {
+      content_category: 'vod',
+      content_id: 'watch',
+      content_name: 'Watch',
+      value: 0,
+    },
+    fighters: {
+      content_category: 'roster',
+      content_id: 'fighters',
+      content_name: 'Fighters',
+      value: 0,
+    },
+    events: {
+      content_category: 'events',
+      content_id: 'events',
+      content_name: 'Events',
+      value: 0,
+    },
+    gallery: {
+      content_category: 'gallery',
+      content_id: 'gallery',
+      content_name: 'Gallery',
+      value: 0,
+    },
+    about: {
+      content_category: 'about',
+      content_id: 'about',
+      content_name: 'About',
+      value: 0,
+    },
+    faq: {
+      content_category: 'faq',
+      content_id: 'faq',
+      content_name: 'FAQ',
+      value: 0,
+    },
+    news: {
+      content_category: 'news',
+      content_id: 'news',
+      content_name: 'News',
+      value: 0,
+    },
+    'episode3-video-picker': {
+      content_category: 'content',
+      content_id: 'episode3-video-picker',
+      content_name: 'Episode 3 Video Picker',
+      value: 0,
+    },
+    '404': {
+      content_category: 'error',
+      content_id: 'not-found',
+      content_name: 'Page Not Found',
+      value: 0,
+    },
+  };
+
+  function resolvePageViewContent() {
+    const pathname = global.location.pathname.toLowerCase();
+    const slug = normalizePathname(pathname);
+
+    if (PAGE_VIEW_MAP[slug]) return PAGE_VIEW_MAP[slug];
+
+    if (slug.startsWith('blog/')) {
+      const postSlug = slug.split('/').pop() || 'blog-post';
+      return {
+        content_category: 'blog',
+        content_id: postSlug,
+        content_name: document.title.split('|')[0].trim() || postSlug,
         value: 0,
-      });
-    } else if (path.includes('book')) {
-      trackViewContent({ content_category: 'tickets', content_id: 'book' });
-    } else if (path.includes('watch')) {
-      trackViewContent({ content_category: 'vod', content_id: 'watch' });
-    } else if (path.includes('fighters')) {
-      trackViewContent({ content_category: 'roster', content_id: 'fighters' });
-    } else if (path.includes('events')) {
-      trackViewContent({ content_category: 'events', content_id: 'events' });
-    } else if (path.includes('gallery')) {
-      trackViewContent({ content_category: 'gallery', content_id: 'gallery' });
-    } else if (path.includes('about')) {
-      trackViewContent({ content_category: 'about', content_id: 'about' });
-    } else if (path.includes('faq')) {
-      trackViewContent({ content_category: 'faq', content_id: 'faq' });
-    } else if (path.includes('news') || path.includes('blog')) {
-      trackViewContent({ content_category: 'news', content_id: 'news' });
-    } else if (path.endsWith('/') || path.includes('index')) {
-      trackViewContent({ content_category: 'home', content_id: 'home' });
+      };
     }
+
+    if (slug.startsWith('ads/')) {
+      const adPage = slug.split('/').pop() || 'ads';
+      return {
+        content_category: 'ads',
+        content_id: adPage,
+        content_name: document.title.split('|')[0].trim() || adPage,
+        value: 0,
+      };
+    }
+
+    const meta = pageMeta();
+    return {
+      content_category: meta.content_id || 'page',
+      content_id: meta.content_id || slug || 'page',
+      content_name: meta.page_title || meta.content_name,
+      value: 0,
+      event_source: 'page_view',
+    };
+  }
+
+  function pageViewContentMap() {
+    const view = resolvePageViewContent();
+    trackViewContent(view);
+    log('ViewContent mapped', view.content_id, view);
   }
 
   function bindClickTracking() {
@@ -625,6 +719,7 @@
   }
 
   function initAdvancedBindings() {
+    trackPageView();
     pageViewContentMap();
     bindClickTracking();
     bindVideoTracking();
@@ -668,6 +763,8 @@
     getAttribution,
     getServerTrackingPayload,
     makeWaitlistEventIds,
+    resolvePageViewContent,
+    PAGE_VIEW_MAP,
     isDebug,
     ticketUsdValue,
     tiktokCurrency,
