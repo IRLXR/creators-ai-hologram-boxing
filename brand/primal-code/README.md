@@ -2,6 +2,16 @@
 
 Patrick Hanlon's **Primal Branding** framework: brands succeed when they operate as **belief systems**, not just marketing. These seven pillars define who we are, who we are for, and who we are not.
 
+## Master motto
+
+> **Our turn.**
+
+Extended creed line:
+
+> **This is our generation's turn.** Not better than the past. Not copying it. The next chapter — and we're living it while it's still new.
+
+---
+
 | # | Pillar | File |
 |---|--------|------|
 | 1 | Creation Story | [01-creation-story.md](./01-creation-story.md) |
@@ -16,4 +26,4 @@ Patrick Hanlon's **Primal Branding** framework: brands succeed when they operate
 **Primary CTA:** Become a Founding Fan  
 **Landing:** https://creators-ai-hologram-boxing.vercel.app/landing.html
 
-Use these docs when writing ads, social posts, UGC scripts, partner decks, and internal creative briefs.
+Every pillar flows from **Our turn** — generational pride, shared belonging, and writing the next chapter of fight night together.

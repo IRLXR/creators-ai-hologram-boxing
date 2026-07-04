@@ -1,0 +1,13 @@
+node_modules/
+.cursor/
+.env
+.env.local
+.env.*.local
+scripts/__pycache__/
+scripts/_*.tmp
+ads/brief-003/output/EVOLUTION-HQ-9x16-*.mp4
+ads/brief-003/output/hq-work/
+ads/brief-003/output/segments/
+ads/brief-003/output/hq/
+adds/
+ugc/output/

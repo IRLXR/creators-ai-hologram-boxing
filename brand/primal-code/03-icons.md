@@ -1,12 +1,14 @@
 # Pillar 3 — Icons
 
-**Primal Code:** Visual and sensory elements — logos, colors, shapes, sounds — that symbolize the brand at a glance.
+**Primal Code:** Visual and sensory elements that symbolize the brand at a glance.
+
+**Built on:** **Our turn.**
 
 ---
 
 ## What it is (plain English)
 
-Icons are the things you recognize **before you read a word**. For hologram boxing, icons are not just a logo — they are the tent, the headset, the glowing square, the wireframe fighter, and the blue light that means *you're in our world now*.
+Icons are what you recognize **before you read a word**. For us, every icon says the same thing: **a new generation's fight night has arrived.**
 
 ---
 
@@ -14,113 +16,107 @@ Icons are the things you recognize **before you read a word**. For hologram boxi
 
 ### 1. The inflatable tent (exterior)
 
-- **Matte black** inflatable shell
-- **Blue illuminated entrance** — the threshold between ordinary night and the experience
-- Urban crowd optional; golden hour or snow for exterior campaigns
-- **Never** a 12ft dome, octagon, or standalone boxing arena — **tent only**
+- Matte black shell · **blue illuminated entrance**
+- Urban night crowd optional
+- **Tent only** — never dome, octagon, or standalone arena
 
-**Meaning:** *Walk inside. Something new is waiting.*
+**Meaning:** *The door to our chapter. Walk in — it's our turn.*
+
+---
 
 ### 2. The tent interior
 
-- Dark **quilted padded walls**
-- **Glowing blue-purple square** on the floor (fight zone boundary)
-- **Thick ground fog**
-- Optional wall screens; perimeter crowd zone
+- Dark quilted walls · **glowing blue-purple square** on the floor · thick fog
+- Perimeter crowd · optional wall screens
 
-**Meaning:** *The ring is on the floor. The crowd surrounds the square.*
+**Meaning:** *The new arena — not inherited, invented. The square is where this generation's fight lives.*
+
+---
 
 ### 3. The AR headset
 
-- White **ski-goggle** shape
-- **Three vertical pill sensors** on the front
-- White luxury patterned head strap
-- **Every visible person wears one** — zero bare heads in brand imagery
+- White ski-goggle shape · three vertical pill sensors · luxury strap
+- **Every visible person wears one**
 
-**Meaning:** *Gear up. You're not watching from outside — you're in.*
+**Meaning:** *Gear up for our era — same headset, same generation, same front row.*
+
+---
 
 ### 4. Wave fighters
 
-- **Wireframe mesh** body — human 1:1 scale
-- **WAVE waistband**
-- Faceless, original variants (Gold, Fire, Blue, Silver, Green, Pink)
-- Restrained glow from **feet + floor grid** — not cartoon overload
+- Wireframe mesh · WAVE waistband · human 1:1 scale
+- Gold, Fire, Blue, Silver, Green, Pink — **original roster only**
 
-**Meaning:** *AI hologram boxers with real boxing physics — our roster, our mythology.*
+**Meaning:** *Our fighters. Our matchups. Not nostalgia — **new mythology for a new turn.***
+
+---
 
 ### 5. Brand colors
 
-| Color | Role |
-|-------|------|
-| **Electric Blue** | Primary brand light, entrance glow, UI accents |
-| **Cyan** | Secondary energy, wireframe highlights |
-| **Matte Black** | Tent shell, premium darkness |
-| **White / Silver** | Headsets, typography, wireframe structure |
-| **Gold** | Founding Fan moments, success states, championship energy |
+| Color | Role | Generational read |
+|-------|------|-----------------|
+| **Electric Blue** | Entrance glow, primary light | The future lighting up |
+| **Cyan** | Wireframe energy | Alive, not cold tech |
+| **Matte Black** | Tent shell | Premium night-out |
+| **White / Silver** | Headsets, structure | Clean new chapter |
+| **Gold** | Founding Fan · championship | *We were here when it started* |
+
+---
 
 ### 6. Logo & wordmark
 
-- `assets/logo.svg`
-- **Creators AI Hologram Boxing** — Orbitron-weight display type in hero contexts
-- End-slate pattern: logo + CTA + URL
+- `assets/logo.svg` · Orbitron display type in hero contexts
+- End slate: logo + **Our turn** territory + CTA + URL
 
-**Meaning:** *Official league identity — not a fan edit.*
-
----
-
-## Sensory icons (sound & motion)
-
-| Element | Spec |
-|---------|------|
-| **VO tone** | Cinematic trailer energy — wonder, not hard sell |
-| **Crowd ambience** | Live tent murmur, not empty studio |
-| **Impact moments** | Wireframe strike + floor grid pulse + fog swirl |
-| **Music direction** | Premium electronic / orchestral hybrid — `production-library/10_SOUND_BIBLE.md` |
+**Meaning:** *Official mark of this generation's league.*
 
 ---
 
-## Icon pairing rules (always together in hero shots)
+### 7. Evolution timeline (Brief 003 icon)
+
+- Stone Age → Egypt → Greece → Rome → Asia → modern boxing → UFC → **hologram tent**
+- The visual proof of **Our turn** — history hands off to now
+
+**Meaning:** *Every generation changed the game. The tent is ours.*
+
+---
+
+## Sensory icons
+
+| Element | Spec | Read |
+|---------|------|------|
+| **VO tone** | Deep documentary (Brief 003) or cinematic trailer | *History speaks — then our generation answers* |
+| **Crowd ambience** | Live tent murmur | The crowd makes the fight |
+| **Impact moments** | Wireframe strike + floor grid pulse | Wonder is the point |
+| **Music** | Premium electronic / orchestral hybrid | `production-library/10_SOUND_BIBLE.md` |
+
+---
+
+## Icon pairing (hero shots)
 
 ```
-Tent entrance  →  Headsets on crowd  →  Glowing square  →  Wave vs Wave
+Evolution handoff  →  Tent entrance  →  Headsets on crowd  →  Square + Wave vs Wave
 ```
 
-Exterior shots: dolly to entrance → **harsh fade to black** before interior reveal.
-
----
-
-## Approved icon assets
-
-| Asset | Path |
-|-------|------|
-| Logo | `assets/logo.svg` |
-| OG image | `assets/og-image.svg` |
-| Fight posters | `assets/fight-*-vs-*.png` |
-| Fighters | `assets/fighter-*.png` |
-| Social Collection 001 | `assets/social-collection-001/POST-*.png` |
-| Arena tech card | `assets/card-arena-tech.svg` |
+Exterior: dolly to entrance → **harsh fade to black** before interior.
 
 ---
 
 ## What to avoid
 
-- Redesigning Wave fighters or headsets in one-off creatives
-- Bare-headed attendees in any visible shot
-- Dome/octagon/standalone arena substitutes for the tent
-- Neon rainbow overload — stay **blue-purple-gold** discipline
+- Icons that feel like **last generation's** arena (octagon, dome, PPV poster clones)
+- Bare heads · celebrity fight recreations · rainbow neon overload
 
 ---
 
 ## Where icons are enforced
 
-- `VISUAL-PROMPT-RULES.md`
-- `.cursor/rules/higgsfield-visual-prompts.mdc`
-- `production-library/04_ARENA_BIBLE.md`, `05_HEADSET_BIBLE.md`, `06_WAVE_BIBLE.md`, `09_COLOR_BIBLE.md`
-- All Higgsfield / Seedance / Nano Banana generation
+- `VISUAL-PROMPT-RULES.md` · `.cursor/rules/higgsfield-visual-prompts.mdc`
+- `production-library/04_ARENA_BIBLE.md` through `09_COLOR_BIBLE.md`
 
 ---
 
 ## Reference
 
-- `production-library/02_BRAND_BIBLE.md`
-- `production-library/18_POSTER_GUIDE.md`
+- `ads/brief-003/master-frames/`
+- `assets/social-collection-001/POST-006-the-evolution-1080x1350.png`

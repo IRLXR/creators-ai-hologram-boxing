@@ -1,88 +1,90 @@
 # Pillar 6 — Nonbelievers (Pagans)
 
-**Primal Code:** The opposition or "other" that defines your in-group by contrast — who you are *not*, and what you stand against.
+**Primal Code:** The opposition that defines the in-group by contrast.
+
+**Built on:** **Our turn.**
 
 ---
 
 ## What it is (plain English)
 
-Every tribe needs a boundary. **Nonbelievers** are not enemies to attack — they are the **old way of thinking** your Founding Fans have already outgrown. Naming them makes belonging sharper: *"We're the people who walk inside. They're the people who keep scrolling."*
+Every generation has people who **sit out**. Nonbelievers aren't enemies — they're the voice that says *"the old way was enough."* Naming that contrast makes **Our turn** sharper.
 
-Use this pillar with confidence, not cruelty. Contrast, not contempt.
-
----
-
-## Who the nonbelievers are (for us)
-
-### 1. The scroll-past crowd
-
-**Belief:** Entertainment is something you watch alone on a phone for 15 seconds, then forget.
-
-**Our contrast:** Hologram boxing is **IRL, shared, and immersive** — you walk into a tent with other people and gear up together.
-
-**Copy angle:** *"Stop scrolling past fight night. Walk inside."*
+We don't attack people. We contrast **mindsets.**
 
 ---
 
-### 2. Flat-screen traditionalists
+## Who the nonbelievers are
 
-**Belief:** Live entertainment peaked at the stadium / PPV / couch TV model — nothing new is needed.
+### 1. The "good old days" crowd
 
-**Our contrast:** Every generation changes the game. **The tent + headset + Wave** is the next lane — not a replacement for boxing history, but a new experience category.
+**Belief:** Fight night peaked already. Nothing new is needed.
 
-**Copy angle:** *"The future of live entertainment isn't on your wall — it's on the floor in front of you."*
+**Our contrast:** We **honor** the evolution — then we write the next page. **Our turn** isn't insulting the past. It's continuing it.
 
----
-
-### 3. Gimmick skeptics
-
-**Belief:** "AI" and "hologram" means cheap green-screen tricks, fake hype, or crypto scams.
-
-**Our contrast:** **Premium cinematic production** — real fog, real crowd, human-scale wireframe fighters, disciplined visuals. Founding Fans join for the **experience**, not buzzwords.
-
-**Copy angle:** *"You had to be there — because screenshots won't believe you."*
+**Copy angle:** *"Every generation changed the game. Some people stopped at the last chapter."*
 
 ---
 
-### 4. Couch-only "metaverse" believers
+### 2. The wait-and-see generation
 
-**Belief:** The future of immersive entertainment is staying home in a VR app.
+**Belief:** Let someone else go first. I'll show up when it's proven.
 
-**Our contrast:** We are **tent-first, crowd-first, night-out-first**. Headsets enhance a **real place** with **real people** — not an escape from the world.
+**Our contrast:** **Our turn** is for people who show up **while it's still new** — Founding Fans, early streamers, first-night tent crews.
 
-**Copy angle:** *"Pull up to the tent. Stream free until you're ready."*
-
----
-
-### 5. Copy-paste fight nostalgia
-
-**Belief:** The only fights worth watching recreate celebrity matchups and old PPV moments.
-
-**Our contrast:** **Original Wave mythology** — Gold vs Fire, Blue vs Silver, our roster, our codes. Style inspiration only; **zero IP recreation**.
-
-**Copy angle:** *"Meet Wave. Only the beginning."*
+**Copy angle:** *"Our turn — not someone else's later."*
 
 ---
 
-### 6. Gatekept fight night
+### 3. The scroll-past crowd
 
-**Belief:** Combat sports culture is hostile, exclusive, or not for families.
+**Belief:** Entertainment is a 15-second clip, then forget.
 
-**Our contrast:** **All-ages, family-friendly energy** inside a premium tent — fight night wonder without the traditional gatekeeping.
+**Our contrast:** **One night can change you** — real fog, real crowd, real square. Feel it before you explain it.
 
-**Copy angle:** *"Fight night energy — family friendly. Lowkey."*
+**Copy angle:** *"Our turn isn't on your feed. It's in the tent."*
+
+---
+
+### 4. The gimmick skeptics
+
+**Belief:** AI + hologram = cheap trick or scam.
+
+**Our contrast:** **Wonder is the point** — premium production, human-scale Wave fighters, real people in the room. Proof over hype.
+
+**Copy angle:** *"Screenshots won't believe you. Our turn will."*
+
+---
+
+### 5. The nostalgia copycats
+
+**Belief:** The only fights that matter recreate celebrity matchups.
+
+**Our contrast:** **Wave** is **our** mythology — original colors, original stakes. Style from history; **IP never copied.**
+
+**Copy angle:** *"Our turn. Our fighters. Our tent."*
+
+---
+
+### 6. The gatekeepers
+
+**Belief:** Fight night isn't for families, creators, or casual fans.
+
+**Our contrast:** **The crowd makes the fight** — all ages, all backgrounds, one tent. School pride energy, not old-guard exclusion.
+
+**Copy angle:** *"Our turn — everyone's invited."*
 
 ---
 
 ## The in-group (who we are for)
 
-| They… | We… |
-|-------|-----|
-| Scroll | Walk inside |
-| Watch from outside | Gear up |
-| Wait for someone else to define culture | Become Founding Fans |
-| Want the same old PPV | Want HB 002 countdown unlock |
-| Doubt AI hype | Demand premium proof in the tent |
+| They say… | We say… |
+|-----------|---------|
+| "It peaked already" | **Our turn** |
+| "I'll wait" | **While it's still new** |
+| "Just scroll" | **Feel it first** |
+| "AI gimmick" | **Wonder is the point** |
+| "Old PPV was enough" | **Next chapter** |
 
 ---
 
@@ -90,38 +92,34 @@ Use this pillar with confidence, not cruelty. Contrast, not contempt.
 
 ### Do
 
-- Contrast **behaviors** (scrolling vs walking in), not people
-- Use **questions** — *"Would you walk inside?"* — let the viewer self-select
-- Show the tent as **proof** — skeptics convert through visuals, not arguments
-- Position Founding Fans as **early believers**, not smarter than everyone else
+- Lead with **Our turn** and invitation — contrast second
+- Use Evolution film to show **respect for history**, then handoff to tent
+- Let viewers self-select: *"Is it your turn yet?"*
 
 ### Don't
 
-- Name and shame competitors or other brands directly
-- Use elitist or insulting language toward casual fans
-- Lead with "anti-" messaging — always lead with **what we offer**, then contrast
-- Fake controversy for engagement
+- Mock the past or other fan bases
+- Make belongers sound elitist
+- Let "us vs them" become the whole brand
 
 ---
 
-## Sample contrast lines (approved tone)
+## Sample contrast lines
 
-- *"The future isn't coming. It's here — if you're willing to walk inside."*
-- *"You're not in the ring. You don't fight. You watch — but you're **front row**."*
-- *"Every generation changes the game. Some people are still watching the last one."*
-- *"Stream it free. Pull up when you're ready. The tent doesn't fit in a feed."*
+- *"Every generation changed the game. **Our turn.**"*
+- *"Not better than the past. **The next chapter.**"*
+- *"Some people wait for proof. **We show up while it's new.**"*
+- *"**Our turn.** Walk inside."*
 
 ---
 
 ## Strategic note
 
-Nonbelievers sharpen the brand **without becoming the brand**. If every post is "us vs them," we've lost the Creed (experience over spectacle). Use this pillar **sparingly** — one contrast beat per piece, then return to wonder and invitation.
+Nonbelievers sharpen **Our turn** — they don't replace it. One contrast beat per piece, then return to generational pride and wonder.
 
 ---
 
 ## Reference
 
-- `ugc/01-what-is-hologram-boxing.md` ("you don't fight")
-- `ads/brief-003/DIRECTORS-BRIEF-003.md` (Evolution — old eras vs now)
-- `assets/social-collection-001/` POST-002, POST-006
-- `.cursor/rules/higgsfield-visual-prompts.mdc` (no IP blocks)
+- `ads/brief-003/DIRECTORS-BRIEF-003.md`
+- `06-nonbelievers` pairs with `01-creation-story` Evolution handoff
