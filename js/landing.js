@@ -68,7 +68,10 @@
       success.removeAttribute('hidden');
       success.setAttribute('aria-hidden', 'false');
       success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      successVideo?.play().catch(() => {});
+      if (successVideo) {
+        successVideo.muted = true;
+        successVideo.play().catch(() => {});
+      }
     }
   }
 
