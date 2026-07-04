@@ -1003,25 +1003,27 @@ function initGoHighLevel() {
   }
 }
 
-function trackFormConversion(formKey, data, formLabel) {
+async function trackFormConversion(formKey, data, formLabel) {
   const analytics = window.HBAnalytics;
   if (!analytics) return;
 
   const email = data.email || '';
+  if (email) await analytics.identify(email);
+
   analytics.trackSubmitForm(formLabel || formKey, { form_key: formKey });
 
   if (formKey === 'ticket') {
     const isAttendee = data.viewMode === 'attendee';
-    const value = isAttendee ? SITE.crypto.ticketPriceAttendee : SITE.crypto.ticketPriceHeadset;
-    analytics.trackLead('Ticket Purchase', email, { form_key: formKey });
-    analytics.trackPurchase(value, {
+    await analytics.trackLead('Ticket Purchase', email, { form_key: formKey, value: 0 });
+    analytics.trackPurchase(isAttendee ? analytics.ticketUsdValue('attendee') : analytics.ticketUsdValue('headset'), {
       content_name: isAttendee ? 'Attendee POV Ticket' : 'Headset POV Ticket',
+      content_id: isAttendee ? 'attendee' : 'headset',
       form_key: formKey,
     });
   } else if (formKey === 'booking') {
-    analytics.trackLead('Booking Request', email, { form_key: formKey });
+    await analytics.trackLead('Booking Request', email, { form_key: formKey });
   } else if (formKey === 'fighter') {
-    analytics.trackCompleteRegistration('Fighter Application', email, { form_key: formKey });
+    await analytics.trackCompleteRegistration('Fighter Application', email, { form_key: formKey });
   }
 }
 
@@ -1039,7 +1041,7 @@ function initFormSubmit(formId, storageKey, successId, mailtoPrefix, ghlFormKey)
     }
 
     if (ghlFormKey) {
-      trackFormConversion(ghlFormKey, data, mailtoPrefix);
+      await trackFormConversion(ghlFormKey, data, mailtoPrefix);
     }
 
     const lines = Object.entries(data).map(([k, v]) => `${k}: ${v || 'N/A'}`).join('\n');

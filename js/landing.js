@@ -82,7 +82,12 @@
     emailInput.addEventListener('focus', () => {
       if (checkoutStarted) return;
       checkoutStarted = true;
-      analytics()?.trackInitiateCheckout({ step: 'waitlist_email_focus', content_category: 'waitlist' });
+      analytics()?.trackInitiateCheckout({
+        step: 'waitlist_email_focus',
+        content_category: 'waitlist',
+        content_id: 'waitlist',
+        value: 0,
+      });
     }, { once: true });
 
     emailInput.addEventListener('blur', () => {
@@ -108,8 +113,14 @@
 
       try {
         await submitWaitlist(email);
-        analytics()?.trackCompleteRegistration('Founding Fan Waitlist', email, { form_key: 'waitlist' });
-        analytics()?.trackLead('Founding Fan Waitlist', email, { form_key: 'waitlist' });
+        await analytics()?.trackCompleteRegistration('Founding Fan Waitlist', email, {
+          form_key: 'waitlist',
+          value: 0,
+        });
+        await analytics()?.trackLead('Founding Fan Waitlist', email, {
+          form_key: 'waitlist',
+          value: 0,
+        });
 
         form.hidden = true;
         if (success) {
