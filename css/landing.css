@@ -239,6 +239,14 @@ body.prelaunch-body {
 }
 
 /* Success */
+.lp-email-wrap.is-complete .lp-email-form {
+  display: none;
+}
+
+.lp-email-wrap.is-complete .lp-success {
+  display: block;
+}
+
 .lp-success {
   padding: 0;
   background: var(--lp-glass);

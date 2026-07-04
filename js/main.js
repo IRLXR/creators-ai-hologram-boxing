@@ -58,6 +58,10 @@ function pageUrl(path) {
   return `${pageRoot()}${path}`;
 }
 
+function ghlApiEndpoint(configured) {
+  return configured || '/api/ghl-submit';
+}
+
 function assetBase() {
   return `${pageRoot()}assets/`;
 }
@@ -965,7 +969,7 @@ async function submitToGoHighLevel(formKey, data, formLabel) {
   if (ghl.useApi === false) return;
 
   try {
-    await fetch(ghl.apiEndpoint || '/api/ghl-submit', {
+    await fetch(ghlApiEndpoint(ghl.apiEndpoint), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

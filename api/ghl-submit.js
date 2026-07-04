@@ -23,6 +23,20 @@ function tagSlug(value) {
     .slice(0, 48);
 }
 
+async function withTimeout(promise, ms) {
+  let timer;
+  try {
+    return await Promise.race([
+      promise,
+      new Promise((_, reject) => {
+        timer = setTimeout(() => reject(new Error('timeout')), ms);
+      }),
+    ]);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -113,23 +127,23 @@ module.exports = async (req, res) => {
       }).catch(() => {});
     }
 
-    const autoReply = await sendAutoReply({
-      pit,
-      contactId,
-      formKey,
-      data,
-      firstName,
-    }).catch(() => ({ ok: false }));
+    const autoReply = await withTimeout(
+      sendAutoReply({ pit, contactId, formKey, data, firstName }),
+      8000,
+    ).catch(() => ({ ok: false }));
 
-    const teamAlert = await sendTeamAlert({
-      pit,
-      locationId,
-      formKey,
-      formLabel,
-      data,
-      submitterContactId: contactId,
-      pageUrl,
-    }).catch(() => ({ ok: false }));
+    const teamAlert = await withTimeout(
+      sendTeamAlert({
+        pit,
+        locationId,
+        formKey,
+        formLabel,
+        data,
+        submitterContactId: contactId,
+        pageUrl,
+      }),
+      8000,
+    ).catch(() => ({ ok: false }));
 
     return res.status(200).json({
       ok: true,
