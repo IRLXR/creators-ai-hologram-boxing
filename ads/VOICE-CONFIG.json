@@ -24,5 +24,16 @@
     "script_file": "ads/brief-003/VO-SCRIPT.md",
     "setup": "docs/ELEVENLABS-CONNECT.md",
     "note": "User asked for Morgan Freeman tone. ElevenLabs prohibits unauthorized celebrity impersonation — Bill is the official deep documentary preset. Add ELEVENLABS_API_KEY to .env.local then npm run generate:brief003-vo"
+  },
+  "elevenlabs_brief004": {
+    "provider": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica — warm, expressive, happy night-out energy",
+    "stability": 0.42,
+    "similarity_boost": 0.82,
+    "speed": 0.98,
+    "script_file": "ads/brief-004/VO-SCRIPT-MEMORY.md",
+    "note": "Invite-style VO — FOMO + fun, not scene description. Poetic close preserved."
   }
 }

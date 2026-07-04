@@ -16,3 +16,13 @@ ads/brief-003/output/EVOLUTION-HQ-9x16-*.mp4
 ads/brief-003/output/hq-work/
 ads/brief-003/output/segments/
 ads/brief-003/output/hq/
+ads/brief-004/output/segments/
+ads/brief-004/output/segments-v2/
+ads/brief-004/output/segments-v3/
+ads/brief-004/output/qc-frames/
+ads/brief-004/output/qc-frames-v3/
+ads/brief-004/output/*.wav
+ads/brief-004/output/*.mp3
+ads/brief-004/output/MEMORY-bg-music-v1.m4a
+ads/brief-004/__pycache__/
+ads/brief-004/master-frames/*-v*.png

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brief 004 — Frame Review | Create a Memory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --black: #050508;
+      --card: #0a0a12;
+      --blue: #00aeef;
+      --gold: #ffc107;
+      --white: #fff;
+      --gray: #8a8a9a;
+      --gray-light: #c8c8d4;
+      --green: #3ddc84;
+      --red: #ff5c5c;
+      --border: rgba(0, 174, 239, 0.25);
+      --font: "Orbitron", system-ui, sans-serif;
+      --body: "Inter", system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--body); background: var(--black); color: var(--white); line-height: 1.5; }
+    a { color: var(--blue); }
+    .wrap { width: min(100% - 2rem, 1280px); margin-inline: auto; padding: 2rem 0 4rem; }
+    .hero { text-align: center; margin-bottom: 2rem; }
+    .label { font-family: var(--font); font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+    h1 { font-family: var(--font); font-size: clamp(1.25rem, 3vw, 2rem); margin-bottom: 0.75rem; }
+    .intro { max-width: 720px; margin: 0 auto; color: var(--gray-light); font-size: 0.95rem; }
+    .banner {
+      margin: 1.5rem auto 0; max-width: 900px; padding: 1rem 1.25rem;
+      border: 1px solid var(--gold); border-radius: 8px;
+      background: rgba(255, 193, 7, 0.08); color: var(--gray-light); font-size: 0.88rem;
+    }
+    .stats {
+      display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+      margin: 1.5rem 0 2rem; font-family: var(--font); font-size: 0.75rem; letter-spacing: 0.08em;
+    }
+    .stat { padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 999px; }
+    .stat strong { color: var(--gold); }
+    .preview {
+      margin-bottom: 2.5rem; border: 2px solid var(--blue); border-radius: 10px; overflow: hidden;
+      box-shadow: 0 0 30px rgba(0, 174, 239, 0.15);
+    }
+    .preview img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; background: #000; }
+    .preview-meta { padding: 1.25rem 1.5rem; background: var(--card); }
+    .preview-meta h2 { font-family: var(--font); font-size: 1rem; margin-bottom: 0.35rem; }
+    .preview-meta p { color: var(--gray-light); font-size: 0.9rem; margin-bottom: 1rem; }
+    .preview-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .btn {
+      font-family: var(--font); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.65rem 1.1rem; border-radius: 4px; border: 1px solid transparent; cursor: pointer;
+    }
+    .btn-approve { background: rgba(61, 220, 132, 0.15); border-color: var(--green); color: var(--green); }
+    .btn-reject { background: rgba(255, 92, 92, 0.12); border-color: var(--red); color: var(--red); }
+    .btn-neutral { background: transparent; border-color: var(--border); color: var(--gray-light); }
+    .btn-approve.is-active { background: var(--green); color: #000; }
+    .btn-reject.is-active { background: var(--red); color: #fff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+      cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .card:hover, .card.is-active { border-color: var(--blue); box-shadow: 0 0 16px rgba(0, 174, 239, 0.2); }
+    .card.is-approved { border-color: var(--green); }
+    .card.is-rejected { border-color: var(--red); opacity: 0.75; }
+    .card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #000; }
+    .card-body { padding: 0.85rem; }
+    .card-num { font-family: var(--font); font-size: 0.65rem; color: var(--blue); letter-spacing: 0.15em; }
+    .card-title { font-size: 0.82rem; font-weight: 600; margin-top: 0.25rem; }
+    .card-status { font-size: 0.72rem; margin-top: 0.35rem; color: var(--gray); }
+    .card-status.approved { color: var(--green); }
+    .card-status.rejected { color: var(--red); }
+    .export {
+      margin-top: 2rem; padding: 1.25rem; border: 1px dashed var(--border); border-radius: 8px;
+      font-size: 0.85rem; color: var(--gray-light);
+    }
+    .export pre { margin-top: 0.75rem; padding: 1rem; background: #000; border-radius: 6px; overflow-x: auto; font-size: 0.78rem; color: var(--gold); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <p class="label">Brief 004 · Create a Memory</p>
+      <h1>Master Frame Review</h1>
+      <p class="intro">Click each frame to preview large. Mark <strong>Approve</strong> or <strong>Redo</strong> so we know what to regenerate in Nano Banana 2.</p>
+      <div class="banner">
+        <strong>Nano Banana 2 pass:</strong> Frames <strong>01–14</strong> are fresh Brief 004 generations (Higgsfield). Frame <strong>15</strong> is still the Brief 002 end-card placeholder — approve or redo each shot before Seedance.
+      </div>
+      <div class="stats" id="stats"></div>
+    </header>
+
+    <section class="preview" id="preview">
+      <img id="preview-img" src="master-frames/01-arrival-wide-tent.png" alt="">
+      <div class="preview-meta">
+        <h2 id="preview-title">01 — Arrival wide tent</h2>
+        <p id="preview-desc"></p>
+        <div class="preview-actions">
+          <button type="button" class="btn btn-approve" data-action="approved">Approve</button>
+          <button type="button" class="btn btn-reject" data-action="rejected">Needs redo</button>
+          <button type="button" class="btn btn-neutral" data-action="pending">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="export">
+      <strong>Your picks (copy to chat):</strong>
+      <pre id="export-text"></pre>
+    </div>
+  </div>
+
+  <script>
+    const FRAMES = [
+      { id: "01-arrival-wide-tent", num: "01", title: "Arrival wide tent", act: "Arrival", emotion: "I've never seen anything like this.", file: "master-frames/01-arrival-wide-tent.png" },
+      { id: "02-friends-selfie-entrance", num: "02", title: "Friends selfie", act: "Arrival", emotion: "Friends outside entrance.", file: "master-frames/02-friends-selfie-entrance.png" },
+      { id: "03-friends-laughing-walk-in", num: "03", title: "Friends laughing", act: "Arrival", emotion: "Walking toward entrance.", file: "master-frames/03-friends-laughing-walk-in.png" },
+      { id: "04-couple-entering", num: "04", title: "Couple entering", act: "Arrival", emotion: "Entering together.", file: "master-frames/04-couple-entering.png" },
+      { id: "05-popcorn-parent-child", num: "05", title: "Popcorn moment", act: "Entering", emotion: "Parent + child warmth.", file: "master-frames/05-popcorn-parent-child.png" },
+      { id: "06-family-photo-tent", num: "06", title: "Family photo", act: "Entering", emotion: "Memory capture at tent.", file: "master-frames/06-family-photo-tent.png" },
+      { id: "07-first-enter-amazement", num: "07", title: "First enter amazement", act: "Entering", emotion: "I want to know what's inside.", file: "master-frames/07-first-enter-amazement.png" },
+      { id: "08-concession-waiting", num: "08", title: "Concession waiting", act: "Entering", emotion: "This looks incredible.", file: "master-frames/08-concession-waiting.png" },
+      { id: "09-perimeter-awe-seats", num: "09", title: "Perimeter awe", act: "Experience", emotion: "Anticipation at the square.", file: "master-frames/09-perimeter-awe-seats.png" },
+      { id: "10-wave-appears-pointing", num: "10", title: "Wave appears", act: "Experience", emotion: "I wish I was there.", file: "master-frames/10-wave-appears-pointing.png" },
+      { id: "11-friends-celebrating-after", num: "11", title: "Friends celebrating", act: "After", emotion: "Post-event joy.", file: "master-frames/11-friends-celebrating-after.png" },
+      { id: "12-families-leaving-talking", num: "12", title: "Families leaving", act: "After", emotion: "That looked unforgettable.", file: "master-frames/12-families-leaving-talking.png" },
+      { id: "13-child-turns-back", num: "13", title: "Child turns back", act: "Finale", emotion: "Hero — wonder on child's face.", file: "master-frames/13-child-turns-back.png" },
+      { id: "14-crane-tent-skyline", num: "14", title: "Crane wide", act: "Finale", emotion: "Tent as city centerpiece.", file: "master-frames/14-crane-tent-skyline.png" },
+      { id: "15-end-card", num: "15", title: "End card", act: "Finale", emotion: "Become a Founding Fan.", file: "master-frames/15-end-card.png" }
+    ];
+
+    const STORAGE_KEY = "brief004_frame_review_v1";
+    let activeId = FRAMES[0].id;
+    let reviews = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+
+    const grid = document.getElementById("grid");
+    const previewImg = document.getElementById("preview-img");
+    const previewTitle = document.getElementById("preview-title");
+    const previewDesc = document.getElementById("preview-desc");
+    const statsEl = document.getElementById("stats");
+    const exportText = document.getElementById("export-text");
+
+    function save() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
+      renderStats();
+      renderExport();
+      renderGrid();
+      updatePreviewButtons();
+    }
+
+    function setReview(id, status) {
+      if (status === "pending") delete reviews[id];
+      else reviews[id] = status;
+      save();
+    }
+
+    function renderStats() {
+      const approved = FRAMES.filter((f) => reviews[f.id] === "approved").length;
+      const rejected = FRAMES.filter((f) => reviews[f.id] === "rejected").length;
+      const pending = FRAMES.length - approved - rejected;
+      statsEl.innerHTML = `
+        <span class="stat"><strong>${approved}</strong> approved</span>
+        <span class="stat"><strong>${rejected}</strong> redo</span>
+        <span class="stat"><strong>${pending}</strong> pending</span>
+      `;
+    }
+
+    function renderExport() {
+      const lines = FRAMES.map((f) => {
+        const s = reviews[f.id] || "pending";
+        return `${f.num} ${f.title}: ${s}`;
+      });
+      const redo = FRAMES.filter((f) => reviews[f.id] === "rejected").map((f) => f.num + " " + f.title);
+      exportText.textContent = lines.join("\n") + (redo.length ? "\n\nREDO LIST:\n" + redo.join("\n") : "");
+    }
+
+    function selectFrame(frame) {
+      activeId = frame.id;
+      previewImg.src = frame.file;
+      previewImg.alt = frame.title;
+      previewTitle.textContent = `${frame.num} — ${frame.title}`;
+      previewDesc.textContent = `${frame.act} · ${frame.emotion}`;
+      renderGrid();
+      updatePreviewButtons();
+    }
+
+    function updatePreviewButtons() {
+      document.querySelectorAll(".preview-actions .btn").forEach((btn) => {
+        btn.classList.remove("is-active");
+        if (reviews[activeId] === btn.dataset.action) btn.classList.add("is-active");
+      });
+    }
+
+    function renderGrid() {
+      grid.innerHTML = FRAMES.map((f) => {
+        const status = reviews[f.id] || "pending";
+        const active = f.id === activeId ? " is-active" : "";
+        const statusClass = status !== "pending" ? ` is-${status}` : "";
+        return `
+          <article class="card${active}${statusClass}" data-id="${f.id}">
+            <img src="${f.file}" alt="${f.title}" loading="lazy">
+            <div class="card-body">
+              <div class="card-num">${f.num}</div>
+              <div class="card-title">${f.title}</div>
+              <div class="card-status ${status}">${status === "pending" ? "Not reviewed" : status === "approved" ? "Approved" : "Needs redo"}</div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      grid.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("click", () => {
+          selectFrame(FRAMES.find((f) => f.id === card.dataset.id));
+        });
+      });
+    }
+
+    document.querySelectorAll(".preview-actions .btn").forEach((btn) => {
+      btn.addEventListener("click", () => setReview(activeId, btn.dataset.action));
+    });
+
+    selectFrame(FRAMES[0]);
+    save();
+  </script>
+</body>
+</html>

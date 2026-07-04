@@ -144,6 +144,18 @@
     });
   }
 
+  function initMemoryFilmSound() {
+    const video = document.querySelector('.lp-memory-film-video');
+    if (!video) return;
+
+    const enableSound = () => {
+      video.muted = false;
+      if (video.volume === 0) video.volume = 1;
+    };
+
+    video.addEventListener('play', enableSound);
+  }
+
   function initReveal() {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const items = document.querySelectorAll('.lp-reveal');
@@ -268,6 +280,7 @@
     initCountdown();
     initWaitlistForm();
     initScene2Cta();
+    initMemoryFilmSound();
     initReveal();
     initParallax();
     initScene2Progress();

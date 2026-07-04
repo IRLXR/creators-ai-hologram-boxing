@@ -501,6 +501,89 @@ body.prelaunch-body {
   margin-inline: auto;
 }
 
+
+/* Brief 004 — Create a Memory film preview */
+.lp-memory-film {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.35rem;
+  align-items: center;
+  margin: clamp(2.5rem, 6vh, 3.5rem) 0 clamp(3rem, 7vh, 4.5rem);
+}
+
+.lp-memory-film-visual {
+  position: relative;
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 174, 239, 0.35);
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 16px 48px rgba(0, 0, 0, 0.6),
+    0 0 64px rgba(0, 174, 239, 0.18);
+}
+
+.lp-memory-film-frame {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.lp-memory-film-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  background: #000;
+}
+
+.lp-memory-film-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 174, 239, 0.1) 0%, transparent 35%),
+    linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+}
+
+.lp-memory-film-copy {
+  padding: clamp(1.15rem, 3.5vw, 1.65rem);
+}
+
+.lp-memory-film-kicker {
+  font-family: var(--lp-font);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: var(--lp-purple);
+  margin-bottom: 0.5rem;
+}
+
+.lp-memory-film-title {
+  font-family: var(--lp-font);
+  font-size: clamp(1.35rem, 3.2vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  margin: 0 0 0.65rem;
+  color: #fff;
+}
+
+.lp-memory-film-desc {
+  font-size: clamp(0.92rem, 2vw, 1rem);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .lp-memory-film {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
+    gap: clamp(1.5rem, 3vw, 2.25rem);
+  }
+}
+
 .lp-story-flow {
   display: flex;
   flex-direction: column;
