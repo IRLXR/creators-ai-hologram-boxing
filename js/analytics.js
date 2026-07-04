@@ -131,10 +131,57 @@
     const ts = Date.now();
     const rand = Math.random().toString(36).slice(2, 10);
     return {
-      Lead: `${ts}_Lead_${rand}`,
+      ViewContent: `${ts}_ViewContent_${rand}`,
+      AddToCart: `${ts}_AddToCart_${rand}`,
+      InitiateCheckout: `${ts}_InitiateCheckout_${rand}`,
+      AddPaymentInfo: `${ts}_AddPaymentInfo_${rand}`,
       CompleteRegistration: `${ts}_CompleteRegistration_${rand}`,
+      Lead: `${ts}_Lead_${rand}`,
       Purchase: `${ts}_Purchase_${rand}`,
     };
+  }
+
+  function waitlistCommerceMeta(extra) {
+    return {
+      form_key: 'waitlist',
+      content_category: 'waitlist',
+      content_id: 'waitlist',
+      content_name: 'Founding Fan Waitlist',
+      content_type: 'product',
+      value: 0,
+      currency: tiktokCurrency(),
+      num_items: 1,
+      ...(extra || {}),
+    };
+  }
+
+  function trackWaitlistCommerceFunnel(eventIds, step) {
+    const meta = waitlistCommerceMeta({ step: step || 'waitlist_funnel' });
+    const id = eventIds || {};
+    trackAddToCart(0, { ...meta, event_id: id.AddToCart });
+    trackInitiateCheckout({ ...meta, force: true, event_id: id.InitiateCheckout });
+    trackAddPaymentInfo({ ...meta, event_id: id.AddPaymentInfo });
+  }
+
+  async function trackWaitlistConversion(email, eventIds) {
+    const meta = waitlistCommerceMeta({ step: 'waitlist_submit' });
+    const id = eventIds || {};
+
+    if (email) await identify(email);
+
+    trackWaitlistCommerceFunnel(id, 'waitlist_submit');
+    await trackCompleteRegistration('Founding Fan Waitlist', email, {
+      ...meta,
+      event_id: id.CompleteRegistration,
+    });
+    await trackLead('Founding Fan Waitlist', email, {
+      ...meta,
+      event_id: id.Lead,
+    });
+    trackPurchase(0, {
+      ...meta,
+      event_id: id.Purchase,
+    });
   }
 
   function getServerTrackingPayload(eventIds) {
@@ -273,7 +320,7 @@
 
   function trackTikTok(eventName, payload, options) {
     const data = buildTikTokPayload(payload);
-    const tiktokOptions = { event_id: options?.event_id || eventId(eventName) };
+    const tiktokOptions = { event_id: options?.event_id || payload?.event_id || eventId(eventName) };
     if (global.ttq) {
       global.ttq.track(eventName, data, tiktokOptions);
       log('TikTok', eventName, data, tiktokOptions);
@@ -344,14 +391,14 @@
   function trackInitiateCheckout(extra) {
     const opts = extra || {};
     const sessionKey = opts.content_category === 'waitlist' ? 'hb_waitlist_checkout' : CHECKOUT_KEY;
-    if (sessionStorage.getItem(sessionKey)) return;
-    sessionStorage.setItem(sessionKey, '1');
+    if (!opts.force && sessionStorage.getItem(sessionKey)) return;
+    if (!opts.force) sessionStorage.setItem(sessionKey, '1');
     track('InitiateCheckout', {
       ...opts,
       event_source: opts.content_category === 'waitlist' ? 'waitlist' : 'ticket_form',
       currency: tiktokCurrency(),
       value: opts.value ?? (opts.content_category === 'waitlist' ? 0 : ticketUsdValue(opts.content_id || 'headset')),
-    });
+    }, 'InitiateCheckout', opts.event_id ? { event_id: opts.event_id } : undefined);
   }
 
   function isWaitlistEvent(opts) {
@@ -371,7 +418,7 @@
       currency: tiktokCurrency(),
       value: usdValue,
       price: usdValue,
-    });
+    }, 'AddToCart', opts.event_id ? { event_id: opts.event_id } : undefined);
   }
 
   function trackAddPaymentInfo(extra) {
@@ -381,7 +428,7 @@
       event_source: isWaitlistEvent(opts) ? 'waitlist' : 'ticket_form',
       currency: tiktokCurrency(),
       value: isWaitlistEvent(opts) ? 0 : ticketUsdValue(opts.content_id || 'headset'),
-    });
+    }, 'AddPaymentInfo', opts.event_id ? { event_id: opts.event_id } : undefined);
   }
 
   function trackSubmitForm(formName, extra) {
@@ -578,6 +625,10 @@
   function pageViewContentMap() {
     const view = resolvePageViewContent();
     trackViewContent(view);
+    if (isLandingPage() && !sessionStorage.getItem('hb_waitlist_funnel_primed')) {
+      sessionStorage.setItem('hb_waitlist_funnel_primed', '1');
+      trackWaitlistCommerceFunnel({}, 'landing_view');
+    }
     log('ViewContent mapped', view.content_id, view);
   }
 
@@ -763,6 +814,9 @@
     getAttribution,
     getServerTrackingPayload,
     makeWaitlistEventIds,
+    waitlistCommerceMeta,
+    trackWaitlistCommerceFunnel,
+    trackWaitlistConversion,
     resolvePageViewContent,
     PAGE_VIEW_MAP,
     isDebug,

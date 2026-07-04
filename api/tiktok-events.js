@@ -151,10 +151,12 @@ async function trackFormConversion({
   const baseProps = {
     form_key: formKey,
     form_label: formLabel,
-    content_category: formKey || 'lead',
-    content_id: formKey || 'website',
+    content_category: formKey === 'waitlist' ? 'waitlist' : (formKey || 'lead'),
+    content_id: formKey === 'waitlist' ? 'waitlist' : (formKey || 'website'),
     content_name: formLabel || 'Website Form',
+    content_type: 'product',
     value: formKey === 'waitlist' ? 0 : undefined,
+    currency: 'USD',
   };
 
   const common = {
@@ -169,29 +171,32 @@ async function trackFormConversion({
     ip,
   };
 
-  const events = [
-    buildEvent({
-      event: 'CompleteRegistration',
-      eventId: eventIds.CompleteRegistration,
-      ...common,
-      properties: { ...baseProps, status: 'submitted' },
-    }),
-    buildEvent({
-      event: 'Lead',
-      eventId: eventIds.Lead,
-      ...common,
-      properties: { ...baseProps, status: 'submitted' },
-    }),
-  ];
+  const waitlistFunnel = formKey === 'waitlist'
+    ? ['AddToCart', 'InitiateCheckout', 'AddPaymentInfo']
+    : [];
 
-  if (formKey === 'waitlist' && eventIds.Purchase) {
-    events.push(buildEvent({
-      event: 'Purchase',
-      eventId: eventIds.Purchase,
+  const conversionEvents = formKey === 'waitlist'
+    ? ['CompleteRegistration', 'Lead', 'Purchase']
+    : ['CompleteRegistration', 'Lead'];
+
+  const events = [
+    ...waitlistFunnel.map((event) => buildEvent({
+      event,
+      eventId: eventIds[event],
       ...common,
-      properties: { ...baseProps, value: 0, status: 'completed' },
-    }));
-  }
+      properties: { ...baseProps, status: event === 'Purchase' ? 'completed' : 'submitted' },
+    })),
+    ...conversionEvents.map((event) => buildEvent({
+      event,
+      eventId: eventIds[event],
+      ...common,
+      properties: {
+        ...baseProps,
+        value: event === 'Purchase' ? 0 : baseProps.value,
+        status: event === 'Purchase' ? 'completed' : 'submitted',
+      },
+    })),
+  ];
 
   return sendTikTokEvents(events);
 }

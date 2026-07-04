@@ -98,33 +98,7 @@
   }
 
   function trackWaitlistConversion(email, eventIds) {
-    const a = analytics();
-    if (!a) return;
-
-    const meta = {
-      form_key: 'waitlist',
-      value: 0,
-      content_category: 'waitlist',
-      content_id: 'waitlist',
-      content_name: 'Founding Fan Waitlist',
-    };
-
-    Promise.resolve()
-      .then(() => a.trackCompleteRegistration('Founding Fan Waitlist', email, {
-        ...meta,
-        event_id: eventIds?.CompleteRegistration,
-      }))
-      .then(() => a.trackLead('Founding Fan Waitlist', email, {
-        ...meta,
-        event_id: eventIds?.Lead,
-      }))
-      .then(() => {
-        a.trackPurchase(0, {
-          ...meta,
-          event_id: eventIds?.Purchase,
-        });
-      })
-      .catch(() => {});
+    analytics()?.trackWaitlistConversion(email, eventIds).catch(() => {});
   }
 
   function initCountdown() {
