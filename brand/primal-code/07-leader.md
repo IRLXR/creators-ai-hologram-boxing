@@ -21,7 +21,7 @@ Every generation needs a voice that says: **"This is ours now."** Our Leader isn
 | **Vision** | This generation writes the next chapter of fight night |
 | **Voice** | Proud, cinematic, human — not cold tech |
 | **Proof** | The tent, the Evolution film, the first HB events |
-| **Platforms** | Kick + Twitch `@creatorsai` · site · streams |
+| **Platforms** | Kick + Twitch `@hologramboxing` · site · streams |
 | **Contact** | `ic4d@irlxr.com` |
 
 The Leader doesn't say *"we're better."* The Leader says: **"It's our turn — walk inside."**

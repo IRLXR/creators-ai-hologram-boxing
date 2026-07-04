@@ -1,8 +1,8 @@
 window.SITE_CONFIG = {
-  kickHandle: "creatorsai",
-  kickUrl: "https://kick.com/creatorsai",
-  twitchHandle: "creatorsai",
-  twitchUrl: "https://www.twitch.tv/creatorsai",
+  kickHandle: "hologramboxing",
+  kickUrl: "https://kick.com/hologramboxing",
+  twitchHandle: "hologramboxing",
+  twitchUrl: "https://www.twitch.tv/hologramboxing",
   streamsReady: true,
   email: "ic4d@irlxr.com",
   siteName: "Creators AI Hologram Boxing",

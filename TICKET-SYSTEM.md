@@ -121,8 +121,8 @@ Deep links are supported:
 
 Cannot attend or don't have MVM? Every event streams **free** on:
 
-- [Kick](https://kick.com/creatorsai)
-- [Twitch](https://www.twitch.tv/creatorsai)
+- [Kick](https://kick.com/hologramboxing)
+- [Twitch](https://www.twitch.tv/hologramboxing)
 
 Streams do not include on-site tent AR viewing or spectator win-pool eligibility.
 
