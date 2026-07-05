@@ -86,6 +86,7 @@ window.SITE_CONFIG = {
     { id: "wave-blue", name: "Wave Blue", role: "Rising Star", image: "assets/fighter-cyber.png", nextFightDate: "2026-08-22T20:00:00" },
     { id: "wave-silver", name: "Wave Silver", role: "Ghost Variant", image: "assets/fighter-phantom.png", nextFightDate: "2026-08-22T20:00:00" },
     { id: "wave-green", name: "Wave Green", role: "Power Core", image: "assets/fighter-titan.png", nextFightDate: "2026-08-29T19:00:00" },
-    { id: "wave-pink", name: "Wave Pink", role: "Speed Demon", image: "assets/fighter-spark.png", nextFightDate: "2026-08-29T19:00:00" }
+    { id: "wave-pink", name: "Wave Pink", role: "Speed Demon", image: "assets/fighter-spark.png", nextFightDate: "2026-08-29T19:00:00" },
+    { id: "wave-mystery", name: "Wave ?", role: "?", image: "assets/fighter-mystery.svg", nextFightDate: "?" }
   ]
 };

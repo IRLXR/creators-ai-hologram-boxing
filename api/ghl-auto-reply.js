@@ -66,7 +66,8 @@ function detailsTable(rows) {
   </table>`;
 }
 
-function viewModeLabel(viewMode) {
+function viewModeLabel(viewMode, data = {}) {
+  if (data.viewCreator) return `Creator POV — ${data.viewCreator} (${CRYPTO_SYMBOL} crypto ticket)`;
   if (viewMode === 'headset') return `Headset POV (${CRYPTO_SYMBOL} crypto ticket)`;
   if (viewMode === 'attendee') return `Attendee POV (${CRYPTO_SYMBOL} crypto ticket)`;
   return viewMode || '';
@@ -86,11 +87,11 @@ function formFieldRows(data, formKey) {
 
   if (formKey === 'ticket') {
     rows.push(
-      detailRow('Viewing experience', viewModeLabel(data.viewMode)),
+      detailRow('Viewing experience', viewModeLabel(data.viewMode, data)),
+      detailRow('Creator', data.viewCreator),
       detailRow('Fight', data.fight),
       detailRow('Fighter pick', data.fighterPick),
       detailRow('Influencer code', data.influencerCode),
-      detailRow('Attendee pass', data.attendeeCode),
       detailRow('Wallet', data.wallet),
       detailRow('Balance confirmed', data.balanceConfirm ? 'Yes' : ''),
     );
@@ -200,17 +201,17 @@ function buildAutoReply(formKey, data, firstName) {
   const name = greeting(firstName);
 
   if (formKey === 'ticket') {
-    const view = viewModeLabel(data.viewMode);
+    const view = viewModeLabel(data.viewMode, data);
     const bodyHtml = `
       <p style="margin:0 0 16px;">${name}</p>
       <p style="margin:0 0 16px;">We received your ticket request for <strong>${escapeHtml(NEXT_EVENT)}</strong>. You're one step closer to ringside.</p>
-      <p style="margin:0 0 16px;">Our team will verify your <strong>${escapeHtml(CRYPTO_NAME)}</strong> wallet and email you once your ticket, POV, and fighter pick are confirmed.</p>
+      <p style="margin:0 0 16px;">Our team will verify your <strong>${escapeHtml(CRYPTO_NAME)}</strong> wallet and email you once your ticket, creator POV, and fighter pick are confirmed.</p>
       ${detailsTable([
         detailRow('Viewing experience', view),
+        detailRow('Creator', data.viewCreator),
         detailRow('Fight', data.fight),
         detailRow('Fighter pick', data.fighterPick),
         detailRow('Influencer code', data.influencerCode),
-        detailRow('Attendee pass', data.attendeeCode),
         detailRow('Wallet', data.wallet),
       ])}
       <p style="margin:0;">If anything looks wrong, reply to this email and we'll fix it before confirmation goes out.</p>

@@ -581,8 +581,14 @@ function initFightCountdowns() {
     if (el.dataset.countdownInit) return;
     el.dataset.countdownInit = '1';
 
-    const targetMs = new Date(el.dataset.fightDate).getTime();
+    const fightDate = el.dataset.fightDate;
+    const targetMs = new Date(fightDate).getTime();
     const label = el.dataset.fightLabel || 'Next Fight';
+
+    if (!fightDate || fightDate === '?' || Number.isNaN(targetMs)) {
+      el.innerHTML = `<span class="countdown-label">${label}</span><span class="countdown-timer fight-countdown-timer">?</span>`;
+      return;
+    }
     const card = el.closest('.fight-card, .fighter-card, .fighter-detail-card');
     const ticketBtn = card?.querySelector('[data-fight-ticket]');
 
@@ -692,69 +698,32 @@ function initTicketForm() {
 
   const fightSelect = form.querySelector('#ticket-fight');
   const fighterSelect = form.querySelector('#ticket-fighter');
-  const viewSelect = form.querySelector('#ticket-view');
+  const creatorSelect = form.querySelector('#ticket-creator');
   const priceEl = form.querySelector('[data-ticket-total]');
-  const viewNote = form.querySelector('[data-view-note]');
-  const influencerPanel = form.querySelector('[data-influencer-panel]');
-  const influencerEnter = form.querySelector('[data-influencer-enter]');
-  const attendeeCodePanel = form.querySelector('[data-attendee-code]');
+  const creatorStatus = form.querySelector('[data-creator-status]');
   const influencerInput = form.querySelector('#ticket-influencer-code');
-  const influencerApply = form.querySelector('[data-influencer-apply]');
-  const influencerStatus = form.querySelector('[data-influencer-status]');
-  const attendeeCodeValue = form.querySelector('[data-attendee-code-value]');
-  const attendeeCodeInput = form.querySelector('#ticket-attendee-code');
-  const attendeeCopyBtn = form.querySelector('[data-attendee-copy]');
-  const attendeeCodeStatus = form.querySelector('[data-attendee-code-status]');
   const fightGroup = form.querySelector('[data-fight-group]');
   const fighterGroup = form.querySelector('[data-fighter-group]');
-  if (!fightSelect || !fighterSelect || !viewSelect) return;
+  if (!fightSelect || !fighterSelect || !creatorSelect) return;
 
   const params = new URLSearchParams(window.location.search);
   const preFight = params.get('fight');
   const preFighter = params.get('fighter');
   const preCode = params.get('code');
 
-  let influencerLocked = false;
-  let attendeeCode = '';
+  let creatorLocked = false;
 
-  const generateAttendeeCode = () => {
-    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-    let suffix = '';
-    for (let i = 0; i < 6; i += 1) {
-      suffix += chars[Math.floor(Math.random() * chars.length)];
-    }
-    return `ATT-${suffix}`;
+  const showCreatorStatus = (message, isError = false) => {
+    if (!creatorStatus) return;
+    creatorStatus.hidden = !message;
+    creatorStatus.textContent = message;
+    creatorStatus.className = `influencer-status ${isError ? 'influencer-status--error' : 'influencer-status--success'}`;
   };
 
-  const showAttendeeCodeStatus = (message) => {
-    if (!attendeeCodeStatus) return;
-    attendeeCodeStatus.hidden = !message;
-    attendeeCodeStatus.textContent = message;
-  };
-
-  const assignAttendeeCode = () => {
-    attendeeCode = generateAttendeeCode();
-    if (attendeeCodeValue) attendeeCodeValue.textContent = attendeeCode;
-    if (attendeeCodeInput) attendeeCodeInput.value = attendeeCode;
-    if (influencerInput) influencerInput.value = '';
-    setInfluencerLocked(false);
-    showInfluencerStatus('');
-    showAttendeeCodeStatus('Your ringside pass is ready. Pick your fight & fighter below, then purchase.');
-  };
-
-  const showInfluencerStatus = (message, isError = false) => {
-    if (!influencerStatus) return;
-    influencerStatus.hidden = !message;
-    influencerStatus.textContent = message;
-    influencerStatus.className = `influencer-status ${isError ? 'influencer-status--error' : 'influencer-status--success'}`;
-  };
-
-  const setInfluencerLocked = (locked) => {
-    influencerLocked = locked;
+  const setCreatorLocked = (locked) => {
+    creatorLocked = locked;
     fightGroup?.classList.toggle('is-influencer-locked', locked);
     fighterGroup?.classList.toggle('is-influencer-locked', locked);
-    fightSelect.disabled = locked;
-    fighterSelect.disabled = locked;
   };
 
   const populateFighters = (fightId, fighterName) => {
@@ -771,7 +740,7 @@ function initTicketForm() {
       fighterSelect.value = fighterName;
       return;
     }
-    if (preFighter && !influencerLocked) {
+    if (preFighter && !creatorLocked) {
       const fighter = SITE.fighters.find((f) => f.id === preFighter);
       if (fighter && [fight.fighter1, fight.fighter2].includes(fighter.name)) {
         fighterSelect.value = fighter.name;
@@ -787,28 +756,41 @@ function initTicketForm() {
     fightSelect.appendChild(opt);
   });
 
-  const applyInfluencerCode = (rawCode) => {
-    const code = String(rawCode || '').trim().toUpperCase();
-    if (!code) {
-      showInfluencerStatus('Enter a code from your creator or partner.', true);
+  creatorSelect.innerHTML = '<option value="">Select a creator…</option>';
+  SITE.influencerCodes.forEach((entry) => {
+    const opt = document.createElement('option');
+    opt.value = entry.influencer;
+    opt.dataset.code = entry.code;
+    opt.textContent = entry.influencer;
+    creatorSelect.appendChild(opt);
+  });
+
+  const applyCreator = (rawValue) => {
+    const value = String(rawValue || '').trim();
+    if (!value) {
+      setCreatorLocked(false);
+      if (influencerInput) influencerInput.value = '';
+      showCreatorStatus('');
       return false;
     }
 
-    const match = SITE.influencerCodes.find((entry) => entry.code.toUpperCase() === code);
+    const match = SITE.influencerCodes.find(
+      (entry) => entry.code.toUpperCase() === value.toUpperCase() || entry.influencer === value
+    );
     if (!match) {
-      setInfluencerLocked(false);
-      showInfluencerStatus('Code not recognized. Double-check with your influencer and try again.', true);
+      setCreatorLocked(false);
+      if (influencerInput) influencerInput.value = '';
+      showCreatorStatus('Creator not found. Pick from the list.', true);
       return false;
     }
 
+    creatorSelect.value = match.influencer;
     fightSelect.value = match.fightId;
     populateFighters(match.fightId, match.fighter);
     fighterSelect.value = match.fighter;
     if (influencerInput) influencerInput.value = match.code;
-    setInfluencerLocked(true);
-    showInfluencerStatus(
-      `Locked in with ${match.influencer}! Fight and fighter set to ${match.fighter}. Confirm your wallet and hit purchase.`
-    );
+    setCreatorLocked(true);
+    showCreatorStatus(`Viewing from ${match.influencer} — fight and fighter pre-selected. You can change them on the next steps.`);
     return true;
   };
 
@@ -824,81 +806,26 @@ function initTicketForm() {
     }
   }
 
-  const toggleInfluencerPanel = () => {
-    const view = viewSelect.value;
-    const hasView = Boolean(view);
-    const isHeadset = view === 'headset';
-    const isAttendee = view === 'attendee';
-
-    if (influencerPanel) influencerPanel.hidden = !hasView;
-    if (influencerEnter) influencerEnter.hidden = !isHeadset;
-    if (attendeeCodePanel) attendeeCodePanel.hidden = !isAttendee;
-
-    if (!hasView) {
-      setInfluencerLocked(false);
-      showInfluencerStatus('');
-      showAttendeeCodeStatus('');
-      if (attendeeCodeInput) attendeeCodeInput.value = '';
-      if (attendeeCodeValue) attendeeCodeValue.textContent = '—';
-      attendeeCode = '';
-      return;
-    }
-
-    if (isHeadset) {
-      if (attendeeCodeInput) attendeeCodeInput.value = '';
-      showAttendeeCodeStatus('');
-    }
-
-    if (isAttendee) {
-      if (influencerInput) influencerInput.value = '';
-      showInfluencerStatus('');
-      setInfluencerLocked(false);
-      if (!attendeeCode) assignAttendeeCode();
-    }
-  };
-
   const updatePrice = () => {
-    const isAttendee = viewSelect.value === 'attendee';
-    const hasView = Boolean(viewSelect.value);
-    const price = isAttendee ? SITE.crypto.ticketPriceAttendee : SITE.crypto.ticketPriceHeadset;
-    if (priceEl) priceEl.textContent = hasView ? `${price} ${SITE.crypto.symbol}` : '—';
-    if (viewNote) viewNote.hidden = !isAttendee;
+    const hasCreator = Boolean(creatorSelect.value);
+    const price = SITE.crypto.ticketPriceHeadset;
+    if (priceEl) priceEl.textContent = hasCreator ? `${price} ${SITE.crypto.symbol}` : '—';
   };
 
   fightSelect.addEventListener('change', () => {
-    if (influencerLocked) return;
     populateFighters(fightSelect.value);
   });
 
-  viewSelect.addEventListener('change', () => {
-    if (viewSelect.value !== 'attendee') attendeeCode = '';
-    toggleInfluencerPanel();
+  creatorSelect.addEventListener('change', () => {
+    if (!creatorSelect.value) {
+      setCreatorLocked(false);
+      if (influencerInput) influencerInput.value = '';
+      showCreatorStatus('');
+      updatePrice();
+      return;
+    }
+    applyCreator(creatorSelect.value);
     updatePrice();
-    if (!viewSelect.value) setInfluencerLocked(false);
-  });
-
-  attendeeCopyBtn?.addEventListener('click', async () => {
-    if (!attendeeCode) return;
-    try {
-      await navigator.clipboard.writeText(attendeeCode);
-      showAttendeeCodeStatus('Code copied! Save it before you purchase.');
-    } catch {
-      showAttendeeCodeStatus(`Your code: ${attendeeCode}`);
-    }
-  });
-
-  influencerApply?.addEventListener('click', () => applyInfluencerCode(influencerInput?.value));
-
-  influencerInput?.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      applyInfluencerCode(influencerInput.value);
-    }
-  });
-
-  influencerInput?.addEventListener('input', () => {
-    if (influencerLocked) setInfluencerLocked(false);
-    showInfluencerStatus('');
   });
 
   form.addEventListener('submit', () => {
@@ -906,15 +833,11 @@ function initTicketForm() {
     fighterSelect.disabled = false;
   }, { capture: true });
 
-  toggleInfluencerPanel();
   updatePrice();
 
   if (preCode) {
-    if (!viewSelect.value) viewSelect.value = 'headset';
-    toggleInfluencerPanel();
+    applyCreator(preCode);
     updatePrice();
-    if (influencerInput) influencerInput.value = preCode;
-    applyInfluencerCode(preCode);
   }
 }
 
@@ -1018,11 +941,10 @@ async function trackFormConversion(formKey, data, formLabel) {
   analytics.trackSubmitForm(formLabel || formKey, { form_key: formKey });
 
   if (formKey === 'ticket') {
-    const isAttendee = data.viewMode === 'attendee';
     await analytics.trackLead('Ticket Purchase', email, { form_key: formKey, value: 0 });
-    analytics.trackPurchase(isAttendee ? analytics.ticketUsdValue('attendee') : analytics.ticketUsdValue('headset'), {
-      content_name: isAttendee ? 'Attendee POV Ticket' : 'Headset POV Ticket',
-      content_id: isAttendee ? 'attendee' : 'headset',
+    analytics.trackPurchase(analytics.ticketUsdValue('headset'), {
+      content_name: 'Creator POV Ticket',
+      content_id: data.viewCreator || data.influencerCode || 'creator',
       form_key: formKey,
     });
   } else if (formKey === 'booking') {
@@ -1032,12 +954,205 @@ async function trackFormConversion(formKey, data, formLabel) {
   }
 }
 
+const WIZARD_ICON_PATHS = {
+  user: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+  mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+  wallet: '<path d="M19 7V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1"/><path d="M16 11h6v6h-6a3 3 0 0 1 0-6z"/>',
+  eye: '<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+  fight: '<path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="M13 6l7 7"/><path d="m8 8 8 8"/>',
+  fighter: '<circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><path d="m8 11 4 2 4-2"/><path d="M10 17v4"/><path d="M14 17v4"/>',
+  check: '<path d="M20 6 9 17l-5-5"/>',
+  type: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/>',
+  calendar: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/>',
+  users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  message: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+  weight: '<path d="M6.5 6.5h11"/><path d="M6 10h12l-1 10H7L6 10Z"/><path d="M9 6V4a3 3 0 0 1 6 0v2"/>',
+  record: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>',
+  social: '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>',
+  dot: '<circle cx="12" cy="12" r="4"/>',
+};
+
+function wizardIcon(name) {
+  const path = WIZARD_ICON_PATHS[name] || WIZARD_ICON_PATHS.dot;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${path}</svg>`;
+}
+
+function validateWizardStep(stepEl) {
+  const fields = stepEl.querySelectorAll('input, select, textarea');
+  for (const field of fields) {
+    if (field.type === 'hidden') continue;
+    if (field.closest('[hidden]')) continue;
+    if (field.disabled) continue;
+    if (!field.checkValidity()) {
+      field.reportValidity();
+      field.focus({ preventScroll: true });
+      return false;
+    }
+  }
+  return true;
+}
+
+function initFormWizard(form) {
+  if (form.dataset.wizardInit) return;
+  form.dataset.wizardInit = '1';
+
+  const steps = [...form.querySelectorAll('.form-wizard-step')];
+  if (!steps.length) return;
+
+  let current = 0;
+
+  const progress = document.createElement('div');
+  progress.className = 'form-wizard-progress';
+  progress.setAttribute('aria-label', 'Form progress');
+
+  const indicators = [];
+  steps.forEach((step, index) => {
+    const item = document.createElement('div');
+    item.className = 'form-wizard-progress-item';
+    item.setAttribute('role', 'button');
+    item.setAttribute('tabindex', index === 0 ? '0' : '-1');
+    item.setAttribute('aria-label', step.dataset.stepLabel || `Step ${index + 1}`);
+    item.innerHTML = `
+      <div class="form-wizard-progress-icon">${wizardIcon(step.dataset.stepIcon || 'dot')}</div>
+      <span class="form-wizard-progress-label">${step.dataset.stepLabel || `Step ${index + 1}`}</span>
+    `;
+    progress.appendChild(item);
+    indicators.push(item);
+    if (index < steps.length - 1) {
+      const line = document.createElement('div');
+      line.className = 'form-wizard-progress-line';
+      line.setAttribute('aria-hidden', 'true');
+      progress.appendChild(line);
+    }
+  });
+
+  const nav = document.createElement('div');
+  nav.className = 'form-wizard-nav';
+
+  const backBtn = document.createElement('button');
+  backBtn.type = 'button';
+  backBtn.className = 'btn btn-outline form-wizard-back';
+  backBtn.textContent = 'Back';
+
+  const nextBtn = document.createElement('button');
+  nextBtn.type = 'button';
+  nextBtn.className = 'btn btn-primary form-wizard-next';
+  nextBtn.textContent = 'Continue';
+
+  const submitBtn = form.querySelector('.form-wizard-submit[type="submit"]');
+  if (submitBtn) {
+    submitBtn.hidden = true;
+    submitBtn.style.width = '100%';
+    submitBtn.style.justifyContent = 'center';
+  }
+
+  nav.append(backBtn, nextBtn);
+  if (submitBtn) nav.appendChild(submitBtn);
+
+  form.insertBefore(progress, form.firstChild);
+  form.appendChild(nav);
+
+  const updateStepMeta = () => {
+    steps.forEach((step, index) => {
+      const meta = step.querySelector('[data-wizard-step-meta]');
+      if (meta) meta.textContent = `Step ${index + 1} of ${steps.length}`;
+    });
+  };
+
+  const focusFirstField = (stepEl) => {
+    const field = stepEl.querySelector('input:not([type="hidden"]):not([type="checkbox"]), select, textarea');
+    field?.focus({ preventScroll: true });
+  };
+
+  const updateUI = () => {
+    steps.forEach((step, index) => {
+      step.hidden = index !== current;
+      step.classList.toggle('is-active', index === current);
+    });
+
+    indicators.forEach((item, index) => {
+      item.classList.toggle('is-complete', index < current);
+      item.classList.toggle('is-active', index === current);
+      item.classList.toggle('is-clickable', index < current);
+      item.setAttribute('aria-current', index === current ? 'step' : 'false');
+      item.setAttribute('tabindex', index <= current ? '0' : '-1');
+    });
+
+    backBtn.hidden = current === 0;
+    const isLast = current === steps.length - 1;
+    nextBtn.hidden = isLast;
+    if (submitBtn) submitBtn.hidden = !isLast;
+
+    focusFirstField(steps[current]);
+  };
+
+  const goToStep = (index) => {
+    if (index < 0 || index >= steps.length) return;
+    current = index;
+    updateUI();
+  };
+
+  nextBtn.addEventListener('click', () => {
+    if (!validateWizardStep(steps[current])) return;
+    if (current < steps.length - 1) goToStep(current + 1);
+  });
+
+  backBtn.addEventListener('click', () => {
+    if (current > 0) goToStep(current - 1);
+  });
+
+  indicators.forEach((item, index) => {
+    const activate = () => {
+      if (index >= current) return;
+      goToStep(index);
+    };
+    item.addEventListener('click', activate);
+    item.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        activate();
+      }
+    });
+  });
+
+  form.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' || event.target.tagName === 'TEXTAREA') return;
+    if (event.target.matches('#ticket-influencer-code')) return;
+    const isLast = current === steps.length - 1;
+    if (isLast) return;
+    event.preventDefault();
+    nextBtn.click();
+  });
+
+  form.addEventListener('wizard:goto', (event) => {
+    goToStep(event.detail?.index ?? 0);
+  });
+
+  updateStepMeta();
+  updateUI();
+}
+
+function initFormWizards() {
+  document.querySelectorAll('[data-form-wizard]').forEach(initFormWizard);
+}
+
 function initFormSubmit(formId, storageKey, successId, mailtoPrefix, ghlFormKey) {
   const form = document.getElementById(formId);
   if (!form) return;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    if (form.matches('[data-form-wizard]')) {
+      const steps = [...form.querySelectorAll('.form-wizard-step')];
+      for (let i = 0; i < steps.length; i += 1) {
+        if (!validateWizardStep(steps[i])) {
+          form.dispatchEvent(new CustomEvent('wizard:goto', { detail: { index: i } }));
+          return;
+        }
+      }
+    }
+
     const data = Object.fromEntries(new FormData(form));
     localStorage.setItem(storageKey, JSON.stringify({ ...data, submittedAt: new Date().toISOString() }));
 
@@ -1133,6 +1248,44 @@ function initFeatureLinks() {
   });
 }
 
+function initStreamStoriesCarousel() {
+  document.querySelectorAll('.stream-stories-wrap').forEach((wrap) => {
+    if (wrap.dataset.carouselInit) return;
+    wrap.dataset.carouselInit = '1';
+
+    const track = wrap.querySelector('[data-stream-stories-track]');
+    const prevBtn = wrap.querySelector('[data-stream-stories-prev]');
+    const nextBtn = wrap.querySelector('[data-stream-stories-next]');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const scrollAmount = () => {
+      const card = track.querySelector('.stream-story');
+      if (!card) return track.clientWidth * 0.8;
+      const styles = window.getComputedStyle(track);
+      const gap = parseFloat(styles.columnGap || styles.gap || '16') || 16;
+      return card.getBoundingClientRect().width + gap;
+    };
+
+    const updateNav = () => {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      prevBtn.disabled = track.scrollLeft <= 4;
+      nextBtn.disabled = track.scrollLeft >= maxScroll - 4;
+    };
+
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+    });
+
+    track.addEventListener('scroll', updateNav, { passive: true });
+    window.addEventListener('resize', updateNav);
+    updateNav();
+  });
+}
+
 function initSocialMarquee() {
   const track = document.querySelector('[data-social-marquee]');
   if (!track || track.dataset.marqueeReady) return;
@@ -1150,7 +1303,7 @@ function initReveal() {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.card, .fighter-card, .fight-card, .social-post:not(.social-marquee-post), .feature-item, .step-card, .gallery-item, .faq-item').forEach((el) => {
+  document.querySelectorAll('.card, .fighter-card, .fight-card, .stream-story, .social-post:not(.social-marquee-post), .feature-item, .step-card, .gallery-item, .faq-item').forEach((el) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -1175,6 +1328,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initCookieBanner();
   initGoHighLevel();
   initSocialMarquee();
+  initStreamStoriesCarousel();
   initSocialLinks();
   initHeroWatchDropdown();
   initCountdown();
@@ -1184,6 +1338,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initAutoplayVideos();
   initVideoPlayer();
   initTicketForm();
+  initFormWizards();
   initFormSubmit('ticket-form', 'creatorsai_ticket', 'ticket-success', 'Ticket Purchase', 'ticket');
   initFormSubmit('booking-form', 'creatorsai_booking', 'form-success', 'Booking Request', 'booking');
   initFormSubmit('fighter-form', 'creatorsai_fighter_apply', 'fighter-success', 'Fighter Application', 'fighter');

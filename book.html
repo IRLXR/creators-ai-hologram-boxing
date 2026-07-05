@@ -184,6 +184,129 @@
       font-size: 0.75rem;
       padding: 0.4rem 0.75rem;
     }
+
+    /* ── Form wizard (one question at a time) ── */
+    .form-wizard {
+      position: relative;
+    }
+    .form-wizard-progress {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .form-wizard-progress::-webkit-scrollbar { display: none; }
+    .form-wizard-progress-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.45rem;
+      min-width: 52px;
+      flex: 0 0 auto;
+      cursor: default;
+    }
+    .form-wizard-progress-item.is-clickable { cursor: pointer; }
+    .form-wizard-progress-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background: var(--bg-dark);
+      color: var(--gray);
+      display: grid;
+      place-items: center;
+      transition: border-color 0.25s, background 0.25s, color 0.25s, box-shadow 0.25s;
+    }
+    .form-wizard-progress-icon svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+    .form-wizard-progress-label {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-align: center;
+      max-width: 64px;
+      line-height: 1.2;
+      transition: color 0.25s;
+    }
+    .form-wizard-progress-line {
+      flex: 0 0 20px;
+      height: 2px;
+      background: var(--border);
+      margin-top: 19px;
+      transition: background 0.25s;
+    }
+    .form-wizard-progress-item.is-complete .form-wizard-progress-icon {
+      border-color: var(--gold);
+      background: rgba(255, 193, 7, 0.12);
+      color: var(--gold);
+    }
+    .form-wizard-progress-item.is-complete .form-wizard-progress-label { color: var(--gold); }
+    .form-wizard-progress-item.is-complete + .form-wizard-progress-line { background: var(--gold); }
+    .form-wizard-progress-item.is-active .form-wizard-progress-icon {
+      border-color: var(--neon-blue);
+      background: rgba(0, 174, 239, 0.15);
+      color: var(--neon-blue);
+      box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.2);
+    }
+    .form-wizard-progress-item.is-active .form-wizard-progress-label { color: var(--neon-blue); }
+    .form-wizard-step {
+      min-height: 220px;
+      animation: wizard-step-in 0.35s ease;
+    }
+    .form-wizard-step[hidden] { display: none !important; }
+    @keyframes wizard-step-in {
+      from { opacity: 0; transform: translateX(12px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .form-wizard-step-meta {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 1.25rem;
+    }
+    .form-wizard-step .form-group:last-child { margin-bottom: 0; }
+    .form-wizard-nav {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .form-wizard-nav .btn { flex: 1; justify-content: center; }
+    .form-wizard-nav .form-wizard-back { flex: 0 0 auto; min-width: 100px; }
+    .form-wizard-nav .form-wizard-submit[hidden],
+    .form-wizard-nav .form-wizard-next[hidden],
+    .form-wizard-nav .form-wizard-back[hidden] { display: none; }
+
+    .booking-email-note {
+      max-width: 600px;
+      margin: 1.25rem auto 0;
+      text-align: center;
+    }
+    .booking-email-link {
+      color: var(--gray-light);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.25s, border-color 0.25s;
+    }
+    .booking-email-link:hover {
+      color: var(--neon-blue);
+      border-bottom-color: var(--neon-blue);
+    }
   </style>
 </head>
 <body>
@@ -193,7 +316,7 @@
     <div class="container">
       <p class="section-label">Book</p>
       <h1 class="section-title">Reserve Your Spot</h1>
-      <p class="section-subtitle"><span data-crypto-name>Me vs Me</span> crypto only · Pick your view · Back a fighter to win</p>
+      <p class="section-subtitle"><span data-crypto-name>Me vs Me</span> crypto only · Pick a creator · Back a fighter to win</p>
     </div>
   </header>
 
@@ -225,7 +348,7 @@
         <div class="info-card">
           <div class="icon"><img src="assets/icon-boxing.svg" alt="Choose Your View" loading="lazy"></div>
           <h3>Choose Your View</h3>
-          <p><strong>Headset POV</strong> — watch through your own AR headset in the tent (<span data-ticket-price-headset>200 MVM</span>). <strong>Attendee POV</strong> — upgrade to a ringside guest's live feed (<span data-ticket-price-attendee>350 MVM</span>).</p>
+          <p><strong>Creator POV</strong> — watch through a featured creator's live feed inside the tent (<span data-ticket-price-headset>200 MVM</span>). Pick your creator when you buy.</p>
         </div>
         <div class="info-card">
           <div class="icon"><img src="assets/card-prize-money.svg" alt="Pick a Fighter Win" loading="lazy"></div>
@@ -246,97 +369,90 @@
 
       <div class="booking-box" style="margin-bottom:3rem;">
         <h2>&gt;&gt; BUY YOUR TICKET &lt;&lt;</h2>
-        <p class="sub">Pay with <span data-crypto-name>Me vs Me</span> · Choose headset or attendee POV · Back a fighter to win</p>
+        <p class="sub">Pay with <span data-crypto-name>Me vs Me</span> · Pick a creator POV · Back a fighter to win</p>
         <p class="highlight">Tickets unlock when each fight countdown hits zero</p>
       </div>
 
       <div class="section-header" style="text-align:center;margin-bottom:2rem;">
         <p class="section-label">Event Tickets</p>
         <h2 class="section-title">Purchase with <span data-crypto-name>Me vs Me</span></h2>
-        <p class="section-subtitle">Pay with <span data-crypto-name>Me vs Me</span> · Pick your POV · Use an influencer code or choose your own fighter · Win if they win</p>
+        <p class="section-subtitle">Pay with <span data-crypto-name>Me vs Me</span> · Select a creator to view from · Pick your fighter · Win if they win</p>
       </div>
 
       <div class="ticket-form-intro">
-        <p>Three steps to ringside: choose how you watch, lock in your fight &amp; fighter, then pay with <span data-crypto-name>Me vs Me</span>. Headset POV? Enter a creator code. Attendee POV? We generate your ringside pass automatically.</p>
+        <p>Three steps to ringside: pick the creator you want to view from, lock in your fight &amp; fighter, then pay with <span data-crypto-name>Me vs Me</span>. Your creator choice sets the fight and fighter automatically.</p>
       </div>
 
-      <form class="booking-form" id="ticket-form" name="Ticket Purchase" data-ghl-form="ticket">
-        <p class="form-section-label">Step 1 — Your Details</p>
-        <div class="form-group">
-          <label for="ticket-name">Full Name</label>
-          <input type="text" id="ticket-name" name="name" required placeholder="Your name">
-          <p class="form-hint">We'll send your ticket confirmation and win-pool entry here.</p>
-        </div>
-        <div class="form-group">
-          <label for="ticket-email">Email</label>
-          <input type="email" id="ticket-email" name="email" required placeholder="you@email.com">
-        </div>
-        <div class="form-group">
-          <label for="ticket-wallet"><span data-crypto-name>Me vs Me</span> Wallet Address</label>
-          <input type="text" id="ticket-wallet" name="wallet" required placeholder="Your MVM wallet address">
-          <p class="form-hint">Tickets are crypto-only. Your wallet must hold enough <span data-crypto-symbol>MVM</span> before you purchase.</p>
-        </div>
-
-        <p class="form-section-label">Step 2 — How You Watch</p>
-        <div class="form-group">
-          <label for="ticket-view">Viewing Experience</label>
-          <select id="ticket-view" name="viewMode" required>
-            <option value="">Choose your POV…</option>
-            <option value="headset">Headset POV — your AR headset, your angle (<span data-ticket-price-headset>200 MVM</span>)</option>
-            <option value="attendee">Attendee POV — ride a ringside spectator's live feed (<span data-ticket-price-attendee>350 MVM</span>)</option>
-          </select>
-          <p data-view-note hidden class="form-hint form-hint--gold">Attendee POV drops you inside the crowd — feel the tent energy through someone already ringside.</p>
-          <div class="influencer-panel" data-influencer-panel hidden>
-            <div data-influencer-enter hidden>
-              <h4>Have an Influencer Code?</h4>
-              <p>Headset POV fans can enter a creator or partner code. Apply it and we'll lock in their fight &amp; fighter pick — then confirm your wallet and hit purchase.</p>
-              <div class="code-input-row">
-                <input type="text" id="ticket-influencer-code" name="influencerCode" placeholder="e.g. GOLDENWAVE" autocomplete="off" autocapitalize="characters">
-                <button type="button" class="btn btn-primary" data-influencer-apply>Apply</button>
-              </div>
-              <p class="influencer-status" data-influencer-status hidden></p>
-            </div>
-            <div data-attendee-code hidden>
-              <h4>Your Attendee POV Code</h4>
-              <p>Attendee POV tickets get a unique ringside pass code generated for you. Save it — this links you to your live spectator feed inside the tent.</p>
-              <div class="generated-code">
-                <span data-attendee-code-value>—</span>
-                <button type="button" class="btn btn-outline" data-attendee-copy>Copy</button>
-              </div>
-              <input type="hidden" id="ticket-attendee-code" name="attendeeCode" value="">
-              <p class="influencer-status influencer-status--success" data-attendee-code-status hidden></p>
-            </div>
+      <form class="booking-form form-wizard" id="ticket-form" name="Ticket Purchase" data-ghl-form="ticket" data-form-wizard>
+        <div class="form-wizard-step" data-step-icon="user" data-step-label="Name">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="ticket-name">Full Name</label>
+            <input type="text" id="ticket-name" name="name" required placeholder="Your name" autocomplete="name">
+            <p class="form-hint">We'll send your ticket confirmation and win-pool entry here.</p>
           </div>
         </div>
-
-        <p class="form-section-label">Step 3 — Fight &amp; Fighter Pick</p>
-        <div class="form-group" data-fight-group>
-          <label for="ticket-fight">Fight</label>
-          <select id="ticket-fight" name="fight" required>
-            <option value="">Select fight…</option>
-          </select>
+        <div class="form-wizard-step" data-step-icon="mail" data-step-label="Email">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="ticket-email">Email</label>
+            <input type="email" id="ticket-email" name="email" required placeholder="you@email.com" autocomplete="email">
+          </div>
         </div>
-        <div class="form-group" data-fighter-group>
-          <label for="ticket-fighter">Pick Your Fighter (to win)</label>
-          <select id="ticket-fighter" name="fighterPick" required>
-            <option value="">Pick your fighter…</option>
-          </select>
-          <p class="form-hint">Back the hologram fighter you believe in. If they win, you're entered to win from the spectator prize pool.</p>
+        <div class="form-wizard-step" data-step-icon="wallet" data-step-label="Wallet">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="ticket-wallet"><span data-crypto-name>Me vs Me</span> Wallet Address</label>
+            <input type="text" id="ticket-wallet" name="wallet" required placeholder="Your MVM wallet address">
+            <p class="form-hint">Tickets are crypto-only. Your wallet must hold enough <span data-crypto-symbol>MVM</span> before you purchase.</p>
+          </div>
         </div>
-
-        <p class="form-section-label">Step 4 — Confirm &amp; Purchase</p>
-        <div class="form-group">
-          <label>Total (<span data-crypto-symbol>MVM</span>)</label>
-          <p style="font-family:var(--font-display);font-size:1.25rem;color:var(--gold);margin:0;" data-ticket-total>—</p>
-          <p class="form-hint">Price updates based on your viewing experience.</p>
+        <div class="form-wizard-step" data-step-icon="social" data-step-label="Creator">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="ticket-creator">Watch From Creator</label>
+            <select id="ticket-creator" name="viewCreator" required>
+              <option value="">Select a creator…</option>
+            </select>
+            <input type="hidden" id="ticket-influencer-code" name="influencerCode" value="">
+            <p class="form-hint">Choose which creator's POV you want inside the tent. We'll lock in their fight and fighter pick for you.</p>
+            <p class="influencer-status" data-creator-status hidden></p>
+          </div>
         </div>
-        <div class="form-group">
-          <label style="display:flex;align-items:flex-start;gap:0.5rem;text-transform:none;letter-spacing:0;font-weight:400;color:var(--gray-light);">
-            <input type="checkbox" name="balanceConfirm" required style="width:auto;margin-top:0.25rem;">
-            <span>I confirm my wallet holds enough <span data-crypto-name>Me vs Me</span> (<span data-crypto-symbol>MVM</span>) to cover this ticket.</span>
-          </label>
+        <div class="form-wizard-step" data-step-icon="fight" data-step-label="Fight">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group" data-fight-group>
+            <label for="ticket-fight">Fight</label>
+            <select id="ticket-fight" name="fight" required>
+              <option value="">Select fight…</option>
+            </select>
+          </div>
         </div>
-        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Purchase Ticket with <span data-crypto-symbol>MVM</span></button>
+        <div class="form-wizard-step" data-step-icon="fighter" data-step-label="Fighter">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group" data-fighter-group>
+            <label for="ticket-fighter">Pick Your Fighter (to win)</label>
+            <select id="ticket-fighter" name="fighterPick" required>
+              <option value="">Pick your fighter…</option>
+            </select>
+            <p class="form-hint">Back the hologram fighter you believe in. If they win, you're entered to win from the spectator prize pool.</p>
+          </div>
+        </div>
+        <div class="form-wizard-step" data-step-icon="check" data-step-label="Confirm">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label>Total (<span data-crypto-symbol>MVM</span>)</label>
+            <p style="font-family:var(--font-display);font-size:1.25rem;color:var(--gold);margin:0;" data-ticket-total>—</p>
+            <p class="form-hint">Price updates based on your viewing experience.</p>
+          </div>
+          <div class="form-group">
+            <label style="display:flex;align-items:flex-start;gap:0.5rem;text-transform:none;letter-spacing:0;font-weight:400;color:var(--gray-light);">
+              <input type="checkbox" name="balanceConfirm" required style="width:auto;margin-top:0.25rem;">
+              <span>I confirm my wallet holds enough <span data-crypto-name>Me vs Me</span> (<span data-crypto-symbol>MVM</span>) to cover this ticket.</span>
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-gold form-wizard-submit" style="width:100%;justify-content:center;">Purchase Ticket with <span data-crypto-symbol>MVM</span></button>
       </form>
 
       <div class="form-success" id="ticket-success">
@@ -352,45 +468,60 @@
         <p class="section-subtitle">For private parties, corporate events, and festivals — not for individual fight tickets</p>
       </div>
 
-      <div class="booking-box" style="margin-bottom:2rem;">
-        <p class="sub">Questions? Email us — every fight also streams live on Kick &amp; Twitch</p>
-        <div class="booking-actions">
-          <a href="#" data-email class="btn btn-gold" data-email-text>ic4d@irlxr.com</a>
+      <form class="booking-form form-wizard" id="booking-form" name="Booking Request" data-ghl-form="booking" data-form-wizard>
+        <div class="form-wizard-step" data-step-icon="user" data-step-label="Name">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
+          </div>
         </div>
-      </div>
-
-      <form class="booking-form" id="booking-form" name="Booking Request" data-ghl-form="booking">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your name">
+        <div class="form-wizard-step" data-step-icon="mail" data-step-label="Email">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com" autocomplete="email">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="you@email.com">
+        <div class="form-wizard-step" data-step-icon="type" data-step-label="Type">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="type">Booking Type</label>
+            <select id="type" name="type" required>
+              <option value="">Select type...</option>
+              <option value="private">Private Event / Party</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="festival">Festival / Pop-Up</option>
+            </select>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="type">Booking Type</label>
-          <select id="type" name="type" required>
-            <option value="">Select type...</option>
-            <option value="private">Private Event / Party</option>
-            <option value="corporate">Corporate Event</option>
-            <option value="festival">Festival / Pop-Up</option>
-          </select>
+        <div class="form-wizard-step" data-step-icon="calendar" data-step-label="Date">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="date">Preferred Date</label>
-          <input type="date" id="date" name="date">
+        <div class="form-wizard-step" data-step-icon="users" data-step-label="Guests">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" placeholder="How many people?">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="guests">Number of Guests</label>
-          <input type="number" id="guests" name="guests" min="1" placeholder="How many people?">
+        <div class="form-wizard-step" data-step-icon="message" data-step-label="Details">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="message">Additional Details</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your event or booking needs..."></textarea>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="message">Additional Details</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us about your event or booking needs..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Submit Booking Request</button>
+        <button type="submit" class="btn btn-gold form-wizard-submit" style="width:100%;justify-content:center;">Submit Booking Request</button>
       </form>
+
+      <p class="booking-email-note">
+        <a href="#" data-email class="booking-email-link">Questions? Email us — every fight also streams live on Kick &amp; Twitch</a>
+      </p>
 
       <div class="form-success" id="form-success">
         <p style="font-size:2rem;margin-bottom:1rem;">✓</p>
@@ -408,39 +539,57 @@
         <h2 class="section-title">Apply as a Hologram Fighter</h2>
         <p class="section-subtitle">This isn't for spectators — it's for creators ready to become the next featured hologram fighter. Get scanned, step into the ring, and go against Wave and other hologram variants for our <span data-prize-pool>$10,000</span> prize pool at <span data-next-event>Hologram Boxing 002</span>.</p>
       </div>
-      <form class="booking-form" id="fighter-form" name="Fighter Application" data-ghl-form="fighter">
-        <div class="form-group">
-          <label for="fighter-name">Full Name / Ring Name</label>
-          <input type="text" id="fighter-name" name="name" required placeholder="Your name or alias">
+      <form class="booking-form form-wizard" id="fighter-form" name="Fighter Application" data-ghl-form="fighter" data-form-wizard>
+        <div class="form-wizard-step" data-step-icon="user" data-step-label="Name">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="fighter-name">Full Name / Ring Name</label>
+            <input type="text" id="fighter-name" name="name" required placeholder="Your name or alias" autocomplete="name">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="fighter-email">Email</label>
-          <input type="email" id="fighter-email" name="email" required placeholder="you@email.com">
+        <div class="form-wizard-step" data-step-icon="mail" data-step-label="Email">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="fighter-email">Email</label>
+            <input type="email" id="fighter-email" name="email" required placeholder="you@email.com" autocomplete="email">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="fighter-weight">Weight Class</label>
-          <select id="fighter-weight" name="weightClass" required>
-            <option value="">Select class...</option>
-            <option value="lightweight">Lightweight</option>
-            <option value="welterweight">Welterweight</option>
-            <option value="middleweight">Middleweight</option>
-            <option value="heavyweight">Heavyweight</option>
-            <option value="super-heavyweight">Super Heavyweight</option>
-          </select>
+        <div class="form-wizard-step" data-step-icon="weight" data-step-label="Class">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="fighter-weight">Weight Class</label>
+            <select id="fighter-weight" name="weightClass" required>
+              <option value="">Select class...</option>
+              <option value="lightweight">Lightweight</option>
+              <option value="welterweight">Welterweight</option>
+              <option value="middleweight">Middleweight</option>
+              <option value="heavyweight">Heavyweight</option>
+              <option value="super-heavyweight">Super Heavyweight</option>
+            </select>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="fighter-record">Record / Experience</label>
-          <input type="text" id="fighter-record" name="record" placeholder="e.g. 5-1-0, amateur boxer, creator">
+        <div class="form-wizard-step" data-step-icon="record" data-step-label="Record">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="fighter-record">Record / Experience</label>
+            <input type="text" id="fighter-record" name="record" placeholder="e.g. 5-1-0, amateur boxer, creator">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="fighter-social">Kick / Twitch Handle</label>
-          <input type="text" id="fighter-social" name="social" placeholder="Your Kick or Twitch username (optional)">
+        <div class="form-wizard-step" data-step-icon="social" data-step-label="Social">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="fighter-social">Kick / Twitch Handle</label>
+            <input type="text" id="fighter-social" name="social" placeholder="Your Kick or Twitch username (optional)">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="fighter-why">Why do you want to be a hologram fighter?</label>
-          <textarea id="fighter-why" name="message" rows="4" required placeholder="Tell us why you belong in the hologram ring. Which Wave variant do you want to face — Gold, Fire, Blue, Silver, Green, or Pink? What makes you the next hologram fighter fans need to see?"></textarea>
+        <div class="form-wizard-step" data-step-icon="message" data-step-label="Why">
+          <p class="form-wizard-step-meta" data-wizard-step-meta></p>
+          <div class="form-group">
+            <label for="fighter-why">Why do you want to be a hologram fighter?</label>
+            <textarea id="fighter-why" name="message" rows="4" required placeholder="Tell us why you belong in the hologram ring. Which Wave variant do you want to face — Gold, Fire, Blue, Silver, Green, Pink, or ? What makes you the next hologram fighter fans need to see?"></textarea>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Fighter Application</button>
+        <button type="submit" class="btn btn-primary form-wizard-submit" style="width:100%;justify-content:center;">Submit Fighter Application</button>
       </form>
       <div class="form-success" id="fighter-success">
         <p style="font-size:2rem;margin-bottom:1rem;">✓</p>

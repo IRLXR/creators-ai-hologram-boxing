@@ -739,7 +739,7 @@
     const form = document.getElementById('ticket-form');
     if (!form) return;
 
-    const viewSelect = form.querySelector('#ticket-view');
+    const creatorSelect = form.querySelector('#ticket-creator');
     const wallet = form.querySelector('#ticket-wallet');
     let checkoutStarted = false;
 
@@ -750,16 +750,15 @@
     };
 
     form.addEventListener('focusin', () => startCheckout({ step: 'form_focus' }), { once: true });
-    viewSelect?.addEventListener('change', () => {
-      startCheckout({ step: 'view_selected' });
-      const isAttendee = viewSelect.value === 'attendee';
+    creatorSelect?.addEventListener('change', () => {
+      startCheckout({ step: 'creator_selected' });
       const site = getSite();
-      const value = isAttendee ? site.crypto?.ticketPriceAttendee : site.crypto?.ticketPriceHeadset;
+      const value = site.crypto?.ticketPriceHeadset;
       trackAddToCart(value, {
-        content_name: isAttendee ? 'Attendee POV Ticket' : 'Headset POV Ticket',
-        content_id: viewSelect.value,
-        value: isAttendee ? ticketUsdValue('attendee') : ticketUsdValue('headset'),
-        price: isAttendee ? ticketUsdValue('attendee') : ticketUsdValue('headset'),
+        content_name: 'Creator POV Ticket',
+        content_id: creatorSelect.value || 'creator',
+        value: ticketUsdValue('headset'),
+        price: ticketUsdValue('headset'),
       });
     });
     wallet?.addEventListener('blur', () => {
