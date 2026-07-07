@@ -196,16 +196,76 @@
     });
   }
 
-  function initMemoryFilmSound() {
-    const video = document.querySelector('.lp-memory-film-video');
-    if (!video) return;
+  function initMemoryFilmPlayer() {
+    const frame = document.querySelector('.lp-memory-film-frame');
+    const video = frame?.querySelector('.lp-memory-film-video');
+    const playBtn = frame?.querySelector('.lp-memory-film-play');
+    if (!frame || !video || !playBtn) return;
 
-    const enableSound = () => {
-      video.muted = false;
-      if (video.volume === 0) video.volume = 1;
+    video.playsInline = true;
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+
+    let busy = false;
+
+    const showOverlay = () => frame.classList.remove('is-playing');
+    const hideOverlay = () => frame.classList.add('is-playing');
+
+    const startPlayback = async (event) => {
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      if (busy || !video.paused) return;
+
+      busy = true;
+      frame.classList.add('is-loading');
+
+      try {
+        if (video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) {
+          video.load();
+        }
+
+        video.muted = false;
+        video.volume = 1;
+
+        try {
+          await video.play();
+        } catch {
+          // iOS / TikTok in-app: start muted inside the tap, then restore sound.
+          video.muted = true;
+          await video.play();
+          video.muted = false;
+          video.volume = 1;
+        }
+
+        hideOverlay();
+      } catch (err) {
+        showOverlay();
+        console.warn('Memory film playback blocked:', err);
+      } finally {
+        frame.classList.remove('is-loading');
+        busy = false;
+      }
     };
 
-    video.addEventListener('play', enableSound);
+    playBtn.addEventListener('pointerup', (event) => {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      startPlayback(event);
+    });
+
+    playBtn.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        startPlayback(event);
+      }
+    });
+
+    video.addEventListener('play', hideOverlay);
+    video.addEventListener('pause', () => {
+      if (!video.ended) showOverlay();
+    });
+    video.addEventListener('ended', showOverlay);
   }
 
   function initReveal() {
@@ -332,7 +392,7 @@
     initCountdown();
     initWaitlistForm();
     initScene2Cta();
-    initMemoryFilmSound();
+    initMemoryFilmPlayer();
     initReveal();
     initParallax();
     initScene2Progress();
