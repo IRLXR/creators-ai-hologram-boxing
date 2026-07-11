@@ -17,11 +17,13 @@ const { execFileSync } = require("child_process");
 const os = require("os");
 const {
   verifyConnection,
+  getAdAccountBillingStatus,
   listCampaigns,
   createCampaign,
   createAdSet,
   createAdCreative,
   createAd,
+  updateObjectStatus,
   uploadVideo,
   uploadAdImage,
   waitForVideo,
@@ -116,7 +118,7 @@ const TEST_AD = {
   message:
     "Something the world has never seen is waiting behind that door. AI hologram boxers. Live. Front row energy. Become a Founding Fan.",
   linkUrl:
-    "https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=test&utm_content=walk_inside",
+    "https://www.hologramboxing.com/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=test&utm_content=walk_inside",
   callToAction: "SIGN_UP",
   dailyBudgetUsd: 5,
 };
@@ -215,11 +217,157 @@ async function cmdCreateTestAd(execute) {
   console.log("\nOpen Ads Manager → preview ad → turn ON only when ready to spend.");
 }
 
+const LANDING_BASE = "https://www.hologramboxing.com/landing.html";
+
+const DAY1_LAUNCH = {
+  campaignName: "CAMP_HB_Experience_001",
+  adSetName: "ADSET_HB_Experience_US_18-44",
+  dailyBudgetUsd: 20,
+  objective: "OUTCOME_TRAFFIC",
+  optimizationGoal: "LINK_CLICKS",
+  ads: [
+    {
+      name: "AD_HB_WalkInside_Launch15s",
+      video: "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4",
+      headline: "Would You Walk Inside?",
+      message:
+        "Something the world has never seen is waiting behind that door. AI hologram boxers. Live. Front row energy. Become a Founding Fan.",
+      linkUrl:
+        `${LANDING_BASE}?utm_source=meta&utm_medium=paid_social&utm_campaign=walk_inside&utm_content=launch_15s_vo`,
+      callToAction: "SIGN_UP",
+    },
+    {
+      name: "AD_HB_FutureIsHere_Launch15s_VO",
+      video: "ads/output/FUTURE-IS-HERE-15s-9x16-VO.mp4",
+      headline: "The Future Is Here",
+      message:
+        "The future of live entertainment just arrived. Walk into the arena, gear up, and watch AI hologram boxers go live — front row energy you've never felt before. Become a Founding Fan.",
+      linkUrl:
+        `${LANDING_BASE}?utm_source=meta&utm_medium=paid_social&utm_campaign=future_is_here&utm_content=launch_15s_vo`,
+      callToAction: "SIGN_UP",
+    },
+  ],
+};
+
+async function createVideoAd({ adSpec, adSetId, pageId, status }) {
+  const root = path.join(__dirname, "../..");
+  const videoPath = path.join(root, adSpec.video);
+  if (!fs.existsSync(videoPath)) {
+    throw new Error(`Video not found: ${adSpec.video}`);
+  }
+
+  console.log(`Uploading ${path.basename(videoPath)}…`);
+  const videoUpload = await uploadVideo(videoPath);
+  const videoId = videoUpload.id;
+  console.log("  Video ID:", videoId);
+
+  console.log("  Waiting for Meta video processing…");
+  const videoReady = await waitForVideo(videoId);
+
+  console.log("  Uploading thumbnail…");
+  const thumbPath = extractThumbnail(videoPath);
+  const imageUpload = await uploadAdImage(thumbPath);
+  fs.unlinkSync(thumbPath);
+  const imageUrl = pickImageUrl(imageUpload, videoReady);
+
+  const creativeRes = await createAdCreative({
+    name: `${adSpec.name}_Creative`,
+    pageId,
+    videoId,
+    imageUrl,
+    message: adSpec.message,
+    headline: adSpec.headline,
+    linkUrl: adSpec.linkUrl,
+    callToAction: adSpec.callToAction,
+  });
+  console.log("  Creative:", creativeRes.id);
+
+  const adRes = await createAd({
+    name: adSpec.name,
+    adSetId,
+    creativeId: creativeRes.id,
+    status,
+  });
+  console.log("  Ad:", adRes.id);
+  return { videoId, creativeId: creativeRes.id, adId: adRes.id };
+}
+
+async function cmdLaunchDay1(execute, activate) {
+  const status = activate ? "ACTIVE" : "PAUSED";
+  const plan = { ...DAY1_LAUNCH, status, landing: LANDING_BASE };
+
+  if (!execute) {
+    printJson("Dry run — Day 1 Meta launch (2 hero ads)", plan);
+    console.log("\nAdd --execute to create in Meta.");
+    console.log("Add --execute --activate to create AND turn on spend ($20/day).");
+    console.log("\nTikTok Day 1 ($15/day): open ads/launch-hub.html → TikTok tab (manual upload).");
+    return;
+  }
+
+  console.log("Checking Meta connection and billing…");
+  const { me, adAccount } = await verifyConnection();
+  console.log(`Connected as ${me.name} · Ad account ${adAccount.name} (status ${adAccount.account_status})`);
+
+  const billing = await getAdAccountBillingStatus();
+  if (!billing.funding_source_details && billing.account_status !== 1) {
+    console.warn(
+      "\n⚠ No payment method detected. Ad creation may fail (error 1359188)."
+    );
+    console.warn(
+      "Add billing: https://adsmanager.facebook.com/adsmanager/manage/ad_account_settings/ad_account_setup?act=534185933351087"
+    );
+  }
+
+  console.log(`\nCreating Day 1 campaign (${status})…`);
+  const campaignRes = await createCampaign({
+    name: DAY1_LAUNCH.campaignName,
+    objective: DAY1_LAUNCH.objective,
+    status,
+  });
+  console.log("Campaign:", campaignRes.id);
+
+  const adSetRes = await createAdSet({
+    campaignId: campaignRes.id,
+    name: DAY1_LAUNCH.adSetName,
+    dailyBudgetUsd: DAY1_LAUNCH.dailyBudgetUsd,
+    optimizationGoal: DAY1_LAUNCH.optimizationGoal,
+    targeting: defaultTargeting(),
+    status,
+  });
+  console.log("Ad set:", adSetRes.id, `($${DAY1_LAUNCH.dailyBudgetUsd}/day)`);
+
+  const pageId = process.env.META_PAGE_ID;
+  const createdAds = [];
+  for (const adSpec of DAY1_LAUNCH.ads) {
+    console.log(`\nCreating ad: ${adSpec.name}`);
+    const result = await createVideoAd({ adSpec, adSetId: adSetRes.id, pageId, status });
+    createdAds.push({ ...adSpec, ...result });
+  }
+
+  const act = process.env.META_AD_ACCOUNT_ID;
+  printJson(`Day 1 Meta ads ${activate ? "LIVE" : "created (PAUSED)"}`, {
+    campaignId: campaignRes.id,
+    adSetId: adSetRes.id,
+    dailyBudgetUsd: DAY1_LAUNCH.dailyBudgetUsd,
+    landingUrl: LANDING_BASE,
+    ads: createdAds,
+    adsManagerUrl: `https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=${act}&selected_campaign_ids=${campaignRes.id}`,
+  });
+
+  if (activate) {
+    console.log("\n✓ Meta ads are ACTIVE — spending up to $20/day.");
+  } else {
+    console.log("\nAds created PAUSED. Re-run with --execute --activate to turn on spend.");
+  }
+  console.log("\nTikTok ($15/day): ads/launch-hub.html → TikTok tab → upload same 2 videos.");
+}
+
 async function main() {
   loadEnv();
   const args = process.argv.slice(2);
   const [command, arg] = args;
   const execute = args.includes("--execute");
+  const activate = args.includes("--activate");
 
   switch (command) {
     case "verify":
@@ -237,6 +385,9 @@ async function main() {
     case "create-test-ad":
       await cmdCreateTestAd(execute);
       break;
+    case "launch-day1":
+      await cmdLaunchDay1(execute, activate);
+      break;
     default:
       console.log(`Meta Marketing API — Hologram Boxing
 
@@ -246,6 +397,7 @@ Commands:
   plan [name]         Show Campaign → Ad Set → Ads mapping from campaigns.json
   create-waitlist     Create PAUSED waitlist campaign + ad set (--execute)
   create-test-ad      Upload hero video + create PAUSED test ad (--execute)
+  launch-day1         Day 1: 2 hero ads → landing ($20/day Meta) (--execute [--activate])
 
 Setup:
   1. Copy .env.example → .env.local

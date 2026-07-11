@@ -1,0 +1,295 @@
+{
+  "version": "2026-07-10",
+  "audience": "influencers_creators_streamers",
+  "goal": "Creators sign up at landing.html to co-stream HB 002 to their followers",
+  "landing": "https://www.hologramboxing.com/landing.html",
+  "utm_campaign_base": "influencer_recruit",
+  "status": "PAUSED_OFF",
+  "priority": "influencers_first",
+  "layer_map": {
+    "L1_see_you": "awareness",
+    "L2_get_curious": "consideration",
+    "L3_sign_up": "conversion",
+    "L4_come_back": "retargeting",
+    "L5_show_up": "countdown"
+  },
+  "fan_funnel_separate": {
+    "note": "Fan campaigns (Founding Fan, Awareness, Consideration) are NOT the influencer staircase. Run influencer layers first.",
+    "campaigns": [
+      "CAMP_HB_Awareness_001",
+      "CAMP_HB_Consideration_001",
+      "CAMP_HB_Convert_FoundingFan_001",
+      "CAMP_HB_Experience_001"
+    ]
+  },
+  "platforms": ["tiktok", "meta"],
+  "staircase": {
+    "L1_see_you": {
+      "step": 1,
+      "funnel_layer": "awareness",
+      "ads_manager_label": "Awareness (creators)",
+      "plain_english": "See you",
+      "creator_job": "Stop scrolling — remember hologram boxing exists for streamers",
+      "tiktok_campaign": "CAMP_HB_Influencer_L1_SeeYou_001",
+      "meta_campaign": "CAMP_HB_Influencer_L1_SeeYou_001",
+      "objective_tiktok": "WEB_CONVERSIONS",
+      "objective_meta": "OUTCOME_AWARENESS",
+      "optimization_tiktok": "CLICK",
+      "optimization_meta": "REACH",
+      "budget_usd_day": 20,
+      "campaign_id_tiktok": "1870345571958114",
+      "cta": "Learn More",
+      "adgroups": [
+        { "slug": "gaming", "name": "ADGRP_HB_Inf_L1_GamingStreamers_FL", "id_tiktok": "1870345667162434", "age_min": 18, "age_max": 34 },
+        { "slug": "creators", "name": "ADGRP_HB_Inf_L1_AllCreators_FL", "id_tiktok": "1870345677808817", "age_min": 18, "age_max": 44 }
+      ],
+      "ads": [
+        {
+          "suffix": "CallingAll",
+          "creative": "calling_all",
+          "file": "ads/influencer-recruit/output/TIKTOK-CALLING-ALL-INFLUENCERS-15s.mp4",
+          "headline": "Calling All Influencers",
+          "tiktok_texts": [
+            "Calling all streamers — live stream the first AI hologram boxing event.",
+            "Creators — your next co-stream is waiting. Would you walk inside?"
+          ],
+          "meta_message": "Calling streamers & content creators. The world's first live AI hologram boxing experience is loading — built for Kick, Twitch, YouTube, and TikTok."
+        },
+        {
+          "suffix": "WalkInside",
+          "creative": "walk",
+          "file": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4",
+          "headline": "Would You Walk Inside?",
+          "tiktok_texts": [
+            "Would you walk inside? Creators — stream hologram boxing live.",
+            "Something wild is behind that door. Streamers — this is your next event."
+          ],
+          "meta_message": "Would you walk inside? Creators — bring your audience into the tent. AI hologram boxers. Live. Front row energy."
+        },
+        {
+          "suffix": "FutureMystery",
+          "creative": "future_mystery",
+          "file": "ads/brief-001/output/Director_Brief_001_Version_B_Cinematic_Mystery.mp4",
+          "headline": "The Future Is Here",
+          "tiktok_texts": [
+            "THE FUTURE OF LIVE ENTERTAINMENT... stream it live.",
+            "Premium fight night energy — built for creators who go live."
+          ],
+          "meta_message": "The future of live entertainment. Tent, headsets, hologram boxers going live — made for streamers."
+        }
+      ]
+    },
+    "L2_get_curious": {
+      "step": 2,
+      "funnel_layer": "consideration",
+      "ads_manager_label": "Consideration (creators)",
+      "plain_english": "Get curious",
+      "creator_job": "Understand the co-stream opportunity — tent, live FX, Kick/Twitch",
+      "tiktok_campaign": "CAMP_HB_Influencer_L2_Curious_001",
+      "meta_campaign": "CAMP_HB_Influencer_L2_Curious_001",
+      "objective_tiktok": "WEB_CONVERSIONS",
+      "objective_meta": "OUTCOME_TRAFFIC",
+      "optimization_tiktok": "TRAFFIC_LANDING_PAGE_VIEW",
+      "optimization_meta": "LINK_CLICKS",
+      "budget_usd_day": 20,
+      "campaign_id_tiktok": "1870345580231025",
+      "cta": "Learn More",
+      "adgroups": [
+        { "slug": "gaming", "name": "ADGRP_HB_Inf_L2_GamingStreamers_FL", "id_tiktok": "1870345678592097", "age_min": 18, "age_max": 34 },
+        { "slug": "creators", "name": "ADGRP_HB_Inf_L2_AllCreators_FL", "id_tiktok": "1870345677811185", "age_min": 18, "age_max": 44 }
+      ],
+      "ads": [
+        {
+          "suffix": "LiveFX",
+          "creative": "livefx",
+          "file": "ads/output/32-live-interactive-effects-plate.mp4",
+          "headline": "Stream the Tent — Live FX",
+          "tiktok_texts": [
+            "Your chat controls the show — live interactive effects in the tent.",
+            "Kick & Twitch creators — stream hologram boxing with live FX."
+          ],
+          "meta_message": "Stream the tent — live interactive effects your audience can feel. Co-stream partnerships open."
+        },
+        {
+          "suffix": "CoStream",
+          "creative": "stream",
+          "file": "ugc/output/08-watch-free-on-kick-twitch-plate.mp4",
+          "headline": "Co-Stream on Kick & Twitch",
+          "tiktok_texts": [
+            "Watch free on Kick & Twitch — or co-stream it with us.",
+            "Streamers: bring your chat ringside to hologram boxing."
+          ],
+          "meta_message": "Co-stream hologram boxing on Kick & Twitch. VIP access and brand ambassador roles for partners."
+        },
+        {
+          "suffix": "InsideTent",
+          "creative": "tent",
+          "file": "ugc/output/02-the-inflatable-tent-plate.mp4",
+          "headline": "Inside the Hologram Tent",
+          "tiktok_texts": [
+            "Dark tent. Glowing square. Wireframe boxers. Your audience watches in VR.",
+            "Show your followers what's inside — inflatable tent fight night."
+          ],
+          "meta_message": "Inside the hologram tent — fog, glowing fight square, Wave wireframe boxers. Content gold for live streamers."
+        }
+      ]
+    },
+    "L3_sign_up": {
+      "step": 3,
+      "funnel_layer": "conversion",
+      "ads_manager_label": "Conversion — Sign up (creators)",
+      "plain_english": "Sign up",
+      "creator_job": "Apply now — open call, partner form, email capture",
+      "tiktok_campaign": "CAMP_HB_InfluencerRecruit_001",
+      "meta_campaign": "CAMP_HB_InfluencerRecruit_001",
+      "campaign_id_tiktok": "1870260441542146",
+      "campaign_id_meta": "120249816887950588",
+      "objective_tiktok": "WEB_CONVERSIONS",
+      "objective_meta": "OUTCOME_TRAFFIC",
+      "optimization_tiktok": "CONVERT",
+      "optimization_meta": "LINK_CLICKS",
+      "optimization_event": "FORM",
+      "budget_usd_day": 20,
+      "cta": "Sign Up",
+      "note": "EXISTING — 6 TikTok ad groups, 24 ads. Meta partial (2 ad sets live, 4 scripted).",
+      "adgroups_tiktok": [
+        "ADGRP_HB_OpenCallExact_US_Creators18-44",
+        "ADGRP_HB_InfluencerRecruit_US_18-44",
+        "ADGRP_HB_InfluencerRecruit_GamingStreamers_FL",
+        "ADGRP_HB_InfluencerRecruit_CombatCreators_FL",
+        "ADGRP_HB_InfluencerRecruit_ReelsCreators_FL",
+        "ADGRP_HB_InfluencerRecruit_OrlandoMiami_FL"
+      ],
+      "ads_per_group": [
+        "Open Call Exact",
+        "Open Call Optimized",
+        "Open Call Creators v1",
+        "Live FX"
+      ]
+    },
+    "L4_come_back": {
+      "step": 4,
+      "funnel_layer": "retargeting",
+      "ads_manager_label": "Retargeting (creators)",
+      "plain_english": "Come back",
+      "creator_job": "Retarget creators who visited landing but didn't sign up",
+      "tiktok_campaign": "CAMP_HB_Influencer_L4_ComeBack_001",
+      "meta_campaign": "CAMP_HB_Influencer_L4_ComeBack_001",
+      "objective_tiktok": "WEB_CONVERSIONS",
+      "objective_meta": "OUTCOME_TRAFFIC",
+      "optimization_tiktok": "CONVERT",
+      "optimization_meta": "LINK_CLICKS",
+      "optimization_event": "FORM",
+      "budget_usd_day": 20,
+      "campaign_id_tiktok": "1870345588238449",
+      "cta": "Sign Up",
+      "audience_note": "Enable when pixel has landing visitors 7d excluding Lead. TikTok retarget list / Meta custom audience.",
+      "adgroups": [
+        { "slug": "gaming", "name": "ADGRP_HB_Inf_L4_GamingStreamers_FL", "id_tiktok": "1870345749405314", "age_min": 18, "age_max": 34 },
+        { "slug": "creators", "name": "ADGRP_HB_Inf_L4_AllCreators_FL", "id_tiktok": "1870345771609170", "age_min": 18, "age_max": 44 }
+      ],
+      "ads": [
+        {
+          "suffix": "Reminder",
+          "creative": "creator_reminder",
+          "file": "ads/influencer-recruit/output/CREATOR-REMINDER-15s.mp4",
+          "headline": "Streamer Slots Filling",
+          "tiktok_texts": [
+            "You looked — streamer partner slots are filling. Finish your application.",
+            "Still thinking about co-streaming hologram boxing? Sign up now."
+          ],
+          "meta_message": "You visited — don't miss partner slots. Co-stream hologram boxing live. Finish your application."
+        },
+        {
+          "suffix": "OpenCallExact",
+          "creative": "open_exact",
+          "file": "ads/influencer-recruit/output/OPEN-CALL-EXACT-POSTER-15s.mp4",
+          "headline": "WE WANT YOU!",
+          "tiktok_texts": [
+            "OPEN CALL — we still want you. Apply at hologramboxing.com",
+            "Creators — your spot is waiting. WE WANT YOU!"
+          ],
+          "meta_message": "OPEN CALL for streamers & content creators. WE WANT YOU — apply now."
+        },
+        {
+          "suffix": "WalkInsideRT",
+          "creative": "walk",
+          "file": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4",
+          "headline": "Don't Miss the Stream",
+          "tiktok_texts": [
+            "You looked inside — bring your audience next time. Sign up.",
+            "Would you walk inside? Creator applications still open."
+          ],
+          "meta_message": "You looked — bring your followers ringside. Creator partner applications still open."
+        }
+      ]
+    },
+    "L5_show_up": {
+      "step": 5,
+      "funnel_layer": "countdown",
+      "ads_manager_label": "Countdown / urgency (creators)",
+      "plain_english": "Show up",
+      "creator_job": "Urgency — event soon, last partner slots, go live with us",
+      "tiktok_campaign": "CAMP_HB_Influencer_L5_ShowUp_001",
+      "meta_campaign": "CAMP_HB_Influencer_L5_ShowUp_001",
+      "objective_tiktok": "WEB_CONVERSIONS",
+      "objective_meta": "OUTCOME_TRAFFIC",
+      "optimization_tiktok": "CONVERT",
+      "optimization_meta": "LINK_CLICKS",
+      "optimization_event": "FORM",
+      "budget_usd_day": 20,
+      "campaign_id_tiktok": "1870345600654738",
+      "cta": "Sign Up",
+      "audience_note": "Turn on when HB 002 date is ≤14 days out. Sync with site countdown.",
+      "adgroups": [
+        { "slug": "gaming", "name": "ADGRP_HB_Inf_L5_GamingStreamers_FL", "id_tiktok": "1870345767397378", "age_min": 18, "age_max": 34 },
+        { "slug": "creators", "name": "ADGRP_HB_Inf_L5_AllCreators_FL", "id_tiktok": "1870345772618818", "age_min": 18, "age_max": 44 }
+      ],
+      "ads": [
+        {
+          "suffix": "LastCall",
+          "creative": "streamer_last_call",
+          "file": "ads/influencer-recruit/output/STREAMER-LAST-CALL-15s.mp4",
+          "headline": "Last Call for Streamers",
+          "tiktok_texts": [
+            "LAST CALL — streamer partner slots closing. HB 002 loading.",
+            "Final call for creators — co-stream hologram boxing before slots close."
+          ],
+          "meta_message": "Last call for streamers & creators. Partner slots closing — sign up before HB 002."
+        },
+        {
+          "suffix": "OpenCallOpt",
+          "creative": "open_opt",
+          "file": "ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4",
+          "headline": "Open Call — We Want You",
+          "tiktok_texts": [
+            "Open call closing soon — stream hologram boxing live. Apply now.",
+            "Creators — last chance to join the team. Sign up."
+          ],
+          "meta_message": "Open call closing soon. Co-stream hologram boxing — VIP access, brand ambassador roles."
+        },
+        {
+          "suffix": "LiveFXUrgency",
+          "creative": "livefx",
+          "file": "ads/output/32-live-interactive-effects-plate.mp4",
+          "headline": "Go Live With Us",
+          "tiktok_texts": [
+            "Go live with us — interactive FX, hologram fights, your audience ringside.",
+            "Streamers — HB 002 is almost here. Sign up to co-stream."
+          ],
+          "meta_message": "Go live with us. Interactive effects, hologram fights, your chat ringside. Partner sign-up closing."
+        }
+      ]
+    }
+  },
+  "totals_when_complete": {
+    "tiktok_campaigns": 5,
+    "tiktok_adgroups": 14,
+    "tiktok_ads": 42,
+    "tiktok_ads_live_july_10": 42,
+    "meta_campaigns": 5,
+    "meta_adsets": 14,
+    "meta_ads": 42,
+    "deployment_note": "TikTok influencer staircase complete (PAUSED). Meta pending token refresh."
+  }
+}

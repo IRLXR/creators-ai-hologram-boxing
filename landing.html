@@ -42,9 +42,42 @@
 
     <div class="lp-content">
       <p class="lp-kicker">CREATORS AI HOLOGRAM BOXING</p>
-      <p class="lp-kicker">ΓÜí A NEW ERA BEGINS</p>
-      <h1 class="lp-title">THE WORLD'S FIRST LIVE AI HOLOGRAM BOXING EXPERIENCE IS COMING.</h1>
-      <p class="lp-lead">Step Inside. Gear Up. Witness History.</p>
+      <p class="lp-kicker" id="lp-kicker-secondary">⚡ A NEW ERA BEGINS</p>
+      <h1 class="lp-title" id="lp-hero-title">THE WORLD'S FIRST LIVE AI HOLOGRAM BOXING EXPERIENCE IS COMING.</h1>
+      <p class="lp-lead" id="lp-hero-lead">Step Inside. Gear Up. Witness History.</p>
+
+      <div class="lp-path-toggle" role="tablist" aria-label="Choose signup type">
+        <button type="button" class="lp-path-btn" id="lp-path-creator" role="tab" aria-selected="false" aria-controls="creator-partner-signup">Streamers &amp; Creators</button>
+        <button type="button" class="lp-path-btn is-active" id="lp-path-fan" role="tab" aria-selected="true" aria-controls="founding-fan-signup">Founding Fans</button>
+      </div>
+
+      <div class="lp-email-wrap" id="creator-partner-signup" hidden>
+        <p class="lp-creator-perks">Co-stream HB 002 · VIP ringside · Brand ambassador roles · Live interactive FX for your chat</p>
+        <form class="lp-email-form" id="creator-partner-form" novalidate>
+          <label class="visually-hidden" for="creator-name">Your name</label>
+          <input type="text" id="creator-name" name="name" class="lp-email-input" placeholder="Your name" autocomplete="name" required aria-required="true">
+          <label class="visually-hidden" for="creator-email">Email</label>
+          <input type="email" id="creator-email" name="email" class="lp-email-input" placeholder="Email" autocomplete="email" inputmode="email" required aria-required="true" aria-describedby="creator-partner-form-hint">
+          <label class="visually-hidden" for="creator-channel">Channel or profile link</label>
+          <input type="url" id="creator-channel" name="channelUrl" class="lp-email-input" placeholder="Kick / Twitch / YouTube / TikTok link" inputmode="url" required aria-required="true">
+          <label class="visually-hidden" for="creator-platform">Primary platform</label>
+          <select id="creator-platform" name="platform" class="lp-email-input lp-email-select" aria-label="Primary platform">
+            <option value="">Primary platform (optional)</option>
+            <option value="Kick">Kick</option>
+            <option value="Twitch">Twitch</option>
+            <option value="YouTube">YouTube</option>
+            <option value="TikTok">TikTok</option>
+            <option value="Instagram Reels">Instagram Reels</option>
+            <option value="Other">Other</option>
+          </select>
+          <button type="submit" class="lp-email-btn lp-email-btn--gold" id="creator-partner-submit">Apply as Creator Partner</button>
+          <p class="lp-email-hint" id="creator-partner-form-hint" role="status" aria-live="polite"></p>
+        </form>
+        <div class="lp-success" id="creator-partner-success" hidden>
+          <p class="lp-success-line1">Application received.</p>
+          <p class="lp-success-line2">We'll review your channel and reach out about co-streaming HB 002.</p>
+        </div>
+      </div>
 
       <div class="lp-email-wrap" id="founding-fan-signup">
         <form class="lp-email-form" id="prelaunch-form" novalidate>
@@ -238,5 +271,5 @@
     </div>
   </section>
 
-  <script src="js/landing.js?v=20260706c" defer></script></body>
+  <script src="js/landing.js?v=20260711a" defer></script></body>
 </html>

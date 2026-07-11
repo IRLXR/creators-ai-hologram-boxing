@@ -1,0 +1,92 @@
+{
+  "campaign_id_internal": "CAMP_HB_InfluencerRecruit_001",
+  "objective_acmo": "Creator recruitment",
+  "business_stage": "Stage 1 Launch — solve influencer bottleneck before fan scale",
+  "primary_kpi": "Landing page sign-ups (waitlist / founding fan)",
+  "landing_url": "https://www.hologramboxing.com/landing.html",
+  "source_poster": {
+    "drive_file": "hf_20260623_204644_29f46aec-a5a3-45f3-b728-106cc08fd14a.png",
+    "open_call_poster": "hf_20260624_004247_c40630d2-118c-45ae-8c5c-57587b58b159.png",
+    "local_original": "ads/influencer-recruit/input/OPEN-CALL-CONTENT-CREATORS-WE-WANT-YOU.png",
+    "local_optimized_tiktok": "ads/influencer-recruit/output/OPEN-CALL-OPTIMIZED-TIKTOK-9x16.png",
+    "local_video_tiktok": "ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4"
+  },
+  "headlines": {
+    "hero": "OPEN CALL FOR STREAMERS & CONTENT CREATORS",
+    "sub": "WE WANT YOU!",
+    "tagline_left": "BE BOLD. BE LIVE. STREAM IT!",
+    "tagline_right": "JOIN THE TEAM. STREAM THE FIGHTS. GROW YOUR CHANNEL!"
+  },
+  "pitch": "Do you love live entertainment, AI, and the future of combat sports? Join Creators AI Hologram Boxing and help us build the next generation of fight night experiences!",
+  "looking_for": [
+    "Kick & Twitch Streamers",
+    "YouTube Content Creators",
+    "TikTok & Reel Creators",
+    "Social Media Influencers",
+    "Event Hype Teams"
+  ],
+  "what_we_need": [
+    "Positive energy",
+    "Reliable and professional",
+    "Comfortable on camera",
+    "Active streaming or content presence",
+    "Passion for live entertainment and hologram boxing",
+    "Ability to create engaging fight night content"
+  ],
+  "opportunities": [
+    "Live Fight Night Streaming Access",
+    "Co-Stream Partnerships",
+    "Hologram Boxing Event Coverage",
+    "Brand Ambassador Roles",
+    "Exclusive VIP Ringside Access"
+  ],
+  "cta": {
+    "primary": "DM @hologramboxing",
+    "dm_fields": "Name, Channel Link",
+    "website": "https://www.hologramboxing.com",
+    "partner_form": "https://www.hologramboxing.com/book.html#partner"
+  },
+  "tiktok": {
+    "campaign_name": "CAMP_HB_InfluencerRecruit_001",
+    "adgroup_name": "ADGRP_HB_InfluencerRecruit_US_18-44",
+    "ad_name": "AD_HB_OpenCall_Optimized15s",
+    "advertiser_id": "7658020511833014273",
+    "daily_budget_usd": 20,
+    "ad_text": "Open call for streamers & creators — live stream hologram boxing. We want you. Apply now.",
+    "landing_url": "https://www.hologramboxing.com/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=influencer_recruit&utm_content=open_call_optimized",
+    "cta": "Sign Up",
+    "identity": "@hologramboxing",
+    "video": "ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4",
+    "status": "DISABLE"
+  },
+  "meta": {
+    "campaign_name": "CAMP_HB_InfluencerRecruit_001",
+    "adset_name": "ADSET_HB_InfluencerRecruit_US_18-44",
+    "ad_name": "AD_HB_OpenCall_Creators_15s",
+    "objective": "OUTCOME_TRAFFIC",
+    "optimization_goal": "LINK_CLICKS",
+    "daily_budget_usd": 20,
+    "headline": "Open Call — We Want You",
+    "primary_text": "Calling streamers & content creators. Live stream the first AI hologram boxing event — your fans watch ringside. VIP access, co-stream partnerships, brand ambassador roles. Apply now.",
+    "description": "Kick, Twitch, YouTube, TikTok creators welcome.",
+    "landing_url": "https://www.hologramboxing.com/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=influencer_recruit&utm_content=open_call_optimized",
+    "call_to_action": "SIGN_UP",
+    "video": "ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4",
+    "targeting": {
+      "geo": "Orlando, Miami, Tampa, Jacksonville (Florida — 25 mile radius)",
+      "age_min": 18,
+      "age_max": 44,
+      "interests": ["Twitch", "Video games", "YouTube", "Gamer", "Social media marketing"],
+      "platforms": ["facebook", "instagram"],
+      "placements": ["feed", "story", "reels", "stream"]
+    },
+    "status": "PAUSED"
+  },
+  "audience_priority_acmo": [
+    "Local micro-creators",
+    "Local streamers",
+    "Gaming creators",
+    "Combat sports creators",
+    "Technology creators"
+  ]
+}

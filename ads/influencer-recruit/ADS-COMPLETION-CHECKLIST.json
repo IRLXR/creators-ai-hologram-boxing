@@ -1,0 +1,131 @@
+{
+  "completed_at": "2026-07-09",
+  "status": "PAUSED_OFF",
+  "primary_goal": "Landing page sign-up (Founding Fan waitlist)",
+  "tiktok": {
+    "campaign": {
+      "name": "CAMP_HB_InfluencerRecruit_001",
+      "id": "1870260441542146",
+      "objective": "WEB_CONVERSIONS",
+      "sales_destination": "WEBSITE",
+      "budget_usd_day": 20,
+      "budget_mode": "CBO (budget_optimize_on=true)",
+      "pixel_id": "7658773511775043592",
+      "status": "DISABLE"
+    },
+    "adgroups": [
+      {
+        "name": "ADGRP_HB_OpenCallExact_US_Creators18-44",
+        "id": "1870273684329890",
+        "optimization_goal": "CONVERT",
+        "optimization_event": "FORM",
+        "pixel_id": "7658773511775043592",
+        "placement": "PLACEMENT_TIKTOK",
+        "geo": "Orlando, Miami, Tampa, Jacksonville (25 mi)",
+        "age": "18-44",
+        "language": "en",
+        "attribution_click": "7 days",
+        "attribution_view": "1 day",
+        "targeting_mode": "AUTOMATIC + suggestion_audience_enabled",
+        "status": "DISABLE"
+      },
+      {
+        "name": "ADGRP_HB_InfluencerRecruit_US_18-44",
+        "id": "1870260507533777",
+        "optimization_goal": "CONVERT",
+        "optimization_event": "FORM",
+        "pixel_id": "7658773511775043592",
+        "placement": "PLACEMENT_TIKTOK",
+        "geo": "Orlando, Miami, Tampa, Jacksonville DMAs",
+        "age": "18-44",
+        "language": "en",
+        "targeting_mode": "AUTOMATIC + suggestion_audience_enabled",
+        "status": "DISABLE"
+      }
+    ],
+    "ads": [
+      {
+        "name": "AD_HB_OpenCallExact_Poster15s",
+        "id": "1870273693978961",
+        "identity": "@hologramboxing (74ce7df5-a252-5942-9d55-6d43033f4752)",
+        "cta": "Sign Up (7659792406161673234)",
+        "landing": "https://www.hologramboxing.com/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=influencer_recruit&utm_content=open_call_exact_poster",
+        "utm_params": true,
+        "pixel_tracking": true,
+        "ad_text_variants": 2,
+        "video": "OPEN-CALL-EXACT-POSTER-15s.mp4",
+        "status": "DISABLE"
+      },
+      {
+        "name": "AD_HB_OpenCall_Optimized15s",
+        "id": "1870260531311938",
+        "identity": "@hologramboxing",
+        "cta": "Sign Up",
+        "landing": "https://www.hologramboxing.com/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=influencer_recruit&utm_content=open_call_optimized",
+        "utm_params": true,
+        "pixel_tracking": true,
+        "ad_text_variants": 2,
+        "video": "TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4",
+        "status": "DISABLE"
+      }
+    ]
+  },
+  "meta": {
+    "campaign": {
+      "name": "CAMP_HB_InfluencerRecruit_001",
+      "id": "120249816887950588",
+      "objective": "OUTCOME_TRAFFIC",
+      "page": "Romethelife (118345932178751)",
+      "status": "PAUSED"
+    },
+    "adsets": [
+      {
+        "name": "ADSET_HB_OpenCallExact_US_Creators18-34",
+        "id": "120249817287270588",
+        "budget_usd_day": 20,
+        "optimization_goal": "LINK_CLICKS",
+        "destination_type": "WEBSITE",
+        "attribution": "1-day click, 0-day view",
+        "geo": "Orlando, Miami, Tampa, Jacksonville DMAs",
+        "age": "18-34",
+        "placements": "Facebook feed/story + Instagram feed/story/reels",
+        "status": "PAUSED"
+      },
+      {
+        "name": "ADSET_HB_InfluencerRecruit_US_18-44",
+        "id": "120249816888100588",
+        "budget_usd_day": 20,
+        "optimization_goal": "LINK_CLICKS",
+        "destination_type": "WEBSITE",
+        "attribution": "1-day click, 0-day view",
+        "geo": "Orlando, Miami, Tampa, Jacksonville DMAs",
+        "age": "18-44",
+        "placements": "Facebook feed/story + Instagram feed/story/reels",
+        "status": "PAUSED"
+      }
+    ],
+    "ads": [
+      {
+        "name": "AD_HB_OpenCallExact_Poster15s",
+        "id": "120249817302960588",
+        "headline": "WE WANT YOU!",
+        "link_description": "Kick, Twitch, YouTube, TikTok & Reel creators welcome. Sign up now.",
+        "cta": "SIGN_UP",
+        "landing": "https://www.hologramboxing.com/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=influencer_recruit&utm_content=open_call_exact_poster",
+        "url_tags": true,
+        "status": "PAUSED"
+      },
+      {
+        "name": "AD_HB_OpenCall_Creators_15s",
+        "id": "120249816902680588",
+        "headline": "Open Call — We Want You",
+        "link_description": "Kick, Twitch, YouTube, TikTok creators welcome. Sign up now.",
+        "cta": "SIGN_UP",
+        "landing": "https://www.hologramboxing.com/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=influencer_recruit&utm_content=open_call_optimized",
+        "url_tags": true,
+        "status": "PAUSED"
+      }
+    ]
+  },
+  "gaps_remaining": []
+}

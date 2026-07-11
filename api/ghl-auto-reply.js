@@ -109,6 +109,11 @@ function formFieldRows(data, formKey) {
       detailRow('Kick / Twitch', data.social),
       detailRow('Application message', data.message),
     );
+  } else if (formKey === 'creator_partner') {
+    rows.push(
+      detailRow('Channel / profile', data.channelUrl),
+      detailRow('Platform', data.platform),
+    );
   } else {
     Object.entries(data).forEach(([key, value]) => {
       if (key === 'name' || key === 'email') return;
@@ -125,6 +130,7 @@ function buildTeamAlert(formKey, formLabel, data, submitterContactId, pageUrl, l
     booking: 'New Booking Request',
     fighter: 'New Fighter Application',
     waitlist: 'New Pre-Launch Signup',
+    creator_partner: 'New Creator Partner Application',
   };
   const title = alertTitles[formKey] || 'New Website Submission';
   const contactName = data.name || data.email || 'Unknown lead';
@@ -273,6 +279,24 @@ function buildAutoReply(formKey, data, firstName) {
     return {
       subject: `Fighter application received — ${NEXT_EVENT}`,
       html: emailShell({ title: 'Fighter Application Received', bodyHtml }),
+    };
+  }
+
+  if (formKey === 'creator_partner') {
+    const bodyHtml = `
+      <p style="margin:0 0 16px;">${name}</p>
+      <p style="margin:0 0 16px;">Your <strong>creator partner application</strong> for <strong>${escapeHtml(NEXT_EVENT)}</strong> is in.</p>
+      <p style="margin:0 0 16px;">We're reviewing streamers and content creators for co-stream slots, VIP tent access, and brand ambassador roles.</p>
+      ${detailsTable([
+        detailRow('Channel / profile', data.channelUrl),
+        detailRow('Platform', data.platform),
+      ])}
+      <p style="margin:0;">If you're a fit, we'll reach out about co-streaming hologram boxing live to your audience. Watch your inbox.</p>
+    `;
+
+    return {
+      subject: `Creator partner application received — ${NEXT_EVENT}`,
+      html: emailShell({ title: 'Creator Partner Application Received', bodyHtml }),
     };
   }
 

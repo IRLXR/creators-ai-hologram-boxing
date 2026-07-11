@@ -1,0 +1,23 @@
+{
+  "deployed_at": "2026-07-10T16:37:00Z",
+  "status": "COMPLETE_PAUSED",
+  "platform": "tiktok",
+  "audience": "influencers_only",
+  "summary": {
+    "campaigns": 5,
+    "adgroups": 14,
+    "ads": 42,
+    "note": "L1 has 1 duplicate WalkInside Gaming ad (7 total in campaign) — safe to pause duplicate in Ads Manager"
+  },
+  "layers": {
+    "L1_awareness": { "campaign_id": "1870345571958114", "ads": 6, "funnel": "awareness" },
+    "L2_consideration": { "campaign_id": "1870345580231025", "ads": 6, "funnel": "consideration" },
+    "L3_conversion": { "campaign_id": "1870260441542146", "ads": 24, "funnel": "conversion" },
+    "L4_retargeting": { "campaign_id": "1870345588238449", "ads": 6, "funnel": "retargeting" },
+    "L5_countdown": { "campaign_id": "1870345600654738", "ads": 6, "funnel": "countdown" }
+  },
+  "meta": {
+    "status": "PENDING_TOKEN_REFRESH",
+    "command": "npm run meta:launch-influencer-staircase"
+  }
+}

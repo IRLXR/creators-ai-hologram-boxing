@@ -71,11 +71,22 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'Email is required' });
   }
 
+  if (formKey === 'creator_partner') {
+    if (!String(data.name || '').trim()) {
+      return res.status(400).json({ error: 'Name is required' });
+    }
+    if (!String(data.channelUrl || '').trim()) {
+      return res.status(400).json({ error: 'Channel link is required' });
+    }
+  }
+
   const { firstName, lastName } = splitName(data.name);
   const tags = [
     'website-lead',
     formKey ? `form-${formKey}` : null,
     formLabel ? tagSlug(formLabel) : null,
+    formKey === 'creator_partner' ? 'creator-partner-lead' : null,
+    formKey === 'creator_partner' ? 'influencer-recruit' : null,
   ].filter(Boolean);
 
   const contactPayload = {

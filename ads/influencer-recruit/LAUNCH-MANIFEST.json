@@ -1,0 +1,54 @@
+{
+  "launched_at": "2026-07-10",
+  "updated_at": "2026-07-10T16:30:00Z",
+  "status": "PAUSED_OFF",
+  "landing": "https://www.hologramboxing.com/landing.html",
+  "influencer_staircase": {
+    "spec": "ads/influencer-recruit/INFLUENCER-STAIRCASE.json",
+    "guide": "docs/INFLUENCER-STAIRCASE-GUIDE.md",
+    "tiktok": {
+      "campaigns": {
+        "L1_see_you": "1870345571958114",
+        "L2_get_curious": "1870345580231025",
+        "L3_sign_up": "1870260441542146",
+        "L4_come_back": "1870345588238449",
+        "L5_show_up": "1870345600654738"
+      },
+      "adgroups": {
+        "L1_gaming": "1870345667162434",
+        "L1_creators": "1870345677808817",
+        "L2_gaming": "1870345678592097",
+        "L2_creators": "1870345677811185",
+        "L4_gaming": "1870345749405314",
+        "L4_creators": "1870345771609170",
+        "L5_gaming": "1870345767397378",
+        "L5_creators": "1870345772618818"
+      },
+      "ads_deployed": 42,
+      "ads_target": 42,
+      "status": "COMPLETE_PAUSED",
+      "note": "All 5 layers built: awareness, consideration, conversion, retargeting, countdown."
+    },
+    "meta": {
+      "status": "PENDING_TOKEN_REFRESH",
+      "command": "npm run meta:launch-influencer-staircase"
+    }
+  },
+  "tiktok": {
+    "advertiser_id": "7658020511833014273",
+    "pixel_id": "7658773511775043592",
+    "identity": "@hologramboxing (74ce7df5-a252-5942-9d55-6d43033f4752)",
+    "totals": {
+      "campaigns": 9,
+      "note": "5 influencer staircase + 4 fan funnel"
+    },
+    "ads_manager": "https://ads.tiktok.com"
+  },
+  "meta_account": {
+    "ad_account": "534185933351087",
+    "pixel_id": "3661825047289885",
+    "page": "Romethelife (118345932178751)",
+    "status": "PENDING_TOKEN_REFRESH",
+    "ads_manager": "https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=534185933351087"
+  }
+}

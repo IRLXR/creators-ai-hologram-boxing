@@ -10,6 +10,7 @@
     h1 { font-size: 1.1rem; margin: 0 0 8px; }
     p { color: #9aa3b2; font-size: 0.9rem; line-height: 1.5; }
     .note { background: rgba(251,191,36,.1); border-left: 3px solid #fbbf24; padding: 12px; margin: 16px 0; border-radius: 0 8px 8px 0; }
+    .err { background: rgba(248,113,113,.1); border-left: 3px solid #f87171; padding: 12px; margin: 16px 0; border-radius: 0 8px 8px 0; font-size: .88rem; }
     iframe { width: 100%; height: 520px; border: 1px solid #333; border-radius: 12px; background: #111; }
     video { width: 100%; border-radius: 12px; margin-top: 16px; }
     .field { background: #12141c; border: 1px solid #333; padding: 10px; border-radius: 8px; margin: 8px 0; font-size: 0.85rem; }
@@ -19,28 +20,30 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>Test Ad Preview (no payment required)</h1>
-    <p>Meta will not create a paid ad without a card on file. This is your creative preview + free organic option.</p>
+    <h1>Test Ad Preview</h1>
+    <p>Full paste guide: <a href="meta-sample-ads.html">meta-sample-ads.html</a></p>
+
+    <div class="err">Token expired — refresh <code>META_ACCESS_TOKEN</code> then run <code>npm run meta:create-test-ad -- --execute</code></div>
 
     <div class="note">
-      <strong>Paid ad:</strong> add payment → tell Cursor “payment added” to finish ad ID creation.<br>
-      <strong>Free test:</strong> post the video below on Instagram/Facebook with the caption — no ad spend.
+      <strong>Paid ad:</strong> billing required → preview in Ads Manager.<br>
+      <strong>Free test:</strong> post the video on Instagram/Facebook with caption below.
     </div>
 
     <h2 style="font-size:.95rem;margin:24px 0 8px;">Meta creative preview</h2>
     <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQLSNV1kVJUZUUnl0hUA4ldIDnynq8lEw6uY6CbPprl1_v8aQgpZK9RQu1ua8Qib6UGhyd6KD1HwpYEqoVh18dRPejdoldZgYqSTNGK1RWzKAMRnbUAAWH50Pmx2KRR5pFvVlLsXDRCYK6IuBdIpDVtuWGLKy0U5ri90zmSDvTa6b2CUx_E9Mq_DQupFAkR2Kze6ypwb3Bhv5S3kzMejGErSM0RyCZGrbk6MKsAEQkakCaCMvNTQXoCNXI9itjntfKsC4aMtSZYG6DEOpNaMbtCOSVSj2GXIC4ItB0cq8wzmMetb-CmFxBWGXusSCj9zf-KktAucSE24ri7Tw31I8_JyDp7xHUNk7R9SLCc9iF6AyOCrnQczSHnWzot-uLDgCY1CXUqeU5GkYp4b76zSh94mg620WjcMKEIs0wpAn-fSSQ3YNo8Uvt7vCvMzCF38P2Y&t=AQKgIRmH2Ab4UdEBGGE" title="Meta ad preview"></iframe>
 
-    <h2 style="font-size:.95rem;margin:24px 0 8px;">Video file (organic post)</h2>
-    <video controls playsinline src="../../ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4"></video>
+    <h2 style="font-size:.95rem;margin:24px 0 8px;">Video file</h2>
+    <video controls playsinline src="brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4"></video>
 
     <label style="margin-top:16px;">Caption</label>
     <div class="field">Would you walk inside? 👀 AI hologram boxers LIVE. Front row energy. Become a Founding Fan — link in bio</div>
 
-    <label>Link in bio</label>
-    <div class="field"><a href="https://creators-ai-hologram-boxing.vercel.app/landing.html">https://creators-ai-hologram-boxing.vercel.app/landing.html</a></div>
+    <label>Landing URL</label>
+    <div class="field"><a href="https://www.hologramboxing.com/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=test&utm_content=walk_inside">hologramboxing.com/landing.html</a></div>
 
     <label>Already in Meta (PAUSED)</label>
-    <div class="field">Campaign CAMP_HB_Test_001 · Creative ID 1369878095036738 · Video uploaded</div>
+    <div class="field">Campaign CAMP_HB_Test_001 · Creative ID 1369878095036738 · act_534185933351087</div>
   </div>
 </body>
 </html>

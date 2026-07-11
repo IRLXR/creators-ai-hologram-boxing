@@ -209,30 +209,76 @@ async function createAd({ name, adSetId, creativeId, status = "PAUSED" }) {
   });
 }
 
+async function updateObjectStatus(objectId, status) {
+  return graph(objectId, { method: "POST", body: { status } });
+}
+
+async function getAdAccountBillingStatus() {
+  const account = adAccountPath();
+  return graph(
+    `${account}?fields=id,name,account_status,currency,disable_reason,funding_source_details,amount_spent,balance`
+  );
+}
+
 function defaultTargeting() {
-  return {
-    geo_locations: { countries: ["US"] },
-    age_min: 18,
-    age_max: 44,
+  return floridaTargeting();
+}
+
+/** Orlando, Miami, Tampa, Jacksonville — 25 mi. See ads/influencer-recruit/GEO-TARGETING.json */
+function floridaTargeting({ ageMin = 18, ageMax = 44, interests } = {}) {
+  const targeting = {
+    geo_locations: {
+      cities: [
+        { key: "2429275", radius: 25, distance_unit: "mile" },
+        { key: "2428987", radius: 25, distance_unit: "mile" },
+        { key: "2429990", radius: 25, distance_unit: "mile" },
+        { key: "2428577", radius: 25, distance_unit: "mile" },
+      ],
+      location_types: ["home", "recent"],
+    },
+    age_min: ageMin,
+    age_max: ageMax,
     publisher_platforms: ["facebook", "instagram"],
     facebook_positions: ["feed", "story"],
     instagram_positions: ["stream", "story", "reels"],
     targeting_automation: { advantage_audience: 0 },
   };
+  if (interests?.length) {
+    targeting.flexible_spec = [{ interests: interests.map((i) => ({ id: i.id, name: i.name })) }];
+  }
+  return targeting;
+}
+
+function creatorInterestsTargeting() {
+  return floridaTargeting({
+    ageMin: 18,
+    ageMax: 34,
+    interests: [
+      { id: "6003440235625", name: "Twitch" },
+      { id: "6003940339466", name: "Video games" },
+      { id: "6004158316095", name: "YouTube" },
+      { id: "6003717913546", name: "Gamer" },
+      { id: "6003389760112", name: "Social media marketing" },
+    ],
+  });
 }
 
 module.exports = {
   graph,
   adAccountPath,
   verifyConnection,
+  getAdAccountBillingStatus,
   listCampaigns,
   createCampaign,
   createAdSet,
   createAdCreative,
   createAd,
+  updateObjectStatus,
   uploadVideo,
   uploadAdImage,
   waitForVideo,
   pickImageUrl,
   defaultTargeting,
+  floridaTargeting,
+  creatorInterestsTargeting,
 };

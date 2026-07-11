@@ -45,7 +45,7 @@ window.SITE_CONFIG = {
   socialAds: {
     metaAdAccountId: "534185933351087",
     metaAdsManagerUrl: "https://adsmanager.facebook.com/adsmanager/manage/ad_account_settings/ad_account_setup?act=534185933351087&nav_source=fb4b",
-    metaPixelId: "",
+    metaPixelId: "3661825047289885",
     tiktokPixelId: "D94N53BC77UFCF7AK7E0"
   },
   fights: [

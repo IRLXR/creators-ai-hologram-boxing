@@ -24,7 +24,7 @@
     return host === 'localhost' || host === '127.0.0.1';
   }
 
-  async function submitWaitlist(email, tracking) {
+  async function submitToGhl(formKey, formLabel, data, tracking) {
     if (!ghl.enabled) return { ok: true };
 
     const controller = new AbortController();
@@ -32,27 +32,100 @@
 
     try {
       const endpoint = ghlApiEndpoint();
-      if (isDevHost()) console.log('[waitlist] POST', endpoint, email);
+      if (isDevHost()) console.log('[ghl]', formKey, endpoint, data);
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         signal: controller.signal,
         body: JSON.stringify({
-          formKey: 'waitlist',
-          formLabel: 'Founding Fan Waitlist',
-          data: { email },
+          formKey,
+          formLabel,
+          data,
           pageUrl: window.location.href,
           tracking: tracking || undefined,
         }),
       });
       const body = await res.json().catch(() => ({}));
       if (!res.ok) {
-        throw new Error(body.error || 'Could not save your email');
+        throw new Error(body.error || 'Could not save your submission');
       }
-      if (isDevHost()) console.log('[waitlist] saved', body);
+      if (isDevHost()) console.log('[ghl] saved', body);
       return body;
     } finally {
       clearTimeout(timeout);
+    }
+  }
+
+  async function submitWaitlist(email, tracking) {
+    return submitToGhl('waitlist', 'Founding Fan Waitlist', { email }, tracking);
+  }
+
+  function isInfluencerTraffic() {
+    const params = new URLSearchParams(window.location.search);
+    const campaign = (params.get('utm_campaign') || '').toLowerCase();
+    if (campaign.includes('influencer')) return true;
+    if (window.location.hash === '#creators' || window.location.hash === '#creator-partner') return true;
+    return false;
+  }
+
+  const HERO_COPY = {
+    creator: {
+      kicker: 'OPEN CALL — STREAMERS & CREATORS',
+      title: 'WE WANT YOU TO CO-STREAM HOLOGRAM BOXING 002.',
+      lead: 'Apply for partner slots — live tent access, interactive FX for your chat, and VIP ringside.',
+    },
+    fan: {
+      kicker: '⚡ A NEW ERA BEGINS',
+      title: "THE WORLD'S FIRST LIVE AI HOLOGRAM BOXING EXPERIENCE IS COMING.",
+      lead: 'Step Inside. Gear Up. Witness History.',
+    },
+  };
+
+  function setLandingMode(mode) {
+    const isCreator = mode === 'creator';
+    document.body.classList.toggle('lp-mode-creator', isCreator);
+    document.body.classList.toggle('lp-mode-fan', !isCreator);
+
+    const creatorWrap = $('creator-partner-signup');
+    const fanWrap = $('founding-fan-signup');
+    const creatorTab = $('lp-path-creator');
+    const fanTab = $('lp-path-fan');
+    const copy = isCreator ? HERO_COPY.creator : HERO_COPY.fan;
+
+    $('lp-kicker-secondary').textContent = copy.kicker;
+    $('lp-hero-title').textContent = copy.title;
+    $('lp-hero-lead').textContent = copy.lead;
+
+    if (creatorWrap) {
+      creatorWrap.hidden = !isCreator;
+      creatorWrap.setAttribute('aria-hidden', isCreator ? 'false' : 'true');
+    }
+    if (fanWrap) {
+      fanWrap.hidden = isCreator;
+      fanWrap.setAttribute('aria-hidden', isCreator ? 'true' : 'false');
+    }
+    if (creatorTab) {
+      creatorTab.classList.toggle('is-active', isCreator);
+      creatorTab.setAttribute('aria-selected', isCreator ? 'true' : 'false');
+    }
+    if (fanTab) {
+      fanTab.classList.toggle('is-active', !isCreator);
+      fanTab.setAttribute('aria-selected', !isCreator ? 'true' : 'false');
+    }
+  }
+
+  function showFormSuccess(form, success, wrap) {
+    const signup = wrap;
+    signup?.classList.add('is-complete');
+    if (form) {
+      form.hidden = true;
+      form.setAttribute('aria-hidden', 'true');
+    }
+    if (success) {
+      success.hidden = false;
+      success.removeAttribute('hidden');
+      success.setAttribute('aria-hidden', 'false');
+      success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   }
 
@@ -134,6 +207,85 @@
 
     tick();
     window.setInterval(tick, 1000);
+  }
+
+  function initPathToggle() {
+    $('lp-path-creator')?.addEventListener('click', () => setLandingMode('creator'));
+    $('lp-path-fan')?.addEventListener('click', () => setLandingMode('fan'));
+    setLandingMode(isInfluencerTraffic() ? 'creator' : 'fan');
+  }
+
+  function initCreatorPartnerForm() {
+    const form = $('creator-partner-form');
+    const hint = $('creator-partner-form-hint');
+    const success = $('creator-partner-success');
+    const submitBtn = $('creator-partner-submit');
+    const wrap = $('creator-partner-signup');
+    let submitting = false;
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (submitting) return;
+
+      const name = $('creator-name')?.value.trim() || '';
+      const email = $('creator-email')?.value.trim() || '';
+      const channelUrl = $('creator-channel')?.value.trim() || '';
+      const platform = $('creator-platform')?.value.trim() || '';
+
+      if (!name) {
+        if (hint) hint.textContent = 'Please enter your name.';
+        return;
+      }
+      if (!email || !email.includes('@')) {
+        if (hint) hint.textContent = 'Please enter a valid email.';
+        return;
+      }
+      if (!channelUrl) {
+        if (hint) hint.textContent = 'Please paste your channel or profile link.';
+        return;
+      }
+
+      submitting = true;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting…';
+      }
+      if (hint) hint.textContent = '';
+
+      analytics()?.trackSubmitForm('Creator Partner Application', { form_key: 'creator_partner' });
+
+      const eventIds = analytics()?.makeWaitlistEventIds?.() || {};
+      const tracking = analytics()?.getServerTrackingPayload?.(eventIds) || { event_ids: eventIds };
+
+      try {
+        await submitToGhl('creator_partner', 'Creator Partner Application', {
+          name,
+          email,
+          channelUrl,
+          platform,
+        }, tracking);
+        showFormSuccess(form, success, wrap);
+        analytics()?.trackLead('Creator Partner Application', email, {
+          form_key: 'creator_partner',
+          event_id: eventIds.Lead,
+        }).catch(() => {});
+      } catch (err) {
+        const message = err.name === 'AbortError'
+          ? 'Request timed out. Please try again.'
+          : (err.message || 'Something went wrong. Please try again.');
+        if (hint) hint.textContent = message;
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Apply as Creator Partner';
+        }
+        wrap?.classList.remove('is-complete');
+        form.hidden = false;
+        form.removeAttribute('hidden');
+      } finally {
+        submitting = false;
+      }
+    });
   }
 
   function initWaitlistForm() {
@@ -390,6 +542,8 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     initCountdown();
+    initPathToggle();
+    initCreatorPartnerForm();
     initWaitlistForm();
     initScene2Cta();
     initMemoryFilmPlayer();

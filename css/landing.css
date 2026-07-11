@@ -157,7 +157,73 @@ body.prelaunch-body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Email form ΓÇö stacked thin rectangles */
+/* Path toggle — creators vs fans */
+.lp-path-toggle {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 1rem;
+  animation: lpFadeUp 0.85s ease 0.28s both;
+}
+
+.lp-path-btn {
+  flex: 1;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  background: rgba(8, 12, 24, 0.55);
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--lp-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.lp-path-btn.is-active {
+  border-color: var(--lp-gold);
+  background: rgba(255, 193, 7, 0.12);
+  color: var(--lp-gold);
+  box-shadow: 0 0 18px rgba(255, 193, 7, 0.2);
+}
+
+.lp-path-btn:focus-visible {
+  outline: 2px solid var(--lp-blue);
+  outline-offset: 2px;
+}
+
+.lp-creator-perks {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: rgba(200, 200, 212, 0.88);
+  text-align: center;
+  margin-bottom: 0.85rem;
+}
+
+.lp-email-select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.lp-email-btn--gold {
+  background: var(--lp-gold);
+  color: var(--lp-black);
+  box-shadow: 0 0 24px rgba(255, 193, 7, 0.35);
+}
+
+.lp-email-btn--gold:hover {
+  background: #ffd54f;
+  box-shadow: 0 0 32px rgba(255, 193, 7, 0.55);
+}
+
+body.lp-mode-creator .lp-email-wrap#founding-fan-signup { display: none; }
+body.lp-mode-creator .lp-email-wrap#creator-partner-signup { display: block; animation: lpFadeUp 0.9s ease 0.32s both; }
+body.lp-mode-creator .lp-email-wrap#creator-partner-signup[hidden] { display: block; }
+
+/* Email form — stacked thin rectangles */
 .lp-email-wrap {
   width: 100%;
   max-width: 480px;

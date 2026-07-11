@@ -31,6 +31,7 @@
     .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
     .actions a { display:inline-block; background:linear-gradient(135deg,rgba(34,211,238,.2),rgba(244,114,182,.15)); border:1px solid rgba(34,211,238,.4); color:var(--text); text-decoration:none; padding:10px 16px; border-radius:8px; font-weight:600; font-size:.88rem; }
     .warn { border-left:3px solid var(--gold); padding:10px 12px; background:rgba(251,191,36,.08); border-radius:0 8px 8px 0; font-size:.88rem; color:var(--muted); margin-bottom:14px; }
+    .err { border-left:3px solid #f87171; padding:10px 12px; background:rgba(248,113,113,.08); border-radius:0 8px 8px 0; font-size:.88rem; color:var(--muted); margin-bottom:14px; }
     .pixel-box input { width:100%; background:#0d0f15; border:1px solid var(--border); border-radius:8px; color:var(--text); padding:10px 12px; font:inherit; margin-top:8px; }
     code { color:var(--cyan); font-size:.85em; }
   </style>
@@ -41,7 +42,12 @@
     <h1>TikTok Ads — Ready to Paste</h1>
     <p class="sub">Videos are on your Desktop. Open TikTok Ads Manager, paste each field, upload the video, submit for review.</p>
 
-    <div class="warn">I can't log into your TikTok account from here. Use the links below — everything is pre-filled for copy-paste.</div>
+    <div class="err"><strong>Billing required.</strong> TikTok MCP returned <code>Complete payment to continue</code>. Add payment in Ads Manager first. Full 2-ad guide: <a href="tiktok-sample-ads.html" style="color:var(--cyan)">tiktok-sample-ads.html</a></div>
+
+    <div class="card">
+      <h2>Account (MCP verified)</h2>
+      <p>Advertiser: <strong>AI Hologram Boxing</strong> · ID <code>7658020511833014273</code> · Pixel <code>D94N53BC77UFCF7AK7E0</code> · Identity <code>@hologramboxing</code></p>
+    </div>
 
     <div class="card">
       <h2>1. Upload this video</h2>
@@ -93,8 +99,8 @@
       smart_campaign: 'OFF',
       ad_text: 'Would you walk inside? 👀 AI hologram boxers LIVE. Front row energy. Become a Founding Fan 🔗',
       cta: 'Sign Up',
-      url: 'https://creators-ai-hologram-boxing.vercel.app/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=walk_inside&utm_content=launch_15s_vo',
-      bio_link: 'https://creators-ai-hologram-boxing.vercel.app/landing.html'
+      url: 'https://www.hologramboxing.com/landing.html?utm_source=tiktok&utm_medium=paid_social&utm_campaign=walk_inside&utm_content=launch_15s_vo',
+      bio_link: 'https://www.hologramboxing.com/landing.html'
     };
 
     const el = document.getElementById('fields');

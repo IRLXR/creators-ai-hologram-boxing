@@ -6,6 +6,8 @@
   "scripts": {
     "start": "python3 scripts/dev-server.py",
     "start:static": "python3 -m http.server 8080",
+    "preview:influencer-ads": "node scripts/serve-preview.mjs",
+    "preview:influencer-ads:open": "node scripts/serve-preview.mjs --open",
     "deploy:vercel": "vercel --prod",
     "deploy:netlify": "netlify deploy --prod --dir=.",
     "meta:verify": "node scripts/meta/meta-ads-cli.js verify",
@@ -13,9 +15,22 @@
     "meta:plan": "node scripts/meta/meta-ads-cli.js plan",
     "meta:create-waitlist": "node scripts/meta/meta-ads-cli.js create-waitlist",
     "meta:create-test-ad": "node scripts/meta/meta-ads-cli.js create-test-ad",
+    "meta:launch-day1": "node scripts/meta/meta-ads-cli.js launch-day1",
+    "meta:launch-influencer": "node scripts/marketing/launch-influencer-ads.js",
+    "meta:launch-matrix": "node scripts/marketing/launch-meta-matrix.js --execute",
+    "meta:launch-influencer-adsets": "node scripts/marketing/launch-meta-matrix.js --execute --phase=influencer_adsets",
+    "meta:launch-influencer-staircase": "node scripts/marketing/launch-influencer-staircase-meta.js --execute",
+    "tiktok:launch-influencer-staircase": "node scripts/marketing/launch-influencer-staircase-tiktok.mjs",
+    "tiktok:verify": "node --env-file=.env.local scripts/tiktok/verify.mjs",
+    "tiktok:oauth": "node --env-file=.env.local scripts/tiktok/oauth-connect.mjs",
+    "tiktok:mcp": "node scripts/tiktok/run-mcp.mjs",
+    "build:final-ads": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-final-ads-package.ps1",
     "generate:brief003-vo": "node --env-file=.env.local scripts/generate-brief003-vo.mjs"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "^2.56.0"
+  },
+  "devDependencies": {
+    "@cesteral/tiktok-mcp": "^1.3.0"
   }
 }

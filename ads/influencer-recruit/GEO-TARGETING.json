@@ -1,0 +1,28 @@
+{
+  "acmo_priority": ["Orlando", "Miami", "Tampa", "Jacksonville"],
+  "meta": {
+    "cities_25mi": [
+      { "key": "2429275", "name": "Orlando, Florida" },
+      { "key": "2428987", "name": "Miami, Florida" },
+      { "key": "2429990", "name": "Tampa, Florida" },
+      { "key": "2428577", "name": "Jacksonville, Florida" }
+    ],
+    "interests": [
+      { "id": "6003440235625", "name": "Twitch" },
+      { "id": "6003940339466", "name": "Video games" },
+      { "id": "6004158316095", "name": "YouTube" },
+      { "id": "6003717913546", "name": "Gamer" },
+      { "id": "6003389760112", "name": "Social media marketing" }
+    ],
+    "location_types": ["home", "recent"]
+  },
+  "tiktok": {
+    "dma_location_ids": [
+      { "id": "534", "name": "Orlando-Daytona Beach-Melbourne DMA" },
+      { "id": "528", "name": "Miami-Fort Lauderdale DMA" },
+      { "id": "539", "name": "Tampa-St. Petersburg (Sarasota) DMA" },
+      { "id": "561", "name": "Jacksonville DMA" }
+    ],
+    "targeting_mode": "MANUAL"
+  }
+}

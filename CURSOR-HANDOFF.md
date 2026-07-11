@@ -74,11 +74,37 @@ Create a **new PIT** in the Hologram Boxing sub-account with **Contacts** (read/
 npm run meta:verify    # token + ad account
 npm run meta:list      # existing campaigns
 npm run meta:plan      # maps ads/campaigns.json → API structure
+npm run tiktok:verify  # TikTok Marketing API + MCP credentials
 ```
 
 ---
 
-## 4. Cursor MCP — Go High Level
+## 4. Cursor MCP — TikTok Ads
+
+Full setup: **`docs/TIKTOK-MCP-CONNECT.md`**
+
+Add to **`~/.cursor/mcp.json`** (merge with existing servers):
+
+```json
+"tiktok-ads": {
+  "command": "node",
+  "args": ["scripts/tiktok/run-mcp.mjs"],
+  "cwd": "C:/Users/suzet/Desktop/creators-ai-hologram-boxing"
+}
+```
+
+Requires in `.env.local`:
+
+- `TIKTOK_MARKETING_ACCESS_TOKEN` — Marketing API (not Events/pixel token)
+- `TIKTOK_ADVERTISER_ID`
+
+Template: `mcp.tiktok.example.json` · Package: `@cesteral/tiktok-mcp`
+
+After adding: **Reload Cursor** → Tools & MCP → `tiktok-ads` should show green.
+
+---
+
+## 5. Cursor MCP — Go High Level
 
 Add this block to **`~/.cursor/mcp.json`** under `mcpServers` (merge with existing servers):
 

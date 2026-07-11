@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Sample Test Ad — Hologram Boxing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0a0b10; --panel:#12141c; --border:rgba(255,255,255,.08); --text:#e8eaf0; --muted:#9aa3b2; --cyan:#22d3ee; --green:#34d399; --gold:#fbbf24; --red:#f87171; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+    .wrap { max-width:820px; margin:0 auto; padding:24px 16px 64px; }
+    h1 { font-family:Orbitron,sans-serif; font-size:1.35rem; margin:0 0 6px; }
+    .sub { color:var(--muted); margin:0 0 20px; }
+    .badge { display:inline-block; background:rgba(96,165,250,.15); color:#93c5fd; border:1px solid rgba(96,165,250,.35); padding:4px 10px; border-radius:999px; font-size:.72rem; font-weight:600; margin-bottom:12px; }
+    .card { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px; margin-bottom:14px; }
+    .card h2 { margin:0 0 10px; font-size:1rem; }
+    .card p, .card li { color:var(--muted); }
+    .path { background:#0d0f15; border:1px dashed var(--border); border-radius:8px; padding:10px 12px; font-family:ui-monospace,monospace; font-size:.78rem; color:var(--gold); word-break:break-all; margin:8px 0; }
+    .field { margin-bottom:12px; }
+    .field label { display:block; font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:5px; }
+    .row { display:flex; gap:8px; }
+    .row input, .row textarea { flex:1; background:#0d0f15; border:1px solid var(--border); border-radius:8px; color:var(--text); padding:10px 12px; font:inherit; font-size:.84rem; }
+    .row textarea { min-height:64px; resize:vertical; }
+    .btn { flex-shrink:0; background:rgba(34,211,238,.12); border:1px solid rgba(34,211,238,.35); color:var(--cyan); border-radius:8px; padding:0 14px; font-weight:600; cursor:pointer; font-size:.78rem; }
+    .btn.copied { color:var(--green); border-color:var(--green); }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    .actions a { display:inline-block; background:linear-gradient(135deg,rgba(59,130,246,.25),rgba(34,211,238,.15)); border:1px solid rgba(96,165,250,.4); color:var(--text); text-decoration:none; padding:10px 16px; border-radius:8px; font-weight:600; font-size:.88rem; }
+    .warn { border-left:3px solid var(--gold); padding:10px 12px; background:rgba(251,191,36,.08); border-radius:0 8px 8px 0; font-size:.88rem; color:var(--muted); margin-bottom:14px; }
+    .err { border-left:3px solid var(--red); padding:10px 12px; background:rgba(248,113,113,.08); border-radius:0 8px 8px 0; font-size:.88rem; color:var(--muted); margin-bottom:14px; }
+    .ok { border-left:3px solid var(--green); padding:10px 12px; background:rgba(52,211,153,.08); border-radius:0 8px 8px 0; font-size:.88rem; color:var(--muted); margin-bottom:14px; }
+    code { color:var(--cyan); font-size:.85em; }
+    .meta-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:.82rem; }
+    .meta-grid div { background:#0d0f15; border-radius:8px; padding:8px 10px; }
+    .meta-grid span { display:block; color:var(--muted); font-size:.68rem; text-transform:uppercase; letter-spacing:.05em; margin-bottom:2px; }
+    video { width:100%; max-width:360px; border-radius:12px; margin-top:8px; display:block; }
+    @media (max-width:560px) { .meta-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="badge">META TEST AD — PAUSED · $5/DAY</span>
+    <h1>Meta Sample Test Ad</h1>
+    <p class="sub">Walk Inside hero video · Traffic objective · US 18–44 · Facebook + Instagram Reels</p>
+
+    <div class="err"><strong>Token expired.</strong> <code>META_ACCESS_TOKEN</code> expired Jul 2. Refresh at <a href="https://developers.facebook.com/tools/explorer/" target="_blank" rel="noopener" style="color:var(--cyan)">Graph API Explorer</a> (app <strong>CursorAdsManger</strong>, scopes <code>ads_read</code> <code>ads_management</code>) → paste into <code>.env.local</code> → run <code>npm run meta:create-test-ad -- --execute</code></div>
+
+    <div class="warn"><strong>Billing:</strong> Meta error <code>1359188</code> if no card on file. Add payment before turning the ad ON.</div>
+
+    <div class="ok"><strong>Already created (PAUSED):</strong> Campaign <code>CAMP_HB_Test_001</code> · Creative ID <code>1369878095036738</code> · video uploaded. Check Ads Manager or re-run CLI after token refresh.</div>
+
+    <div class="card">
+      <h2>Account</h2>
+      <div class="meta-grid">
+        <div><span>Ad account</span>act_534185933351087</div>
+        <div><span>Facebook Page</span>Romethelife (118345932178751)</div>
+        <div><span>App</span>CursorAdsManger</div>
+        <div><span>Objective</span>Traffic → Link clicks</div>
+      </div>
+      <div class="actions">
+        <a href="https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=534185933351087" target="_blank" rel="noopener">Ads Manager</a>
+        <a href="https://adsmanager.facebook.com/adsmanager/manage/ad_account_settings/ad_account_setup?act=534185933351087" target="_blank" rel="noopener">Add billing</a>
+        <a href="https://developers.facebook.com/tools/explorer/" target="_blank" rel="noopener">Refresh token</a>
+        <a href="meta-test-ad-preview.html">Creative preview</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Video — upload this</h2>
+      <video controls playsinline src="brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4"></video>
+      <div class="path">ads\brief-002\output\WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4</div>
+      <p>Desktop copy: <code>C:\Users\suzet\Desktop\WOULD-YOU-WALK-INSIDE-15s-9x16.mp4</code></p>
+    </div>
+
+    <div class="card">
+      <h2>Campaign fields (copy each)</h2>
+      <div id="fields"></div>
+    </div>
+
+    <div class="card">
+      <h2>Automated create (after token refresh)</h2>
+      <ol>
+        <li>Graph API Explorer → Generate token → paste into <code>.env.local</code> as <code>META_ACCESS_TOKEN</code></li>
+        <li><code>npm run meta:verify</code></li>
+        <li><code>npm run meta:create-test-ad -- --execute</code> — uploads video, creates PAUSED campaign + ad set + ad</li>
+        <li>Preview in Ads Manager → turn ON only when billing is set and you're ready to spend $5/day</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Manual Ads Manager steps</h2>
+      <ol>
+        <li>Create campaign → <strong>Traffic</strong> → name <code>CAMP_HB_Test_001</code></li>
+        <li>Ad set → US · 18–44 · $5/day · Placements: Facebook Feed, Instagram Reels + Stories</li>
+        <li>Ad → Page <strong>Romethelife</strong> → upload video → paste headline + primary text below</li>
+        <li>CTA: <strong>Sign Up</strong> → landing URL below</li>
+        <li>Leave <strong>PAUSED</strong> until billing + preview look good</li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    const FIELDS = {
+      campaign: 'CAMP_HB_Test_001',
+      ad_set: 'ADSET_HB_Test_US_18-44',
+      ad: 'AD_HB_Test_WalkInside_001',
+      objective: 'Traffic (Link clicks)',
+      budget: '$5/day',
+      location: 'United States',
+      age: '18–44',
+      placements: 'Facebook Feed, Instagram Reels, Instagram Stories',
+      headline: 'Would You Walk Inside?',
+      primary_text: 'Something the world has never seen is waiting behind that door. AI hologram boxers. Live. Front row energy. Become a Founding Fan.',
+      cta: 'Sign Up',
+      url: 'https://www.hologramboxing.com/landing.html?utm_source=meta&utm_medium=paid_social&utm_campaign=test&utm_content=walk_inside'
+    };
+
+    document.getElementById('fields').innerHTML = Object.entries(FIELDS).map(([k, v]) => {
+      const id = 'f-' + k;
+      const long = v.length > 70;
+      return `<div class="field"><label>${k.replace(/_/g,' ')}</label><div class="row">${
+        long ? `<textarea readonly id="${id}">${v}</textarea>` : `<input readonly id="${id}" value="${v.replace(/"/g,'&quot;')}">`
+      }<button class="btn" type="button" data-copy="${id}">Copy</button></div></div>`;
+    }).join('');
+
+    document.body.addEventListener('click', async (e) => {
+      const btn = e.target.closest('[data-copy]');
+      if (!btn) return;
+      const node = document.getElementById(btn.dataset.copy);
+      const text = node.tagName === 'TEXTAREA' ? node.value : node.value;
+      await navigator.clipboard.writeText(text);
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1500);
+    });
+  </script>
+</body>
+</html>
