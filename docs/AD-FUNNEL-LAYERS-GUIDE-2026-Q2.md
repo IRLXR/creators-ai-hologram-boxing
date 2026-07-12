@@ -4,30 +4,38 @@
 **Goal:** Get emails, build buzz, fill the tent, and make the countdown feel real.  
 **Landing page:** [hologramboxing.com/landing.html](https://www.hologramboxing.com/landing.html)  
 **Geo priority:** Orlando → Miami → Tampa → Jacksonville  
-**Last updated:** July 10, 2026 — TikTok influencer staircase L1–L5 built (PAUSED); fan matrix separate
+**Last updated:** July 12, 2026 — Influencer staircase **54 ads** + **10 bonus** composites; launch matrix synced; fan matrix separate
 
 This guide explains **what ad layers to build**, **why each exists**, and **what to fill in** so nothing is half-empty in Ads Manager. Written for humans, not ad nerds.
 
-**Influencer-only staircase:** [INFLUENCER-STAIRCASE-GUIDE.md](./INFLUENCER-STAIRCASE-GUIDE.md) · **Watch all ads:** [INFLUENCER-42-ADS-PREVIEW.html](../ads/influencer-recruit/INFLUENCER-42-ADS-PREVIEW.html) (local server required)
+**Influencer-only staircase:** [INFLUENCER-STAIRCASE-GUIDE.md](./INFLUENCER-STAIRCASE-GUIDE.md) · **Launch matrix (64 cards · doc IDs):** [INFLUENCER-PREVIEW-LAUNCH-MATRIX.md](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md) · **Master ops:** [INFLUENCER-ADS-MASTER-GUIDE.md](./INFLUENCER-ADS-MASTER-GUIDE.md) · **Watch all ads:** [INFLUENCER-42-ADS-PREVIEW.html](../ads/influencer-recruit/INFLUENCER-42-ADS-PREVIEW.html) (local server required)
 
 **Companion docs:** [AD-SET-AD-BUILD-MATRIX.md](./AD-SET-AD-BUILD-MATRIX.md) (every row) · [AD-FUNNEL-LEARNING-GUIDE.md](./AD-FUNNEL-LEARNING-GUIDE.md) (10 lessons)
 
 ---
 
-## What changed (July 10, 2026)
+## What changed (July 12, 2026)
 
-This update reorganizes ads around the **influencer staircase first** — streamers/creators who sign up at `landing.html` to co-stream HB 002.
-
-### Built on TikTok (all PAUSED)
+### July 12 — Composites + launch matrix
 
 | Change | Before | After |
 |--------|--------|-------|
-| **Influencer funnel** | Only Layer 3 (conversion) — 1 campaign, 24 ads | **All 5 layers** — 5 campaigns, 14 ad groups, **42 ads** |
-| **L1 Awareness** | Not built for creators | `CAMP_HB_Influencer_L1_SeeYou_001` — 6 ads (Calling All, Walk Inside, Future Mystery) |
-| **L2 Consideration** | Not built for creators | `CAMP_HB_Influencer_L2_Curious_001` — 6 ads (Live FX, Co-Stream, Inside Tent) |
-| **L3 Conversion** | Already live | `CAMP_HB_InfluencerRecruit_001` — unchanged, 6 ad groups, 24 ads |
-| **L4 Retargeting** | Not built | `CAMP_HB_Influencer_L4_ComeBack_001` — 6 ads (Reminder, Open Call, Walk Inside RT) |
-| **L5 Countdown** | Not built | `CAMP_HB_Influencer_L5_ShowUp_001` — 6 ads (Last Call, Open Call Opt, Live FX urgency) |
+| **Staircase ad count** | 42 (L4 = 6) | **54** (L4 = **12** incl. 6 confirmation ads) |
+| **Preview cards** | 42–48 | **64** (54 staircase + 10 bonus A/B) |
+| **Ship files** | VO plates / silent posters | **`INFLUENCER-*-COMPOSITE-15s.mp4`** (host PiP over cinematic B-roll) |
+| **Per-ad launch spec** | Scattered across guides | [INFLUENCER-PREVIEW-LAUNCH-MATRIX.md](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md) (`XX.YY.ZZ` doc IDs) |
+| **Regenerate matrix** | — | `npm run docs:launch-matrix` |
+
+### July 10 — Influencer staircase built (TikTok, PAUSED)
+
+| Change | Before | After |
+|--------|--------|-------|
+| **Influencer funnel** | Only Layer 3 (conversion) — 1 campaign, 24 ads | **All 5 layers** — 5 campaigns, 14 ad groups |
+| **L1 Awareness** | Not built for creators | `CAMP_HB_Influencer_L1_SeeYou_001` — 6 ads (doc `01.*`) |
+| **L2 Consideration** | Not built for creators | `CAMP_HB_Influencer_L2_Curious_001` — 6 ads (doc `02.*`) |
+| **L3 Conversion** | Already live | `CAMP_HB_InfluencerRecruit_001` — 6 ad groups, 24 ads (doc `03.*`) |
+| **L4 Retargeting** | Not built | `CAMP_HB_Influencer_L4_ComeBack_001` — **12 ads** direct + confirmation (doc `04.*`) |
+| **L5 Countdown** | Not built | `CAMP_HB_Influencer_L5_ShowUp_001` — 6 voiced composites (doc `05.*`) |
 
 ### New docs & scripts
 
@@ -37,7 +45,9 @@ This update reorganizes ads around the **influencer staircase first** — stream
 | `ads/influencer-recruit/INFLUENCER-STAIRCASE.json` | Machine spec + campaign/ad group IDs |
 | `scripts/marketing/launch-influencer-staircase-tiktok.mjs` | TikTok deploy script |
 | `scripts/marketing/launch-influencer-staircase-meta.js` | Meta mirror (run after token refresh) |
-| `npm run meta:launch-influencer-staircase` | One command to mirror all 5 layers on Meta |
+| `docs/INFLUENCER-PREVIEW-LAUNCH-MATRIX.md` | **64-card preview → TikTok/Meta launch** (`XX.YY.ZZ` IDs) |
+| `scripts/marketing/build-influencer-composites.ps1` | Rebuild cinematic + poster composites |
+| `npm run docs:launch-matrix` | Regenerate matrix from preview HTML |
 
 ### Clarifications added to this guide
 
@@ -49,33 +59,36 @@ This update reorganizes ads around the **influencer staircase first** — stream
 
 | Item | Action |
 |------|--------|
+| **TikTok composite re-upload** | Upload `*-COMPOSITE-15s.mp4` per [launch matrix](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md) before turn-on |
 | **Meta influencer staircase** | Refresh `META_ACCESS_TOKEN` → `npm run meta:launch-influencer-staircase` |
 | **L4/L5 audiences** | Attach retarget lists in Ads Manager when pixel + event date are ready |
 | **L1 duplicate** | One extra `WalkInside Gaming` ad in L1 — safe to pause duplicate in TikTok Ads Manager |
 
 ---
 
-## Live inventory snapshot (July 10, 2026)
+## Live inventory snapshot (July 12, 2026)
 
 **All ads are PAUSED / DISABLE** — safe to review in Ads Manager before turning on.
 
-| Platform | Campaigns | Ad sets / groups | Ads | Status |
-|----------|-----------|------------------|-----|--------|
-| **TikTok (fans)** | 4 | 11 | 42 | Built — awareness, consideration, founding fan, experience |
-| **TikTok (influencers)** | **5** | **14** | **42** | **COMPLETE** — all 5 layers built (PAUSED) |
-| **Meta (influencers)** | 0 of 5 | 0 of 14 | 0 of 42 | Pending token → `npm run meta:launch-influencer-staircase` |
+| Platform | Campaigns | Ad sets / groups | Staircase ads | Preview | Status |
+|----------|-----------|------------------|---------------|---------|--------|
+| **TikTok (fans)** | 4 | 11 | 42 | — | Built — awareness, consideration, founding fan, experience |
+| **TikTok (influencers)** | **5** | **14** | **54** | **64** | Composites built · **re-upload ship files** · PAUSED |
+| **Meta (influencers)** | 0 of 5 | 0 of 14 | 0 of 54 | — | Pending token → `npm run meta:launch-influencer-staircase` |
 
 ### TikTok — Influencer staircase (PRIORITY #1 — creators only, all OFF)
 
-| Layer | Ads Manager term | Staircase step | Campaign | Campaign ID | Ad groups | Ads | Budget |
-|-------|------------------|----------------|----------|-------------|-----------|-----|--------|
-| **1** | **Awareness** | See you | `CAMP_HB_Influencer_L1_SeeYou_001` | `1870345571958114` | 2 | 6 | $20/day |
-| **2** | **Consideration** | Get curious | `CAMP_HB_Influencer_L2_Curious_001` | `1870345580231025` | 2 | 6 | $20/day |
-| **3** | **Conversion** | Sign up | `CAMP_HB_InfluencerRecruit_001` | `1870260441542146` | 6 | 24 | $20/day |
-| **4** | **Retargeting** | Come back | `CAMP_HB_Influencer_L4_ComeBack_001` | `1870345588238449` | 2 | 6 | $20/day |
-| **5** | **Countdown** | Show up | `CAMP_HB_Influencer_L5_ShowUp_001` | `1870345600654738` | 2 | 6 | $20/day |
+| Layer | Ads Manager term | Staircase step | Campaign | Campaign ID | Ad groups | Ads | Doc layer | Budget |
+|-------|------------------|----------------|----------|-------------|-----------|-----|-----------|--------|
+| **1** | **Awareness** | See you | `CAMP_HB_Influencer_L1_SeeYou_001` | `1870345571958114` | 2 | 6 | `01.*` | $20/day |
+| **2** | **Consideration** | Get curious | `CAMP_HB_Influencer_L2_Curious_001` | `1870345580231025` | 2 | 6 | `02.*` | $20/day |
+| **3** | **Conversion** | Sign up | `CAMP_HB_InfluencerRecruit_001` | `1870260441542146` | 6 | 24 | `03.*` | $20/day |
+| **4** | **Retargeting** | Come back | `CAMP_HB_Influencer_L4_ComeBack_001` | `1870345588238449` | 2 | **12** | `04.*` | $20/day |
+| **5** | **Countdown** | Show up | `CAMP_HB_Influencer_L5_ShowUp_001` | `1870345600654738` | 2 | 6 | `05.*` | $20/day |
 
-**Landing for all layers:** `landing.html` · **UTM:** `influencer_recruit`
+**Bonus A/B (not in staircase JSON):** 10 cards · doc `06.*` · preview #55–#64.
+
+**Landing for all layers:** `landing.html` · **UTM:** `influencer_recruit` · **Ship rule:** `*-COMPOSITE-15s.mp4` where built
 
 ### TikTok — Fan funnel (run later — NOT influencer staircase)
 
@@ -101,7 +114,7 @@ This update reorganizes ads around the **influencer staircase first** — stream
 | **Meta fan mirror** | Founding Fan, Awareness, Consideration | Same token refresh → `npm run meta:launch-matrix` |
 | **L4/L5 audiences** | Retarget + countdown | Pixel traffic + HB 002 date ≤14 days |
 
-**Source of truth:** `ads/influencer-recruit/INFLUENCER-STAIRCASE.json` · `docs/INFLUENCER-STAIRCASE-GUIDE.md` · `LAUNCH-MANIFEST.json`
+**Source of truth:** [INFLUENCER-PREVIEW-LAUNCH-MATRIX.md](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md) · `ads/influencer-recruit/INFLUENCER-STAIRCASE.json` · `docs/INFLUENCER-STAIRCASE-GUIDE.md` · `LAUNCH-MANIFEST.json`
 
 ---
 
@@ -143,7 +156,7 @@ You asked to focus on **influencers / streamers** first — not general fans. Th
 
 Same staircase logic — different copy, creatives, and `utm_campaign` (`influencer_recruit` vs `founding_fan`).
 
-**TikTok status (July 10):** All **42 influencer ads** across **5 layers** are built and **PAUSED**. Turn on **L1 + L2 + L3** first for cold creator prospecting + signup. **L4** after pixel data. **L5** when HB 002 is ≤14 days out.
+**TikTok status (July 12):** **54 staircase ads** built and **PAUSED**. Cinematic **composites** in repo — re-upload `*-COMPOSITE-15s.mp4` before turn-on. Turn on **L1 + L2 + L3** first. **L4** after pixel data. **L5** when HB 002 is ≤14 days out. Per-ad detail: [launch matrix](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md).
 
 Full map: [INFLUENCER-STAIRCASE-GUIDE.md](./INFLUENCER-STAIRCASE-GUIDE.md)
 
@@ -309,7 +322,7 @@ Create **separate ad sets** so you can see what works:
 | Meta | `ADSET_HB_InfluencerRecruit_ReelsCreators_FL` | Reels creators, FL | 4 | **Scripted** — pending token |
 | Meta | `ADSET_HB_InfluencerRecruit_OrlandoMiami_FL` | Orlando + Miami only | 4 | **Scripted** — pending token |
 
-**Creatives per influencer ad group:** Open Call Exact · Open Call Optimized · Open Call Creators v1 · Live FX (same videos reused, different copy + `utm_content` per audience).
+**Creatives per influencer ad group (L3):** Ship files — `INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-15s.mp4` · `INFLUENCER-JOIN-THE-TEAM-COMPOSITE-15s.mp4` · `TIKTOK-OPEN-CALL-CREATORS-15s.mp4` (silent) · `INFLUENCER-L2-LIVEFX-COMPOSITE-15s.mp4`. Same files reused across 6 ad groups with different copy + `utm_content`. Doc IDs: `03.01.00`–`03.24.00`.
 
 ### Ad sets — Founding Fan (fan email funnel)
 
@@ -366,8 +379,8 @@ Each ad needs **all** of these — empty fields = weaker delivery in 2026:
 | Ad set | Audience | Message | Status |
 |--------|----------|---------|--------|
 | **Influencer (creators)** | | | |
-| `ADGRP_HB_Inf_L4_GamingStreamers_FL` | FL gaming streamers 18–34 | Reminder + Open Call + Walk Inside RT | **BUILT** (TT) · campaign `1870345588238449` |
-| `ADGRP_HB_Inf_L4_AllCreators_FL` | FL creators 18–44 | Same 3 ads, broader age | **BUILT** (TT) |
+| `ADGRP_HB_Inf_L4_GamingStreamers_FL` | FL gaming streamers 18–34 | Partner + Reminder + Retarget + **3 confirmation** composites | **BUILT** (TT) · doc `04.01`–`04.09` |
+| `ADGRP_HB_Inf_L4_AllCreators_FL` | FL creators 18–44 | Same 6 ads, broader age | **BUILT** (TT) · doc `04.04`–`04.12` |
 | **Fan (later)** | | | |
 | `ADSET_HB_RT_Landing_7d` | Visited landing, no signup, 7 days | "You looked — don't miss the first event" | **Not built** (fans) |
 | `ADSET_HB_RT_VideoEngagers_14d` | 75% video watch | "See what happens inside the tent" | **Not built** (fans) |
@@ -375,11 +388,13 @@ Each ad needs **all** of these — empty fields = weaker delivery in 2026:
 
 **Prerequisite:** Run Layer 3 ads for 7+ days first so the pixel has visitor data to retarget. Attach **landing visitors 7d excluding Lead** audience before turning on influencer L4.
 
-### Ads
+### Ads (influencer L4 — ship composites)
 
-- Countdown timer creative (sync with site countdown)
-- Testimonial / hype clip
-- Static poster with bold CTA
+- `INFLUENCER-L4-PARTNER-REVIEWS-COMPOSITE-15s.mp4` (`04.01` / `04.04`)
+- `INFLUENCER-L4-REMINDER-SLOTS-COMPOSITE-15s.mp4` (`04.02` / `04.05`)
+- `INFLUENCER-L4-RETARGET-OPEN-CALL-COMPOSITE-15s.mp4` (`04.03` / `04.06`)
+- `INFLUENCER-L4-CONFIRMS-*-COMPOSITE-15s.mp4` (`04.07`–`04.12`)
+- Poster A/B bonus: `*-COMPOSITE-POSTER-15s.mp4` (doc `06.*`)
 
 **Budget tip:** Retargeting ad sets often run at **30–50% of cold budget** but deliver **2–5× better cost per email**.
 
@@ -400,8 +415,8 @@ Each ad needs **all** of these — empty fields = weaker delivery in 2026:
 | Ad set | Window | Tone | Status |
 |--------|--------|------|--------|
 | **Influencer (creators)** | | | |
-| `ADGRP_HB_Inf_L5_GamingStreamers_FL` | When HB 002 ≤14 days | Last Call + Open Call Opt + Live FX urgency | **BUILT** (TT) · campaign `1870345600654738` |
-| `ADGRP_HB_Inf_L5_AllCreators_FL` | Same | Same 3 ads, creators 18–44 | **BUILT** (TT) |
+| `ADGRP_HB_Inf_L5_GamingStreamers_FL` | When HB 002 ≤14 days | Countdown + Last Call + Final slots **composites** | **BUILT** (TT) · doc `05.01`–`05.03` |
+| `ADGRP_HB_Inf_L5_AllCreators_FL` | Same | Same 3 ads, creators 18–44 | **BUILT** (TT) · doc `05.04`–`05.06` |
 | **Fan (later)** | | | |
 | `ADSET_HB_Event_14d_FL` | 14–8 days out | "Two weeks until history" | **Not built** (fans) |
 | `ADSET_HB_Event_7d_FL` | 7–3 days out | "One week — Founding Fans first" | **Not built** (fans) |
@@ -526,9 +541,11 @@ Build these once, reuse across layers. **11 videos uploaded to TikTok asset libr
 | Walk Inside 15s | 9:16 video | 1, 3, 7 | `ads/brief-002/` | Yes |
 | Future Is Here 15s VO | 9:16 video | 1, 3, 7 | `ads/output/` | Yes |
 | Future Mystery 15s | 9:16 video | 1, 3 | `ads/brief-001/` | Yes |
-| Open Call exact poster 15s | 9:16 video | 3 (creators) | `ads/influencer-recruit/` | Yes |
-| Open Call optimized 15s | 9:16 video | 3 (creators) | `ads/influencer-recruit/` | Yes |
-| Open Call creators v1 15s | 9:16 video | 3 (creators) | `ads/influencer-recruit/` | Yes |
+| Open Call exact **composite** 15s | 9:16 video | 3 (creators) | `INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-15s.mp4` | Re-upload |
+| Open Call optimized **composite** 15s | 9:16 video | 3 (creators) | `INFLUENCER-JOIN-THE-TEAM-COMPOSITE-15s.mp4` | Re-upload |
+| Open Call creators v1 15s | 9:16 silent poster | 3 (creators) | `TIKTOK-OPEN-CALL-CREATORS-15s.mp4` | Yes |
+| L2 Live FX **composite** | 9:16 video | 2, 3 | `INFLUENCER-L2-LIVEFX-COMPOSITE-15s.mp4` | Re-upload |
+| L4/L5 voiced **composites** | 9:16 video | 4, 5 | `INFLUENCER-L4-*-COMPOSITE-15s.mp4` · `INFLUENCER-L5-*-COMPOSITE-15s.mp4` | Re-upload |
 | What Is hologram boxing | 9:16 UGC | 2, 3 | `ugc/output/` | Yes |
 | Tent / Headset / How It Works | 9:16 UGC | 2, 4, 7 | `ugc/output/` | Yes |
 | Live interactive FX | 9:16 UGC | 3 (creators) | `ads/output/` | Yes |
@@ -543,7 +560,9 @@ Build these once, reuse across layers. **11 videos uploaded to TikTok asset libr
 
 ### Done on TikTok (July 2026) ✓
 
-- [x] **Influencer staircase — all 5 layers** — 5 campaigns, 14 ad groups, 42 ads *(July 10)*
+- [x] **Influencer staircase — all 5 layers** — 5 campaigns, 14 ad groups, **54 ads** *(July 12)*
+- [x] **Cinematic composites built** — 17 staircase + 8 poster + 2 HF bonus
+- [x] **Launch matrix doc** — 64 preview cards with `XX.YY.ZZ` IDs
 - [x] Creator recruit L3 — 6 ad groups, 24 ads
 - [x] Founding Fan conversion — 4 ad groups, 16 ads
 - [x] Brand awareness (fans) — 4 ad groups, 12 ads
@@ -555,6 +574,7 @@ Build these once, reuse across layers. **11 videos uploaded to TikTok asset libr
 
 | Priority | What | Why |
 |----------|------|-----|
+| **0** | Re-upload **composite** ship files to TikTok | Per [launch matrix](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md) doc IDs `01.*`–`05.*` |
 | **1** | Turn on **influencer L1 + L2 + L3** on TikTok at $20/day each | Creator awareness → consideration → signup |
 | **2** | Refresh Meta token → `npm run meta:launch-influencer-staircase` | Mirror all 5 influencer layers on Meta |
 | **3** | Influencer **L4 retargeting** | After 7+ days of landing traffic in pixel |
@@ -621,7 +641,7 @@ Examples:
 | **Landing** | hologramboxing.com/landing.html | Same |
 | **Campaigns live** | 2 (influencer L3 + experience) | **9** (5 influencer + 4 fan) |
 | **Ad sets / groups** | 3 | **31** (14 influencer + 17 fan) |
-| **Ads** | 4 (PAUSED) | **108** (42 influencer + 66 fan, all DISABLE) |
+| **Ads** | 4 (PAUSED) | **120** (54 influencer staircase + 66 fan, all DISABLE) |
 | **Ads Manager** | [Open Meta](https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=534185933351087) | [Open TikTok](https://ads.tiktok.com) |
 
 **Meta blocker:** `META_ACCESS_TOKEN` expired — refresh at [Graph API Explorer](https://developers.facebook.com/tools/explorer/) then run `npm run meta:launch-influencer-staircase` (creators) or `npm run meta:launch-matrix` (full fan mirror).
@@ -637,12 +657,15 @@ Examples:
 | `scripts/marketing/launch-meta-matrix.js` | Meta bulk launcher (PAUSED by default) |
 | `ads/influencer-recruit/CAMPAIGN-SPEC.json` | Creator campaign copy + URLs |
 | `ads/influencer-recruit/GEO-TARGETING.json` | Florida city / DMA IDs |
-| `docs/AD-SET-AD-BUILD-MATRIX.md` | Full campaign × ad set × ad matrix |
+| `docs/INFLUENCER-PREVIEW-LAUNCH-MATRIX.md` | **64-card preview → launch** (targeting, UTMs, ship files) |
+| `docs/INFLUENCER-ADS-MASTER-GUIDE.md` | Readiness, blockers, composite ship rules |
 | `docs/AD-FUNNEL-LEARNING-GUIDE.md` | Step-by-step learning guide |
 | `marketing/acmo/` | Full IRLXR marketing brain |
 | `js/analytics.js` | Pixel loading + Lead events |
 | `docs/TIKTOK-MCP-CONNECT.md` | TikTok MCP setup |
 
+| `docs/AD-SET-AD-BUILD-MATRIX.md` | Full campaign × ad set × ad matrix |
+
 ---
 
-*Last updated: July 10, 2026 — TikTok matrix live (66 ads, all OFF). Meta partial (4 ads); full mirror pending token refresh.*
+*Last updated: July 12, 2026 — Influencer staircase 54 ads + composites + launch matrix. TikTok matrix live (all OFF). Meta partial; full mirror pending token refresh.*

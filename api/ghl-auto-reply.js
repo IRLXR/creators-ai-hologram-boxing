@@ -110,8 +110,10 @@ function formFieldRows(data, formKey) {
       detailRow('Application message', data.message),
     );
   } else if (formKey === 'creator_partner') {
+    rows.length = 0;
     rows.push(
-      detailRow('Channel / profile', data.channelUrl),
+      detailRow('Username / handle', data.username),
+      detailRow('Email', data.email),
       detailRow('Platform', data.platform),
     );
   } else {
@@ -288,7 +290,7 @@ function buildAutoReply(formKey, data, firstName) {
       <p style="margin:0 0 16px;">Your <strong>creator partner application</strong> for <strong>${escapeHtml(NEXT_EVENT)}</strong> is in.</p>
       <p style="margin:0 0 16px;">We're reviewing streamers and content creators for co-stream slots, VIP tent access, and brand ambassador roles.</p>
       ${detailsTable([
-        detailRow('Channel / profile', data.channelUrl),
+        detailRow('Username / handle', data.username),
         detailRow('Platform', data.platform),
       ])}
       <p style="margin:0;">If you're a fit, we'll reach out about co-streaming hologram boxing live to your audience. Watch your inbox.</p>

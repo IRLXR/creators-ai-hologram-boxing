@@ -8,44 +8,44 @@
   },
   "videos": {
     "walk": {
-      "video_id": "v10033g50000d97tuh7og65jjsham7u0",
-      "file_name": "TIKTOK-WalkInside-15s.mp4",
-      "cover": "tos-alisg-p-0051c001-sg/1da213461e081472d05741eb49bf5103"
+      "video_id": "v10033g50000d99tajvog65mvn6iu54g",
+      "file_name": "WOULD-YOU-WALK-INSIDE-15s-9x16-silent-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/8ce632fcc38be0ef0d558d409a1c6335"
     },
     "future_vo": {
-      "video_id": "v10033g50000d93c5tvog65iq2di4on0",
-      "file_name": "FUTURE-IS-HERE-15s-9x16-VO.mp4",
-      "cover": "tos-alisg-p-0051c001-sg/454dc9201a411ad6f1c301d414596074"
+      "video_id": "v10033g50000d99tak7og65knt1s9qmg",
+      "file_name": "FUTURE-IS-HERE-15s-9x16-ambient-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/a698a4ad22e8ddff66bfd45a2745cb26"
     },
     "future_mystery": {
-      "video_id": "v10033g50000d98e5q7og65nulofmrig",
-      "file_name": "FUTURE-IS-HERE-Mystery-15s.mp4",
-      "cover": "tos-alisg-p-0051c001-sg/6064938c0f22b70d727608dd05eccb75"
+      "video_id": "v10033g50000d99tak7og65knt1s9qtg",
+      "file_name": "Director_Brief_001_Version_B_Cinematic_Mystery-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/e2354947625247212a1de5e0f0a96313"
     },
     "whatis": {
-      "video_id": "v10033g50000d98e5q7og65gnfcd9k3g",
-      "file_name": "WhatIs-HologramBoxing-plate.mp4",
-      "cover": "tos-alisg-p-0051c001-sg/c54ae5b7568e23deb29d5107dc909f08"
+      "video_id": "v10033g50000d99ta6fog65nrgr2edng",
+      "file_name": "INFLUENCER-L3-WHATIS-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/954f13d41fc4d179a3eb0db4a976da49"
     },
     "open_exact": {
-      "video_id": "v10033g50000d9810d7og65qnrtm9p70",
-      "file_name": "OPEN-CALL-EXACT-POSTER-15s.mp4",
-      "cover": "tos-alisg-p-0051c001-sg/7b1b7274d3fb8a6a5afa047264d570d7"
+      "video_id": "v10033g50000d99takfog65s2g9h9r8g",
+      "file_name": "OPEN-CALL-EXACT-POSTER-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/b4bd6b6393c1f48fd01a5093132f683f"
     },
     "open_opt": {
-      "video_id": "v10033g50000d980oa7og65ncgj2cmhg",
-      "file_name": "TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4",
-      "cover": "tos-alisg-p-0051c001-sg/b2b414bddf1d5823ccd95df4ed7cf769"
+      "video_id": "v10033g50000d99taknog65ib4lihqug",
+      "file_name": "TIKTOK-OPEN-CALL-OPTIMIZED-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/02d3268a0147985d07c0f855ed4d7dc7"
     },
     "open_v1": {
-      "video_id": "v10033g50000d97um1fog65oqjdrlgsg",
-      "file_name": "TIKTOK-OPEN-CALL-CREATORS-15s.mp4",
-      "cover": "tos-alisg-p-0051c001-sg/4cb18c277178fca6ec2a134c9f23dcaf"
+      "video_id": "v10033g50000d99tahvog65r348sqskg",
+      "file_name": "TIKTOK-OPEN-CALL-CREATORS-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/84b1c218f132b77094999ffef7a9f209"
     },
     "tent": {
-      "video_id": "v10033g50000d98egt7og65l08650ok0",
-      "file_name": "02-inflatable-tent-plate.mp4",
-      "cover": "tos-alisg-p-0051c001-sg/209f6ddb2e803054db1bff2848ce4d0c"
+      "video_id": "v10033g50000d99t9svog65k1p2acg10",
+      "file_name": "INFLUENCER-L2-INSIDE-TENT-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/74423ce23fa075215ea5272012abbad8"
     },
     "headset": {
       "video_id": "v10033g50000d98egt7og65kdcsomoag",
@@ -58,14 +58,79 @@
       "cover": "tos-alisg-p-0051c001-sg/fdaed8d9cbb8bc0880e4a1675b7bf531"
     },
     "livefx": {
-      "video_id": "v10033g50000d98egvvog65vd03ccu4g",
-      "file_name": "32-live-interactive-effects-plate.mp4",
-      "cover": "tos-alisg-p-0051c001-sg/b80977b52f39d1776bcc50409d599a39"
+      "video_id": "v10033g50000d99t9sfog65o0budsev0",
+      "file_name": "INFLUENCER-L2-LIVEFX-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/102f2e02ede5a022ad95e370c63b229b"
     },
     "prize": {
       "video_id": "v10033g50000d98egvnog65pd8j0c5rg",
       "file_name": "06-prize-pool-plate.mp4",
       "cover": "tos-alisg-p-0051c001-sg/df13a4baa9b87a3209747475e97d348e"
+    },
+    "inf_calling_all_vo": {
+      "video_id": "v10033g50000d99t93vog65k0b7sujvg",
+      "file_name": "INFLUENCER-CALLING-ALL-COMPOSITE-15s.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/6dad806e58709a16961ff17ddff74770"
+    },
+    "stream": {
+      "video_id": "v10033g50000d99t9svog65g67s78mo0",
+      "file_name": "INFLUENCER-L2-COSTREAM-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/570c8272532440ed80e94d0a8f80e5a4"
+    },
+    "inf_open_call_vo": {
+      "video_id": "v10033g50000d99t9svog65kqrr92b60",
+      "file_name": "INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/f3d8eb49c5690162bc4088f713c4ce0a"
+    },
+    "inf_join_team_vo": {
+      "video_id": "v10033g50000d99ta5vog65r5tnfg150",
+      "file_name": "INFLUENCER-JOIN-THE-TEAM-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/bca6ee5e9fa41b5b11547507474fa6a8"
+    },
+    "inf_l4_partner_reviews_vo": {
+      "video_id": "v10033g50000d99ta6nog65qjv50b5gg",
+      "file_name": "INFLUENCER-L4-PARTNER-REVIEWS-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/04ec0ef3a73666c47a7d77adf9d5d96e"
+    },
+    "inf_l4_reminder_vo": {
+      "video_id": "v10033g50000d99ta6nog65pd8n2152g",
+      "file_name": "INFLUENCER-L4-REMINDER-SLOTS-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/5634e909bb9eed72cd2f49dbfe6d5ba5"
+    },
+    "inf_l4_retarget_vo": {
+      "video_id": "v10033g50000d99tadnog65md9aupr60",
+      "file_name": "INFLUENCER-L4-RETARGET-OPEN-CALL-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/014a7926585a105710842f7547d91591"
+    },
+    "inf_l4_confirms_partner_vo": {
+      "video_id": "v10033g50000d99tadvog65k0b7t1ub0",
+      "file_name": "INFLUENCER-L4-CONFIRMS-PARTNER-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/6545f1670dfa6ef6722f231199a1133c"
+    },
+    "inf_l4_confirms_reminder_vo": {
+      "video_id": "v10033g50000d99taevog65g67s79i2g",
+      "file_name": "INFLUENCER-L4-CONFIRMS-REMINDER-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/ce51a0425bf963a60cf15265ce85a011"
+    },
+    "inf_l4_confirms_open_call_vo": {
+      "video_id": "v10033g50000d99taenog65ptrhs18l0",
+      "file_name": "INFLUENCER-L4-CONFIRMS-OPEN-CALL-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/929eb8e14840aa6eb02ee14eee3bb355"
+    },
+    "inf_l5_countdown_vo": {
+      "video_id": "v10033g50000d99tahfog65kj6v2n1v0",
+      "file_name": "INFLUENCER-L5-COUNTDOWN-TIMER-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/6121b135021bf2732562ade5144f9c4e"
+    },
+    "inf_l5_last_call_vo": {
+      "video_id": "v10033g50000d99tahfog65g07g65im0",
+      "file_name": "INFLUENCER-L5-LAST-CALL-STREAMERS-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/8b32f86dfb752d88886a0f876888514b"
+    },
+    "inf_l5_final_slots_vo": {
+      "video_id": "v10033g50000d99tahnog65sjdvuvelg",
+      "file_name": "INFLUENCER-L5-FINAL-SLOTS-CLOSING-COMPOSITE-15s-20260712.mp4",
+      "cover": "tos-alisg-p-0051c001-sg/71171bf8c7b94dec23484799b36102d7"
     }
   },
   "campaigns": {
@@ -116,19 +181,19 @@
     "influencer_staircase": {
       "L1_see_you": {
         "campaign_id": "1870345571958114",
-        "adgroups": { "gaming": "1870345667162434", "creators": "1870345677808817" }
+        "adgroups": {}
       },
       "L2_get_curious": {
         "campaign_id": "1870345580231025",
-        "adgroups": { "gaming": "1870345678592097", "creators": "1870345677811185" }
+        "adgroups": {}
       },
       "L4_come_back": {
         "campaign_id": "1870345588238449",
-        "adgroups": { "gaming": "1870345749405314", "creators": "1870345771609170" }
+        "adgroups": {}
       },
       "L5_show_up": {
         "campaign_id": "1870345600654738",
-        "adgroups": { "gaming": "1870345767397378", "creators": "1870345772618818" }
+        "adgroups": {}
       }
     },
     "consideration": {
@@ -138,24 +203,6 @@
       "adgroups": {
         "explainer": "1870331727858737",
         "streamers": "1870331719101457"
-      }
-    },
-    "influencer_staircase": {
-      "L1_see_you": {
-        "campaign_id": "1870345571958114",
-        "adgroups": {}
-      },
-      "L2_get_curious": {
-        "campaign_id": "1870345580231025",
-        "adgroups": {}
-      },
-      "L4_come_back": {
-        "campaign_id": "1870345588238449",
-        "adgroups": {}
-      },
-      "L5_show_up": {
-        "campaign_id": "1870345600654738",
-        "adgroups": {}
       }
     }
   },

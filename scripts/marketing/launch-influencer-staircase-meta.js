@@ -29,16 +29,31 @@ const MANIFEST_PATH = path.join(ROOT, "ads/influencer-recruit/LAUNCH-MANIFEST.js
 const LANDING = "https://www.hologramboxing.com/landing.html";
 
 const VIDEOS = {
-  walk: "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4",
+  walk: "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-silent.mp4",
   future_mystery: "ads/brief-001/output/Director_Brief_001_Version_B_Cinematic_Mystery.mp4",
-  calling_all: "ads/influencer-recruit/output/TIKTOK-CALLING-ALL-INFLUENCERS-15s.mp4",
-  livefx: "ads/output/32-live-interactive-effects-plate.mp4",
-  stream: "ugc/output/08-watch-free-on-kick-twitch-plate.mp4",
-  tent: "ugc/output/02-the-inflatable-tent-plate.mp4",
+  inf_calling_all_vo: "ads/influencer-recruit/output/INFLUENCER-CALLING-ALL-COMPOSITE-15s.mp4",
+  inf_open_call_vo: "ads/influencer-recruit/output/INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-15s.mp4",
+  inf_l4_retarget_vo: "ads/influencer-recruit/output/INFLUENCER-L4-RETARGET-OPEN-CALL-COMPOSITE-15s.mp4",
+  inf_l4_partner_reviews_vo: "ads/influencer-recruit/output/INFLUENCER-L4-PARTNER-REVIEWS-COMPOSITE-15s.mp4",
+  inf_l4_reminder_vo: "ads/influencer-recruit/output/INFLUENCER-L4-REMINDER-SLOTS-COMPOSITE-15s.mp4",
+  inf_l4_streamer_reviews_vo: "ads/influencer-recruit/output/INFLUENCER-L4-STREAMER-REVIEWS-COMPOSITE-15s.mp4",
+  inf_l4_confirms_partner_vo: "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-PARTNER-COMPOSITE-15s.mp4",
+  inf_l4_confirms_reminder_vo: "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-REMINDER-COMPOSITE-15s.mp4",
+  inf_l4_confirms_open_call_vo: "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-OPEN-CALL-COMPOSITE-15s.mp4",
+  inf_join_team_vo: "ads/influencer-recruit/output/INFLUENCER-JOIN-THE-TEAM-COMPOSITE-15s.mp4",
+  livefx: "ads/influencer-recruit/output/INFLUENCER-L2-LIVEFX-COMPOSITE-15s.mp4",
+  stream: "ads/influencer-recruit/output/INFLUENCER-L2-COSTREAM-COMPOSITE-15s.mp4",
+  tent: "ads/influencer-recruit/output/INFLUENCER-L2-INSIDE-TENT-COMPOSITE-15s.mp4",
+  whatis: "ads/influencer-recruit/output/INFLUENCER-L3-WHATIS-COMPOSITE-15s.mp4",
   open_exact: "ads/influencer-recruit/output/OPEN-CALL-EXACT-POSTER-15s.mp4",
   open_opt: "ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4",
   creator_reminder: "ads/influencer-recruit/output/CREATOR-REMINDER-15s.mp4",
-  streamer_last_call: "ads/influencer-recruit/output/STREAMER-LAST-CALL-15s.mp4",
+  partner_spotlight: "ads/influencer-recruit/output/PARTNER-SPOTLIGHT-15s.mp4",
+  inf_l5_countdown_vo: "ads/influencer-recruit/output/INFLUENCER-L5-COUNTDOWN-TIMER-COMPOSITE-15s.mp4",
+  inf_l5_last_call_vo: "ads/influencer-recruit/output/INFLUENCER-L5-LAST-CALL-STREAMERS-COMPOSITE-15s.mp4",
+  inf_l5_final_slots_vo: "ads/influencer-recruit/output/INFLUENCER-L5-FINAL-SLOTS-CLOSING-COMPOSITE-15s.mp4",
+  memory: "ads/brief-004/output/MEMORY-60s-16x9-silent.mp4",
+  future_vo: "ads/output/FUTURE-IS-HERE-15s-9x16-ambient.mp4",
 };
 
 const LAYER_META = {

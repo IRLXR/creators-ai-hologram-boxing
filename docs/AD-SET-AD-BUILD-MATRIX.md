@@ -4,11 +4,26 @@
 **Strategy:** One video ≠ one ad. **Reuse the same file across many ad sets** with different audiences, copy, or UTMs.  
 **Primary KPI (now):** Email sign-up → [landing.html](https://www.hologramboxing.com/landing.html)  
 **Geo (all cold/warm FL ad sets):** Orlando · Miami · Tampa · Jacksonville  
-**Reference:** [AD-FUNNEL-LAYERS-GUIDE-2026-Q2.md](./AD-FUNNEL-LAYERS-GUIDE-2026-Q2.md) · [ALL-ADS-CATALOG.json](../ads/ALL-ADS-CATALOG.json)
+**Reference:** [INFLUENCER-PREVIEW-LAUNCH-MATRIX.md](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md) (`XX.YY.ZZ` doc IDs) · [INFLUENCER-ADS-MASTER-GUIDE.md](./INFLUENCER-ADS-MASTER-GUIDE.md) · [AD-FUNNEL-LAYERS-GUIDE-2026-Q2.md](./AD-FUNNEL-LAYERS-GUIDE-2026-Q2.md) · [ALL-ADS-CATALOG.json](../ads/ALL-ADS-CATALOG.json)
+
+**Influencer ship rule:** Upload `INFLUENCER-*-COMPOSITE-15s.mp4` — not raw `*-15s-VO.mp4` or silent posters (except `CR-OPEN-V1` silent slot).
 
 ---
 
-## At a glance
+## Influencer staircase at a glance (July 12, 2026)
+
+| | Staircase | Bonus A/B | Preview cards |
+|---|-----------|-----------|---------------|
+| **Campaigns** | 5 (L1–L5) | — | — |
+| **Ad groups / sets** | 14 | — | — |
+| **Ads** | **54** | **10** | **64** |
+| **Ship files** | 17 cinematic composites + silent/trailer slots | 2 HF + 8 poster composites | doc `06.*` |
+
+**Full per-ad matrix:** [INFLUENCER-PREVIEW-LAUNCH-MATRIX.md](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md) · Regenerate: `npm run docs:launch-matrix`
+
+---
+
+## At a glance (fan + legacy matrix)
 
 | | Already live (PAUSED/OFF) | To build next | **Total when complete** |
 |---|---------------------------|---------------|-------------------------|
@@ -32,13 +47,31 @@
 | `CR-FUTURE-MYST` | `ads/brief-001/output/Director_Brief_001_Version_B_Cinematic_Mystery.mp4` | IG Reels, awareness, no VO |
 | `CR-FUTURE-A` | `ads/brief-001/output/Director_Brief_001_Version_A_With_VoiceOver.mp4` | Same as VO master (alt export) |
 
-### Tier B — Creator / open call
+### Tier B — Influencer composites (ship to TikTok/Meta)
+
+| ID | Ship file | Creative key | Reused in | Doc layer |
+|----|-----------|--------------|-----------|-----------|
+| `CR-INF-CALL-COMP` | `INFLUENCER-CALLING-ALL-COMPOSITE-15s.mp4` | `inf_calling_all_vo` | L1 ×2 | `01.01` `01.04` |
+| `CR-INF-OPEN-COMP` | `INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-15s.mp4` | `inf_open_call_vo` | L3 ×6 | `03.*` slot 1 |
+| `CR-INF-JOIN-COMP` | `INFLUENCER-JOIN-THE-TEAM-COMPOSITE-15s.mp4` | `inf_join_team_vo` | L3 ×6 | `03.*` slot 2 |
+| `CR-INF-LIVEFX-COMP` | `INFLUENCER-L2-LIVEFX-COMPOSITE-15s.mp4` | `livefx` | L2 ×2 · L3 ×6 | `02.*` · `03.*` slot 4 |
+| `CR-INF-TENT-COMP` | `INFLUENCER-L2-INSIDE-TENT-COMPOSITE-15s.mp4` | `tent` | L2 ×2 · L3 cross | `02.*` · `03.08` `03.20` |
+| `CR-INF-STREAM-COMP` | `INFLUENCER-L2-COSTREAM-COMPOSITE-15s.mp4` | `stream` | L2 ×2 | `02.02` `02.05` |
+| `CR-INF-WHATIS-COMP` | `INFLUENCER-L3-WHATIS-COMPOSITE-15s.mp4` | `whatis` | L3 ×1 | `03.07` |
+| `CR-INF-L4-PARTNER` | `INFLUENCER-L4-PARTNER-REVIEWS-COMPOSITE-15s.mp4` | `inf_l4_partner_reviews_vo` | L4 ×2 | `04.01` `04.04` |
+| `CR-INF-L4-REMIND` | `INFLUENCER-L4-REMINDER-SLOTS-COMPOSITE-15s.mp4` | `inf_l4_reminder_vo` | L4 ×2 | `04.02` `04.05` |
+| `CR-INF-L4-RETARGET` | `INFLUENCER-L4-RETARGET-OPEN-CALL-COMPOSITE-15s.mp4` | `inf_l4_retarget_vo` | L4 ×2 | `04.03` `04.06` |
+| `CR-INF-L4-CONF-*` | `INFLUENCER-L4-CONFIRMS-*-COMPOSITE-15s.mp4` | `inf_l4_confirms_*_vo` | L4 ×6 | `04.07`–`04.12` |
+| `CR-INF-L5-*` | `INFLUENCER-L5-*-COMPOSITE-15s.mp4` | `inf_l5_*_vo` | L5 ×6 | `05.01`–`05.06` |
+
+### Tier B — Silent / legacy (BG sources or standalone slots)
 
 | ID | File | Best for |
 |----|------|----------|
-| `CR-OPEN-EXACT` | `ads/influencer-recruit/output/OPEN-CALL-EXACT-POSTER-15s.mp4` | Creator recruit conversion |
-| `CR-OPEN-OPT` | `ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4` | Creator recruit conversion |
-| `CR-OPEN-V1` | `ads/influencer-recruit/output/TIKTOK-OPEN-CALL-CREATORS-15s.mp4` | Creator variant |
+| `CR-WALK-SILENT` | `ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-silent.mp4` | L1/L3 full-screen · composite BG for calling all |
+| `CR-OPEN-V1` | `ads/influencer-recruit/output/TIKTOK-OPEN-CALL-CREATORS-15s.mp4` | L3 ×6 silent poster slot |
+| `CR-OPEN-EXACT-POSTER` | `ads/influencer-recruit/output/OPEN-CALL-EXACT-POSTER-15s.mp4` | Poster A/B BG only — ship `CR-INF-OPEN-POSTER-COMP` |
+| `CR-OPEN-OPT-POSTER` | `ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4` | Poster A/B BG — ship `CR-INF-JOIN-POSTER-COMP` |
 
 ### Tier C — Long-form → cutdowns / awareness
 
@@ -74,8 +107,10 @@
 | `CR-WALK-VO` | Awareness Combat · Awareness General · Convert FoundingFan · Retarget Landing · Countdown 7d | **5+** |
 | `CR-FUTURE-VO` | Awareness Tech · Convert FoundingFan · Convert Tech · Retarget Video | **4+** |
 | `CR-FUTURE-MYST` | Awareness General · Consideration Warm · Retarget Landing | **3+** |
-| `CR-OPEN-EXACT` | Creator Exact (live) · Creator Combat streamers · Retarget creators | **3** |
-| `CR-OPEN-OPT` | Creator Optimized (live) · Creator Gaming | **2+** |
+| `CR-INF-OPEN-COMP` | L3 all 6 ad groups · L4 retarget cross | **6+** |
+| `CR-INF-JOIN-COMP` | L3 all 6 ad groups | **6** |
+| `CR-INF-LIVEFX-COMP` | L2 ×2 · L3 ×6 | **8** |
+| `CR-WALK-SILENT` | L1 ×2 · L3 walk cross · fan funnels | **5+** |
 | `UGC-WHATIS` | Awareness General · Convert Explain · Retarget · Consideration | **4+** |
 | `UGC-TENT` | Awareness · Consideration · Convert | **3+** |
 | `UGC-HB002` | Countdown 14d · Countdown 7d · Countdown 48h · Convert urgency | **4** |
@@ -103,28 +138,60 @@
 
 ---
 
-# CAMPAIGN 1 — Creator recruit *(LIVE — expand ads)*
+# INFLUENCER STAIRCASE — 5 campaigns · 54 ads *(PRIORITY #1)*
+
+**Goal:** Recruit streamers/creators · sign up at `landing.html`  
+**UTM:** `influencer_recruit` · **Detail:** [launch matrix](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md)
+
+| Layer | Campaign | Ad groups | Ads | Doc IDs |
+|-------|----------|-----------|-----|---------|
+| L1 Awareness | `CAMP_HB_Influencer_L1_SeeYou_001` | 2 | 6 | `01.01`–`01.06` |
+| L2 Consideration | `CAMP_HB_Influencer_L2_Curious_001` | 2 | 6 | `02.01`–`02.06` |
+| L3 Conversion | `CAMP_HB_InfluencerRecruit_001` | 6 | 24 | `03.01`–`03.24` |
+| L4 Retargeting | `CAMP_HB_Influencer_L4_ComeBack_001` | 2 | **12** | `04.01`–`04.12` |
+| L5 Countdown | `CAMP_HB_Influencer_L5_ShowUp_001` | 2 | 6 | `05.01`–`05.06` |
+
+**Bonus A/B (not in staircase JSON):** preview #55–#64 · doc `06.01`–`06.10`
+
+### L3 — 6 ad groups × 4 creatives (ship files)
+
+| Slot | Creative ID | Ship file | Preview doc (per group) |
+|------|-------------|-----------|-------------------------|
+| Open Call Exact | `CR-INF-OPEN-COMP` | `INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-15s.mp4` | `03.01` `03.09` `03.13` `03.17` `03.21` + variants |
+| Open Call Optimized | `CR-INF-JOIN-COMP` | `INFLUENCER-JOIN-THE-TEAM-COMPOSITE-15s.mp4` | `03.05` `03.10` … slot 2 each group |
+| Creators v1 | `CR-OPEN-V1` | `TIKTOK-OPEN-CALL-CREATORS-15s.mp4` | slot 3 each group (silent) |
+| Live FX | `CR-INF-LIVEFX-COMP` | `INFLUENCER-L2-LIVEFX-COMPOSITE-15s.mp4` | slot 4 each group |
+
+**utm_content pattern:** `{ad_name_slug}_{creative_key}` — see matrix `*.06` sections per ad.
+
+---
+
+# CAMPAIGN 1 — Creator recruit L3 *(LIVE — 6 ad groups · 24 ads)*
 
 **Goal:** Recruit streamers/creators to partner + sign up  
-**Layer:** 3 Conversion (creators)
+**Layer:** 3 Conversion (creators) · **Ship composites** per table above
 
 ### TikTok — `CAMP_HB_InfluencerRecruit_001` · $20/day CBO · OFF
 
-| Ad group | Status | Audience | Age |
-|----------|--------|----------|-----|
-| `ADGRP_HB_OpenCallExact_US_Creators18-44` | **LIVE** | FL DMAs · Manual · Creator interests | 18–44 |
-| `ADGRP_HB_InfluencerRecruit_US_18-44` | **LIVE** | FL DMAs · Manual | 18–44 |
+| Ad group | Status | Preview # | Doc IDs | Age |
+|----------|--------|-----------|---------|-----|
+| `ADGRP_HB_OpenCallExact_US_Creators18-44` | **LIVE** | 13–16 | `03.01`–`03.04` | 18–44 |
+| `ADGRP_HB_InfluencerRecruit_US_18-44` | **LIVE** | 17–20 | `03.05`–`03.08` | 18–44 |
+| `ADGRP_HB_InfluencerRecruit_GamingStreamers_FL` | **LIVE** | 21–24 | `03.09`–`03.12` | 18–44 |
+| `ADGRP_HB_InfluencerRecruit_CombatCreators_FL` | **LIVE** | 25–28 | `03.13`–`03.16` | 18–44 |
+| `ADGRP_HB_InfluencerRecruit_ReelsCreators_FL` | **LIVE** | 29–32 | `03.17`–`03.20` | 18–44 |
+| `ADGRP_HB_InfluencerRecruit_OrlandoMiami_FL` | **LIVE** | 33–36 | `03.21`–`03.24` | 18–44 |
 
-**Ads to add inside existing ad groups** (reuse media + new `utm_content`):
+**Example ads (Open Call Exact ad group):**
 
-| Ad name | Creative | Ad text (TikTok) | utm_content | Ad group |
-|---------|----------|------------------|-------------|----------|
-| `AD_HB_OpenCallExact_Poster15s` | `CR-OPEN-EXACT` | OPEN CALL… WE WANT YOU! DM @hologramboxing | `open_call_exact_poster` | Exact *(live)* |
-| `AD_HB_OpenCallExact_SignUp_V2` | `CR-OPEN-EXACT` | Streamers wanted — sign up at hologramboxing.com | `open_call_exact_signup_v2` | Exact |
-| `AD_HB_OpenCallExact_WalkInside_X` | `CR-WALK-VO` | Would you walk inside? Creators — stream the first event. Apply. | `walk_inside_creator_cross` | Exact |
-| `AD_HB_OpenCall_Optimized15s` | `CR-OPEN-OPT` | Open call for streamers & creators… Apply now. | `open_call_optimized` | Optimized *(live)* |
-| `AD_HB_OpenCall_Optimized_Future_X` | `CR-FUTURE-VO` | The future of live entertainment. Creators — we want you. | `future_creator_cross` | Optimized |
-| `AD_HB_OpenCall_UGC_WhatIs` | `UGC-WHATIS` | What is hologram boxing? Stream it live. Sign up. | `whatis_creator` | Optimized |
+| Ad name | Creative ID | Ship file | utm_content | Doc ID |
+|---------|-------------|-----------|-------------|--------|
+| `AD_HB_OpenCallExact_Poster15s` | `CR-INF-OPEN-COMP` | `INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-15s.mp4` | `open_call_exact_poster_inf_open_call_vo` | `03.01.00` |
+| `AD_HB_OpenCallExact_SignUp_V2` | `CR-INF-OPEN-COMP` | same | `open_call_exact_signup_v2_inf_open_call_vo` | `03.02.00` |
+| `AD_HB_OpenCallExact_WalkInside_X` | `CR-WALK-SILENT` | `WOULD-YOU-WALK-INSIDE-15s-9x16-silent.mp4` | `walk_inside_creator_cross_walk` | `03.03.00` |
+| `AD_HB_OpenCallExact_StreamFX` | `CR-INF-LIVEFX-COMP` | `INFLUENCER-L2-LIVEFX-COMPOSITE-15s.mp4` | `…_livefx` | `03.04.00` |
+
+**All 24 rows:** [launch matrix §03](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md#030000--l3--conversion-sign-up--6-ad-groups--4-ads)
 
 ### Meta — `CAMP_HB_InfluencerRecruit_001` · PAUSED
 
@@ -132,19 +199,11 @@
 |--------|--------|----------|-----|
 | `ADSET_HB_OpenCallExact_US_Creators18-34` | **LIVE** | FL cities + Twitch/YouTube/Gamer interests | 18–34 |
 | `ADSET_HB_InfluencerRecruit_US_18-44` | **LIVE** | FL cities + creator interests | 18–44 |
+| *(+4 ad sets scripted)* | Pending token | Gaming · Combat · Reels · Orlando/Miami | 18–44 |
 
-**Ads to add:**
+**Meta ads:** Use same **ship files** and `utm_content` as TikTok rows in launch matrix.
 
-| Ad name | Creative | Headline | utm_content | Ad set |
-|---------|----------|----------|-------------|--------|
-| `AD_HB_OpenCallExact_Poster15s` | `CR-OPEN-EXACT` | WE WANT YOU! | `open_call_exact_poster` | Exact *(live)* |
-| `AD_HB_OpenCallExact_FutureCross` | `CR-FUTURE-VO` | Open Call — We Want You | `future_open_call_cross` | Exact |
-| `AD_HB_OpenCallExact_StreamFX` | `UGC-LIVE-FX` | Stream the tent — live effects | `livefx_creator` | Exact |
-| `AD_HB_OpenCall_Creators_15s` | `CR-OPEN-OPT` | Open Call — We Want You | `open_call_optimized` | Recruit *(live)* |
-| `AD_HB_OpenCall_WalkInside_Cross` | `CR-WALK-VO` | Calling All Creators | `walk_inside_creator` | Recruit |
-| `AD_HB_OpenCall_Tent_Cross` | `UGC-TENT` | Join the team — stream the fights | `tent_creator` | Recruit |
-
-**Campaign 1 totals:** 2 TT ad groups · 2 Meta ad sets · **12 ads** (4 live + 8 to add)
+**Campaign 1 totals:** 6 TT ad groups · 6 Meta ad sets (2 live + 4 scripted) · **24 ads**
 
 ---
 
@@ -377,6 +436,10 @@
 
 | File | Purpose |
 |------|---------|
+| [INFLUENCER-PREVIEW-LAUNCH-MATRIX.md](./INFLUENCER-PREVIEW-LAUNCH-MATRIX.md) | **54 staircase + 10 bonus** — per-ad ship file, targeting, UTMs |
+| [INFLUENCER-ADS-MASTER-GUIDE.md](./INFLUENCER-ADS-MASTER-GUIDE.md) | Readiness, blockers, turn-on order |
+| `scripts/marketing/build-influencer-composites.ps1` | Rebuild cinematic + poster composites |
+| `npm run docs:launch-matrix` | Regenerate launch matrix from preview HTML |
 | [ALL-ADS-CATALOG.json](../ads/ALL-ADS-CATALOG.json) | Copy + paths for 19 catalog ads |
 | [GEO-TARGETING.json](../ads/influencer-recruit/GEO-TARGETING.json) | FL city/DMA IDs |
 | [ADS-COMPLETION-CHECKLIST.json](../ads/influencer-recruit/ADS-COMPLETION-CHECKLIST.json) | What's live today |
@@ -397,4 +460,4 @@
 
 ---
 
-*Generated July 2026 — maps all existing repo media to a full-funnel ad set + ad matrix.*
+*Last updated: July 12, 2026 — Influencer staircase 54 ads + composite ship IDs. Fan matrix below unchanged.*

@@ -46,8 +46,8 @@
       "ads": [
         {
           "suffix": "CallingAll",
-          "creative": "calling_all",
-          "file": "ads/influencer-recruit/output/TIKTOK-CALLING-ALL-INFLUENCERS-15s.mp4",
+          "creative": "inf_calling_all_vo",
+          "file": "ads/influencer-recruit/output/INFLUENCER-CALLING-ALL-COMPOSITE-15s.mp4",
           "headline": "Calling All Influencers",
           "tiktok_texts": [
             "Calling all streamers — live stream the first AI hologram boxing event.",
@@ -102,7 +102,7 @@
         {
           "suffix": "LiveFX",
           "creative": "livefx",
-          "file": "ads/output/32-live-interactive-effects-plate.mp4",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L2-LIVEFX-COMPOSITE-15s.mp4",
           "headline": "Stream the Tent — Live FX",
           "tiktok_texts": [
             "Your chat controls the show — live interactive effects in the tent.",
@@ -113,7 +113,7 @@
         {
           "suffix": "CoStream",
           "creative": "stream",
-          "file": "ugc/output/08-watch-free-on-kick-twitch-plate.mp4",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L2-COSTREAM-COMPOSITE-15s.mp4",
           "headline": "Co-Stream on Kick & Twitch",
           "tiktok_texts": [
             "Watch free on Kick & Twitch — or co-stream it with us.",
@@ -124,7 +124,7 @@
         {
           "suffix": "InsideTent",
           "creative": "tent",
-          "file": "ugc/output/02-the-inflatable-tent-plate.mp4",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L2-INSIDE-TENT-COMPOSITE-15s.mp4",
           "headline": "Inside the Hologram Tent",
           "tiktok_texts": [
             "Dark tent. Glowing square. Wireframe boxers. Your audience watches in VR.",
@@ -172,7 +172,7 @@
       "funnel_layer": "retargeting",
       "ads_manager_label": "Retargeting (creators)",
       "plain_english": "Come back",
-      "creator_job": "Retarget creators who visited landing but didn't sign up",
+      "creator_job": "Retarget landing visitors — spotlight confirmed partners + finish application",
       "tiktok_campaign": "CAMP_HB_Influencer_L4_ComeBack_001",
       "meta_campaign": "CAMP_HB_Influencer_L4_ComeBack_001",
       "objective_tiktok": "WEB_CONVERSIONS",
@@ -190,37 +190,85 @@
       ],
       "ads": [
         {
-          "suffix": "Reminder",
-          "creative": "creator_reminder",
-          "file": "ads/influencer-recruit/output/CREATOR-REMINDER-15s.mp4",
-          "headline": "Streamer Slots Filling",
+          "suffix": "PartnerSpotlight",
+          "creative": "inf_l4_partner_reviews_vo",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L4-PARTNER-REVIEWS-COMPOSITE-15s.mp4",
+          "headline": "Creators Are Already In",
+          "hook_gaming": "WHAT STREAMERS ARE SAYING",
+          "hook_creators": "CREATORS ARE ALREADY IN",
           "tiktok_texts": [
-            "You looked — streamer partner slots are filling. Finish your application.",
-            "Still thinking about co-streaming hologram boxing? Sign up now."
+            "Streamers who toured the tent say the content is insane — co-stream hologram boxing. Your turn. Sign up.",
+            "Confirmed creators are locking co-stream slots. Kick, Twitch, TikTok partners are in. Join the roster."
           ],
-          "meta_message": "You visited — don't miss partner slots. Co-stream hologram boxing live. Finish your application."
+          "meta_message": "Creators on Kick, Twitch, and TikTok are locking partner slots. Reviews are wild — your co-stream slot is still open."
+        },
+        {
+          "suffix": "Reminder",
+          "creative": "inf_l4_reminder_vo",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L4-REMINDER-SLOTS-COMPOSITE-15s.mp4",
+          "headline": "Streamer Slots Filling",
+          "hook_gaming": "STILL THINKING ABOUT IT?",
+          "hook_creators": "YOU LOOKED — SLOTS ARE FILLING",
+          "tiktok_texts": [
+            "Still thinking about co-streaming hologram boxing? Partner slots are filling — finish at hologramboxing.com.",
+            "You looked — streamer partner slots are filling. Finish your application now."
+          ],
+          "meta_message": "You visited — partner slots are filling. Finish your application for hologram boxing co-stream access."
         },
         {
           "suffix": "OpenCallExact",
-          "creative": "open_exact",
-          "file": "ads/influencer-recruit/output/OPEN-CALL-EXACT-POSTER-15s.mp4",
-          "headline": "WE WANT YOU!",
+          "creative": "inf_l4_retarget_vo",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L4-RETARGET-OPEN-CALL-COMPOSITE-15s.mp4",
+          "headline": "Your Spot's Still Open",
+          "hook_gaming": "YOUR SPOT'S STILL OPEN",
+          "hook_creators": "YOU LOOKED — FINISH YOUR APPLICATION",
           "tiktok_texts": [
-            "OPEN CALL — we still want you. Apply at hologramboxing.com",
-            "Creators — your spot is waiting. WE WANT YOU!"
+            "Your co-stream partner slot is still open. Open call live — finish at hologramboxing.com.",
+            "You looked — open call's still live for Kick, Twitch, and TikTok creators. Finish your signup."
           ],
-          "meta_message": "OPEN CALL for streamers & content creators. WE WANT YOU — apply now."
+          "meta_message": "You checked us out — your co-stream partner slot is still open. Finish your application for hologram boxing."
         },
         {
-          "suffix": "WalkInsideRT",
-          "creative": "walk",
-          "file": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4",
-          "headline": "Don't Miss the Stream",
+          "suffix": "ConfirmsPartner",
+          "creative": "inf_l4_confirms_partner_vo",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-PARTNER-COMPOSITE-15s.mp4",
+          "headline": "That Ad Was Right",
+          "confirms_script": 37,
+          "hook_gaming": "THAT PARTNER AD? IT'S REAL",
+          "hook_creators": "YES — CREATORS ARE SIGNING UP",
           "tiktok_texts": [
-            "You looked inside — bring your audience next time. Sign up.",
-            "Would you walk inside? Creator applications still open."
+            "Saw our partner ad? It's real — streamers are locking co-stream slots. Finish at hologramboxing.com.",
+            "That creators-are-in ad wasn't fluff. Co-stream hologram boxing — finish your signup."
           ],
-          "meta_message": "You looked — bring your followers ringside. Creator partner applications still open."
+          "meta_message": "Saw the partner ad? It's true — creators are locking co-stream slots. Finish your application."
+        },
+        {
+          "suffix": "ConfirmsReminder",
+          "creative": "inf_l4_confirms_reminder_vo",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-REMINDER-COMPOSITE-15s.mp4",
+          "headline": "That Reminder Was Real",
+          "confirms_script": 38,
+          "hook_gaming": "THAT REMINDER AD? FACTS",
+          "hook_creators": "YES — SLOTS ARE FILLING",
+          "tiktok_texts": [
+            "That reminder ad was right — partner slots are filling. Apply at hologramboxing.com.",
+            "You saw the slots-filling ad? Yeah it's real. Co-stream hologram boxing — sign up now."
+          ],
+          "meta_message": "That reminder ad was accurate — partner slots are filling. Don't wait — apply now."
+        },
+        {
+          "suffix": "ConfirmsOpenCall",
+          "creative": "inf_l4_confirms_open_call_vo",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-OPEN-CALL-COMPOSITE-15s.mp4",
+          "headline": "The Open Call Is Real",
+          "confirms_script": 36,
+          "hook_gaming": "THAT OPEN CALL AD? LEGIT",
+          "hook_creators": "YES — THEY WANT CREATORS",
+          "tiktok_texts": [
+            "Saw the open call ad? It's legit — they want co-stream creators. Finish at hologramboxing.com.",
+            "That open call wasn't clickbait. Hologram boxing wants streamers — your slot's still open."
+          ],
+          "meta_message": "The open call ad is real — hologram boxing wants co-stream creators. Finish your signup."
         }
       ]
     },
@@ -229,7 +277,7 @@
       "funnel_layer": "countdown",
       "ads_manager_label": "Countdown / urgency (creators)",
       "plain_english": "Show up",
-      "creator_job": "Urgency — event soon, last partner slots, go live with us",
+      "creator_job": "Countdown urgency — timer synced to HB 002, last partner slots",
       "tiktok_campaign": "CAMP_HB_Influencer_L5_ShowUp_001",
       "meta_campaign": "CAMP_HB_Influencer_L5_ShowUp_001",
       "objective_tiktok": "WEB_CONVERSIONS",
@@ -247,37 +295,37 @@
       ],
       "ads": [
         {
+          "suffix": "CountdownTimer",
+          "creative": "inf_l5_countdown_vo",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L5-COUNTDOWN-TIMER-COMPOSITE-15s.mp4",
+          "headline": "Countdown Is Live",
+          "tiktok_texts": [
+            "Partner slots close when the countdown hits zero. Co-stream hologram boxing — lock your slot at hologramboxing.com.",
+            "Fight night countdown is live. Streamers — lock your co-stream slot before partner applications close."
+          ],
+          "meta_message": "Fight night countdown is live — partner co-stream slots closing. Timer synced with hologramboxing.com. Apply now."
+        },
+        {
           "suffix": "LastCall",
-          "creative": "streamer_last_call",
-          "file": "ads/influencer-recruit/output/STREAMER-LAST-CALL-15s.mp4",
+          "creative": "inf_l5_last_call_vo",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L5-LAST-CALL-STREAMERS-COMPOSITE-15s.mp4",
           "headline": "Last Call for Streamers",
           "tiktok_texts": [
-            "LAST CALL — streamer partner slots closing. HB 002 loading.",
-            "Final call for creators — co-stream hologram boxing before slots close."
+            "LAST CALL — streamer partner slots closing. Co-stream hologram boxing before the roster locks. Sign up now.",
+            "Final call for Kick & Twitch creators — co-stream hologram boxing live. Partner applications closing soon."
           ],
-          "meta_message": "Last call for streamers & creators. Partner slots closing — sign up before HB 002."
+          "meta_message": "Last call for streamers & creators. Partner slots closing — sign up before applications lock."
         },
         {
           "suffix": "OpenCallOpt",
-          "creative": "open_opt",
-          "file": "ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4",
-          "headline": "Open Call — We Want You",
+          "creative": "inf_l5_final_slots_vo",
+          "file": "ads/influencer-recruit/output/INFLUENCER-L5-FINAL-SLOTS-CLOSING-COMPOSITE-15s.mp4",
+          "headline": "Open Call Closing Soon",
           "tiktok_texts": [
-            "Open call closing soon — stream hologram boxing live. Apply now.",
-            "Creators — last chance to join the team. Sign up."
+            "Open call closing soon — stream hologram boxing live. Final co-stream partner slots. Apply now.",
+            "Creators — last chance to join the co-stream roster. VIP tent access. Sign up at hologramboxing.com."
           ],
-          "meta_message": "Open call closing soon. Co-stream hologram boxing — VIP access, brand ambassador roles."
-        },
-        {
-          "suffix": "LiveFXUrgency",
-          "creative": "livefx",
-          "file": "ads/output/32-live-interactive-effects-plate.mp4",
-          "headline": "Go Live With Us",
-          "tiktok_texts": [
-            "Go live with us — interactive FX, hologram fights, your audience ringside.",
-            "Streamers — HB 002 is almost here. Sign up to co-stream."
-          ],
-          "meta_message": "Go live with us. Interactive effects, hologram fights, your chat ringside. Partner sign-up closing."
+          "meta_message": "Open call closing soon. Final co-stream partner slots for hologram boxing — VIP access, brand ambassador roles."
         }
       ]
     }

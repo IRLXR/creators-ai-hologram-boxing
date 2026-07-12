@@ -45,9 +45,22 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /** Creatives not yet in TikTok library — closest uploaded match */
 const CREATIVE_FALLBACK = {
-  calling_all: "open_v1",
+  inf_calling_all_vo: "open_v1",
+  inf_open_call_vo: "open_exact",
+  inf_l4_retarget_vo: "open_exact",
+  inf_l4_partner_reviews_vo: "open_exact",
+  inf_l4_reminder_vo: "open_exact",
+  inf_l4_confirms_partner_vo: "open_exact",
+  inf_l4_confirms_reminder_vo: "open_exact",
+  inf_l4_confirms_open_call_vo: "open_exact",
+  inf_join_team_vo: "open_opt",
   stream: "how",
   creator_reminder: "open_exact",
+  partner_spotlight: "open_exact",
+  inf_l5_countdown_vo: "open_opt",
+  inf_l5_last_call_vo: "open_opt",
+  inf_l5_final_slots_vo: "open_opt",
+  countdown_timer: "open_opt",
   streamer_last_call: "open_opt",
 };
 

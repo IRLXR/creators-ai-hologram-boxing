@@ -72,15 +72,16 @@ module.exports = async (req, res) => {
   }
 
   if (formKey === 'creator_partner') {
-    if (!String(data.name || '').trim()) {
-      return res.status(400).json({ error: 'Name is required' });
-    }
-    if (!String(data.channelUrl || '').trim()) {
-      return res.status(400).json({ error: 'Channel link is required' });
+    if (!String(data.username || '').trim()) {
+      return res.status(400).json({ error: 'Username is required' });
     }
   }
 
-  const { firstName, lastName } = splitName(data.name);
+  const isCreatorPartner = formKey === 'creator_partner';
+  const displayName = isCreatorPartner
+    ? String(data.username || '').trim().replace(/^@+/, '')
+    : data.name;
+  const { firstName, lastName } = splitName(displayName);
   const tags = [
     'website-lead',
     formKey ? `form-${formKey}` : null,
@@ -93,7 +94,7 @@ module.exports = async (req, res) => {
     locationId,
     firstName,
     lastName,
-    name: data.name || [firstName, lastName].filter(Boolean).join(' '),
+    name: displayName || [firstName, lastName].filter(Boolean).join(' '),
     email,
     source: 'Creators AI Hologram Boxing Website',
     tags,

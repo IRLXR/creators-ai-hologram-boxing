@@ -1,0 +1,112 @@
+{
+  "inf_calling_all_vo": {
+    "video_id": "v10033g50000d99t93vog65k0b7sujvg",
+    "file_name": "INFLUENCER-CALLING-ALL-COMPOSITE-15s.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/6dad806e58709a16961ff17ddff74770"
+  },
+  "livefx": {
+    "video_id": "v10033g50000d99t9sfog65o0budsev0",
+    "file_name": "INFLUENCER-L2-LIVEFX-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/102f2e02ede5a022ad95e370c63b229b"
+  },
+  "stream": {
+    "video_id": "v10033g50000d99t9svog65g67s78mo0",
+    "file_name": "INFLUENCER-L2-COSTREAM-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/570c8272532440ed80e94d0a8f80e5a4"
+  },
+  "tent": {
+    "video_id": "v10033g50000d99t9svog65k1p2acg10",
+    "file_name": "INFLUENCER-L2-INSIDE-TENT-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/74423ce23fa075215ea5272012abbad8"
+  },
+  "inf_open_call_vo": {
+    "video_id": "v10033g50000d99t9svog65kqrr92b60",
+    "file_name": "INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/f3d8eb49c5690162bc4088f713c4ce0a"
+  },
+  "inf_join_team_vo": {
+    "video_id": "v10033g50000d99ta5vog65r5tnfg150",
+    "file_name": "INFLUENCER-JOIN-THE-TEAM-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/bca6ee5e9fa41b5b11547507474fa6a8"
+  },
+  "whatis": {
+    "video_id": "v10033g50000d99ta6fog65nrgr2edng",
+    "file_name": "INFLUENCER-L3-WHATIS-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/954f13d41fc4d179a3eb0db4a976da49"
+  },
+  "inf_l4_partner_reviews_vo": {
+    "video_id": "v10033g50000d99ta6nog65qjv50b5gg",
+    "file_name": "INFLUENCER-L4-PARTNER-REVIEWS-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/04ec0ef3a73666c47a7d77adf9d5d96e"
+  },
+  "inf_l4_reminder_vo": {
+    "video_id": "v10033g50000d99ta6nog65pd8n2152g",
+    "file_name": "INFLUENCER-L4-REMINDER-SLOTS-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/5634e909bb9eed72cd2f49dbfe6d5ba5"
+  },
+  "inf_l4_retarget_vo": {
+    "video_id": "v10033g50000d99tadnog65md9aupr60",
+    "file_name": "INFLUENCER-L4-RETARGET-OPEN-CALL-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/014a7926585a105710842f7547d91591"
+  },
+  "inf_l4_confirms_partner_vo": {
+    "video_id": "v10033g50000d99tadvog65k0b7t1ub0",
+    "file_name": "INFLUENCER-L4-CONFIRMS-PARTNER-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/6545f1670dfa6ef6722f231199a1133c"
+  },
+  "inf_l4_confirms_reminder_vo": {
+    "video_id": "v10033g50000d99taevog65g67s79i2g",
+    "file_name": "INFLUENCER-L4-CONFIRMS-REMINDER-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/ce51a0425bf963a60cf15265ce85a011"
+  },
+  "inf_l4_confirms_open_call_vo": {
+    "video_id": "v10033g50000d99taenog65ptrhs18l0",
+    "file_name": "INFLUENCER-L4-CONFIRMS-OPEN-CALL-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/929eb8e14840aa6eb02ee14eee3bb355"
+  },
+  "inf_l5_countdown_vo": {
+    "video_id": "v10033g50000d99tahfog65kj6v2n1v0",
+    "file_name": "INFLUENCER-L5-COUNTDOWN-TIMER-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/6121b135021bf2732562ade5144f9c4e"
+  },
+  "inf_l5_last_call_vo": {
+    "video_id": "v10033g50000d99tahfog65g07g65im0",
+    "file_name": "INFLUENCER-L5-LAST-CALL-STREAMERS-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/8b32f86dfb752d88886a0f876888514b"
+  },
+  "inf_l5_final_slots_vo": {
+    "video_id": "v10033g50000d99tahnog65sjdvuvelg",
+    "file_name": "INFLUENCER-L5-FINAL-SLOTS-CLOSING-COMPOSITE-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/71171bf8c7b94dec23484799b36102d7"
+  },
+  "open_v1": {
+    "video_id": "v10033g50000d99tahvog65r348sqskg",
+    "file_name": "TIKTOK-OPEN-CALL-CREATORS-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/84b1c218f132b77094999ffef7a9f209"
+  },
+  "walk": {
+    "video_id": "v10033g50000d99tajvog65mvn6iu54g",
+    "file_name": "WOULD-YOU-WALK-INSIDE-15s-9x16-silent-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/8ce632fcc38be0ef0d558d409a1c6335"
+  },
+  "future_mystery": {
+    "video_id": "v10033g50000d99tak7og65knt1s9qtg",
+    "file_name": "Director_Brief_001_Version_B_Cinematic_Mystery-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/e2354947625247212a1de5e0f0a96313"
+  },
+  "future_vo": {
+    "video_id": "v10033g50000d99tak7og65knt1s9qmg",
+    "file_name": "FUTURE-IS-HERE-15s-9x16-ambient-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/a698a4ad22e8ddff66bfd45a2745cb26"
+  },
+  "open_exact": {
+    "video_id": "v10033g50000d99takfog65s2g9h9r8g",
+    "file_name": "OPEN-CALL-EXACT-POSTER-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/b4bd6b6393c1f48fd01a5093132f683f"
+  },
+  "open_opt": {
+    "video_id": "v10033g50000d99taknog65ib4lihqug",
+    "file_name": "TIKTOK-OPEN-CALL-OPTIMIZED-15s-20260712.mp4",
+    "cover": "tos-alisg-p-0051c001-sg/02d3268a0147985d07c0f855ed4d7dc7"
+  }
+}

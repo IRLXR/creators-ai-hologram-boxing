@@ -228,21 +228,16 @@
       e.preventDefault();
       if (submitting) return;
 
-      const name = $('creator-name')?.value.trim() || '';
+      const username = $('creator-username')?.value.trim().replace(/^@+/, '') || '';
       const email = $('creator-email')?.value.trim() || '';
-      const channelUrl = $('creator-channel')?.value.trim() || '';
       const platform = $('creator-platform')?.value.trim() || '';
 
-      if (!name) {
-        if (hint) hint.textContent = 'Please enter your name.';
+      if (!username) {
+        if (hint) hint.textContent = 'Please enter your username or handle.';
         return;
       }
       if (!email || !email.includes('@')) {
         if (hint) hint.textContent = 'Please enter a valid email.';
-        return;
-      }
-      if (!channelUrl) {
-        if (hint) hint.textContent = 'Please paste your channel or profile link.';
         return;
       }
 
@@ -260,9 +255,8 @@
 
       try {
         await submitToGhl('creator_partner', 'Creator Partner Application', {
-          name,
+          username,
           email,
-          channelUrl,
           platform,
         }, tracking);
         showFormSuccess(form, success, wrap);

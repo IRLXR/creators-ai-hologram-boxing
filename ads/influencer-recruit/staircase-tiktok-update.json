@@ -1,0 +1,291 @@
+{
+  "updated_at": "2026-07-12T18:05:11.064Z",
+  "uploads_new": 21,
+  "uploads_skipped": 1,
+  "uploads_total_keys": 22,
+  "upload_note": "21 new URL uploads (UPLOAD_BY_URL, -20260712 suffix) + inf_calling_all_vo skipped (pre-existing v10033g50000d99t93vog65k0b7sujvg)",
+  "ads_updated": 49,
+  "updated": [
+    {
+      "name": "AD_HB_Inf_L5_OpenCallOpt_Gaming",
+      "smart_plus_ad_id": "1870346391331010",
+      "video_id": "v10033g50000d99tahnog65sjdvuvelg",
+      "creative_key": "inf_l5_final_slots_vo"
+    },
+    {
+      "name": "AD_HB_Influencer_Gaming_OpenCallOpt",
+      "smart_plus_ad_id": "1870341040082961",
+      "video_id": "v10033g50000d99ta5vog65r5tnfg150",
+      "creative_key": "inf_join_team_vo"
+    },
+    {
+      "name": "AD_HB_OpenCall_UGC_WhatIs",
+      "smart_plus_ad_id": "1870331306523713",
+      "video_id": "v10033g50000d99ta6fog65nrgr2edng",
+      "creative_key": "whatis"
+    },
+    {
+      "name": "AD_HB_Influencer_OrlandoMiami_OpenCallCreators",
+      "smart_plus_ad_id": "1870341086123217",
+      "video_id": "v10033g50000d99tahvog65r348sqskg",
+      "creative_key": "open_v1"
+    },
+    {
+      "name": "AD_HB_Inf_L2_InsideTent_Creators",
+      "smart_plus_ad_id": "1870346212473266",
+      "video_id": "v10033g50000d99t9svog65k1p2acg10",
+      "creative_key": "tent"
+    },
+    {
+      "name": "AD_HB_Influencer_Combat_OpenCallOpt",
+      "smart_plus_ad_id": "1870341022898321",
+      "video_id": "v10033g50000d99ta5vog65r5tnfg150",
+      "creative_key": "inf_join_team_vo"
+    },
+    {
+      "name": "AD_HB_Inf_L5_LastCall_Gaming",
+      "smart_plus_ad_id": "1870346288008513",
+      "video_id": "v10033g50000d99tahfog65g07g65im0",
+      "creative_key": "inf_l5_last_call_vo"
+    },
+    {
+      "name": "AD_HB_Influencer_Gaming_LiveFX",
+      "smart_plus_ad_id": "1870341045999826",
+      "video_id": "v10033g50000d99t9sfog65o0budsev0",
+      "creative_key": "livefx"
+    },
+    {
+      "name": "AD_HB_Influencer_Combat_OpenCallCreators",
+      "smart_plus_ad_id": "1870341055800465",
+      "video_id": "v10033g50000d99tahvog65r348sqskg",
+      "creative_key": "open_v1"
+    },
+    {
+      "name": "AD_HB_Inf_L4_Reminder_Creators",
+      "smart_plus_ad_id": "1870346221059154",
+      "video_id": "v10033g50000d99ta6nog65pd8n2152g",
+      "creative_key": "inf_l4_reminder_vo"
+    },
+    {
+      "name": "AD_HB_Inf_L2_CoStream_Creators",
+      "smart_plus_ad_id": "1870346253044146",
+      "video_id": "v10033g50000d99t9svog65g67s78mo0",
+      "creative_key": "stream"
+    },
+    {
+      "name": "AD_HB_Influencer_Combat_OpenCallExact",
+      "smart_plus_ad_id": "1870341054452833",
+      "video_id": "v10033g50000d99t9svog65kqrr92b60",
+      "creative_key": "inf_open_call_vo"
+    },
+    {
+      "name": "AD_HB_OpenCallExact_Poster15s",
+      "smart_plus_ad_id": "1870273693978961",
+      "video_id": "v10033g50000d99t9svog65kqrr92b60",
+      "creative_key": "inf_open_call_vo"
+    },
+    {
+      "name": "AD_HB_Influencer_Reels_OpenCallExact",
+      "smart_plus_ad_id": "1870341066293665",
+      "video_id": "v10033g50000d99t9svog65kqrr92b60",
+      "creative_key": "inf_open_call_vo"
+    },
+    {
+      "name": "AD_HB_OpenCall_Tent_Cross",
+      "smart_plus_ad_id": "1870331859921986",
+      "video_id": "v10033g50000d99t9svog65k1p2acg10",
+      "creative_key": "tent"
+    },
+    {
+      "name": "AD_HB_Inf_L1_WalkInside_Creators",
+      "smart_plus_ad_id": "1870346137381537",
+      "video_id": "v10033g50000d99tajvog65mvn6iu54g",
+      "creative_key": "walk"
+    },
+    {
+      "name": "AD_HB_Inf_L5_OpenCallOpt_Creators",
+      "smart_plus_ad_id": "1870346463677649",
+      "video_id": "v10033g50000d99tahnog65sjdvuvelg",
+      "creative_key": "inf_l5_final_slots_vo"
+    },
+    {
+      "name": "AD_HB_Inf_L4_Reminder_Gaming",
+      "smart_plus_ad_id": "1870346248299810",
+      "video_id": "v10033g50000d99ta6nog65pd8n2152g",
+      "creative_key": "inf_l4_reminder_vo"
+    },
+    {
+      "name": "AD_HB_Inf_L2_CoStream_Gaming",
+      "smart_plus_ad_id": "1870346215963761",
+      "video_id": "v10033g50000d99t9svog65g67s78mo0",
+      "creative_key": "stream"
+    },
+    {
+      "name": "AD_HB_Inf_L1_WalkInside_Gaming",
+      "smart_plus_ad_id": "1870345661631554",
+      "video_id": "v10033g50000d99tajvog65mvn6iu54g",
+      "creative_key": "walk"
+    },
+    {
+      "name": "AD_HB_Inf_L5_LastCall_Creators",
+      "smart_plus_ad_id": "1870346434888066",
+      "video_id": "v10033g50000d99tahfog65g07g65im0",
+      "creative_key": "inf_l5_last_call_vo"
+    },
+    {
+      "name": "AD_HB_Influencer_Reels_OpenCallCreators",
+      "smart_plus_ad_id": "1870341070968961",
+      "video_id": "v10033g50000d99tahvog65r348sqskg",
+      "creative_key": "open_v1"
+    },
+    {
+      "name": "AD_HB_Inf_L4_OpenCallExact_Creators",
+      "smart_plus_ad_id": "1870346261192001",
+      "video_id": "v10033g50000d99tadnog65md9aupr60",
+      "creative_key": "inf_l4_retarget_vo"
+    },
+    {
+      "name": "AD_HB_Inf_L4_OpenCallExact_Gaming",
+      "smart_plus_ad_id": "1870346212493458",
+      "video_id": "v10033g50000d99tadnog65md9aupr60",
+      "creative_key": "inf_l4_retarget_vo"
+    },
+    {
+      "name": "AD_HB_OpenCall_Optimized_Future_X",
+      "smart_plus_ad_id": "1870331285042177",
+      "video_id": "v10033g50000d99tak7og65knt1s9qmg",
+      "creative_key": "future_vo"
+    },
+    {
+      "name": "AD_HB_Inf_L2_LiveFX_Gaming",
+      "smart_plus_ad_id": "1870346188440609",
+      "video_id": "v10033g50000d99t9sfog65o0budsev0",
+      "creative_key": "livefx"
+    },
+    {
+      "name": "AD_HB_Influencer_Combat_LiveFX",
+      "smart_plus_ad_id": "1870341059524433",
+      "video_id": "v10033g50000d99t9sfog65o0budsev0",
+      "creative_key": "livefx"
+    },
+    {
+      "name": "AD_HB_OpenCall_Optimized15s",
+      "smart_plus_ad_id": "1870260531311938",
+      "video_id": "v10033g50000d99ta5vog65r5tnfg150",
+      "creative_key": "inf_join_team_vo"
+    },
+    {
+      "name": "AD_HB_Inf_L1_CallingAll_Gaming",
+      "smart_plus_ad_id": "1870345630634481",
+      "video_id": "v10033g50000d99t93vog65k0b7sujvg",
+      "creative_key": "inf_calling_all_vo"
+    },
+    {
+      "name": "AD_HB_Influencer_Reels_OpenCallOpt",
+      "smart_plus_ad_id": "1870341070117890",
+      "video_id": "v10033g50000d99ta5vog65r5tnfg150",
+      "creative_key": "inf_join_team_vo"
+    },
+    {
+      "name": "AD_HB_Influencer_OrlandoMiami_LiveFX",
+      "smart_plus_ad_id": "1870341086224593",
+      "video_id": "v10033g50000d99t9sfog65o0budsev0",
+      "creative_key": "livefx"
+    },
+    {
+      "name": "AD_HB_Influencer_OrlandoMiami_OpenCallExact",
+      "smart_plus_ad_id": "1870341080820866",
+      "video_id": "v10033g50000d99t9svog65kqrr92b60",
+      "creative_key": "inf_open_call_vo"
+    },
+    {
+      "name": "AD_HB_Influencer_Reels_LiveFX",
+      "smart_plus_ad_id": "1870341072931906",
+      "video_id": "v10033g50000d99t9sfog65o0budsev0",
+      "creative_key": "livefx"
+    },
+    {
+      "name": "AD_HB_Influencer_Gaming_OpenCallCreators",
+      "smart_plus_ad_id": "1870341042682193",
+      "video_id": "v10033g50000d99tahvog65r348sqskg",
+      "creative_key": "open_v1"
+    },
+    {
+      "name": "AD_HB_Inf_L2_InsideTent_Gaming",
+      "smart_plus_ad_id": "1870346233066689",
+      "video_id": "v10033g50000d99t9svog65k1p2acg10",
+      "creative_key": "tent"
+    },
+    {
+      "name": "AD_HB_OpenCallExact_StreamFX",
+      "smart_plus_ad_id": "1870331861068962",
+      "video_id": "v10033g50000d99t9sfog65o0budsev0",
+      "creative_key": "livefx"
+    },
+    {
+      "name": "AD_HB_Inf_L2_LiveFX_Creators",
+      "smart_plus_ad_id": "1870346253235409",
+      "video_id": "v10033g50000d99t9sfog65o0budsev0",
+      "creative_key": "livefx"
+    },
+    {
+      "name": "AD_HB_Influencer_Gaming_OpenCallExact",
+      "smart_plus_ad_id": "1870341038609074",
+      "video_id": "v10033g50000d99t9svog65kqrr92b60",
+      "creative_key": "inf_open_call_vo"
+    },
+    {
+      "name": "AD_HB_Inf_L1_FutureMystery_Gaming",
+      "smart_plus_ad_id": "1870345585481921",
+      "video_id": "v10033g50000d99tak7og65knt1s9qtg",
+      "creative_key": "future_mystery"
+    },
+    {
+      "name": "AD_HB_OpenCallExact_WalkInside_X",
+      "smart_plus_ad_id": "1870331258018817",
+      "video_id": "v10033g50000d99tajvog65mvn6iu54g",
+      "creative_key": "walk"
+    },
+    {
+      "name": "AD_HB_OpenCallExact_SignUp_V2",
+      "smart_plus_ad_id": "1870331239753154",
+      "video_id": "v10033g50000d99t9svog65kqrr92b60",
+      "creative_key": "inf_open_call_vo"
+    },
+    {
+      "name": "AD_HB_Influencer_OrlandoMiami_OpenCallOpt",
+      "smart_plus_ad_id": "1870341066366161",
+      "video_id": "v10033g50000d99ta5vog65r5tnfg150",
+      "creative_key": "inf_join_team_vo"
+    },
+    {
+      "name": "AD_HB_Inf_L1_FutureMystery_Creators",
+      "smart_plus_ad_id": "1870345902490881",
+      "video_id": "v10033g50000d99tak7og65knt1s9qtg",
+      "creative_key": "future_mystery"
+    },
+    {
+      "name": "AD_HB_Inf_L1_WalkInside_Gaming",
+      "smart_plus_ad_id": "1870346012816705",
+      "video_id": "v10033g50000d99tajvog65mvn6iu54g",
+      "creative_key": "walk"
+    }
+  ],
+  "errors": [],
+  "pending": [],
+  "skipped": [
+    {
+      "name": "AD_HB_Inf_L1_CallingAll_Creators",
+      "reason": "already on composite video_id"
+    }
+  ],
+  "unmatched": [],
+  "followup_updated": [
+    {"name": "AD_HB_Inf_L4_WalkInsideRT_Creators", "creative_key": "walk"},
+    {"name": "AD_HB_Inf_L4_WalkInsideRT_Gaming", "creative_key": "walk"},
+    {"name": "AD_HB_Inf_L5_LiveFXUrgency_Gaming", "creative_key": "livefx"},
+    {"name": "AD_HB_Inf_L5_LiveFXUrgency_Creators", "creative_key": "livefx", "note": "2 duplicate ad IDs updated"}
+  ],
+  "ads_fetched": 92,
+  "ads_in_queue": 44
+}

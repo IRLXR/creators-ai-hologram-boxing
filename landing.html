@@ -54,12 +54,10 @@
       <div class="lp-email-wrap" id="creator-partner-signup" hidden>
         <p class="lp-creator-perks">Co-stream HB 002 · VIP ringside · Brand ambassador roles · Live interactive FX for your chat</p>
         <form class="lp-email-form" id="creator-partner-form" novalidate>
-          <label class="visually-hidden" for="creator-name">Your name</label>
-          <input type="text" id="creator-name" name="name" class="lp-email-input" placeholder="Your name" autocomplete="name" required aria-required="true">
+          <label class="visually-hidden" for="creator-username">Username / handle</label>
+          <input type="text" id="creator-username" name="username" class="lp-email-input" placeholder="@yourhandle" autocomplete="username" required aria-required="true" autocapitalize="off" spellcheck="false">
           <label class="visually-hidden" for="creator-email">Email</label>
           <input type="email" id="creator-email" name="email" class="lp-email-input" placeholder="Email" autocomplete="email" inputmode="email" required aria-required="true" aria-describedby="creator-partner-form-hint">
-          <label class="visually-hidden" for="creator-channel">Channel or profile link</label>
-          <input type="url" id="creator-channel" name="channelUrl" class="lp-email-input" placeholder="Kick / Twitch / YouTube / TikTok link" inputmode="url" required aria-required="true">
           <label class="visually-hidden" for="creator-platform">Primary platform</label>
           <select id="creator-platform" name="platform" class="lp-email-input lp-email-select" aria-label="Primary platform">
             <option value="">Primary platform (optional)</option>
@@ -75,7 +73,7 @@
         </form>
         <div class="lp-success" id="creator-partner-success" hidden>
           <p class="lp-success-line1">Application received.</p>
-          <p class="lp-success-line2">We'll review your channel and reach out about co-streaming HB 002.</p>
+          <p class="lp-success-line2">We'll review your handle and reach out about co-streaming HB 002.</p>
         </div>
       </div>
 
@@ -271,5 +269,5 @@
     </div>
   </section>
 
-  <script src="js/landing.js?v=20260711a" defer></script></body>
+  <script src="js/landing.js?v=20260711b" defer></script></body>
 </html>

@@ -1,0 +1,35 @@
+{
+  "version": "2026-07-11",
+  "jobs": {
+    "calling_all": {
+      "video_job": "f1a59bf7-dd2d-4fbf-9552-65832f7c390f",
+      "audio_job": "0d9e38c5-d231-4f49-8d36-0668d2a02c7e",
+      "poster_media": "9bf6a848-b5cb-43e0-a971-f2fbc8f6b3b6",
+      "output": "ads/influencer-recruit/output/TIKTOK-CALLING-ALL-INFLUENCERS-15s.mp4"
+    },
+    "open_exact": {
+      "video_job": "b002936b-cd82-4ee8-96ca-80ef4eb733e7",
+      "audio_job": "b564ac51-77f0-48b2-976a-bd882078343a",
+      "poster_media": "45644177-04c8-4cfd-95df-5b7e49ce5316",
+      "output": "ads/influencer-recruit/output/OPEN-CALL-EXACT-POSTER-15s.mp4"
+    },
+    "open_opt": {
+      "video_job": "69b77bc9-a7a9-4b21-94c1-67e74b7a794e",
+      "audio_job": "7c42dc47-1216-4be1-b1a1-76ec5d211e1f",
+      "poster_media": "c9724afa-b07f-4035-8055-95533b26133d",
+      "output": "ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4"
+    },
+    "creator_reminder": {
+      "video_job": "17f7ed8d-7923-42ec-9a7d-f003a9235840",
+      "audio_job": "7ffa5381-69c3-4640-9a19-bb0e8fd10229",
+      "poster_media": "bd06e90f-dca6-4af5-b419-bee1e3364541",
+      "output": "ads/influencer-recruit/output/CREATOR-REMINDER-15s.mp4"
+    },
+    "streamer_last_call": {
+      "video_job": "e82d43cd-9a9b-4131-9911-e63e2931266e",
+      "audio_job": "e02e32cd-289c-4a4b-9b48-7a5a80f55670",
+      "poster_media": "ac493317-03b8-409d-a494-297a27d896ae",
+      "output": "ads/influencer-recruit/output/STREAMER-LAST-CALL-15s.mp4"
+    }
+  }
+}

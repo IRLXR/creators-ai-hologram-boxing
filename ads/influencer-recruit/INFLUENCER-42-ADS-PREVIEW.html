@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Influencer Staircase — 42 TikTok Ads Preview</title>
+  <title>Influencer Staircase — 64 TikTok Ads Preview</title>
   <style>
     :root { --bg: #0a0a0f; --card: #14141c; --text: #e8e8f0; --muted: #888; --accent: #7c5cff; --layer: #2a2a38; }
     * { box-sizing: border-box; }
@@ -26,6 +26,7 @@
     .card h3 { margin: .25rem 0 .5rem; font-size: .9rem; word-break: break-word; }
     .card .audience { font-size: .8rem; color: var(--muted); margin-bottom: .5rem; }
     .card .copy { font-size: .82rem; background: var(--layer); padding: .6rem; border-radius: 6px; margin: .35rem 0; }
+    .card .copy.hook { background: #1a2a1a; border-left: 3px solid var(--accent, #34d399); }
     .card .cta { font-size: .75rem; color: var(--muted); margin-top: .5rem; }
     .card .file { font-size: .7rem; color: #666; margin-top: .35rem; word-break: break-all; }
     .missing { padding: 3rem 1rem; text-align: center; color: #f66; background: #1a1010; aspect-ratio: 9/16; display: flex; align-items: center; justify-content: center; font-size: .85rem; }
@@ -33,14 +34,15 @@
 </head>
 <body>
   <header>
-    <h1>Influencer Staircase — All TikTok Ads (48)</h1>
-    <p class="sub">L1–L4 = 42 ads · L5 adds 6 more · All PAUSED/OFF</p>
+    <h1>Influencer Staircase — All TikTok Ads (64)</h1>
+    <p class="sub">54 staircase ads (48 base + 6 L4 confirmation) + 10 bonus composites (2 HF B-roll · 8 poster A/B) · Preview server · All PAUSED/OFF</p>
     <nav>
       <a href="#L1">L1 Awareness (6)</a>
       <a href="#L2">L2 Consideration (6)</a>
       <a href="#L3">L3 Conversion (24)</a>
-      <a href="#L4">L4 Retargeting (6)</a>
+      <a href="#L4">L4 Retargeting (12)</a>
       <a href="#L5">L5 Countdown (6)</a>
+      <a href="#BONUS">Bonus (10)</a>
     </nav>
     <p class="sub" style="margin-top:1rem">
       <strong>Do not double-click this file</strong> — browsers block videos on <code>file://</code>.<br>
@@ -53,28 +55,52 @@
   <script>
     const CREATIVE = {
       calling_all: "output/TIKTOK-CALLING-ALL-INFLUENCERS-15s.mp4",
-      walk: "../brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-VO.mp4",
+      inf_calling_all_vo: "output/INFLUENCER-CALLING-ALL-COMPOSITE-15s.mp4",
+      inf_open_call_vo: "output/INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-15s.mp4",
+      inf_l4_retarget_vo: "output/INFLUENCER-L4-RETARGET-OPEN-CALL-COMPOSITE-15s.mp4",
+      inf_l4_partner_reviews_vo: "output/INFLUENCER-L4-PARTNER-REVIEWS-COMPOSITE-15s.mp4",
+      inf_l4_reminder_vo: "output/INFLUENCER-L4-REMINDER-SLOTS-COMPOSITE-15s.mp4",
+      inf_l4_streamer_reviews_vo: "output/INFLUENCER-L4-STREAMER-REVIEWS-COMPOSITE-15s.mp4",
+      inf_l4_confirms_partner_vo: "output/INFLUENCER-L4-CONFIRMS-PARTNER-COMPOSITE-15s.mp4",
+      inf_l4_confirms_reminder_vo: "output/INFLUENCER-L4-CONFIRMS-REMINDER-COMPOSITE-15s.mp4",
+      inf_l4_confirms_open_call_vo: "output/INFLUENCER-L4-CONFIRMS-OPEN-CALL-COMPOSITE-15s.mp4",
+      inf_join_team_vo: "output/INFLUENCER-JOIN-THE-TEAM-COMPOSITE-15s.mp4",
+      walk: "../brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-silent.mp4",
       future_mystery: "../brief-001/output/Director_Brief_001_Version_B_Cinematic_Mystery.mp4",
-      livefx: "../output/32-live-interactive-effects-plate.mp4",
-      stream: "../../ugc/output/08-watch-free-on-kick-twitch-plate.mp4",
-      tent: "../../ugc/output/02-the-inflatable-tent-plate.mp4",
+      memory: "../brief-004/output/MEMORY-60s-16x9-silent.mp4",
+      livefx: "output/INFLUENCER-L2-LIVEFX-COMPOSITE-15s.mp4",
+      stream: "output/INFLUENCER-L2-COSTREAM-COMPOSITE-15s.mp4",
+      tent: "output/INFLUENCER-L2-INSIDE-TENT-COMPOSITE-15s.mp4",
       open_exact: "output/OPEN-CALL-EXACT-POSTER-15s.mp4",
       open_opt: "output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4",
       open_v1: "output/TIKTOK-OPEN-CALL-CREATORS-15s.mp4",
-      future_vo: "../output/FUTURE-IS-HERE-15s-9x16-VO.mp4",
-      whatis: "../../ugc/output/ads-avatar-what-is-hologram-boxing-plate.mp4",
+      future_vo: "../output/FUTURE-IS-HERE-15s-9x16-ambient.mp4",
+      whatis: "output/INFLUENCER-L3-WHATIS-COMPOSITE-15s.mp4",
       creator_reminder: "output/CREATOR-REMINDER-15s.mp4",
-      streamer_last_call: "output/STREAMER-LAST-CALL-15s.mp4",
+      partner_spotlight: "output/PARTNER-SPOTLIGHT-15s.mp4",
+      inf_l5_countdown_vo: "output/INFLUENCER-L5-COUNTDOWN-TIMER-COMPOSITE-15s.mp4",
+      inf_l5_last_call_vo: "output/INFLUENCER-L5-LAST-CALL-STREAMERS-COMPOSITE-15s.mp4",
+      inf_l5_final_slots_vo: "output/INFLUENCER-L5-FINAL-SLOTS-CLOSING-COMPOSITE-15s.mp4",
+      inf_open_call_hf: "output/INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-HF-386B5E5C-15s.mp4",
+      inf_join_team_hf: "output/INFLUENCER-JOIN-THE-TEAM-COMPOSITE-HF-B002936B-15s.mp4",
+      inf_open_call_poster: "output/INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-POSTER-15s.mp4",
+      inf_calling_all_poster: "output/INFLUENCER-CALLING-ALL-COMPOSITE-POSTER-15s.mp4",
+      inf_join_team_poster: "output/INFLUENCER-JOIN-THE-TEAM-COMPOSITE-POSTER-15s.mp4",
+      inf_l4_partner_poster: "output/INFLUENCER-L4-PARTNER-REVIEWS-COMPOSITE-POSTER-15s.mp4",
+      inf_l4_reminder_poster: "output/INFLUENCER-L4-REMINDER-SLOTS-COMPOSITE-POSTER-15s.mp4",
+      inf_l5_countdown_poster: "output/INFLUENCER-L5-COUNTDOWN-TIMER-COMPOSITE-POSTER-15s.mp4",
+      inf_l5_last_call_poster: "output/INFLUENCER-L5-LAST-CALL-STREAMERS-COMPOSITE-POSTER-15s.mp4",
+      inf_l4_confirms_open_call_poster: "output/INFLUENCER-L4-CONFIRMS-OPEN-CALL-COMPOSITE-POSTER-15s.mp4",
     };
 
     const LAYERS = [
       {
         id: "L1", title: "L1 — Awareness (See you)", desc: "Stop scroll · remember hologram boxing for streamers · CTA: Learn More",
         ads: [
-          { n: 1, name: "AD_HB_Inf_L1_CallingAll_Gaming", aud: "Gaming streamers 18–34 FL", cr: "calling_all", texts: ["Calling all streamers — live stream the first AI hologram boxing event.", "Creators — your next co-stream is waiting. Would you walk inside?"] },
+          { n: 1, name: "AD_HB_Inf_L1_CallingAll_Gaming", aud: "Gaming streamers 18–34 FL", cr: "inf_calling_all_vo", texts: ["Calling all streamers — live stream the first AI hologram boxing event.", "Creators — your next co-stream is waiting. Would you walk inside?"] },
           { n: 2, name: "AD_HB_Inf_L1_WalkInside_Gaming", aud: "Gaming streamers 18–34 FL", cr: "walk", texts: ["Would you walk inside? Creators — stream hologram boxing live.", "Something wild is behind that door. Streamers — this is your next event."] },
           { n: 3, name: "AD_HB_Inf_L1_FutureMystery_Gaming", aud: "Gaming streamers 18–34 FL", cr: "future_mystery", texts: ["THE FUTURE OF LIVE ENTERTAINMENT... stream it live.", "Premium fight night energy — built for creators who go live."] },
-          { n: 4, name: "AD_HB_Inf_L1_CallingAll_Creators", aud: "All creators 18–44 FL", cr: "calling_all", texts: ["Calling all streamers — live stream the first AI hologram boxing event.", "Creators — your next co-stream is waiting. Would you walk inside?"] },
+          { n: 4, name: "AD_HB_Inf_L1_CallingAll_Creators", aud: "All creators 18–44 FL", cr: "inf_calling_all_vo", texts: ["Calling all streamers — live stream the first AI hologram boxing event.", "Creators — your next co-stream is waiting. Would you walk inside?"] },
           { n: 5, name: "AD_HB_Inf_L1_WalkInside_Creators", aud: "All creators 18–44 FL", cr: "walk", texts: ["Would you walk inside? Creators — stream hologram boxing live.", "Something wild is behind that door. Streamers — this is your next event."] },
           { n: 6, name: "AD_HB_Inf_L1_FutureMystery_Creators", aud: "All creators 18–44 FL", cr: "future_mystery", texts: ["THE FUTURE OF LIVE ENTERTAINMENT... stream it live.", "Premium fight night energy — built for creators who go live."] },
         ]
@@ -93,52 +119,73 @@
       {
         id: "L3", title: "L3 — Conversion (Sign up)", desc: "Open call · partner form · CTA: Sign Up · 6 ad groups × 4 ads",
         ads: [
-          { n: 13, name: "AD_HB_OpenCallExact_Poster15s", aud: "Open Call Exact · FL creators 18–44", cr: "open_exact", texts: ["OPEN CALL FOR STREAMERS & CONTENT CREATORS. WE WANT YOU! DM @hologramboxing", "WE WANT YOU! Join Creators AI Hologram Boxing — sign up on hologramboxing.com"] },
-          { n: 14, name: "AD_HB_OpenCallExact_SignUp_V2", aud: "Open Call Exact", cr: "open_exact", texts: ["Streamers wanted — sign up at hologramboxing.com", "OPEN CALL FOR CREATORS. WE WANT YOU! Apply at hologramboxing.com"] },
+          { n: 13, name: "AD_HB_OpenCallExact_Poster15s", aud: "Open Call Exact · FL creators 18–44", cr: "inf_open_call_vo", texts: ["OPEN CALL FOR STREAMERS & CONTENT CREATORS. WE WANT YOU! DM @hologramboxing", "WE WANT YOU! Join Creators AI Hologram Boxing — sign up on hologramboxing.com"] },
+          { n: 14, name: "AD_HB_OpenCallExact_SignUp_V2", aud: "Open Call Exact", cr: "inf_open_call_vo", texts: ["Streamers wanted — sign up at hologramboxing.com", "OPEN CALL FOR CREATORS. WE WANT YOU! Apply at hologramboxing.com"] },
           { n: 15, name: "AD_HB_OpenCallExact_WalkInside_X", aud: "Open Call Exact", cr: "walk", texts: ["Would you walk inside? Creators — stream the first event. Apply.", "Something wild is behind that door. Creators — stream hologram boxing live."] },
           { n: 16, name: "AD_HB_OpenCallExact_StreamFX", aud: "Open Call Exact", cr: "livefx", texts: ["Stream the tent — live interactive effects.", "Creators — co-stream hologram boxing. Sign up."] },
-          { n: 17, name: "AD_HB_OpenCall_Optimized15s", aud: "Optimized · FL creators 18–44", cr: "open_opt", texts: ["Open call for streamers & creators — live stream hologram boxing. We want you. Apply now.", "Streamers & creators wanted. Sign up for the first AI hologram boxing event at hologramboxing.com"] },
+          { n: 17, name: "AD_HB_OpenCall_Optimized15s", aud: "Optimized · FL creators 18–44", cr: "inf_join_team_vo", texts: ["Open call for streamers & creators — live stream hologram boxing. We want you. Apply now.", "Streamers & creators wanted. Sign up for the first AI hologram boxing event at hologramboxing.com"] },
           { n: 18, name: "AD_HB_OpenCall_Optimized_Future_X", aud: "Optimized", cr: "future_vo", texts: ["The future of live entertainment. Creators — we want you.", "Picture this — tent + AR + AI boxers LIVE. Creators apply now."] },
           { n: 19, name: "AD_HB_OpenCall_UGC_WhatIs", aud: "Optimized", cr: "whatis", texts: ["What is hologram boxing? Stream it live. Sign up.", "What is hologram boxing? Creators — join the first AI fight night."] },
           { n: 20, name: "AD_HB_OpenCall_Tent_Cross", aud: "Optimized", cr: "tent", texts: ["Join the team — stream the fights from inside the tent.", "Creators wanted. Stream hologram boxing live."] },
-          { n: 21, name: "AD_HB_Influencer_Gaming_OpenCallExact", aud: "Gaming streamers FL", cr: "open_exact", texts: ["OPEN CALL — streamers wanted on Kick/Twitch. WE WANT YOU!", "Gaming creators — co-stream hologram boxing. Sign up."] },
-          { n: 22, name: "AD_HB_Influencer_Gaming_OpenCallOpt", aud: "Gaming streamers FL", cr: "open_opt", texts: ["Open call for Kick & Twitch streamers — co-stream hologram boxing. Apply now.", "Gaming creators: stream the first AI fight night. Sign up."] },
+          { n: 21, name: "AD_HB_Influencer_Gaming_OpenCallExact", aud: "Gaming streamers FL", cr: "inf_open_call_vo", texts: ["OPEN CALL — streamers wanted on Kick/Twitch. WE WANT YOU!", "Gaming creators — co-stream hologram boxing. Sign up."] },
+          { n: 22, name: "AD_HB_Influencer_Gaming_OpenCallOpt", aud: "Gaming streamers FL", cr: "inf_join_team_vo", texts: ["Open call for Kick & Twitch streamers — co-stream hologram boxing. Apply now.", "Gaming creators: stream the first AI fight night. Sign up."] },
           { n: 23, name: "AD_HB_Influencer_Gaming_OpenCallCreators", aud: "Gaming streamers FL", cr: "open_v1", texts: ["OPEN CALL FOR STREAMERS & CONTENT CREATORS — WE WANT YOU!", "Kick, Twitch, YouTube gamers — join hologram boxing. Sign up."] },
           { n: 24, name: "AD_HB_Influencer_Gaming_LiveFX", aud: "Gaming streamers FL", cr: "livefx", texts: ["Stream the tent — live interactive effects.", "Kick & Twitch streamers — hologram boxing needs you."] },
-          { n: 25, name: "AD_HB_Influencer_Combat_OpenCallExact", aud: "Combat creators FL", cr: "open_exact", texts: ["OPEN CALL — boxing creators wanted. WE WANT YOU!", "MMA & boxing creators — stream hologram fight night. Sign up."] },
-          { n: 26, name: "AD_HB_Influencer_Combat_OpenCallOpt", aud: "Combat creators FL", cr: "open_opt", texts: ["Open call for combat sports creators — live stream hologram boxing. Apply now.", "UFC fans, boxing creators — co-stream the tent. Sign up."] },
+          { n: 25, name: "AD_HB_Influencer_Combat_OpenCallExact", aud: "Combat creators FL", cr: "inf_open_call_vo", texts: ["OPEN CALL — boxing creators wanted. WE WANT YOU!", "MMA & boxing creators — stream hologram fight night. Sign up."] },
+          { n: 26, name: "AD_HB_Influencer_Combat_OpenCallOpt", aud: "Combat creators FL", cr: "inf_join_team_vo", texts: ["Open call for combat sports creators — live stream hologram boxing. Apply now.", "UFC fans, boxing creators — co-stream the tent. Sign up."] },
           { n: 27, name: "AD_HB_Influencer_Combat_OpenCallCreators", aud: "Combat creators FL", cr: "open_v1", texts: ["Calling all combat sports creators — WE WANT YOU!", "Boxing & MMA streamers — hologram boxing needs you. Sign up."] },
           { n: 28, name: "AD_HB_Influencer_Combat_LiveFX", aud: "Combat creators FL", cr: "livefx", texts: ["Stream the tent — live interactive effects.", "Combat sports creators — hologram boxing live effects. Sign up."] },
-          { n: 29, name: "AD_HB_Influencer_Reels_OpenCallExact", aud: "Reels creators FL", cr: "open_exact", texts: ["OPEN CALL — TikTok & Reels creators wanted. WE WANT YOU!", "Short-form creators — film hologram boxing. Sign up."] },
-          { n: 30, name: "AD_HB_Influencer_Reels_OpenCallOpt", aud: "Reels creators FL", cr: "open_opt", texts: ["Open call for TikTok & Reels creators — hype hologram boxing. Apply now.", "Short-form content creators — stream the first AI fight night. Sign up."] },
+          { n: 29, name: "AD_HB_Influencer_Reels_OpenCallExact", aud: "Reels creators FL", cr: "inf_open_call_vo", texts: ["OPEN CALL — TikTok & Reels creators wanted. WE WANT YOU!", "Short-form creators — film hologram boxing. Sign up."] },
+          { n: 30, name: "AD_HB_Influencer_Reels_OpenCallOpt", aud: "Reels creators FL", cr: "inf_join_team_vo", texts: ["Open call for TikTok & Reels creators — hype hologram boxing. Apply now.", "Short-form content creators — stream the first AI fight night. Sign up."] },
           { n: 31, name: "AD_HB_Influencer_Reels_OpenCallCreators", aud: "Reels creators FL", cr: "open_v1", texts: ["OPEN CALL FOR CREATORS — WE WANT YOU!", "TikTok, Reels, short-form — join hologram boxing. Sign up."] },
           { n: 32, name: "AD_HB_Influencer_Reels_LiveFX", aud: "Reels creators FL", cr: "livefx", texts: ["Stream the tent — live interactive effects.", "Reels & TikTok creators — hologram boxing needs you."] },
-          { n: 33, name: "AD_HB_Influencer_OrlandoMiami_OpenCallExact", aud: "Orlando + Miami FL", cr: "open_exact", texts: ["OPEN CALL — Orlando & Miami creators. WE WANT YOU!", "Local FL creators — co-stream hologram boxing. Sign up."] },
-          { n: 34, name: "AD_HB_Influencer_OrlandoMiami_OpenCallOpt", aud: "Orlando + Miami FL", cr: "open_opt", texts: ["Open call for Orlando & Miami creators — live stream hologram boxing. Apply now.", "South Florida creators — join the first AI fight night. Sign up."] },
+          { n: 33, name: "AD_HB_Influencer_OrlandoMiami_OpenCallExact", aud: "Orlando + Miami FL", cr: "inf_open_call_vo", texts: ["OPEN CALL — Orlando & Miami creators. WE WANT YOU!", "Local FL creators — co-stream hologram boxing. Sign up."] },
+          { n: 34, name: "AD_HB_Influencer_OrlandoMiami_OpenCallOpt", aud: "Orlando + Miami FL", cr: "inf_join_team_vo", texts: ["Open call for Orlando & Miami creators — live stream hologram boxing. Apply now.", "South Florida creators — join the first AI fight night. Sign up."] },
           { n: 35, name: "AD_HB_Influencer_OrlandoMiami_OpenCallCreators", aud: "Orlando + Miami FL", cr: "open_v1", texts: ["Calling Orlando & Miami content creators — WE WANT YOU!", "Local streamers & creators — hologram boxing is hiring partners. Sign up."] },
           { n: 36, name: "AD_HB_Influencer_OrlandoMiami_LiveFX", aud: "Orlando + Miami FL", cr: "livefx", texts: ["Stream the tent — live interactive effects.", "Orlando & Miami creators — hologram boxing live effects. Sign up."] },
         ]
       },
       {
-        id: "L4", title: "L4 — Retargeting (Come back)", desc: "Visited landing, didn't sign up · CTA: Sign Up",
+        id: "L4", title: "L4 — Retargeting (Come back)", desc: "6 direct retarget + 6 ad-confirmation talking heads (validates the other L4 ads) · CTA: Sign Up",
         ads: [
-          { n: 37, name: "AD_HB_Inf_L4_Reminder_Gaming", aud: "Gaming streamers 18–34 FL", cr: "creator_reminder", texts: ["You looked — streamer partner slots are filling. Finish your application.", "Still thinking about co-streaming hologram boxing? Sign up now."] },
-          { n: 38, name: "AD_HB_Inf_L4_OpenCallExact_Gaming", aud: "Gaming streamers 18–34 FL", cr: "open_exact", texts: ["OPEN CALL — we still want you. Apply at hologramboxing.com", "Creators — your spot is waiting. WE WANT YOU!"] },
-          { n: 39, name: "AD_HB_Inf_L4_WalkInsideRT_Gaming", aud: "Gaming streamers 18–34 FL", cr: "walk", texts: ["You looked inside — bring your audience next time. Sign up.", "Would you walk inside? Creator applications still open."] },
-          { n: 40, name: "AD_HB_Inf_L4_Reminder_Creators", aud: "All creators 18–44 FL", cr: "creator_reminder", texts: ["You looked — streamer partner slots are filling. Finish your application.", "Still thinking about co-streaming hologram boxing? Sign up now."] },
-          { n: 41, name: "AD_HB_Inf_L4_OpenCallExact_Creators", aud: "All creators 18–44 FL", cr: "open_exact", texts: ["OPEN CALL — we still want you. Apply at hologramboxing.com", "Creators — your spot is waiting. WE WANT YOU!"] },
-          { n: 42, name: "AD_HB_Inf_L4_WalkInsideRT_Creators", aud: "All creators 18–44 FL", cr: "walk", texts: ["You looked inside — bring your audience next time. Sign up.", "Would you walk inside? Creator applications still open."] },
+          { n: 37, name: "AD_HB_Inf_L4_PartnerSpotlight_Gaming", aud: "Gaming streamers 18–34 FL · retarget 7d", cr: "inf_l4_partner_reviews_vo", hook: "WHAT STREAMERS ARE SAYING", texts: ["Streamers who toured the tent say the content is insane — co-stream hologram boxing. Your turn. Sign up.", "Kick, Twitch, and TikTok partners are in. VIP ringside, live FX. Join the roster."] },
+          { n: 38, name: "AD_HB_Inf_L4_Reminder_Gaming", aud: "Gaming streamers 18–34 FL · retarget 7d", cr: "inf_l4_reminder_vo", hook: "STILL THINKING ABOUT IT?", texts: ["Still thinking about co-streaming hologram boxing? Partner slots are filling — finish at hologramboxing.com.", "Bring your chat ringside — live interactive FX. Finish your application."] },
+          { n: 39, name: "AD_HB_Inf_L4_OpenCallExact_Gaming", aud: "Gaming streamers 18–34 FL · retarget 7d", cr: "inf_l4_retarget_vo", hook: "YOUR SPOT'S STILL OPEN", texts: ["Your co-stream partner slot is still open. Open call live — finish at hologramboxing.com.", "Co-stream hologram boxing — VIP ringside, live FX. Sign up now."] },
+          { n: 40, name: "AD_HB_Inf_L4_PartnerSpotlight_Creators", aud: "All creators 18–44 FL · retarget 7d", cr: "inf_l4_partner_reviews_vo", hook: "CREATORS ARE ALREADY IN", texts: ["Confirmed creators are locking co-stream slots. Streamers say the tent content is insane — your turn.", "Kick, Twitch, and TikTok partners are in. Co-stream hologram boxing — join the roster."] },
+          { n: 41, name: "AD_HB_Inf_L4_Reminder_Creators", aud: "All creators 18–44 FL · retarget 7d", cr: "inf_l4_reminder_vo", hook: "YOU LOOKED — SLOTS ARE FILLING", texts: ["You looked — streamer partner slots are filling. Finish your application at hologramboxing.com.", "VIP tent access, content your audience hasn't seen. Takes thirty seconds."] },
+          { n: 42, name: "AD_HB_Inf_L4_OpenCallExact_Creators", aud: "All creators 18–44 FL · retarget 7d", cr: "inf_l4_retarget_vo", hook: "YOU LOOKED — FINISH YOUR APPLICATION", texts: ["You looked — open call's still live for creators. Finish your signup at hologramboxing.com.", "Partner slots filling — your spot's still open. Sign up now."] },
+          { n: 43, name: "AD_HB_Inf_L4_ConfirmsPartner_Gaming", aud: "Gaming · 2nd touch · confirms partner ad", cr: "inf_l4_confirms_partner_vo", hook: "THAT PARTNER AD? IT'S REAL", texts: ["Saw our partner ad? It's real — streamers are locking co-stream slots. Finish at hologramboxing.com.", "That creators-are-in ad wasn't fluff. Go finish your signup like they said."] },
+          { n: 44, name: "AD_HB_Inf_L4_ConfirmsReminder_Gaming", aud: "Gaming · 2nd touch · confirms reminder ad", cr: "inf_l4_confirms_reminder_vo", hook: "THAT REMINDER AD? FACTS", texts: ["That reminder ad was right — partner slots are filling. Apply at hologramboxing.com.", "Don't sleep on it — co-stream hologram boxing spots are actually going."] },
+          { n: 45, name: "AD_HB_Inf_L4_ConfirmsOpenCall_Gaming", aud: "Gaming · 2nd touch · confirms open call ad", cr: "inf_l4_confirms_open_call_vo", hook: "THAT OPEN CALL AD? LEGIT", texts: ["Saw the open call ad? It's legit — they want co-stream creators. Finish at hologramboxing.com.", "Not clickbait. Hologram boxing wants streamers — your slot's still open."] },
+          { n: 46, name: "AD_HB_Inf_L4_ConfirmsPartner_Creators", aud: "Creators · 2nd touch · confirms partner ad", cr: "inf_l4_confirms_partner_vo", hook: "YES — CREATORS ARE SIGNING UP", texts: ["That partner ad? True — creators are locking co-stream slots. Sign up now.", "The reviews aren't fluff. Finish at hologramboxing.com."] },
+          { n: 47, name: "AD_HB_Inf_L4_ConfirmsReminder_Creators", aud: "Creators · 2nd touch · confirms reminder ad", cr: "inf_l4_confirms_reminder_vo", hook: "YES — SLOTS ARE FILLING", texts: ["You saw the slots-filling ad? Yeah it's real. Co-stream hologram boxing — apply now.", "I checked the site — partner spots are going. Don't wait."] },
+          { n: 48, name: "AD_HB_Inf_L4_ConfirmsOpenCall_Creators", aud: "Creators · 2nd touch · confirms open call ad", cr: "inf_l4_confirms_open_call_vo", hook: "YES — THEY WANT CREATORS", texts: ["The open call ad is real — they want creators. Finish at hologramboxing.com.", "I almost didn't apply. Do it — your slot's still open."] },
         ]
       },
       {
-        id: "L5", title: "L5 — Countdown (Show up)", desc: "Last partner slots before HB 002 · CTA: Sign Up",
+        id: "L5", title: "L5 — Countdown (Show up)", desc: "All 3 creatives = voiced talking heads (timer · last call · final slots) · CTA: Sign Up",
         ads: [
-          { n: 43, name: "AD_HB_Inf_L5_LastCall_Gaming", aud: "Gaming streamers 18–34 FL", cr: "streamer_last_call", texts: ["LAST CALL — streamer partner slots closing. HB 002 loading.", "Final call for creators — co-stream hologram boxing before slots close."] },
-          { n: 44, name: "AD_HB_Inf_L5_OpenCallOpt_Gaming", aud: "Gaming streamers 18–34 FL", cr: "open_opt", texts: ["Open call closing soon — stream hologram boxing live. Apply now.", "Creators — last chance to join the team. Sign up."] },
-          { n: 45, name: "AD_HB_Inf_L5_LiveFXUrgency_Gaming", aud: "Gaming streamers 18–34 FL", cr: "livefx", texts: ["Go live with us — interactive FX, hologram fights, your audience ringside.", "Streamers — HB 002 is almost here. Sign up to co-stream."] },
-          { n: 46, name: "AD_HB_Inf_L5_LastCall_Creators", aud: "All creators 18–44 FL", cr: "streamer_last_call", texts: ["LAST CALL — streamer partner slots closing. HB 002 loading.", "Final call for creators — co-stream hologram boxing before slots close."] },
-          { n: 47, name: "AD_HB_Inf_L5_OpenCallOpt_Creators", aud: "All creators 18–44 FL", cr: "open_opt", texts: ["Open call closing soon — stream hologram boxing live. Apply now.", "Creators — last chance to join the team. Sign up."] },
-          { n: 48, name: "AD_HB_Inf_L5_LiveFXUrgency_Creators", aud: "All creators 18–44 FL", cr: "livefx", texts: ["Go live with us — interactive FX, hologram fights, your audience ringside.", "Streamers — HB 002 is almost here. Sign up to co-stream."] },
+          { n: 49, name: "AD_HB_Inf_L5_CountdownTimer_Gaming", aud: "Gaming streamers 18–34 FL · ≤14d to fight night", cr: "inf_l5_countdown_vo", texts: ["Partner slots close when the countdown hits zero. Co-stream hologram boxing — lock your slot at hologramboxing.com.", "Fight night countdown is live. Streamers — lock your co-stream slot before partner applications close."] },
+          { n: 50, name: "AD_HB_Inf_L5_LastCall_Gaming", aud: "Gaming streamers 18–34 FL · ≤14d to fight night", cr: "inf_l5_last_call_vo", texts: ["LAST CALL — streamer partner slots closing. Co-stream hologram boxing before the roster locks. Sign up now.", "Final call for Kick & Twitch creators — co-stream hologram boxing live. Partner applications closing soon."] },
+          { n: 51, name: "AD_HB_Inf_L5_OpenCallOpt_Gaming", aud: "Gaming streamers 18–34 FL · ≤14d to fight night", cr: "inf_l5_final_slots_vo", texts: ["Open call closing soon — stream hologram boxing live. Final co-stream partner slots. Apply now.", "Creators — last chance to join the co-stream roster. VIP tent access. Sign up at hologramboxing.com."] },
+          { n: 52, name: "AD_HB_Inf_L5_CountdownTimer_Creators", aud: "All creators 18–44 FL · ≤14d to fight night", cr: "inf_l5_countdown_vo", texts: ["Partner slots close when the countdown hits zero. Co-stream hologram boxing — lock your slot at hologramboxing.com.", "Fight night countdown is live. Streamers — lock your co-stream slot before partner applications close."] },
+          { n: 53, name: "AD_HB_Inf_L5_LastCall_Creators", aud: "All creators 18–44 FL · ≤14d to fight night", cr: "inf_l5_last_call_vo", texts: ["LAST CALL — streamer partner slots closing. Co-stream hologram boxing before the roster locks. Sign up now.", "Final call for Kick & Twitch creators — co-stream hologram boxing live. Partner applications closing soon."] },
+          { n: 54, name: "AD_HB_Inf_L5_OpenCallOpt_Creators", aud: "All creators 18–44 FL · ≤14d to fight night", cr: "inf_l5_final_slots_vo", texts: ["Open call closing soon — stream hologram boxing live. Final co-stream partner slots. Apply now.", "Creators — last chance to join the co-stream roster. VIP tent access. Sign up at hologramboxing.com."] },
+        ]
+      },
+      {
+        id: "BONUS", title: "Bonus — Higgsfield B-roll & Poster A/B (10)", desc: "Add-on composites · not in staircase launch matrix · use for TikTok A/B tests",
+        ads: [
+          { n: 55, name: "BONUS_OpenCall_HF_386B5E5C", aud: "Script 33 · HF highlight reel B-roll", cr: "inf_open_call_hf", texts: ["OPEN CALL FOR STREAMERS & CONTENT CREATORS. WE WANT YOU! DM @hologramboxing", "WE WANT YOU! Join Creators AI Hologram Boxing — sign up on hologramboxing.com"] },
+          { n: 56, name: "BONUS_JoinTeam_HF_B002936B", aud: "Script 34 · HF tent B-roll (b002936b)", cr: "inf_join_team_hf", texts: ["Open call for streamers & creators — live stream hologram boxing. We want you. Apply now.", "Streamers & creators wanted. Sign up for the first AI hologram boxing event at hologramboxing.com"] },
+          { n: 57, name: "BONUS_OpenCall_Poster_AB", aud: "Script 33 · silent poster BG", cr: "inf_open_call_poster", texts: ["OPEN CALL FOR STREAMERS & CONTENT CREATORS. WE WANT YOU! DM @hologramboxing", "WE WANT YOU! Join Creators AI Hologram Boxing — sign up on hologramboxing.com"] },
+          { n: 58, name: "BONUS_CallingAll_Poster_AB", aud: "Script 34 · silent poster BG", cr: "inf_calling_all_poster", texts: ["Calling all streamers — live stream the first AI hologram boxing event.", "Creators — your next co-stream is waiting. Would you walk inside?"] },
+          { n: 59, name: "BONUS_JoinTeam_Poster_AB", aud: "Script 35 · silent poster BG", cr: "inf_join_team_poster", texts: ["Open call for streamers & creators — live stream hologram boxing. We want you. Apply now.", "Streamers & creators wanted. Sign up for the first AI hologram boxing event at hologramboxing.com"] },
+          { n: 60, name: "BONUS_L4_Partner_Poster_AB", aud: "Script 37 · silent poster BG", cr: "inf_l4_partner_poster", hook: "WHAT STREAMERS ARE SAYING", texts: ["Streamers who toured the tent say the content is insane — co-stream hologram boxing. Your turn. Sign up.", "Kick, Twitch, and TikTok partners are in. VIP ringside, live FX. Join the roster."] },
+          { n: 61, name: "BONUS_L4_Reminder_Poster_AB", aud: "Script 38 · silent poster BG", cr: "inf_l4_reminder_poster", hook: "STILL THINKING ABOUT IT?", texts: ["Still thinking about co-streaming hologram boxing? Partner slots are filling — finish at hologramboxing.com.", "Bring your chat ringside — live interactive FX. Finish your application."] },
+          { n: 62, name: "BONUS_L5_Countdown_Poster_AB", aud: "Script 40 · silent poster BG", cr: "inf_l5_countdown_poster", texts: ["Partner slots close when the countdown hits zero. Co-stream hologram boxing — lock your slot at hologramboxing.com.", "Fight night countdown is live. Streamers — lock your co-stream slot before partner applications close."] },
+          { n: 63, name: "BONUS_L5_LastCall_Poster_AB", aud: "Script 41 · silent poster BG", cr: "inf_l5_last_call_poster", texts: ["LAST CALL — streamer partner slots closing. Co-stream hologram boxing before the roster locks. Sign up now.", "Final call for Kick & Twitch creators — co-stream hologram boxing live. Partner applications closing soon."] },
+          { n: 64, name: "BONUS_L4_ConfirmsOpenCall_Poster_AB", aud: "Script 45 · silent poster BG", cr: "inf_l4_confirms_open_call_poster", hook: "THAT OPEN CALL AD? LEGIT", texts: ["Saw the open call ad? It's legit — they want co-stream creators. Finish at hologramboxing.com.", "Not clickbait. Hologram boxing wants streamers — your slot's still open."] },
         ]
       },
     ];
@@ -164,8 +211,9 @@
             <div class="num">#${globalN} · ${layer.id}</div>
             <h3>${ad.name}</h3>
             <div class="audience">${ad.aud}</div>
+            ${ad.hook ? `<div class="copy hook"><strong>Hook:</strong> ${ad.hook}</div>` : ""}
             ${ad.texts.map(t => `<div class="copy">"${t}"</div>`).join("")}
-            <div class="cta">CTA: ${layer.id === "L1" || layer.id === "L2" ? "Learn More" : "Sign Up"} · 9:16 video</div>
+            <div class="cta">CTA: ${layer.id === "L1" || layer.id === "L2" ? "Learn More" : "Sign Up"} · 9:16 video${layer.id === "BONUS" ? " · A/B add-on" : ""}</div>
             <div class="file">${src || ad.cr}</div>
           </div>`;
         grid.appendChild(card);

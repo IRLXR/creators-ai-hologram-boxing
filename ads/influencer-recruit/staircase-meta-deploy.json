@@ -1,0 +1,229 @@
+[
+  {
+    "layerKey": "L1_see_you",
+    "campaignId": "120249891084990588",
+    "adsets": [
+      {
+        "name": "ADGRP_HB_Inf_L1_GamingStreamers_FL",
+        "id": "120249891085310588",
+        "ads": [
+          {
+            "name": "AD_HB_Inf_L1_CallingAll_Gaming",
+            "adId": "120249891086420588",
+            "creativeId": "904545388682703"
+          },
+          {
+            "name": "AD_HB_Inf_L1_WalkInside_Gaming",
+            "adId": "120249891086700588",
+            "creativeId": "1040142268408489"
+          },
+          {
+            "name": "AD_HB_Inf_L1_FutureMystery_Gaming",
+            "adId": "120249891087750588",
+            "creativeId": "1628885092573454"
+          }
+        ]
+      },
+      {
+        "name": "ADGRP_HB_Inf_L1_AllCreators_FL",
+        "id": "120249891088510588",
+        "ads": [
+          {
+            "name": "AD_HB_Inf_L1_CallingAll_Creators",
+            "adId": "120249891088840588",
+            "creativeId": "1046294567802071"
+          },
+          {
+            "name": "AD_HB_Inf_L1_WalkInside_Creators",
+            "adId": "120249891089370588",
+            "creativeId": "1793189611700989"
+          },
+          {
+            "name": "AD_HB_Inf_L1_FutureMystery_Creators",
+            "adId": "120249891089890588",
+            "creativeId": "3415920945252781"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "layerKey": "L2_get_curious",
+    "campaignId": "120249891089970588",
+    "adsets": [
+      {
+        "name": "ADGRP_HB_Inf_L2_GamingStreamers_FL",
+        "id": "120249891090040588",
+        "ads": [
+          {
+            "name": "AD_HB_Inf_L2_LiveFX_Gaming",
+            "adId": "120249891090450588",
+            "creativeId": "978946661766865"
+          },
+          {
+            "name": "AD_HB_Inf_L2_CoStream_Gaming",
+            "adId": "120249891091060588",
+            "creativeId": "2777353375972547"
+          },
+          {
+            "name": "AD_HB_Inf_L2_InsideTent_Gaming",
+            "adId": "120249891091200588",
+            "creativeId": "1949974752374897"
+          }
+        ]
+      },
+      {
+        "name": "ADGRP_HB_Inf_L2_AllCreators_FL",
+        "id": "120249891091360588",
+        "ads": [
+          {
+            "name": "AD_HB_Inf_L2_LiveFX_Creators",
+            "adId": "120249891091920588",
+            "creativeId": "1069809658819120"
+          },
+          {
+            "name": "AD_HB_Inf_L2_CoStream_Creators",
+            "adId": "120249891092730588",
+            "creativeId": "1718438279280904"
+          },
+          {
+            "name": "AD_HB_Inf_L2_InsideTent_Creators",
+            "adId": "120249891093110588",
+            "creativeId": "1029710306332595"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "layerKey": "L3_sign_up",
+    "skipped": true,
+    "campaignId": "120249816887950588"
+  },
+  {
+    "layerKey": "L4_come_back",
+    "campaignId": "120249891093560588",
+    "adsets": [
+      {
+        "name": "ADGRP_HB_Inf_L4_GamingStreamers_FL",
+        "id": "120249891093780588",
+        "ads": [
+          {
+            "name": "AD_HB_Inf_L4_PartnerSpotlight_Gaming",
+            "adId": "120249891094150588",
+            "creativeId": "27670057139294942"
+          },
+          {
+            "name": "AD_HB_Inf_L4_Reminder_Gaming",
+            "adId": "120249891094500588",
+            "creativeId": "2387831155042412"
+          },
+          {
+            "name": "AD_HB_Inf_L4_OpenCallExact_Gaming",
+            "adId": "120249891095000588",
+            "creativeId": "1386295713355982"
+          },
+          {
+            "name": "AD_HB_Inf_L4_ConfirmsPartner_Gaming",
+            "adId": "120249891095550588",
+            "creativeId": "3256958841157323"
+          },
+          {
+            "name": "AD_HB_Inf_L4_ConfirmsReminder_Gaming",
+            "adId": "120249891095890588",
+            "creativeId": "1694611331795820"
+          },
+          {
+            "name": "AD_HB_Inf_L4_ConfirmsOpenCall_Gaming",
+            "adId": "120249891096960588",
+            "creativeId": "2798925480494231"
+          }
+        ]
+      },
+      {
+        "name": "ADGRP_HB_Inf_L4_AllCreators_FL",
+        "id": "120249891097110588",
+        "ads": [
+          {
+            "name": "AD_HB_Inf_L4_PartnerSpotlight_Creators",
+            "adId": "120249891097520588",
+            "creativeId": "2468555186901586"
+          },
+          {
+            "name": "AD_HB_Inf_L4_Reminder_Creators",
+            "adId": "120249891097760588",
+            "creativeId": "1350747060546202"
+          },
+          {
+            "name": "AD_HB_Inf_L4_OpenCallExact_Creators",
+            "adId": "120249891098450588",
+            "creativeId": "1567899844726908"
+          },
+          {
+            "name": "AD_HB_Inf_L4_ConfirmsPartner_Creators",
+            "adId": "120249891099200588",
+            "creativeId": "1499518481463953"
+          },
+          {
+            "name": "AD_HB_Inf_L4_ConfirmsReminder_Creators",
+            "adId": "120249891099850588",
+            "creativeId": "1504366924249424"
+          },
+          {
+            "name": "AD_HB_Inf_L4_ConfirmsOpenCall_Creators",
+            "adId": "120249891100040588",
+            "creativeId": "2242111583271011"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "layerKey": "L5_show_up",
+    "campaignId": "120249891100470588",
+    "adsets": [
+      {
+        "name": "ADGRP_HB_Inf_L5_GamingStreamers_FL",
+        "id": "120249891100580588",
+        "ads": [
+          {
+            "name": "AD_HB_Inf_L5_CountdownTimer_Gaming",
+            "adId": "120249891101360588",
+            "creativeId": "27333098903026778"
+          },
+          {
+            "name": "AD_HB_Inf_L5_LastCall_Gaming",
+            "adId": "120249891101600588",
+            "creativeId": "2346049296223275"
+          },
+          {
+            "name": "AD_HB_Inf_L5_OpenCallOpt_Gaming",
+            "adId": "120249891102200588",
+            "creativeId": "2259106428247926"
+          }
+        ]
+      },
+      {
+        "name": "ADGRP_HB_Inf_L5_AllCreators_FL",
+        "id": "120249891102600588",
+        "ads": [
+          {
+            "name": "AD_HB_Inf_L5_CountdownTimer_Creators",
+            "adId": "120249891103360588",
+            "creativeId": "922273390888871"
+          },
+          {
+            "name": "AD_HB_Inf_L5_LastCall_Creators",
+            "adId": "120249891103770588",
+            "creativeId": "2095646388012426"
+          },
+          {
+            "name": "AD_HB_Inf_L5_OpenCallOpt_Creators",
+            "adId": "120249891104320588",
+            "creativeId": "1677773866788967"
+          }
+        ]
+      }
+    ]
+  }
+]

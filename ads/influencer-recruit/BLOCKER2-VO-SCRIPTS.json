@@ -1,0 +1,48 @@
+{
+  "version": "2026-07-11",
+  "blocker": 2,
+  "pipeline": "nano poster PNG → seedance_2_0 (9:16 15s subtle motion) → seed_audio Skye VO → ffmpeg mux → replace silent MP4",
+  "voice": {
+    "preset": "Skye",
+    "voice_id": "1fb253b8-928b-4d29-a349-f242a71eaddf",
+    "voice_type": "preset",
+    "model": "seed_audio"
+  },
+  "ads": [
+    {
+      "id": "calling_all",
+      "output": "ads/influencer-recruit/output/TIKTOK-CALLING-ALL-INFLUENCERS-15s.mp4",
+      "poster": "ads/influencer-recruit/output/CALLING-ALL-INFLUENCERS-9x16.png",
+      "vo": "Calling all streamers — Creators AI Hologram Boxing wants you. Co-stream HB 002 live from the tent. VIP ringside. Interactive FX your chat controls. Apply now at hologramboxing.com.",
+      "seedance_prompt": "15s 9:16 vertical TikTok ad poster animation. Start from the exact poster keyframe — preserve all on-screen text and layout. Slow cinematic push-in zoom, subtle light sweep, premium fight-night energy. Locked frame feel, no scene change. Photorealistic motion graphics."
+    },
+    {
+      "id": "open_exact",
+      "output": "ads/influencer-recruit/output/OPEN-CALL-EXACT-POSTER-15s.mp4",
+      "poster": "ads/influencer-recruit/input/hf_20260624_011044_6d239fc7-3b85-49ba-a813-6a42ad758976.png",
+      "vo": "Open call for streamers and content creators. We want you. Kick, Twitch, YouTube, TikTok — co-stream hologram boxing. Partner slots open. Sign up at hologramboxing.com.",
+      "seedance_prompt": "15s 9:16 open-call recruitment poster animation. Match keyframe text exactly — WE WANT YOU. Slow dolly zoom, subtle glow pulse on headline, dark premium arena background. No new elements. Ad-ready."
+    },
+    {
+      "id": "open_opt",
+      "output": "ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4",
+      "poster": "ads/influencer-recruit/output/OPEN-CALL-OPTIMIZED-TIKTOK-9x16.png",
+      "vo": "Streamers and creators — we're hiring partners for the first AI hologram boxing event. Bring your audience ringside. Brand ambassador roles. Apply at hologramboxing.com.",
+      "seedance_prompt": "15s 9:16 optimized TikTok open-call poster. Preserve hook text layout. Gentle Ken Burns zoom, cyan accent light sweep, scroll-stopping but readable. Locked typography."
+    },
+    {
+      "id": "creator_reminder",
+      "output": "ads/influencer-recruit/output/CREATOR-REMINDER-15s.mp4",
+      "poster": "ads/influencer-recruit/output/CREATOR-REMINDER-9x16.png",
+      "vo": "You looked — streamer partner slots are filling fast. Finish your application. Co-stream hologram boxing live to your followers. Sign up at hologramboxing.com.",
+      "seedance_prompt": "15s 9:16 retargeting reminder poster. YOU LOOKED — STREAMER SLOTS ARE FILLING. Slow push-in, warm gold accent pulse, urgency without chaos. Text stays sharp."
+    },
+    {
+      "id": "streamer_last_call",
+      "output": "ads/influencer-recruit/output/STREAMER-LAST-CALL-15s.mp4",
+      "poster": "ads/influencer-recruit/output/STREAMER-LAST-CALL-9x16.png",
+      "vo": "Last call for streamers. HB 002 is loading and partner slots are closing. Co-stream hologram boxing before we lock the roster. Apply now at hologramboxing.com.",
+      "seedance_prompt": "15s 9:16 countdown LAST CALL poster animation. Red urgency accent, slow zoom on headline, fog drift at bottom. Preserve all poster copy. Final-call energy."
+    }
+  ]
+}

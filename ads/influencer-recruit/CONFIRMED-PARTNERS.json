@@ -1,0 +1,25 @@
+{
+  "version": "2026-07-11",
+  "note": "Swap handles when real partners confirm. Only list partners with status confirmed.",
+  "event": "Hologram Boxing 002",
+  "spotlight": [
+    {
+      "handle": "@FLGameHost",
+      "platform": "Kick",
+      "status": "confirmed",
+      "tag": "Co-stream partner"
+    },
+    {
+      "handle": "@OrlandoIRL",
+      "platform": "Twitch",
+      "status": "confirmed",
+      "tag": "Ringside stream"
+    },
+    {
+      "handle": "@ReelsFight",
+      "platform": "TikTok",
+      "status": "confirmed",
+      "tag": "Hype team"
+    }
+  ]
+}

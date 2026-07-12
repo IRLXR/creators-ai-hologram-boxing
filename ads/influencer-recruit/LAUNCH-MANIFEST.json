@@ -1,6 +1,6 @@
 {
   "launched_at": "2026-07-10",
-  "updated_at": "2026-07-10T16:30:00Z",
+  "updated_at": "2026-07-12T18:05:11.069Z",
   "status": "PAUSED_OFF",
   "landing": "https://www.hologramboxing.com/landing.html",
   "influencer_staircase": {
@@ -26,12 +26,245 @@
       },
       "ads_deployed": 42,
       "ads_target": 42,
-      "status": "COMPLETE_PAUSED",
-      "note": "All 5 layers built: awareness, consideration, conversion, retargeting, countdown."
+      "status": "COMPOSITES_UPDATED",
+      "note": "Staircase ads swapped to voiced composite creatives via MCP OAuth",
+      "composites_updated_at": "2026-07-12T18:05:11.069Z",
+      "ads_updated": 49,
+      "ads_errors": 0,
+      "ads_skipped": 1,
+      "ads_unmatched": 4
     },
     "meta": {
-      "status": "PENDING_TOKEN_REFRESH",
-      "command": "npm run meta:launch-influencer-staircase"
+      "deployed_at": "2026-07-12T17:41:00.998Z",
+      "layers": [
+        {
+          "layerKey": "L1_see_you",
+          "campaignId": "120249891084990588",
+          "adsets": [
+            {
+              "name": "ADGRP_HB_Inf_L1_GamingStreamers_FL",
+              "id": "120249891085310588",
+              "ads": [
+                {
+                  "name": "AD_HB_Inf_L1_CallingAll_Gaming",
+                  "adId": "120249891086420588",
+                  "creativeId": "904545388682703"
+                },
+                {
+                  "name": "AD_HB_Inf_L1_WalkInside_Gaming",
+                  "adId": "120249891086700588",
+                  "creativeId": "1040142268408489"
+                },
+                {
+                  "name": "AD_HB_Inf_L1_FutureMystery_Gaming",
+                  "adId": "120249891087750588",
+                  "creativeId": "1628885092573454"
+                }
+              ]
+            },
+            {
+              "name": "ADGRP_HB_Inf_L1_AllCreators_FL",
+              "id": "120249891088510588",
+              "ads": [
+                {
+                  "name": "AD_HB_Inf_L1_CallingAll_Creators",
+                  "adId": "120249891088840588",
+                  "creativeId": "1046294567802071"
+                },
+                {
+                  "name": "AD_HB_Inf_L1_WalkInside_Creators",
+                  "adId": "120249891089370588",
+                  "creativeId": "1793189611700989"
+                },
+                {
+                  "name": "AD_HB_Inf_L1_FutureMystery_Creators",
+                  "adId": "120249891089890588",
+                  "creativeId": "3415920945252781"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerKey": "L2_get_curious",
+          "campaignId": "120249891089970588",
+          "adsets": [
+            {
+              "name": "ADGRP_HB_Inf_L2_GamingStreamers_FL",
+              "id": "120249891090040588",
+              "ads": [
+                {
+                  "name": "AD_HB_Inf_L2_LiveFX_Gaming",
+                  "adId": "120249891090450588",
+                  "creativeId": "978946661766865"
+                },
+                {
+                  "name": "AD_HB_Inf_L2_CoStream_Gaming",
+                  "adId": "120249891091060588",
+                  "creativeId": "2777353375972547"
+                },
+                {
+                  "name": "AD_HB_Inf_L2_InsideTent_Gaming",
+                  "adId": "120249891091200588",
+                  "creativeId": "1949974752374897"
+                }
+              ]
+            },
+            {
+              "name": "ADGRP_HB_Inf_L2_AllCreators_FL",
+              "id": "120249891091360588",
+              "ads": [
+                {
+                  "name": "AD_HB_Inf_L2_LiveFX_Creators",
+                  "adId": "120249891091920588",
+                  "creativeId": "1069809658819120"
+                },
+                {
+                  "name": "AD_HB_Inf_L2_CoStream_Creators",
+                  "adId": "120249891092730588",
+                  "creativeId": "1718438279280904"
+                },
+                {
+                  "name": "AD_HB_Inf_L2_InsideTent_Creators",
+                  "adId": "120249891093110588",
+                  "creativeId": "1029710306332595"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerKey": "L3_sign_up",
+          "skipped": true,
+          "campaignId": "120249816887950588"
+        },
+        {
+          "layerKey": "L4_come_back",
+          "campaignId": "120249891093560588",
+          "adsets": [
+            {
+              "name": "ADGRP_HB_Inf_L4_GamingStreamers_FL",
+              "id": "120249891093780588",
+              "ads": [
+                {
+                  "name": "AD_HB_Inf_L4_PartnerSpotlight_Gaming",
+                  "adId": "120249891094150588",
+                  "creativeId": "27670057139294942"
+                },
+                {
+                  "name": "AD_HB_Inf_L4_Reminder_Gaming",
+                  "adId": "120249891094500588",
+                  "creativeId": "2387831155042412"
+                },
+                {
+                  "name": "AD_HB_Inf_L4_OpenCallExact_Gaming",
+                  "adId": "120249891095000588",
+                  "creativeId": "1386295713355982"
+                },
+                {
+                  "name": "AD_HB_Inf_L4_ConfirmsPartner_Gaming",
+                  "adId": "120249891095550588",
+                  "creativeId": "3256958841157323"
+                },
+                {
+                  "name": "AD_HB_Inf_L4_ConfirmsReminder_Gaming",
+                  "adId": "120249891095890588",
+                  "creativeId": "1694611331795820"
+                },
+                {
+                  "name": "AD_HB_Inf_L4_ConfirmsOpenCall_Gaming",
+                  "adId": "120249891096960588",
+                  "creativeId": "2798925480494231"
+                }
+              ]
+            },
+            {
+              "name": "ADGRP_HB_Inf_L4_AllCreators_FL",
+              "id": "120249891097110588",
+              "ads": [
+                {
+                  "name": "AD_HB_Inf_L4_PartnerSpotlight_Creators",
+                  "adId": "120249891097520588",
+                  "creativeId": "2468555186901586"
+                },
+                {
+                  "name": "AD_HB_Inf_L4_Reminder_Creators",
+                  "adId": "120249891097760588",
+                  "creativeId": "1350747060546202"
+                },
+                {
+                  "name": "AD_HB_Inf_L4_OpenCallExact_Creators",
+                  "adId": "120249891098450588",
+                  "creativeId": "1567899844726908"
+                },
+                {
+                  "name": "AD_HB_Inf_L4_ConfirmsPartner_Creators",
+                  "adId": "120249891099200588",
+                  "creativeId": "1499518481463953"
+                },
+                {
+                  "name": "AD_HB_Inf_L4_ConfirmsReminder_Creators",
+                  "adId": "120249891099850588",
+                  "creativeId": "1504366924249424"
+                },
+                {
+                  "name": "AD_HB_Inf_L4_ConfirmsOpenCall_Creators",
+                  "adId": "120249891100040588",
+                  "creativeId": "2242111583271011"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerKey": "L5_show_up",
+          "campaignId": "120249891100470588",
+          "adsets": [
+            {
+              "name": "ADGRP_HB_Inf_L5_GamingStreamers_FL",
+              "id": "120249891100580588",
+              "ads": [
+                {
+                  "name": "AD_HB_Inf_L5_CountdownTimer_Gaming",
+                  "adId": "120249891101360588",
+                  "creativeId": "27333098903026778"
+                },
+                {
+                  "name": "AD_HB_Inf_L5_LastCall_Gaming",
+                  "adId": "120249891101600588",
+                  "creativeId": "2346049296223275"
+                },
+                {
+                  "name": "AD_HB_Inf_L5_OpenCallOpt_Gaming",
+                  "adId": "120249891102200588",
+                  "creativeId": "2259106428247926"
+                }
+              ]
+            },
+            {
+              "name": "ADGRP_HB_Inf_L5_AllCreators_FL",
+              "id": "120249891102600588",
+              "ads": [
+                {
+                  "name": "AD_HB_Inf_L5_CountdownTimer_Creators",
+                  "adId": "120249891103360588",
+                  "creativeId": "922273390888871"
+                },
+                {
+                  "name": "AD_HB_Inf_L5_LastCall_Creators",
+                  "adId": "120249891103770588",
+                  "creativeId": "2095646388012426"
+                },
+                {
+                  "name": "AD_HB_Inf_L5_OpenCallOpt_Creators",
+                  "adId": "120249891104320588",
+                  "creativeId": "1677773866788967"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   },
   "tiktok": {
@@ -48,7 +281,283 @@
     "ad_account": "534185933351087",
     "pixel_id": "3661825047289885",
     "page": "Romethelife (118345932178751)",
-    "status": "PENDING_TOKEN_REFRESH",
+    "status": "STAIRCASE_DEPLOYED_PAUSED",
     "ads_manager": "https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=534185933351087"
+  },
+  "meta": {
+    "video_ids": {
+      "inf_calling_all_vo": {
+        "videoId": "1702796234275990",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/746503906_26594081203601537_8465819347272235051_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=rPTasDTsUgQQ7kNvwHI4Amr&_nc_oc=AdrF3YvsFfPsNy_nxilgJ4cmuCaCekQ_5bmBbGmaaziITtsRs2xYbnY6dqOCyrN1Ce8&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=PUOuuWDbCzCNQZx-Zl2AYw&_nc_tpa=Q5bMBQHp-d-bADTNfcsBpRnZd1dC267Lo1w1qoFZz4uZHBYCVzJhlXcUaPVdEwqr-8AH6Dr2uxP6I-dqyQ&oh=00_AQAaOMPDo0uvvfPTvDgishfr9327bjvZaFszjjcawISWHA&oe=6A59B342",
+        "file": "ads/influencer-recruit/output/INFLUENCER-CALLING-ALL-COMPOSITE-15s.mp4"
+      },
+      "walk": {
+        "videoId": "2062406461294827",
+        "imageUrl": "https://scontent-atl3-1.xx.fbcdn.net/v/t45.1600-4/744744407_26594084340267890_6906307310665818849_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=LfNylL4diDUQ7kNvwGZK0Ml&_nc_oc=Adp8EwFwL94EXXWhSbbMb3E9_gHvTqftAbYm2IW3uPAX7v0bZl8Vnfcn8MaTZMoSQ_I&_nc_zt=1&_nc_ht=scontent-atl3-1.xx&edm=AJNyvH4EAAAA&_nc_gid=doH-jrEyt5CLGwEBeDAOhA&_nc_tpa=Q5bMBQFF-Jqc4fouWqoYAeZRPyfk5LN_0p8F8Y-VE9YD6QIuTjdLIzg2a43YWw-PtGaLyL1_psJa4zYYHQ&oh=00_AQBGej2o9tg6nyeu8D8Jhesxh2Hz9526TEd-rsmvhSZ-zQ&oe=6A59B0DE",
+        "file": "ads/brief-002/output/WOULD-YOU-WALK-INSIDE-15s-9x16-silent.mp4"
+      },
+      "future_mystery": {
+        "videoId": "1035472455726881",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/743940293_26594088236934167_1751800420271648670_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=F6eiVCO2orwQ7kNvwEypnDf&_nc_oc=AdpDTiEXc_81NukOWnfFUacyRdnKxYLJ45Lu6XoWSX0OujbUNE-UvRCNsKYBgQpUMMk&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=kFPm3duhDpJN5h4uc65UBA&_nc_tpa=Q5bMBQEa_mUmP5h-TnxpLaxrQcwUnVhzVxqzlWHMADL0-JCyeRekMSuJXqvCtMf3lYAMt35dwSn9fxAcyw&oh=00_AQBRxVc9y8kBa2FkYvLBa0tb_urO5TDwcBnGfxSsptwvuw&oe=6A59BADF",
+        "file": "ads/brief-001/output/Director_Brief_001_Version_B_Cinematic_Mystery.mp4"
+      },
+      "livefx": {
+        "videoId": "1004075502547944",
+        "imageUrl": "https://scontent-atl3-1.xx.fbcdn.net/v/t45.1600-4/745559653_26594091120267212_5945496649475015514_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=M0xTQ6MB280Q7kNvwGlovBv&_nc_oc=AdqVVt2hcrfZFzQTJoY5iCZwWdh4hbKRNX4amriFnQylWOOaVDtWep_hCWoB773ax9E&_nc_zt=1&_nc_ht=scontent-atl3-1.xx&edm=AJNyvH4EAAAA&_nc_gid=Kz6vZ47q9mn8q0VrEG9whQ&_nc_tpa=Q5bMBQGQcKZRg5T_p9F36RW2BLWqh5d-lcD6nyp82wYPDI4TeANNyy2YvsVPaD_VgW40L2txzzb8LApSIQ&oh=00_AQBqilwSJawMKNPCdqCXrM-OAnGpwClwb8WYMcmFj8Dqlg&oe=6A599038",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L2-LIVEFX-COMPOSITE-15s.mp4"
+      },
+      "stream": {
+        "videoId": "1167225528941832",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/743611353_26594093750266949_8033651606264118162_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=oCqVfNK1FrQQ7kNvwGrKhn-&_nc_oc=Adpg7qeTmBzQaN2PNwlkk4LVXZpeAIgqWlfpPo7_iwHkPjbQz0p7CUZYxWIe2gcOB5Y&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=bFZe-IWDX_fj1ezEF0UUJA&_nc_tpa=Q5bMBQEx8BOBU5nmQ27Ghzl7fMleG841BFz1GSTTptVLzmh0ra1mQlG8IYVL2ggxHLRJ5MyzudkJhKC5pQ&oh=00_AQC2WM0uTVIV7LbUx1jPWtbJ66DAWrQd7EzlB1loJtJ_-A&oe=6A599A43",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L2-COSTREAM-COMPOSITE-15s.mp4"
+      },
+      "tent": {
+        "videoId": "1016803957729480",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t45.1600-4/744357545_26594096576933333_6180724124356239436_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=NTPppFcdO04Q7kNvwHql2TB&_nc_oc=AdrPSpJNOh3RW1L9yq8DishjLC__V5TC6MlfalM2xp8W-g6BW-0jYU-QtsCmM6EDlkE&_nc_zt=1&_nc_ht=scontent-atl3-2.xx&edm=AJNyvH4EAAAA&_nc_gid=6-HFPJRsO26GLPI_AUJbPA&_nc_tpa=Q5bMBQGbekPnKVY2Yj_G_Cf7Ie0SrpaiDMNPv8XZwDOId0gKTOX7vPxLZrLhxPsvlxM_LY5tCnJQoYGGXw&oh=00_AQB31z5h4kKDOAhtuXkrI3acPF3S8HjSU-zUcNmpE_JhQA&oe=6A599DC9",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L2-INSIDE-TENT-COMPOSITE-15s.mp4"
+      },
+      "inf_open_call_vo": {
+        "videoId": "2114126436652311",
+        "imageUrl": "https://scontent-atl3-1.xx.fbcdn.net/v/t45.1600-4/743764149_26594099450266379_4398218075927942204_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=WCq8ZYoWp9YQ7kNvwEKdono&_nc_oc=AdqJpbNuiYTcmQfFNnxIr635HI2IU3g4-56TDcqn1Q2HGXvxyv6mTKmxCgcpASEPfW4&_nc_zt=1&_nc_ht=scontent-atl3-1.xx&edm=AJNyvH4EAAAA&_nc_gid=FmZ0X4Ik_SiNBNoHurfr5w&_nc_tpa=Q5bMBQHmWztT9Tz-Etr2Ngapr3ZnyPiihl5ef1f12AVl55coZk1AEJLR3lylc--yLok-dVNGRLirAlwcDQ&oh=00_AQDIPEjEIMoIUfnw0d3SjLGzwWUTr2o0RLdVPYOrAFU0Zw&oe=6A598C9D",
+        "file": "ads/influencer-recruit/output/INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-15s.mp4"
+      },
+      "inf_join_team_vo": {
+        "videoId": "2496073700908262",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/746209606_26594102066932784_4896713549764375447_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=RZsFKyI09rIQ7kNvwEv2slR&_nc_oc=AdoAkEMsRHchfCIgiyQtVptTvgbYXHo0penEl77xSFzGBoSK4FFa0l_Sr2WNpAbUy4Y&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=2qzLob2C__THgBGjTRdzxQ&_nc_tpa=Q5bMBQHuqZz4eFCEmB2QJfM2zDrC9kaQa0UsWM8R11yX4ry42yjHw7a5dgL-hAj8wc_DHPCVEqAI4IYggw&oh=00_AQCdSLdDivnO6zjZSDHHEdGOyy8MFxhZG6cmnC9cUD42vg&oe=6A599C80",
+        "file": "ads/influencer-recruit/output/INFLUENCER-JOIN-THE-TEAM-COMPOSITE-15s.mp4"
+      },
+      "future_vo": {
+        "videoId": "994423803359854",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t45.1600-4/745688432_26594104606932530_128166184578927988_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=vVm_IyDm5PoQ7kNvwELAv0m&_nc_oc=Adp9E4UHcBQKrbqknYWeecraZZoM5xaD4ohBavlVmyicNxGCfUhK7ztZ_uvDPU2wbus&_nc_zt=1&_nc_ht=scontent-atl3-2.xx&edm=AJNyvH4EAAAA&_nc_gid=ATLylw6BaamAOmQ5z6PTAA&_nc_tpa=Q5bMBQH8Gtr8doh2H-GBI7z_WKIs_6lwHwrhYv7-DOttxpNGsmTCnsrLb2Z07Quq09wqVvChkK3M07PezA&oh=00_AQDDQSnkW7CllPwfcZNFR_L76Qq-bZmu3_HB4ac_1IfgOA&oe=6A5987D7",
+        "file": "ads/output/FUTURE-IS-HERE-15s-9x16-ambient.mp4"
+      },
+      "whatis": {
+        "videoId": "909336688876976",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/746028277_26594106820265642_1781683485016515559_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=FxmRjZ84QP0Q7kNvwHgSr5Z&_nc_oc=AdpZ6w8kyGp1lu1s2j-AuvmC6mNFtUvArSwgqGhAG8O2FiIHdBSqMUd7VXLIzkDmlZc&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=UchvOwoFM2s3NxZqEFsaEQ&_nc_tpa=Q5bMBQHFZ31XTFE89_cnyFBXHXngCB310B0oSROB0vzlYNSWrDslwcGe3YLlN7PRK83QPtRf7jjuSoGU2w&oh=00_AQC0Y28NOTkQPcSBkJqctda-WqdbhRqJMtpSD1i3aTEkog&oe=6A59BA58",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L3-WHATIS-COMPOSITE-15s.mp4"
+      },
+      "open_v1": {
+        "videoId": "1299563569041225",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t45.1600-4/744357791_26594109253598732_3073269084467563200_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=cuD3pqVh3AQQ7kNvwEy0kZf&_nc_oc=AdpJaAs_x-H1R96I8y7HVKkkO69iZYLML5vr-s2V9UAy4Q6N5yqq43DvfjBxCYY81Ko&_nc_zt=1&_nc_ht=scontent-atl3-2.xx&edm=AJNyvH4EAAAA&_nc_gid=hVKifxxaoFCVNvCMVQSVZw&_nc_tpa=Q5bMBQHYJb7Vc4sYYE7yuS2N-LofbPzfe9iDpTDxsvpuISPcXYUp_M31J4Th-d8ROAoiUp-Q1oMlQgjlVw&oh=00_AQDY7LZIosDFz0ISCO9PrVrGDUaSQdK4v-_Z4iShmUs9OQ&oe=6A59A3B7",
+        "file": "ads/influencer-recruit/output/TIKTOK-OPEN-CALL-CREATORS-15s.mp4"
+      },
+      "inf_l4_partner_reviews_vo": {
+        "videoId": "1365248655540896",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/744823738_26594112876931703_5449952066326471456_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=ExQfc5jfROgQ7kNvwEuErZt&_nc_oc=AdoJQp_l1T8jsa0Ukg5z87Q792c3zZ16LNjJEsCLKp-uWUK-owAXPvqVtrJpdqP7XyM&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=Y6aQyUextOmhojibitKqNQ&_nc_tpa=Q5bMBQF58n7iHS-e2Y8FYNza1wiszGJ1BhURv3-d6G0RgOoRqMRUS1q6oJzw5epju3chlb1u27QTP-JWnA&oh=00_AQDFofmEpRO7o_qw-nPKB0lxL43eBTPjyQ7RII7P24_lsA&oe=6A599186",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L4-PARTNER-REVIEWS-COMPOSITE-15s.mp4"
+      },
+      "inf_l4_reminder_vo": {
+        "videoId": "1061185959598150",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t45.1600-4/744358904_26594115890264735_1606811657232607240_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=b-rSkr6yGWQQ7kNvwExVZZl&_nc_oc=Ado7jnPF9m9hZj-Oz7bWldoj8zrgNILPYvIoC0FR8xaW2iwhn7cr3ehbjMnFwhj5RSE&_nc_zt=1&_nc_ht=scontent-atl3-2.xx&edm=AJNyvH4EAAAA&_nc_gid=QeCWsTMy2NkrtoRIC-jRcw&_nc_tpa=Q5bMBQEmCuFh7_s3rx85W-1w5B1c0aPNheFKnYpt6e4LU1Y7t2rp5fPHbFo9PKhQDk_8iC0a-U7xETuS2Q&oh=00_AQBYsCLKTDJ9bNU296wwVdkrmBKCphPHwJPfANgQ5AlXJg&oe=6A59A6E8",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L4-REMINDER-SLOTS-COMPOSITE-15s.mp4"
+      },
+      "inf_l4_retarget_vo": {
+        "videoId": "1003430882574265",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t45.1600-4/746648594_26594118363597821_878563618446074039_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=wCDTmTFpoUAQ7kNvwGJ0Wd3&_nc_oc=AdrqfB8G_QeX9nfSWCcB39dcqqqWPy2dXrEoO1gCjhA1p5jzRIicxV7x5vUt3WpH4gs&_nc_zt=1&_nc_ht=scontent-atl3-2.xx&edm=AJNyvH4EAAAA&_nc_gid=CIV9_fAjjX9Bv0TpXEKAQg&_nc_tpa=Q5bMBQFJms6Fvnqf1-vco0IaIF88y2xBxlV4KeEb6gE3cRSHjCCsv7p6ra2OL57OL04tUJqNI48vOn9o1Q&oh=00_AQCUO-h1zb6X526qcxpY8yRQl3-5tjFI9IdVhlIh5bgQvA&oe=6A59AD7A",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L4-RETARGET-OPEN-CALL-COMPOSITE-15s.mp4"
+      },
+      "inf_l4_confirms_partner_vo": {
+        "videoId": "1039637178564409",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/744358917_26594121640264160_160936791621617175_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=6XRAPM7xXuQQ7kNvwFRPC2g&_nc_oc=AdrD9Z7WXUhTqHkhI6M-1_nMdwPbcDsiwg5c5yoVA1bTAIiiG0t1iz2tIGH8j-SYIjg&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=T702OpTFuuz8deC5BSLSiA&_nc_tpa=Q5bMBQFYB8QsVxpX3iP7SR5IWUvexoE99T0oHxFcuqvJ0SJ4HnlrzRTVu5XVxesXbm3UnQYwZ3sctIkVvQ&oh=00_AQDN0ONuJE19iMvBCdkp-UIIgEmWBFQh15YnA_HB4fxoIw&oe=6A59B51C",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-PARTNER-COMPOSITE-15s.mp4"
+      },
+      "inf_l4_confirms_reminder_vo": {
+        "videoId": "1005339375622365",
+        "imageUrl": "https://scontent-atl3-1.xx.fbcdn.net/v/t45.1600-4/746022393_26594124506930540_6238205259595533657_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=So-J6120Px0Q7kNvwEwouoN&_nc_oc=AdrOpxzmjn9RmSi-_gfhaHkusOC8_rZAJLH22F2Px2QJ0MVfPNwI0U-e9sNXKsgFwto&_nc_zt=1&_nc_ht=scontent-atl3-1.xx&edm=AJNyvH4EAAAA&_nc_gid=TjMr9fNjPKpycaGJ4YvrPg&_nc_tpa=Q5bMBQFMiFe8oFwQtqHJEd7BRsR4cMRH1JfpD3jF4-3BeCGPYISVzuAjb8MoNJdpypDEBVJrx6XaCK7NjA&oh=00_AQDfQR0aGbci-qp5I3XI-iPODhqeWoSzOo76Bn4qBcaazA&oe=6A59BC10",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-REMINDER-COMPOSITE-15s.mp4"
+      },
+      "inf_l4_confirms_open_call_vo": {
+        "videoId": "1746868869667680",
+        "imageUrl": "https://scontent-atl3-1.xx.fbcdn.net/v/t45.1600-4/747099041_26594126990263625_2493559681188498334_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=iG-hmfG54ugQ7kNvwET3dmt&_nc_oc=AdpGD0s5paqkDz_NCNXV2I58bf_J-Sd_9vTekIJG7_91Yu9THbYYKLYTtiCYPE_0Qac&_nc_zt=1&_nc_ht=scontent-atl3-1.xx&edm=AJNyvH4EAAAA&_nc_gid=JGUVcVJ27g-W326cxg1Blg&_nc_tpa=Q5bMBQHwlPaMUDZb2jl9f77_GwRwtkaHcIO7uZHuIdoKPx1nfWNYVEzAlyD4XI_ddfhAqiF4Q6XSSn-mbg&oh=00_AQClVk-5Myb3LZy4o53Qji1oOo5ttAQlA1nCaZiJol2Dfw&oe=6A598CDE",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-OPEN-CALL-COMPOSITE-15s.mp4"
+      },
+      "inf_l5_countdown_vo": {
+        "videoId": "1338951848444279",
+        "imageUrl": "https://scontent-atl3-1.xx.fbcdn.net/v/t45.1600-4/747099040_26594129986929992_6300064458439853074_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=2PdgHuMeRKwQ7kNvwG21uRc&_nc_oc=AdpD96DHNWb9PxAJ3-BzI60D1lw_uqOw5ecSMUTtm1URBTNp4BiyAYBD6PWJbL_xG58&_nc_zt=1&_nc_ht=scontent-atl3-1.xx&edm=AJNyvH4EAAAA&_nc_gid=pvUFLmvz6qdGGx63GOF7Jg&_nc_tpa=Q5bMBQHMBLvrDEM2yoJyt7SIqbut-MmovE68-4omh8LLqdYJFYlVDkLpqjx0omaAYpD5o7cZFfFSD4GsHg&oh=00_AQD8LmUkP0asBgbL6D3Uus0cjF2a24aDyjsVcdY57eto-g&oe=6A59BE2F",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L5-COUNTDOWN-TIMER-COMPOSITE-15s.mp4"
+      },
+      "inf_l5_last_call_vo": {
+        "videoId": "1686494569319586",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t45.1600-4/744357788_26594132053596452_372190920974027344_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=uq88TaaxnpMQ7kNvwHQKH32&_nc_oc=AdpAhbrFhEnkPGb1gtGu8jwTlbmTNf4FcMukXxTW1dEe_aBYr3Cwp9jtV7ywX8W1NYg&_nc_zt=1&_nc_ht=scontent-atl3-2.xx&edm=AJNyvH4EAAAA&_nc_gid=84Q7PawHX6_FEeHC94Ydow&_nc_tpa=Q5bMBQFRcb-8QfB7rjJzFPYJFHi0SJGLIFXFKLXG_0UA-Av_o8Bq74cGtq3XNI-Ao82ACMYI5QXjbbvrRw&oh=00_AQBORzrNuxbBeg6nkqvUN6GZVXVoTQr-FjXnvswN0wvNxw&oe=6A59B489",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L5-LAST-CALL-STREAMERS-COMPOSITE-15s.mp4"
+      },
+      "inf_l5_final_slots_vo": {
+        "videoId": "27475291185487673",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/745313882_26594134760262848_8007817610232716109_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=fg71xo2xc-4Q7kNvwF2mycy&_nc_oc=AdpVHx1KBFlTvyTOmcHZ1QSJtYgozJzjUNfSOLA5G9kpHzV8VXf4DYh9QXsXKcpv6sg&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=zDDt_5Hwe3qt2_PqexpE6w&_nc_tpa=Q5bMBQG7TmPuf_hDEB9mP0wRviW8S9NpSGDgX7mqZfLbkt8LMa6NqCUXk1qFhnP75_f2psqIyG4AUq7nFQ&oh=00_AQCQopCHOoLsAptCpKu8CVECqEyrWLR5AR2Sa0rBbBtGxw&oe=6A59A6C4",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L5-FINAL-SLOTS-CLOSING-COMPOSITE-15s.mp4"
+      },
+      "inf_open_call_hf": {
+        "videoId": "1702079764456748",
+        "imageUrl": "https://scontent-atl3-1.xx.fbcdn.net/v/t45.1600-4/743764149_26594099450266379_4398218075927942204_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=WCq8ZYoWp9YQ7kNvwEKdono&_nc_oc=AdqJpbNuiYTcmQfFNnxIr635HI2IU3g4-56TDcqn1Q2HGXvxyv6mTKmxCgcpASEPfW4&_nc_zt=1&_nc_ht=scontent-atl3-1.xx&edm=AJNyvH4EAAAA&_nc_gid=YMKxrITtBpHUOFQXG3qXlQ&_nc_tpa=Q5bMBQEdrnv34XiMddpwHIFfmlaKKm7GFh_l0AUmH-PHeMCrrEUzzWUYUI2ksMTUNXx1F6nJZsY4_i3dLA&oh=00_AQA1wibsCuA2HKciSdhqva-JASpyh37xC3lFa4eXJeF9EA&oe=6A598C9D",
+        "file": "ads/influencer-recruit/output/INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-HF-386B5E5C-15s.mp4"
+      },
+      "inf_join_team_hf": {
+        "videoId": "2919298648420187",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t45.1600-4/743841107_26594140196928971_7100283750545831284_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=pMsO6GygjTgQ7kNvwFfLArz&_nc_oc=Adoj72Y4GYKnPrxmKJ4noiLUg3Jc71rG_xjg7mRETBW636-YiboqmjDMSL5pdYRUycY&_nc_zt=1&_nc_ht=scontent-atl3-2.xx&edm=AJNyvH4EAAAA&_nc_gid=7YLZHAwAlLdCJxRMbMM_BQ&_nc_tpa=Q5bMBQFsuPTG-1_nxsD8jmjmBYCer41HOAv7IC5DOWvcx9Vt9iDtoLxDYhe7f60ah1d-QHhFzheIzYMRyQ&oh=00_AQBWk-UFdFT1XCaEmsQgT-tJNGjH0s5AiHRiMtl3m-zNoA&oe=6A59A6DD",
+        "file": "ads/influencer-recruit/output/INFLUENCER-JOIN-THE-TEAM-COMPOSITE-HF-B002936B-15s.mp4"
+      },
+      "inf_open_call_poster": {
+        "videoId": "2440825673106565",
+        "imageUrl": "https://scontent-atl3-1.xx.fbcdn.net/v/t45.1600-4/744331938_26594142613595396_8003586292033319784_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=1yJzb5Zl8MAQ7kNvwGdd3E3&_nc_oc=AdpormXH09ivhiKbZfPB0MAZ2pCysycviWiXyCMdZ8CUdnb_ogqRtc20OHtul9mp66Q&_nc_zt=1&_nc_ht=scontent-atl3-1.xx&edm=AJNyvH4EAAAA&_nc_gid=DlGciihdNbM7gi8nRMEiPA&_nc_tpa=Q5bMBQFQTaQPV_owX2kqP6BUzRYNF9JsY-AIFCG3kcRWh_BCPlX9y9vDsBfPDZdx-sTqMiGAVSrpUU5jZA&oh=00_AQCAYvgoWEl1hhbiJkkhv9ALaXpTWiNxdXd0RhaZT85I2w&oe=6A59AC4B",
+        "file": "ads/influencer-recruit/output/INFLUENCER-OPEN-CALL-EXACT-COMPOSITE-POSTER-15s.mp4"
+      },
+      "inf_calling_all_poster": {
+        "videoId": "1419433850015223",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/743611353_26594145270261797_663428959795902074_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=HzRtcQAKENMQ7kNvwE2GrMA&_nc_oc=AdrKahMfsb7Qpl7Xo6Is_f8lWq7wEkO_H5-4SseGUR-U8rKswYaHrDCn1p4H7pW3XWE&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=qiMbdiPa7w91miyKo4yJUQ&_nc_tpa=Q5bMBQGv0w_NnPEyE3LduPk0ev3YXPlYP1wTHbsXtZLWj_EJvXahxTEcXe1EhuThle7jhCuHYM_DwLxEsQ&oh=00_AQCd_2Vb8IjEDqn6TJiu3eSE_XyDnRaIvEx_YpvuHHZ6sw&oe=6A598B5B",
+        "file": "ads/influencer-recruit/output/INFLUENCER-CALLING-ALL-COMPOSITE-POSTER-15s.mp4"
+      },
+      "inf_join_team_poster": {
+        "videoId": "3924970214477773",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/746984677_26594148176928173_2873403070689569419_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=B1IILPNAN18Q7kNvwGZCf7z&_nc_oc=Adrq_3pHiO3kQ-l-vtdQh1YryYAi6uYzehOLhQf9MyFoUZ4ITbnWErLSHHOrdH158j4&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=9P-bV1Sg-M6St-U129bW7Q&_nc_tpa=Q5bMBQEymx7f4cYWeye2pLVw_QniH_4vxgfuUDb2FSuXaxCXfydIe0-1DS_8OPl3HJu-9CeBCCp_Av7mUA&oh=00_AQCtSFabjc1Rxj28GVglte9E-xxc7T3WuaJyh4FR2_Tvjg&oe=6A599E48",
+        "file": "ads/influencer-recruit/output/INFLUENCER-JOIN-THE-TEAM-COMPOSITE-POSTER-15s.mp4"
+      },
+      "inf_l4_partner_poster": {
+        "videoId": "1511093547010502",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t45.1600-4/745305065_26594150743594583_6150753068427341203_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=71XMD54tHhYQ7kNvwEd3cnO&_nc_oc=Adrkck3KK-sPQm5QxAmAojT977J3k-xeSQ-a4jiGbTSz2gDtPPTmMBrpdAihxdUEEQg&_nc_zt=1&_nc_ht=scontent-atl3-2.xx&edm=AJNyvH4EAAAA&_nc_gid=Ayxxa8TMxeOCL57oupf6GQ&_nc_tpa=Q5bMBQEzuyUFL1QHm9vcZj_29hiDNaltwCd1GoQ1WwnYBOxVz8KpK9kRS2DAbL0dnaFN4gGdypSAQK-pHA&oh=00_AQAZs8UQvEs4Cu54z525piacGHqcLGyy-GrJYyK-RsGErQ&oe=6A59B8EF",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L4-PARTNER-REVIEWS-COMPOSITE-POSTER-15s.mp4"
+      },
+      "inf_l4_reminder_poster": {
+        "videoId": "1814970172821992",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t45.1600-4/744357788_26594153043594353_6239730547981606757_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=E4Cmxd9Ry2oQ7kNvwHdrKzQ&_nc_oc=Adqu1VH1620SWGYH8kir4WukeZkMH1aAjzM7AWhlJ4CXWk18vXF9qpUHx3iW8_NL7Hk&_nc_zt=1&_nc_ht=scontent-atl3-2.xx&edm=AJNyvH4EAAAA&_nc_gid=KH21KgkEdNf93bI9GCPaww&_nc_tpa=Q5bMBQG30Dwf-Tyt22ogZkDn8cHY_JXvd9XCneOefTHpbaKpnb9fTzVYfi0XkQiL9rJUgqeqElDBLKt5qA&oh=00_AQBWv6XKN4DQth28yWG_QsEmcIatoV08Pov63em0bAwy3Q&oe=6A5987BB",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L4-REMINDER-SLOTS-COMPOSITE-POSTER-15s.mp4"
+      },
+      "inf_l5_countdown_poster": {
+        "videoId": "1762787928468192",
+        "imageUrl": "https://scontent-atl3-1.xx.fbcdn.net/v/t45.1600-4/743485464_26594155820260742_6204225003929217720_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=abRUgCguVvkQ7kNvwFcYdk5&_nc_oc=AdqRNQaEe1P3j31I-Hy44DFB-99PuBX6vbQj3lfVL8dDn97F0138YrY8aJw88LXytfs&_nc_zt=1&_nc_ht=scontent-atl3-1.xx&edm=AJNyvH4EAAAA&_nc_gid=cM3koKEMPHYZMkYbte7HnQ&_nc_tpa=Q5bMBQGNc2ZS13mcWh9s1Fef-tYfQTXjn6qXPeEVSAwmddcfbvcjJVkZCzBIWeZvMUT3eUoz34whOsq4wA&oh=00_AQBKjAWhSXRBEwyyw1oycqjeot4KWvMKIgXz90gzQHsqNw&oe=6A59B692",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L5-COUNTDOWN-TIMER-COMPOSITE-POSTER-15s.mp4"
+      },
+      "inf_l5_last_call_poster": {
+        "videoId": "999697266168188",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/743659139_26594158473593810_3940480767717948277_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=ePhK5Y2iAjUQ7kNvwGYFoi4&_nc_oc=AdpMIRnceEexwPE38Jm4Tw_g1kBVno0dMwzDqMd5aqKwcimvOgDUYb0DWo26NRQ_KVM&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=d1wRvX77Z6lGzqWR1HDZCQ&_nc_tpa=Q5bMBQFonIwkBA5XVVWY6p_bD88B2l6o3Sr8iy2A3ilY1Qurl9ocxaUUqPf5k_o76jk-84YjOzooZveliw&oh=00_AQDHBpruvEzFP-o7B2coUAOLEb90INL-EFRephduayVQaw&oe=6A599243",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L5-LAST-CALL-STREAMERS-COMPOSITE-POSTER-15s.mp4"
+      },
+      "inf_l4_confirms_open_call_poster": {
+        "videoId": "26559493510394307",
+        "imageUrl": "https://scontent-atl3-2.xx.fbcdn.net/v/t45.1600-4/745441888_26594160753593582_1231845398408471351_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=gUUml5CZI5wQ7kNvwHiX-MT&_nc_oc=AdpypvWy1LJWnQAjwmiVlyhJdArVkSnUcgN0ckjufLgZF5n5M4J3yGSNCEdWLTAKlrA&_nc_zt=1&_nc_ht=scontent-atl3-2.xx&edm=AJNyvH4EAAAA&_nc_gid=oW7KE-hXz8e5w5RTUyR9Gw&_nc_tpa=Q5bMBQFkE0SjAke6ZU2KG3hXgzmAVbuKN-5hPLSl4oVn53OKuMlKYA0A5fTs6vYnO4UOXkjfcREdIV7YqQ&oh=00_AQBvAN0YNo1xV6McqXhszx7SyB5cwE45H03fy-QNI9zUuw&oe=6A59A8C7",
+        "file": "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-OPEN-CALL-COMPOSITE-POSTER-15s.mp4"
+      },
+      "open_exact": {
+        "videoId": "1573111051016949",
+        "imageUrl": "https://scontent-atl3-1.xx.fbcdn.net/v/t45.1600-4/744294489_26566156609727330_7688321687289454546_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=WKoDWxWbzcEQ7kNvwFo7Wo6&_nc_oc=AdoEx1HXOVH-ajP3_PpXdMnzagWA1_eI2r1eC2_GjkqdbhhDjP5RrQ1Xz-5ogBqPXRA&_nc_zt=1&_nc_ht=scontent-atl3-1.xx&edm=AJNyvH4EAAAA&_nc_gid=gwBq4_mPKgQ1ptRd6ln8YA&_nc_tpa=Q5bMBQHIsxKHGSj5jUWK-tzxE2eb5zCTrBi5nwtW-U8VNY-ePXGZGaND94yuIFeKbpPMuhGgF6DozG181w&oh=00_AQCdepjVkzk4HDj1J_lhpZZqnE4E-N4C9WQC5xsO8vMsaw&oe=6A598DCA",
+        "file": "ads/influencer-recruit/output/OPEN-CALL-EXACT-POSTER-15s.mp4"
+      },
+      "open_opt": {
+        "videoId": "3263879287133021",
+        "imageUrl": "https://scontent-atl3-3.xx.fbcdn.net/v/t45.1600-4/744488723_26566103723065952_2640563771913081201_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=d5bd00&_nc_ohc=R-sY71lDEyAQ7kNvwEoXSZx&_nc_oc=AdoXrtdI_VYUj5h1oClXAUU0gN3-o8c-LBPbBdG7LHlfst45qBLFGhn7wAlBpT3vZbA&_nc_zt=1&_nc_ht=scontent-atl3-3.xx&edm=AJNyvH4EAAAA&_nc_gid=g2HZIOtgFBKecCG6GSSoiA&_nc_tpa=Q5bMBQFHzhx5D7E2JH9xmFOOnJlNnPeggHEV5s-d7vXUkP8Xkw4CiAnzAF-rT6kdmI8AAFOeDWfgqPvvdg&oh=00_AQAcZA3TXT47EJ3mOcJDlh_Jax8AFwO-mHb-rMgmzNxodA&oe=6A59B37C",
+        "file": "ads/influencer-recruit/output/TIKTOK-OPEN-CALL-OPTIMIZED-15s.mp4"
+      }
+    },
+    "last_launch": "2026-07-12T17:42:54.078Z",
+    "results": {
+      "influencer_adsets": {
+        "campaignId": "120249816887950588",
+        "adsets": [
+          {
+            "name": "ADSET_HB_InfluencerRecruit_GamingStreamers_FL",
+            "id": "120249891107890588",
+            "ads": [
+              {
+                "name": "AD_HB_Influencer_GamingStreamers_OpenCallExact",
+                "adId": "120249891116640588",
+                "creativeId": "1342582730673635"
+              },
+              {
+                "name": "AD_HB_Influencer_GamingStreamers_OpenCallOpt",
+                "adId": "120249891120870588",
+                "creativeId": "4821241298193060"
+              },
+              {
+                "name": "AD_HB_Influencer_GamingStreamers_FutureCross",
+                "adId": "120249891121090588",
+                "creativeId": "1415098890429618"
+              },
+              {
+                "name": "AD_HB_Influencer_GamingStreamers_LiveFX",
+                "adId": "120249891121440588",
+                "creativeId": "1698908681405572"
+              }
+            ]
+          },
+          {
+            "name": "ADSET_HB_InfluencerRecruit_CombatCreators_FL",
+            "id": "120249891121560588",
+            "ads": [
+              {
+                "name": "AD_HB_Influencer_CombatCreators_OpenCallExact",
+                "adId": "120249891122010588",
+                "creativeId": "1636638778024118"
+              },
+              {
+                "name": "AD_HB_Influencer_CombatCreators_OpenCallOpt",
+                "adId": "120249891122490588",
+                "creativeId": "1053553850339279"
+              },
+              {
+                "name": "AD_HB_Influencer_CombatCreators_FutureCross",
+                "adId": "120249891124380588",
+                "creativeId": "1721835892290174"
+              },
+              {
+                "name": "AD_HB_Influencer_CombatCreators_LiveFX",
+                "adId": "120249891126680588",
+                "creativeId": "1499891491458070"
+              }
+            ]
+          },
+          {
+            "name": "ADSET_HB_InfluencerRecruit_ReelsCreators_FL",
+            "id": "120249891126820588",
+            "ads": [
+              {
+                "name": "AD_HB_Influencer_ReelsCreators_OpenCallExact",
+                "adId": "120249891128080588",
+                "creativeId": "2074981553225956"
+              },
+              {
+                "name": "AD_HB_Influencer_ReelsCreators_OpenCallOpt",
+                "adId": "120249891128660588",
+                "creativeId": "1486749073468352"
+              },
+              {
+                "name": "AD_HB_Influencer_ReelsCreators_FutureCross",
+                "adId": "120249891129380588",
+                "creativeId": "1034347712784988"
+              },
+              {
+                "name": "AD_HB_Influencer_ReelsCreators_LiveFX",
+                "adId": "120249891130300588",
+                "creativeId": "2158866928294797"
+              }
+            ]
+          },
+          {
+            "name": "ADSET_HB_InfluencerRecruit_OrlandoMiami_FL",
+            "id": "120249891130910588",
+            "ads": [
+              {
+                "name": "AD_HB_Influencer_OrlandoMiami_OpenCallExact",
+                "adId": "120249891132030588",
+                "creativeId": "1210890181164577"
+              },
+              {
+                "name": "AD_HB_Influencer_OrlandoMiami_OpenCallOpt",
+                "adId": "120249891132820588",
+                "creativeId": "1263012390218426"
+              },
+              {
+                "name": "AD_HB_Influencer_OrlandoMiami_FutureCross",
+                "adId": "120249891133600588",
+                "creativeId": "888615783767373"
+              },
+              {
+                "name": "AD_HB_Influencer_OrlandoMiami_LiveFX",
+                "adId": "120249891133920588",
+                "creativeId": "1360097812339977"
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }

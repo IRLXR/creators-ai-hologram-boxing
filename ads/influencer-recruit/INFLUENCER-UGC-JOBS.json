@@ -1,0 +1,157 @@
+{
+  "version": "2026-07-11",
+  "pipeline": "keyframe → kling3_0_turbo 15s (generate_audio) → voice_change Skye",
+  "hosts": {
+    "blazer_quest3": {
+      "keyframe_job_id": "916340ac-0891-4ea8-b20f-59ecb4267d25",
+      "file": "ugc/output/host-keyframe-ads-avatar-quest3-strap.png",
+      "used_in": ["join_the_team", "l4_partner_reviews", "l5_countdown_timer"]
+    },
+    "black_mic_crop_tank": {
+      "keyframe_job_id": "0f1d806e-19a5-456c-877d-c4448ee72cc3",
+      "file": "ugc/output/host-keyframe-v4-social-outfit.png",
+      "used_in": ["open_call_exact", "calling_all", "l4_retarget_open_call", "l4_reminder_slots", "l4_streamer_reviews_ab", "l5_last_call_streamers", "l5_final_slots_closing", "l4_confirms_partner_ad", "l4_confirms_reminder_ad", "l4_confirms_open_call_ad"]
+    }
+  },
+  "voice": {
+    "preset": "Skye",
+    "voice_id": "1fb253b8-928b-4d29-a349-f242a71eaddf",
+    "voice_type": "preset"
+  },
+  "scripts": {
+    "open_call_exact": {
+      "script": "ads/influencer-recruit/ugc/33-influencer-open-call-exact.md",
+      "host": "black_mic_crop_tank",
+      "output": "ads/influencer-recruit/output/INFLUENCER-OPEN-CALL-EXACT-15s-VO.mp4",
+      "backup_blazer": "ads/influencer-recruit/output/INFLUENCER-OPEN-CALL-EXACT-15s-VO-BLAZER-BACKUP.mp4",
+      "seedance_job": "483ad57e-891d-45d1-a7b7-9494be5b4c62",
+      "voice_job": "56098191-0087-4775-8376-49e518d3a8e5",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_000635_56098191-0087-4775-8376-49e518d3a8e5.mp4",
+      "status": "completed"
+    },
+    "calling_all": {
+      "script": "ads/influencer-recruit/ugc/34-influencer-calling-all.md",
+      "host": "black_mic_crop_tank",
+      "output": "ads/influencer-recruit/output/INFLUENCER-CALLING-ALL-15s-VO.mp4",
+      "backup_blazer": "ads/influencer-recruit/output/INFLUENCER-CALLING-ALL-15s-VO-BLAZER-BACKUP.mp4",
+      "seedance_job": "3c7d1737-7480-43f3-8691-7757cd73cebd",
+      "voice_job": "3f62b65f-1da4-402b-af23-fa9856aa7669",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_000635_3f62b65f-1da4-402b-af23-fa9856aa7669.mp4",
+      "status": "completed"
+    },
+    "join_the_team": {
+      "script": "ads/influencer-recruit/ugc/35-influencer-join-the-team.md",
+      "host": "blazer_quest3",
+      "output": "ads/influencer-recruit/output/INFLUENCER-JOIN-THE-TEAM-15s-VO.mp4",
+      "seedance_job": "944918e0-f126-4db6-9b28-fe7ff313e9cd",
+      "seedance_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260711_234835_944918e0-f126-4db6-9b28-fe7ff313e9cd.mp4",
+      "voice_job": "7a5e551a-ff6d-41d6-aa90-40918cd3ded4",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260711_235058_7a5e551a-ff6d-41d6-aa90-40918cd3ded4.mp4",
+      "status": "completed"
+    },
+    "l4_retarget_open_call": {
+      "script": "ads/influencer-recruit/ugc/36-influencer-l4-retarget-open-call.md",
+      "host": "black_mic_crop_tank",
+      "output": "ads/influencer-recruit/output/INFLUENCER-L4-RETARGET-OPEN-CALL-15s-VO.mp4",
+      "kling_job": "e78ddaa0-7d69-48af-9b18-40603c1e9cb0",
+      "kling_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_015248_e78ddaa0-7d69-48af-9b18-40603c1e9cb0.mp4",
+      "voice_job": "fc2bbd3f-f334-49b2-b08c-01682007c146",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_015448_fc2bbd3f-f334-49b2-b08c-01682007c146.mp4",
+      "status": "completed"
+    },
+    "l4_partner_reviews": {
+      "script": "ads/influencer-recruit/ugc/37-influencer-l4-partner-reviews.md",
+      "host": "blazer_quest3",
+      "output": "ads/influencer-recruit/output/INFLUENCER-L4-PARTNER-REVIEWS-15s-VO.mp4",
+      "kling_job": "339cc52e-98e9-402d-b97d-5cad44070cc4",
+      "kling_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032232_339cc52e-98e9-402d-b97d-5cad44070cc4.mp4",
+      "voice_job": "1bf71e19-d7ff-44c4-9027-31102532736c",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032515_1bf71e19-d7ff-44c4-9027-31102532736c.mp4",
+      "status": "completed"
+    },
+    "l4_reminder_slots": {
+      "script": "ads/influencer-recruit/ugc/38-influencer-l4-reminder-slots.md",
+      "host": "black_mic_crop_tank",
+      "output": "ads/influencer-recruit/output/INFLUENCER-L4-REMINDER-SLOTS-15s-VO.mp4",
+      "kling_job": "6f67041c-98cc-464c-b381-a8cbdd73b958",
+      "kling_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032233_6f67041c-98cc-464c-b381-a8cbdd73b958.mp4",
+      "voice_job": "0fcf9b7f-248b-442e-9788-0bbdfab65f4c",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032516_0fcf9b7f-248b-442e-9788-0bbdfab65f4c.mp4",
+      "status": "completed"
+    },
+    "l4_streamer_reviews_ab": {
+      "script": "ads/influencer-recruit/ugc/39-influencer-l4-streamer-reviews-ab.md",
+      "host": "black_mic_crop_tank",
+      "output": "ads/influencer-recruit/output/INFLUENCER-L4-STREAMER-REVIEWS-15s-VO.mp4",
+      "kling_job": "8b32f907-7adf-455f-85f2-381f3633dd23",
+      "kling_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032233_8b32f907-7adf-455f-85f2-381f3633dd23.mp4",
+      "voice_job": "2b53af75-c7be-46e6-ad81-0c49f7de21d0",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032517_2b53af75-c7be-46e6-ad81-0c49f7de21d0.mp4",
+      "status": "completed",
+      "note": "Optional A/B vs l4_partner_reviews on Partner Spotlight slots"
+    },
+    "l5_countdown_timer": {
+      "script": "ads/influencer-recruit/ugc/40-influencer-l5-countdown-timer.md",
+      "host": "blazer_quest3",
+      "output": "ads/influencer-recruit/output/INFLUENCER-L5-COUNTDOWN-TIMER-15s-VO.mp4",
+      "kling_job": "ecfd055b-abbe-472c-bed1-d60c6e2e3a1c",
+      "kling_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032234_ecfd055b-abbe-472c-bed1-d60c6e2e3a1c.mp4",
+      "voice_job": "2723a0af-cd3c-4149-9f17-557e8bf21ba5",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032517_2723a0af-cd3c-4149-9f17-557e8bf21ba5.mp4",
+      "status": "completed"
+    },
+    "l5_last_call_streamers": {
+      "script": "ads/influencer-recruit/ugc/41-influencer-l5-last-call-streamers.md",
+      "host": "black_mic_crop_tank",
+      "output": "ads/influencer-recruit/output/INFLUENCER-L5-LAST-CALL-STREAMERS-15s-VO.mp4",
+      "kling_job": "731209f8-69cc-46c8-9a9b-dd76dd1bf75f",
+      "kling_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032237_731209f8-69cc-46c8-9a9b-dd76dd1bf75f.mp4",
+      "voice_job": "bb19d395-f804-44f8-85fb-08697a9680c4",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032517_bb19d395-f804-44f8-85fb-08697a9680c4.mp4",
+      "status": "completed"
+    },
+    "l5_final_slots_closing": {
+      "script": "ads/influencer-recruit/ugc/42-influencer-l5-final-slots-closing.md",
+      "host": "black_mic_crop_tank",
+      "output": "ads/influencer-recruit/output/INFLUENCER-L5-FINAL-SLOTS-CLOSING-15s-VO.mp4",
+      "kling_job": "f6951091-3e9b-45b8-a16d-b0d1ceaeafe2",
+      "kling_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032238_f6951091-3e9b-45b8-a16d-b0d1ceaeafe2.mp4",
+      "voice_job": "a5f8d550-deef-4098-88f8-baa289d6ab79",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032518_a5f8d550-deef-4098-88f8-baa289d6ab79.mp4",
+      "status": "completed"
+    },
+    "l4_confirms_partner_ad": {
+      "script": "ads/influencer-recruit/ugc/43-influencer-l4-confirms-partner-ad.md",
+      "host": "black_mic_crop_tank",
+      "output": "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-PARTNER-AD-15s-VO.mp4",
+      "confirms": "l4_partner_reviews",
+      "kling_job": "58f3a4e4-b96d-4589-8913-a5b90733a8b0",
+      "kling_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_015248_58f3a4e4-b96d-4589-8913-a5b90733a8b0.mp4",
+      "voice_job": "c3c6cbd5-8df1-4156-8e4c-5c17590d770e",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_015448_c3c6cbd5-8df1-4156-8e4c-5c17590d770e.mp4",
+      "status": "completed"
+    },
+    "l4_confirms_reminder_ad": {
+      "script": "ads/influencer-recruit/ugc/44-influencer-l4-confirms-reminder-ad.md",
+      "host": "black_mic_crop_tank",
+      "output": "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-REMINDER-AD-15s-VO.mp4",
+      "confirms": "l4_reminder_slots",
+      "kling_job": "0f090fa4-f89b-43ff-951a-52e9892af8af",
+      "kling_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032240_0f090fa4-f89b-43ff-951a-52e9892af8af.mp4",
+      "voice_job": "2875a45e-4ed1-4e02-ae83-6ed558a42af6",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032518_2875a45e-4ed1-4e02-ae83-6ed558a42af6.mp4",
+      "status": "completed"
+    },
+    "l4_confirms_open_call_ad": {
+      "script": "ads/influencer-recruit/ugc/45-influencer-l4-confirms-open-call-ad.md",
+      "host": "black_mic_crop_tank",
+      "output": "ads/influencer-recruit/output/INFLUENCER-L4-CONFIRMS-OPEN-CALL-AD-15s-VO.mp4",
+      "confirms": "l4_retarget_open_call",
+      "kling_job": "e2849322-7cad-4906-beb9-453869562c69",
+      "kling_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032241_e2849322-7cad-4906-beb9-453869562c69.mp4",
+      "voice_job": "68356280-d7fd-4cda-bcf3-4e8dbbff8733",
+      "voice_url": "https://d8j0ntlcm91z4.cloudfront.net/user_36qUG9ViEiTTb1uSQP8OYOk94zV/hf_20260712_032518_68356280-d7fd-4cda-bcf3-4e8dbbff8733.mp4",
+      "status": "completed"
+    }
+  }
+}
